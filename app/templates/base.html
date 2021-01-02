@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        {% if title %}
+        <title>{{ title }} </title>
+        {% else %}
+        <title>Hey! You forgot a title!</title>
+        {% endif %}
+        <!-- css stylesheets -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <!-- font family -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- slick carousel -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slick.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slick-theme.css') }}"/>
+        <!-- jquery -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	    <script src="resources/jquery.js"></script>
+        <!-- slick -->
+        <script type="text/javascript" src="scripts/slick.js"></script>
+        <script type="text/javascript" src="scripts/slick.min.js"></script>
+        {% block head %} {% endblock %}
+    </head>
+    <body>
+        <header id = "secondBox" class = "navbar fade-in">
+            <div class = "logoBox">
+                <a class = "homepageLogo" href = "index.html"><img src = "images/FillerLogo.png">Insert Name</a>
+            </div>
+            <nav class = "secondBox">
+                <ul class = "headerList">
+                    <div class = "dropDownAbout">
+                        <button class = "dropButtonAbout" onclick="window.location.href = 'models.html'"><a href = "models.html"> About </a> </button>
+                        <div class = "dropDownContentAbout fade-in">
+                            <div class = "test1">
+                            <button class = "insideButtonAbout fade-in" onclick="window.location.href = 'fulgora.html'"><a class = "name" href = "fulgora.html"> Why Us? </a><a href = "fulgora.html"><!--<i id = "rightArrow" class="fa fa-angle-right"></i>--></a></button>
+                                <!--<div class = "dropDownInsideAbout fade-in">
+                                    <a class = "name2" href = "fulgora-xe.html"> Fulgora XE</a>
+                                    <a class = "name2" href = "fulgora-xe-neoquad.html"> Fulgora XE NeoQuad </a>
+                                    <a class = "name2" href = "fulgora-xe-tergo.html"> Fulgora XE Tergo </a>
+                                </div>-->
+                            </div>
+                            <div class = "test2">
+                            <button class = "insideButtonAbout2 fade-in" onclick="window.location.href = 'bronte.html'"><a class = "name" href = "bronte.html"> History </a><a href = "bronte.html"><!--<i id = "rightArrow" class="fa fa-angle-right"></i>--></a></button>
+                                <!--<div class = "dropDownInsideAbout2 fade-in">
+                                    <a class = "name2" href = "bronte-xfe-nitro.html"> Bronte XFE Nitro </a>
+                                    <a class = "name2" href = "bronte-xf-neoquad.html"> Bronte XF NeoQuad</a>
+                                    <a class = "name2" href = "bronte-xf-domus.html"> Bronte XF Domus</a>
+                                </div>-->
+                            </div>
+                            <div class = "test3">
+                            <button class = "insideButtonAbout3 fade-in" onclick="window.location.href = 'astrape.html'"><a class = "name" href = "astrape.html"> Leadership </a><a href = "astrape.html"></a></button>
+                                <!--<div class = "dropDownInsideAbout3">
+                                </div>-->
+                            </div>
+                            <div class = "test4">
+                            <button class = "insideButtonAbout4 fade-in" onclick="window.location.href = 'pele.html'"><a class = "name" href = "pele.html"> Our Providers </a><a href = "pele.html"></a></button>
+                                <!--<div class = "dropDownInsideAbout4">
+                                </div>-->
+                            </div>
+                            <div class = "test5">
+                            <button class = "insideButtonAbout5 fade-in" onclick="window.location.href = 'oya.html'"><a class = "name" id = "lastLink" href = "oya.html"> NCQA and ACHC </a><a></a></button>
+                                <!--<div class = "dropDownInsideAbout5">
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "dropDownOverview">
+                        <button class = "dropButtonOverview" onclick="window.location.href = 'brand.html'"> <a href = "brand.html">Treatment Options </a></button>
+                        <div class = "dropDownContentOverview fade-in">
+                            <div class = "test6">
+                            <button class = "insideButtonAbout6 shorter fade-in" onclick="window.location.href = 'people.html'"><a class = "name" href = "people.html"> Medical Health Solutions </a><a href = "people.html"><i id = "rightArrow" class="fa fa-angle-right"></i></a></button>
+                                <div class = "dropDownInsideAbout6">
+                                    <a class = "name2 fade-in" href = "sammy-urtzal.html"> Urgent Care </a>
+                                    <a class = "name2 fade-in" href = "peyton-everlue.html"> Men's Health </a>
+                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Women's Health </a>
+                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Children's Health </a>
+                                </div>
+                            </div>
+                            <div class = "test7">
+                                <button class = "insideButtonAbout7 shorter fade-in" onclick="window.location.href = 'history.html'"><a class = "name" href = "history.html"> Behavioral Health Solutions </a><a href = "people.html"><i id = "rightArrow" class="fa fa-angle-right"></i></a></button>
+                                <div class = "dropDownInsideAbout7">
+                                    <a class = "name2 fade-in" href = "sammy-urtzal.html"> Individual Therapy and Psychiatry  </a>
+                                    <a class = "name2 fade-in" href = "peyton-everlue.html"> Couples Therapy </a>
+                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Family Therapy </a>
+                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Speech Therapy </a>
+                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Occupational Therapy </a>
+                                </div>
+                            </div>
+                            <div class = "test4">
+                            <button class = "insideButtonAbout4 shorter fade-in" onclick="window.location.href = 'awards.html'"><a class = "name" href = "awards.html"> Return-to-Work Solutions </a><a href = "people.html"><i id = "rightArrow" class="fa fa-angle-right"></i></a></button>
+                                <div class = "dropDownInsideAbout4">
+                                    <a class = "name2 fade-in" href = "sammy-urtzal.html"> COVID-19 Testing </a>
+                                    <a class = "name2 fade-in" href = "peyton-everlue.html"> COVID-19 Screening and Treatment</a>
+                                </div>
+                            </div>
+                            <div class = "test3">
+                             <button class = "insideButtonAbout4 shorter fade-in" onclick="window.location.href = 'awards.html'"><a class = "name" href = "awards.html"> Virtual Reality Solutions </a><a href = "people.html"><i id = "rightArrow" class="fa fa-angle-right"></i></a></button>
+                                <div class = "dropDownInsideAbout3">
+                                    <a class = "name2 fade-in" href = "sammy-urtzal.html"> Mental Disorders Therapy </a>
+                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Physical Therapy </a>
+                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Phobia Therapy</a>
+                                </div>
+                            </div>
+                            <div class = "test4">
+                            <button class = "insideButtonAbout4 shorter fade-in" onclick="window.location.href = 'awards.html'"><a class = "name" href = "awards.html"> Pet Therapy Solutions </a><a href = "people.html"><i id = "rightArrow" class="fa fa-angle-right"></i></a></button>
+                                <div class = "dropDownInsideAbout4">
+                                    <a class = "name2 fade-in" href = "sammy-urtzal.html"> Therapy Dogs </a>
+                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Therapy Cats </a>
+                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Therapy Horses </a>
+                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Therapy Rabbits </a>
+                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Therapy Reptiles </a>
+                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Therapy Birds </a>
+                                </div>
+                            </div>
+                            <div class = "test4">
+                            <button class = "insideButtonAbout4 shorter fade-in" onclick="window.location.href = 'design.html'"><a class = "name" id = "lastLink" href = "design.html"> Pet Therapy Solutions </a></button>
+                                <div class = "dropDownInsideAbout4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "dropDownMedia">
+                        <button class = "dropButtonMedia" onclick="window.location.href = 'experience.html'"> <a href = "experience.html"> How It Works </a></button>
+                        <div class = "dropDownContentMedia fade-in">
+                            <a href = "girl-powered.html" class = "fade-in">Deals and Offers</a>
+                            <a href = "social.html" id = "lastLink" class = "fade-in"> Our App </a>
+                            
+                        </div>
+                    </div>
+                    <div class = "dropDownMedia">
+                        <button class = "dropButtonMedia" onclick="window.location.href = 'ownership.html'"><a href = "ownership.html"> Testimonials </a></button>
+                    </div>
+                    <div class = "dropDownMedia">
+                        <button class = "dropButtonMedia" onclick="window.location.href = 'lifestyle.html'"><a href = "lifestyle.html"> Organizations </a></button>
+                        <div id = "Ownership"  class = "dropDownContentMedia fade-in">
+                            <a href = "privacy-legal.html"> Employer Groups </a>
+                            <a href = "warranties.html"> Hospitals and Health Systems </a>
+                            <a href = "warranties.html"> Unions and Associations </a>
+                            <a href = "warranties.html"> Government and Education </a>
+                            <a href = "warranties.html"> Brokers and Advisors </a>
+                            <a href = "services.html" id = "lastLink"> Distribution Partners </a>
+                        </div>
+                    </div>
+                    <div class = "dropDownMedia">
+                        <button class = "dropButtonMedia" onclick="window.location.href = 'contact.html'"><a href = "contact.html"> News </a></button>
+                    </div>
+                    <div class = "dropDownMedia">
+                        <button class = "dropButtonMedia" onclick="window.location.href = 'contact.html'"><a href = "contact.html"> Blog </a></button>
+                    </div>
+                    <div class = "dropDownMedia">
+                        <button class = "dropButtonMedia" onclick="window.location.href = 'contact.html'"><a href = "contact.html"> Contact </a></button>
+                        <div id = "Ownership"  class = "dropDownContentMedia fade-in">
+                            <a href = "privacy-legal.html"> FAQs </a>
+                            <a href = "warranties.html"> Our Social </a>
+                            <a href = "services.html" id = "lastLink"> Join Us </a>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+            <div class = "loginBox">
+                <a class = "homepageLogo" href = "index.html" id = "loginButton"><p>Login/Register</p><i class="far fa-user"></i></a>
+            </div>
+        </header>
+        {% block content %}{% endblock %}
+        <a href="#" class="Scrolltotop"><button onclick="topFunction()" id="mybtn" class="button" title="Go to top"></button></a>
+        <!-- js -->
+        <script src="scripts/fade-on-scroll.js"></script>
+        <script src="{{ url_for('static', filename='js/body_fade.js') }}"></script>
+        <script src="scripts/feature-slideshow.js"></script>
+        <script src="scripts/slideshow.js"></script>
+        <script src="{{ url_for('static', filename='js/scroll_to_top.js') }}"></script>
+    </body>
+</html>
