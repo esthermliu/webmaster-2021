@@ -27,16 +27,15 @@
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	    <script src="resources/jquery.js"></script>
         <!-- slick -->
-        <script type="text/javascript" src="scripts/slick.js"></script>
-        <script type="text/javascript" src="scripts/slick.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/slick.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
         {% block head %} {% endblock %}
     </head>
     <body>
         <header id = "secondBox" class = "navbar fade-in">
             <div class = "logoBox">
-                <a class = "homepageLogo" href = "index.html"><img src = "images/FillerLogo.png">Insert Name</a>
+                <a class = "homepageLogo" href = "index.html"><img src = "{{ url_for('static', filename='images/FillerLogo.png')}}">Insert Name</a>
             </div>
             <nav class = "secondBox">
                 <ul class = "headerList">
@@ -176,10 +175,11 @@
         {% block content %}{% endblock %}
         <a href="#" class="Scrolltotop"><button onclick="topFunction()" id="mybtn" class="button" title="Go to top"></button></a>
         <!-- js -->
-        <script src="scripts/fade-on-scroll.js"></script>
+        <script src="{{ url_for('static', filename='js/fade_on_scroll.js') }}"></script>
         <script src="{{ url_for('static', filename='js/body_fade.js') }}"></script>
-        <script src="scripts/feature-slideshow.js"></script>
-        <script src="scripts/slideshow.js"></script>
+        <script src="{{ url_for('static', filename='js/feature_slideshow.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
         <script src="{{ url_for('static', filename='js/scroll_to_top.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
     </body>
 </html>

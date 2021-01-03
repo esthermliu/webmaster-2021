@@ -1,9 +1,251 @@
 {% extends "base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 {% endblock %}
 
 {% block content %}
-    <p>Hi</p>
+<div class="slideshowContainer">
+    <div class = "slideImageHolder">
+        <div id = "transparent1" class = "transparentBackground transparent">
+        </div>
+        <img src="{{ url_for('static', filename='images/WhiteBackground.jpeg') }}"/>
+        <div class = "slideTextHolder">
+            <h1 class = "slideTitle fadeInDown"> INSERT TITLE  </h1>
+            <h2 class = "slideCaption fadeInUp"> insert text insert text insert text </h2>
+            <div id = "buttonSlide" class = "learnMoreContainer fadeInUp">
+                <a id = "buttonSlide" href = "news.html" class="learnMoreButton fadeInUp"><button>Discover more </button></a>
+            </div>
+        </div>
+    </div>
+    <div class = "slideImageHolder">
+        <div class = "transparentBackground transparent">
+        </div>
+        <img src="{{ url_for('static', filename='images/Filler.jpeg') }}"/>
+        <div class = "slideTextHolder fadeInUp">
+            <h1 class = "slideTitle fadeInDown"> INSERT TITLE </h1>
+            <h2 class = "slideCaption fadeInUp"> insert text insert text insert text </h2>
+            <div id = "buttonSlide" class = "learnMoreContainer fadeInUp">
+                <a id = "buttonSlide" href = "news.html" class="learnMoreButton fadeInUp"><button>Discover more </button></a>
+            </div>
+        </div>
+    </div>
+    <div class = "slideImageHolder">
+        <div class = "transparentBackground transparent">
+        </div>
+        <img src="{{ url_for('static', filename='images/BlueTech.jpeg') }}"/>
+        <div class = "slideTextHolder">
+            <div class = "textHolder1">
+              <h1 class = "slideTitle fadeInDown"> INSERT TITLE BLAH BLAH </h1>
+            </div>
+            <div class = "textHolder2">
+              <h2 class = "slideCaption fadeInUp"> insert text insert text insert text</h2>
+            </div>
+            <div class = "learnMoreContainer">
+                <a id = "buttonSlide" href = "news.html" class="learnMoreButton fadeInUp"><button>Discover more </button></a>
+            </div>
+        </div>
+    </div>
+    <div class = "slideImageHolder">
+        <div class = "transparentBackground transparent">
+        </div>
+        <img src="{{ url_for('static', filename='images/BlueTech.jpeg') }}"/>
+        <div class = "slideTextHolder">
+            <div class = "textHolder1">
+              <h1 class = "slideTitle fadeInDown"> INSERT TITLE BLAH BLAH </h1>
+            </div>
+            <div class = "textHolder2">
+              <h2 class = "slideCaption fadeInUp"> insert text insert text insert text</h2>
+            </div>
+            <div class = "learnMoreContainer">
+                <a id = "buttonSlide" href = "news.html" class="learnMoreButton fadeInUp"><button>Discover more </button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<a class="prev"><i class="fa fa-angle-left"></i></a>
+<a class="next"><i class="fa fa-angle-right"></i></a>
+  
+<article>
+    <div class = "firstSection">
+        <div class = "impactTitle show-on-scroll">
+            <h2>Making an impact</h2>
+        </div>
+        <div class = "impactBox">
+            <div class = "impactImageHolder show-on-scroll">
+                <img class = "show-on-scroll" src = "{{ url_for('static', filename='images/BlueHole.jpg') }}">
+            </div>
+            <div class = "impactText">
+                <div class = "iconBox">
+                    <img class = "show-on-scroll" src = "{{ url_for('static', filename='images/FillerLogoBlue.png') }}">
+                    <div class = "titleText show-on-scroll">
+                        <h3>Insert title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    </div>
+                </div>
+                <div class = "iconBox">
+                    <img class = "show-on-scroll" src = "{{ url_for('static', filename='images/FillerLogoBlue.png') }}">
+                    <div class = "titleText show-on-scroll">
+                        <h3>Insert title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    </div>
+                </div>
+                <div id = "lastIcon" class = "iconBox">
+                    <img class = "show-on-scroll" src = "{{ url_for('static', filename='images/FillerLogoBlue.png') }}">
+                    <div class = "titleText show-on-scroll">
+                        <h3>Insert title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class = "secondSection">
+        <div id = "alignLeft" class = "impactTitle show-on-scroll">
+            <h2>COVID-19</h2>
+        </div>
+        <div class = "largeMessage">
+            <div class = "messageHolder">
+                <div class = "textSection show-on-scroll-right">
+                    <p>Dear People,</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class = "signatureBox">
+                        <img src = "{{ url_for('static', filename='images/FakeSignature.svg') }}">
+                        <h3>Sammy Urtzal, MD</h3>
+                        <h4>Chief Medical Officer</h4>
+                    </div>
+                </div>
+            </div>
+            <div class = "virusImageHolder show-on-scroll-left">
+                <img src = "{{ url_for('static', filename='images/DoctorVirus.jpeg') }}">
+            </div>
+        </div>
+    </div>
+    <div class = "firstSection">
+        <div class = "impactTitle show-on-scroll">
+            <h2>Our Solutions</h2>
+        </div>
+        <div class = "contentHolder">
+            <div class = "solutionsHolder">
+                <div class = "solution show-on-scroll-right">
+                    <div class = "solutionCircle">
+                        <img src = "{{ url_for('static', filename='images/IconCircleRed.png') }}">
+                    </div>
+                    <h4>Medical Health</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                    <a href = "#" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                </div>
+                <div class = "solution show-on-scroll-right">
+                    <div class = "solutionCircle">
+                        <img src = "{{ url_for('static', filename='images/IconCircleBlue.png') }}">
+                    </div>
+                    <h4>Behavioral Health</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                    <a href = "#" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                </div>
+                <div class = "solution show-on-scroll-right">
+                    <div class = "solutionCircle">
+                        <img src = "{{ url_for('static', filename='images/IconCircleTestPurple.png') }}">
+                    </div>
+                    <h4>Return-to-Work</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                    <a href = "#" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                </div>
+                <div class = "solution show-on-scroll-left">
+                    <div class = "solutionCircle">
+                        <img src = "{{ url_for('static', filename='images/IconCircleTestPurple.png') }}">
+                    </div>
+                    <h4>Virtual Reality</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                    <a href = "#" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                </div>
+                <div class = "solution show-on-scroll-left">
+                    <div class = "solutionCircle">
+                        <img src = "{{ url_for('static', filename='images/IconCircleRed.png') }}">
+                    </div>
+                    <h4>Pet Therapy</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                    <a href = "#" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                </div>
+                <div class = "solution show-on-scroll-left">
+                    <div class = "solutionCircle">
+                        <img src = "{{ url_for('static', filename='images/IconCircleBlue.png') }}">
+                    </div>
+                    <h4>Insert Name</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                    <a href = "#" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                </div>
+            </div>
+            <div class = "learnMoreContainerRegular show-on-scroll-up">
+                <a href = "news.html" class="learnMoreButtonRegular"><button>Discover more </button></a>
+            </div>
+        </div>
+    </div>
+    <div id = "featuredSection" class = "secondSection">
+        <div class = "featureTransparent">
+            <div id = "smallerTitle" class = "impactTitle show-on-scroll">
+                <h2>As featured on</h2>
+            </div>
+            <div class = "featureLargeBox show-on-scroll-up">
+                <a class="featurePrev"><i class="fa fa-angle-left"></i></a>
+                <div class="featuredContainer">
+                    <div class = "featuredImageHolder">
+                        <img src = "{{ url_for('static', filename='images/WAPostTransparent.png') }}">
+                    </div>
+                    <div class = "featuredImageHolder">
+                        <img src = "{{ url_for('static', filename='images/nbcLogoActual.png') }}">
+                    </div>
+                    <div class = "featuredImageHolder">
+                        <img src = "{{ url_for('static', filename='images/NYTNews.png') }}">
+                    </div>
+                    <div class = "featuredImageHolder">
+                        <img src = "{{ url_for('static', filename='images/USAToday.png') }}">
+                    </div>
+                    <div class = "featuredImageHolder">
+                        <img src = "{{ url_for('static', filename='images/StarTribune.png') }}">
+                    </div>
+                    <div class = "featuredImageHolder">
+                        <img src = "{{ url_for('static', filename='images/ABCNews.png') }}">
+                    </div>       
+                </div>
+                <a class="featureNext"><i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <div id = "whySection" class = "firstSection">
+        <div class = "impactTitle show-on-scroll">
+            <h2>Why Us?</h2>
+        </div>
+        <div class = "specialContainer">
+            <div class = "specialInsideContainer">
+                <div class = "specialText">
+                    <h3>Insert text blah blah blah</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class = "specialLargeBox">
+                    <div class = "specialBox">
+                        <h1>8x</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </p>
+                    </div>
+                    <div class = "specialBox">
+                        <h1>8x</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                    </div>
+                    <div class = "specialBox">
+                        <h1>8x</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                    </div>
+                    <div class = "specialBox">
+                        <h1>8x</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
 {% endblock %}
