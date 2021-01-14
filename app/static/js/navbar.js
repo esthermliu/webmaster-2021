@@ -18,7 +18,10 @@ jQuery(document).ready(function($){
 		
 		$('.dropDownContentAbout').css("box-shadow", "none");
 		$('.dropDownContentOverview').css("box-shadow", "none");
-		$('.dropDownContentMedia').css("box-shadow", "none");
+        $('.dropDownContentMedia').css("box-shadow", "none");
+        
+        $('.logoWhite').css("display", "flex");
+        $('.logoDark').css("display", "none");
 	} else {
 		$('.navbar').css("background-color", "rgba(255, 255, 255, 1)");
         $('.dropDownContentAbout').css("transform", "translate(0px, -13px)");
@@ -33,6 +36,9 @@ jQuery(document).ready(function($){
         $('.navbar').css("height", "85px");
         
         $('.navbar').css("box-shadow", "0 4px 10px -10px rgba(0,0,0,.6)");
+
+        $('.logoWhite').css("display", "none");
+        $('.logoDark').css("display", "flex");
         
         $('.dropDownContentAbout').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
 		$('.dropDownContentOverview').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
@@ -60,7 +66,10 @@ jQuery(document).ready(function($){
 			
 			$('.dropDownContentAbout').css("box-shadow", "none");
 			$('.dropDownContentOverview').css("box-shadow", "none");
-			$('.dropDownContentMedia').css("box-shadow", "none");
+            $('.dropDownContentMedia').css("box-shadow", "none");
+            
+            $('.logoWhite').css("display", "flex");
+            $('.logoDark').css("display", "none");
 		} else {
 			$('.navbar').css("background-color", "rgba(255, 255, 255, 1)");
             $('.navbar').css("height", "85px");
@@ -79,7 +88,10 @@ jQuery(document).ready(function($){
             
             $('.dropDownContentAbout').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
 		    $('.dropDownContentOverview').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
-		    $('.dropDownContentMedia').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
+            $('.dropDownContentMedia').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
+            
+            $('.logoWhite').css("display", "none");
+            $('.logoDark').css("display", "flex");
 		    
 			/*$('.dropDownContentAbout').css("background-color", "rgba(225, 225, 225, 1)");
 			$('.dropDownContentOverview').css("background-color", "rgba(225, 225, 225, 1)");
@@ -104,7 +116,10 @@ jQuery(document).ready(function($){
             
             $('.dropDownContentAbout').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
 		    $('.dropDownContentOverview').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
-		    $('.dropDownContentMedia').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
+            $('.dropDownContentMedia').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
+            
+            $('.logoWhite').css("display", "none");
+            $('.logoDark').css("display", "flex");
 		} else {
 			$('.navbar').css("background-color", "transparent");
             $('.navbar').css("height", "110px");
@@ -126,7 +141,10 @@ jQuery(document).ready(function($){
 			
 			$('.dropDownContentAbout').css("box-shadow", "none");
 			$('.dropDownContentOverview').css("box-shadow", "none");
-			$('.dropDownContentMedia').css("box-shadow", "none");
+            $('.dropDownContentMedia').css("box-shadow", "none");
+            
+            $('.logoWhite').css("display", "flex");
+            $('.logoDark').css("display", "none");
 		}
 		
 

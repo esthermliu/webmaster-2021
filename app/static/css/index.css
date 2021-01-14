@@ -123,7 +123,7 @@ body.fade-out {
 }
 
 /* feature prev and next */
-.featurePrev, .featureNext {
+.featurePrev, .featureNext, .reviewPrev, .reviewNext {
   cursor: pointer;
   color: white;
   display: flex;
@@ -137,23 +137,34 @@ body.fade-out {
   user-select: none;
   z-index: 3 !important;
   transition: 0.4s ease;
-}
-
-.featureNext:hover {
-    transform: translate(6px, 0) scale(0.9);
-}
-
-.featurePrev:hover {
-    transform: translate(-6px, 0) scale(0.9);
-}
-
-.featurePrev, .featureNext {
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
 }
 
+.reviewPrev, .reviewNext {
+    color: rgb(23, 37, 42);
+}
+
+.featureNext:hover, .reviewNext:hover {
+    transform: translate(6px, 0) scale(0.9);
+}
+
+.featurePrev:hover, .reviewPrev:hover {
+    transform: translate(-6px, 0) scale(0.9);
+}
+
+
 .featurePrev:hover, .featureNext:hover {
 	color: rgba(222, 242, 241, 0.6);
+}
+
+.reviewPrev:hover, .reviewNext:hover {
+    color: grey;
+}
+
+.noPadTop {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
 }
 
 
@@ -344,24 +355,7 @@ body.fade-out {
     text-align: left !important;
 }
 
-.impactTitle h2 {
-    position: relative;
-    font-size: 50px;
-    font-weight: 600;
-    color: rgb(23, 37, 42);
-}
 
-.impactTitle h2:after {
-    position: absolute;
-	content: '';
-	height: 2px;
-	bottom: -20px;
-	margin: 0 auto;
-	left: 0;
-    right: 0;
-	width: 15%;
-	background: #3aafa9;
-}
 
 #alignLeft h2:after {
     margin: 0 0 !important;
@@ -637,7 +631,7 @@ body.fade-out {
 
 /* featured section */
 #featuredSection {
-    background-image: url(../images/Feature.jpeg);
+    background-image: url('../images/Feature.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -650,16 +644,27 @@ body.fade-out {
     font-size: 30px;
 }
 
+#smallerTitleBlack h2 {
+    color: rgb(23, 37, 42) !important; 
+    font-size: 30px;
+}
+
 #smallerTitle h2:after {
 	width: 5%;
 	background: white;
 }
 
-.featuredContainer {
+
+.featuredContainer, .reviewContainer {
     display: flex !important;
     justify-content: space-between;
     align-items: center;
     width: 60%;
+}
+
+
+.reviewContainer {
+    width: 85%;
 }
 
 .featuredImageHolder {
@@ -674,6 +679,11 @@ body.fade-out {
     padding: 8% 16% 9% 16% !important;
 }
 
+.providerTransparent {
+    background-image: linear-gradient( rgba(145, 75, 173, 0.2), rgba(43, 122, 120, 0.2));
+    padding: 8% 10% 8% 10% !important;
+}
+
 .featuredImageHolder img {
     height: 100%;
 }
@@ -683,6 +693,7 @@ body.fade-out {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 8%;
 }
 
 .featuredContainer .slick-dots {
@@ -690,13 +701,38 @@ body.fade-out {
     width: 100% !important;
 }
 
+.reviewContainer .slick-dots  {
+    bottom: -80px !important;
+    width: 100% !important;
+}
+
+.reviewContainer .slick-dots li button:before {
+    color: rgb(23, 37, 42) !important;
+}
+
+.reviewText {
+    flex-direction: column;
+    height: auto !important;
+}
+
+.reviewInnerText {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviewInnerText p {
+    line-height: 30px;
+}
+
 .specialContainer {
     margin-top: 8%;
-    background-color: orange;
 }
 
 .specialText {
-    background-color: pink;
     margin-bottom: 5%;
     width: 80%;
     text-align: center;
@@ -709,15 +745,15 @@ body.fade-out {
 }
 
 .specialLargeBox {
-    background-color: yellowgreen;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
 }
 
 .specialBox {
-    width: 23%;
-    background-color: purple;
+    width: 31%;
+    background-color:white;
+    box-shadow: 0 0 13px rgba(0,0,0,0.1);
 }
 
 #whySection {
@@ -726,11 +762,174 @@ body.fade-out {
 }
 
 .specialInsideContainer {
-    padding: 8% 13% 8% 13%;
+    padding: 8% 15% 8% 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: #DEF2F1;
+    background: linear-gradient(
+        to bottom,
+        #DEF2F1,
+        #DEF2F1 80%,
+        transparent 20%,
+        transparent 100%
+      );
+}
+
+.whyText {
+    margin-top: 8%;
+}
+
+.specialInner {
+    padding: 15%;
+    text-align: center;
+}
+
+.specialInner h1 {
+    font-size: 80px;
+    color: #2b7a78;
+}
+
+.quoteHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8%;
+    padding-bottom: 5%;
+}
+
+.quoteHolder img {
+    width: 12%;
+}
+
+.recBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+}
+
+.recBox img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    margin-bottom: 3%;
+}
+
+.recBox h2, .recBox h3 {
+    font-weight: 400;
+}
+
+.recBox h3 {
+    color: #818181;
+    font-size: 16px;
+}
+
+.reviewActualText {
+    width: 75%;
+}
+
+.providerHolder {
+    display: flex;
+    justify-content: center;
+    justify-content: flex-end;
+}
+
+.providerTextBox {
+    background-color: white;
+    width: 28%;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+.providerTextBox h3 {
+    font-weight: 600;
+    line-height: 45px;
+}
+
+.providerTextBox h2 {
+    font-weight: 600 !important;
+    letter-spacing: 1px;
+    line-height: 50px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.providerTextBox p {
+    margin-top: 15%;
+}
+
+.providerSection {
+    background-image: url('/static/images/Providers3.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.providerButton {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.humanConnect h2:after {
+    margin: 0 0;
+}
+
+.demoSection {
+    background-color: #534666;
+    background-image: linear-gradient(to bottom right, #138086, #534666);
+}
+
+.buttonHolder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.simpleSucks {
+    padding: 0 5% 0 5%;
+    text-align: center;
+}
+
+.simpleSucks h2 {
+    font-size: 70px;
+    font-weight: 600;
+    color: white;
+}
+
+.demoButton {
+    padding: 25px;
+}
+
+.demoButton button {
+    border-radius: 50px;
+    padding: 28px 30px;
+    color: white;
+    border-color: white;
+}
+
+.freeAccount button {
+    background-color: #3AAFA9;
+    color: white;
+    border-color: #3AAFA9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.demoButton button:hover {
+    color: lightblue;
+    border-color: lightblue;
+}
+
+.freeAccount button:hover {
+    background-color: rgb(46, 141, 136);
+    border-color:  rgb(46, 141, 136);
+    color: white;
 }
 

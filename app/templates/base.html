@@ -3,7 +3,6 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-
         {% if title %}
         <title>{{ title }} </title>
         {% else %}
@@ -30,12 +29,19 @@
         <!-- slick -->
         <script type="text/javascript" src="{{ url_for('static', filename='js/slick.js') }}"></script>
         <script type="text/javascript" src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
+        <!-- scripts -->
+        <script src="{{ url_for('static', filename='js/feature_slideshow.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/review_slideshow.js') }}"></script>
         {% block head %} {% endblock %}
     </head>
     <body>
         <header id = "secondBox" class = "navbar fade-in">
-            <div class = "logoBox">
-                <a class = "homepageLogo" href = "index.html"><img src = "{{ url_for('static', filename='images/FillerLogo.png')}}">Insert Name</a>
+            <div class = "logoBox logoWhite">
+                <a class = "homepageLogo" href = "index.html"><img src = "{{ url_for('static', filename='images/Logo.png')}}"></a>
+            </div>
+            <div class = "logoBox logoDark">
+                <a class = "homepageLogo" href = "index.html"><img src = "{{ url_for('static', filename='images/LogoBlue.png')}}"></a>
             </div>
             <nav class = "secondBox">
                 <ul class = "headerList">
@@ -161,7 +167,7 @@
                     <div class = "dropDownMedia">
                         <button class = "dropButtonMedia" onclick="window.location.href = 'contact.html'"><a href = "contact.html"> Contact </a></button>
                         <div id = "Ownership"  class = "dropDownContentMedia fade-in">
-                            <a href = "privacy-legal.html"> FAQs </a>
+                            <a href = "privacy-legal.html"> FAQ </a>
                             <a href = "warranties.html"> Our Social </a>
                             <a href = "services.html" id = "lastLink"> Join Us </a>
                         </div>
@@ -169,17 +175,123 @@
                 </ul>
             </nav>
             <div class = "loginBox">
-                <a class = "homepageLogo" href = "index.html" id = "loginButton"><p>Login/Register</p><i class="far fa-user"></i></a>
+                <a class = "homepageLogo loginThing" href = "index.html" id = "loginButton">
+                    <p>Login</p><i class="far fa-user"></i>
+                </a>
             </div>
         </header>
         {% block content %}{% endblock %}
-        <a href="#" class="Scrolltotop"><button onclick="topFunction()" id="mybtn" class="button" title="Go to top"></button></a>
+        
+        <footer> 
+            <div class = "footerFilter">
+                <div class = "footerSectionOverall">
+                <div class = "footerHolder">
+                    <div class = "footerSection sigh">
+                        <div class = "iHateThis">
+                            <img src = "{{ url_for('static', filename='images/Logo.png') }}">
+                        </div>
+                        <p>Doctor visits made easy online 24/7/365.</p>
+                        <div class = "lilLogo">
+                            <div class = "iHateThis aLot">
+                                <img src = "{{ url_for('static', filename='images/Phone.png') }}">
+                            </div>
+                            <p>1-855-269-4712</p>
+                        </div>
+                        <div class = "lilLogo">
+                            <div class = "iHateThis aLot">
+                                <img src = "{{ url_for('static', filename='images/Mail.png') }}">
+                            </div>
+                            <a class = "lilText" href="mailto:helpdesk@neomedica.com">helpdesk@neomedica.com</a>
+                        </div>
+                    </div>
+                    <div class = "footerSection">
+                        <a class = "underlineFooter">Learn More</a>
+                        <div class = "linkHolderFooter">
+                            <a href = "people.html">Why Us?</a>
+                        </div>
+                        <div class = "linkHolderFooter">
+                            <a href = "history.html">History</a>
+                        </div>
+                        <div class = "linkHolderFooter">
+                            <a href = "masterpieces.html">Leadership</a>
+                        </div>
+                        <div class = "linkHolderFooter">
+                            <a href = "design.html">Our Providers</a>
+                        </div>
+                        <div class = "linkHolderFooter">
+                            <a href = "awards.html">NCQA and ACHC</a>
+                        </div>
+                    </div>
+                    <div class = "footerSection">
+                        <a class = "underlineFooter">Experience</a>
+                        <div class = "linkHolderFooter">
+                            <a href = "news.html">Medical Health</a>
+                        </div>
+                        <div class = "linkHolderFooter">
+                            <a href = "events.html">Behavioral Health</a>
+                        </div>
+                        <div class = "linkHolderFooter">
+                            <a href = "museum.html">COVID-19</a>
+                        </div>
+                        <div class = "linkHolderFooter">
+                            <a href = "girl-powered.html">Virtual Reality</a>
+                        </div>
+                        <div class = "linkHolderFooter">
+                            <a href = "social.html">Pet Therapy</a>
+                        </div>
+                    </div>
+                    <div class = "footerSection">
+                        <a class = "underlineFooter">Connect</a>
+                        <div class = "linkHolderFooter">
+                            <a href = "privacy.html">Request a Demo</a>
+                        </div>
+                        <div class = "linkHolderFooter">
+                            <a href = "warranties.html">FAQ</a>
+                        </div>
+                        <div class = "linkHolderFooter">
+                            <a href = "accessories.html">Our Social</a>
+                        </div>
+                        <div class = "linkHolderFooter">
+                            <a href = "guides-manuals.html">Join Us</a>
+                        </div>
+                    </div>
+                    <div class = "footerSection">
+                        <a class = "underlineFooter">Download App</a>
+                        <div class = "learnMoreContainerRegular show-on-scroll-up footerButton">
+                            <a href = "news.html" class="learnMoreButtonRegular">
+                                <button>Apple</button>
+                            </a>
+                        </div>
+                        <div class = "learnMoreContainerRegular show-on-scroll-up footerButton">
+                            <a href = "news.html" class="learnMoreButtonRegular">
+                                <button>Android</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class = "footerBottom">
+                    <div class = "footerSocial">
+                        <div class = "footerWords">
+                            <a class = "social" href="https://facebook.com/weareneolectra" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+                            <a class = "social" href="https://instagram.com/weareneolectra" target="_blank" ><i class="fab fa-instagram"></i></a>
+                            <a class = "social" href="https://twitter.com/@weareneolectra" target="_blank" ><i class="fab fa-twitter"></i></a>
+                            <a class = "social" href="https://www.youtube.com/" target="_blank" ><i class="fab fa-youtube"></i></a>
+                            <a class = "social" href="https://www.pinterest.com/" target="_blank" ><i class="fab fa-pinterest"></i></a>
+                            <a class = "social" href="https://www.linkedin.com/" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class = "copyright">
+                            <p>&copy; 2020-2021 Juanita High School </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </footer>
+
+
         <!-- js -->
         <script src="{{ url_for('static', filename='js/fade_on_scroll.js') }}"></script>
         <script src="{{ url_for('static', filename='js/body_fade.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/feature_slideshow.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/scroll_to_top.js') }}"></script>
         <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
     </body>
 </html>

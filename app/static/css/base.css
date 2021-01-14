@@ -29,12 +29,12 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    max-width: 100px;
-    
+    max-width: 10%;
     font-family: Poppins, sans-serif;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1.5px;
+    transition-duration: 0.3s !important;
 }
 
 .logoBox a {
@@ -47,7 +47,7 @@ header {
 
 .logoBox a img {
 	object-fit: contain;
-	height: 100%;
+	width: 100%;
 }
 
 .loginBox {
@@ -55,7 +55,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100px;
+    max-width: 10%;
 }
 
 .loginBox a {
@@ -180,7 +180,7 @@ header {
 	margin-top: 10px;
 }
 
-.dropDownContentAbout .name:hover::after , .dropDownContentOverview .name:hover::after {
+.dropDownContentAbout .name:hover::after , .dropDownContentOverview .name:hover::after, .loginThing p:hover::after {
     width: 100%;
     transition: width .3s;
 }
@@ -211,7 +211,7 @@ header {
 }  
 
 
-.dropButtonAbout::after, .dropButtonOverview::after, .dropButtonMedia::after {
+.dropButtonAbout::after, .dropButtonOverview::after, .dropButtonMedia::after, .loginThing p::after {
     content: '';
     display: block;
     width: 0;
@@ -269,11 +269,6 @@ header {
 	cursor: pointer;
     height: 19.5px;
 }
-
-#lastLink {
-    padding-bottom: 40px;
-}
-
 
 .dropDownContentAbout button {
 	display: block;
@@ -384,5 +379,228 @@ header {
 .homepageLogo, .homepageLogo p, .homepageLogo i {
     transition-duration: 0.3s;
 }
+
+
+/* title */
+.impactTitle h2 {
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(23, 37, 42);
+}
+
+.impactTitle h2:after {
+    position: absolute;
+	content: '';
+	height: 3px;
+	bottom: -20px;
+	margin: 0 auto;
+	left: 0;
+    right: 0;
+	width: 8%;
+	background: #3aafa9;
+}
     
 
+/** Footer stuff **/
+
+footer {
+    width: 100%;
+    background-color: #21343b;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+ }
+ 
+ 
+ .footerFilter {
+	background-color: rgba(0,0,0,0);
+	height: 100%;
+	width: 100%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footerHolder {
+	height: 100%;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.footerSection {
+	width: 15%;
+    line-height: 40px;
+    text-align: left;
+}
+
+.footerSection a {
+	color: white;
+}
+
+.underlineFooter {
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+
+.linkHolderFooter {
+	font-size: 13px;
+}
+
+.linkHolderFooter a {
+	transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	color: #f0f0f0;
+	letter-spacing: 1px;
+}
+
+
+.linkHolderFooter a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #3aafa9;
+    transition: width .3s;
+}
+
+.linkHolderFooter a:hover::after  {
+    width: 50%;
+    transition: width .3s;
+}
+
+.footerBottom {
+	padding-top: 3%
+}
+
+.footerSocial {
+	text-align: center;
+}
+
+.FooterLinks li p {
+	padding-top: 20px;
+}
+
+.footerSectionOverall {
+	width: 80vw;
+}
+
+.footerWords {
+	display: flex;
+	align-items: center;	
+	justify-content: center;
+	padding-top: 15px;
+}
+
+
+.footerWords h4 {
+	font-family: Roboto, sans-serif;
+	color: white;
+	text-transform: uppercase;
+	padding-right: 30px;
+}
+
+.fa-facebook-f, .fa-instagram, .fa-twitter, .fa-youtube, .fa-pinterest {
+	padding-top: 0 !important;
+	padding-right: 30px;
+}
+
+.copyright {
+	color: white;
+	letter-spacing: 1px;
+    padding-top: 15px;
+    font-size: 12px;
+}
+
+.fa-facebook-f, .fa-instagram, .fa-twitter, .fa-youtube, .fa-pinterest, .fa-linkedin-in {
+    font-size: 20px;
+    color: white;
+  }
+  
+  .fa-facebook-f:hover, .fa-instagram:hover, .fa-twitter:hover, .fa-youtube:hover, .fa-pinterest:hover, .fa-linkedin-in:hover  {
+    color: #3aafa9 !important;
+    cursor: pointer;
+  }
+  
+  .fa-facebook-f, .fa-instagram, .fa-twitter, .fa-youtube, .fa-pinterest, .fa-linkedin-in {
+    -webkit-transition-duration: 0.2s; 
+    transition-duration: 0.2s;
+  }
+  
+  .social {
+      color: white;
+  }
+    
+  .iHateThis {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 10px;
+  }
+
+  .iHateThis img {
+      width: 100%;
+  }
+
+  .lilLogo {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }
+
+  .aLot {
+      margin-right: 15px;
+      width: 10%;
+      height: 100%;
+      padding: 0 !important;
+  }
+
+  .aLot img {
+      width: 100%;
+  }
+
+  .footerSection p {
+      font-size: 14px;
+      color: #f0f0f0;
+  }
+
+  .lilText {
+      font-size: 14px;
+  }
+
+  .sigh {
+      margin-right: 5%;
+      width: 25%;
+  }
+
+.footerButton button {
+    color: white !important;
+    border-color: white !important;
+    border-radius: 50px !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.footerButton button {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+.footerButton {
+    justify-content: flex-start !important;
+}
+
+.footerButton button:hover {
+    color: #3fc2bb !important;
+    border-color: #3fc2bb !important;
+}
+
+
+  

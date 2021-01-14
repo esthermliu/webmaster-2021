@@ -192,7 +192,7 @@
             </div>
             <div class = "featureLargeBox show-on-scroll-up">
                 <a class="featurePrev"><i class="fa fa-angle-left"></i></a>
-                <div class="featuredContainer">
+                <div class="featuredContainer specificFeature">
                     <div class = "featuredImageHolder">
                         <img src = "{{ url_for('static', filename='images/WAPostTransparent.png') }}">
                     </div>
@@ -217,32 +217,149 @@
         </div>
     </div>
     <div id = "whySection" class = "firstSection">
-        <div class = "impactTitle show-on-scroll">
-            <h2>Why Us?</h2>
-        </div>
+        
         <div class = "specialContainer">
             <div class = "specialInsideContainer">
                 <div class = "specialText">
-                    <h3>Insert text blah blah blah</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class = "impactTitle show-on-scroll">
+                        <h2>Why Us?</h2>
+                    </div>
+                    <p class = "whyText show-on-scroll">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <div class = "specialLargeBox">
-                    <div class = "specialBox">
-                        <h1>8x</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </p>
+                    <div class = "specialBox show-on-scroll-up">
+                        <div class = "specialInner">
+                            <h1>90s</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        </div>
                     </div>
-                    <div class = "specialBox">
-                        <h1>8x</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                    <div class = "specialBox show-on-scroll-up">
+                        <div class = "specialInner">
+                            <h1>95%</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        </div>
                     </div>
-                    <div class = "specialBox">
-                        <h1>8x</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                    <div class = "specialBox show-on-scroll-up">
+                        <div class = "specialInner">
+                            <h1>8x</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        </div>
                     </div>
-                    <div class = "specialBox">
-                        <h1>8x</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "firstSection providerSection">
+        <div class = "featureTransparent providerTransparent">
+            <div class = "providerHolder">
+                <div class = "providerTextBox">
+                    <h3>Real People</h3>
+                    <div class = "impactTitle show-on-scroll humanConnect">
+                        <h2>Always a Human Connection</h2>
                     </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <div class = "learnMoreContainerRegular show-on-scroll-up providerButton">
+                        <a href = "news.html" class="learnMoreButtonRegular"><button>Our Providers</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "firstSection">
+        <div id = "smallerTitleBlack" class = "impactTitle show-on-scroll">
+            <h2>Our Members Say it Best</h2>
+        </div>
+        <div class="quoteHolder">
+            <img src="{{ url_for('static', filename='images/Quotes.png') }}">
+        </div>
+        <div class = "featureLargeBox show-on-scroll-up noPadTop">
+            <a class="reviewPrev"><i class="fa fa-angle-left"></i></a>
+            <div class="reviewContainer">
+                <div class = "featuredImageHolder reviewText">
+                    <div class = "reviewInnerText">
+                        <div class="reviewActualText">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class="recBox">
+                            <img src="{{ url_for('static', filename='images/FillerDude.png') }}">
+                            <h2>Insert Name</h2>
+                            <h3>Insert Description</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class = "featuredImageHolder reviewText">
+                    <div class = "reviewInnerText">
+                        <div class="reviewActualText">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        </div>
+                        <div class="recBox">
+                            <img src="{{ url_for('static', filename='images/FillerDude.png') }}">
+                            <h2>Insert Name</h2>
+                            <h3>Insert Description</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class = "featuredImageHolder reviewText">
+                    <div class = "reviewInnerText">
+                        <div class="reviewActualText">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class="recBox">
+                            <img src="{{ url_for('static', filename='images/FillerDude.png') }}">
+                            <h2>Insert Name</h2>
+                            <h3>Insert Description</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class = "featuredImageHolder reviewText">
+                    <div class = "reviewInnerText">
+                        <div class="reviewActualText">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class="recBox">
+                            <img src="{{ url_for('static', filename='images/FillerDude.png') }}">
+                            <h2>Insert Name</h2>
+                            <h3>Insert Description</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class = "featuredImageHolder reviewText">
+                    <div class = "reviewInnerText">
+                        <div class="reviewActualText">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class="recBox">
+                            <img src="{{ url_for('static', filename='images/FillerDude.png') }}">
+                            <h2>Insert Name</h2>
+                            <h3>Insert Description</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class = "featuredImageHolder reviewText">
+                    <div class = "reviewInnerText">
+                        <div class="reviewActualText">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class="recBox">
+                            <img src="{{ url_for('static', filename='images/FillerDude.png') }}">
+                            <h2>Insert Name</h2>
+                            <h3>Insert Description</h3>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+            <a class="reviewNext"><i class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
+    <div class = "firstSection demoSection">
+        <div class = "simpleSucks">
+            <h2 class = "show-on-scroll-up">Simple, yet powerful.</h2>
+            <div class = "buttonHolder">
+                <div class = "learnMoreContainerRegular show-on-scroll-up demoButton">
+                    <a href = "news.html" class="learnMoreButtonRegular"><button>Request Demo</button></a>
+                </div>
+                <div class = "learnMoreContainerRegular show-on-scroll-up demoButton freeAccount">
+                    <a href = "news.html" class="learnMoreButtonRegular"><button>Create a Free Account</button></a>
                 </div>
             </div>
         </div>
