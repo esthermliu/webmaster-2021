@@ -1,0 +1,200 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }} <!-- Have to include the super to get the default css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block childcontent %}
+    <div class = "firstSection">
+        <div class = "aboutUsSection">
+            <div class = "impactTitle show-on-scroll-up">
+                <h2>Who Are We? </h2>
+            </div>
+            <div class = "aboutUsArticle lessSpace show-on-scroll-right">
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+            <div class = "imageHolder show-on-scroll-left">
+                <img src = "{{ url_for('static', filename='images/FillerPicture.jpeg') }}"/>
+            </div>
+        </div>
+    </div>
+    <div class = "secondSection">
+        <div class = "backgroundColor">
+            <div class = "impactTitle moreSpace whiteTitle show-on-scroll-up">
+                <h2> Our Values </h2>
+            </div>
+            <div class = "valuesSection">
+                <div class = "value show-on-scroll-right">
+                    <img src = "{{ url_for('static', filename='images/FillerLogo.png') }}"/>
+                    <div class = "wordHolder">
+                        <h3>PASSION</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </div>
+                </div>
+                <div class = "value show-on-scroll-up">
+                    <img src = "{{ url_for('static', filename='images/FillerLogo.png') }}"/>
+                    <div class = "wordHolder">
+                        <h3>COLLABORATION</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </div>
+                </div>
+                <div class = "value show-on-scroll-left">
+                    <img src = "{{ url_for('static', filename='images/FillerLogo.png') }}"/>
+                    <div class = "wordHolder">
+                        <h3>INNOVATION</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </div>
+                </div>
+                <div class = "value show-on-scroll-right">
+                    <img src = "{{ url_for('static', filename='images/FillerLogo.png') }}"/>
+                    <div class = "wordHolder">
+                        <h3>PASSION</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </div>
+                </div>
+                <div class = "value show-on-scroll-up">
+                    <img src = "{{ url_for('static', filename='images/FillerLogo.png') }}"/>
+                    <div class = "wordHolder">
+                        <h3>COLLABORATION</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </div>
+                </div>
+                <div class = "value show-on-scroll-left">
+                    <img src = "{{ url_for('static', filename='images/FillerLogo.png') }}"/>
+                    <div class = "wordHolder">
+                        <h3>INNOVATION</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "thirdSection">
+        <div class = "impactTitle show-on-scroll-up">
+            <h2>What Do We Do? </h2>
+        </div>
+        <div class = "aboutUsArticle">
+            <p class = "show-on-scroll-right"> <b>We build robots!</b> Each team designs, builds, and programs their own robot for the current season. In fact, within a single season, EXO teams often rebuild multiple times, sometimes even creating a new 
+            robot altogether. Teams also enter into competitions. These include the local league competitions, the regional competitions, the state competition, and finally the VEX Robotics Worlds Championship. TSA and VEX also partner together, so teams interested in the VEX Robotics Competition at TSA also compete there.
+            The current game for the 2020 - 2021 season is Change Up. To learn more, check out the competitions section under "VEX Overview".</p>
+            <p class = "show-on-scroll-left"><b>...But we do more than build robots.</b> Through the interactive, hands-on platform VEX Robotics provides, we also develop teamwork and leadership skills. We learn how to work together with our 
+            different skill sets and personalities, and we learn how to lead a team. We also develop resilience and perseverance when things don't always go right in the process. </p>
+            <p class = "show-on-scroll-right"> <b> And most importantly, we have fun! </b> Here at Exothermic Robotics, we believe that the experience and process is what matters the most. The results may not always turn out as expected, but
+            there's always another opportunity!</p>
+        </div>
+    </div>
+    <div id = "future" class = "secondSection">
+        <div id = "futureBackground" class = "backgroundColor">
+            <div class = "impactTitle whiteTitle show-on-scroll-up">
+                <h2>Our Vision for the Future </h2>
+            </div>
+            <div class = "valuesSection">
+                <div class = "value valSpace show-on-scroll-right">
+                    <img src = "{{ url_for('static', filename='images/FillerLogo.png') }}"/>
+                    <div class = "wordHolder">
+                        <h3>INDIVIDUAL</h3>
+                        <p>Become a place to provide self-development in all aspects, not just in robotics</p>
+                    </div>
+                </div>
+                <div class = "value valSpace show-on-scroll-up">
+                    <img src = "{{ url_for('static', filename='images/FillerLogo.png') }}"/>
+                    <div class = "wordHolder">
+                        <h3>CLUB</h3>
+                        <p>Maintain our reputation as a top-tier robotics club </p>
+                    </div>
+                </div>
+                <div class = "value valSpace show-on-scroll-left">
+                    <img src = "{{ url_for('static', filename='images/FillerLogo.png') }}"/>
+                    <div class = "wordHolder">
+                        <h3>COMMUNITY</h3>
+                        <p>Become a major player in the contribution and growth of STEM and robotics in our local community</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "when" class = "thirdSection when">
+        <div class = "impactTitle show-on-scroll-up">
+            <h2>When Do We Meet? </h2>
+        </div>
+        <div class = "aboutUsArticle show-on-scroll-left">
+            <p>Our official meetings times are Tuesdays and Thursdays from 5:30 - 7:30 PM, though often times teams will meet multiple times a week, especially before competitions. Each team is given their own key to the space so they get to decide their own meeting schedules, creating a flexible environment. Teams also communicate with each other about who is at the Robot House as well as other information, such as upcoming competitions, fees, etc. </p>
+            <p>Our official meetings times are Tuesdays and Thursdays from 5:30 - 7:30 PM, though often times teams will meet multiple times a week, especially before competitions. Each team is given their own key to the space so they get to decide their own meeting schedules, creating a flexible environment. Teams also communicate with each other about who is at the Robot House as well as other information, such as upcoming competitions, fees, etc. </p>
+        </div>
+    </div>
+    <div class = "thirdSection">
+        <div class = "impactTitle show-on-scroll-up">
+            <h2>Where Do We Work? </h2>
+        </div>
+        <div class = "aboutUsArticle show-on-scroll-right">
+            <p>We have our own workspace located just off of Willows Road in Redmond, Washington. Inside, we've set up a raised practice field as well as tables for each team to work on. Teams share the basic supplies and tools needed to create an effective robot, but can also order their own parts when needed. </p>
+        </div>
+        <div class="mapouter">
+            <div class="gmap_canvas show-on-scroll-left">
+                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=14840%20NE%2095th%20St%2C%20Redmond%2C%20WA%2098052&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <a href="https://ytify.com"></a>
+            </div>
+        </div>
+    </div>
+    <div class = "firstSection specialClub">
+        <div class = "aboutUsSection">
+            <div class = "impactTitle show-on-scroll-up">
+                <h2>What's Special About Us? </h2>
+            </div>
+            <div class = "aboutUsArticle show-on-scroll-right">
+                <p> Our club is one of a kind due to its focus on passing our knowledge from generation to generation. Our student board members range from build/programming advisors to supply managers allowing our club to be completely student run. We work in a shared work place, known as the Robot House, so everyone can share tips and advice with each other as we work. We are also a community organization, with members from schools all over the Washington Eastside.</p>
+            </div>
+        </div>
+    </div>
+    <div class = "lastSection">
+        <div class = "backgroundSection2">
+            <div class = "impactTitle show-on-scroll-up">
+                <h2>Learn More About Us </h2>
+            </div>
+            <div class = "learnContainer">
+                <div class = "learnMoreContainer show-on-scroll-left">
+                <a href = "{{ url_for('why') }}" class = "competitionLink"> 
+                    <div class = "competition">
+                        <div class = "Filter">
+                            <h4>Why Us?</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href = "{{ url_for('history') }}" class = "eventsLink">
+                    <div class = "events">
+                        <div class = "Filter">
+                            <h4>History</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href = "{{ url_for('leadership') }}" class = "programsLink">
+                    <div class = "programs">
+                        <div class = "Filter">
+                            <h4>Leadership</h4>
+                        </div>
+                    </div>
+                </a>
+                <a id = "outreach" href = "{{ url_for('providers') }}" class = "programsLink">
+                    <div class = "programs">
+                        <div class = "Filter">
+                            <h4>Our Providers</h4>
+                        </div>
+                    </div>
+                </a>
+                <a id = "challenges" href = "{{ url_for('ncqa') }}" class = "programsLink">
+                    <div class = "programs">
+                        <div class = "Filter">
+                            <h4>NCQA and ACHC</h4>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+

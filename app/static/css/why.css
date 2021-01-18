@@ -1,0 +1,513 @@
+.firstSection {
+    padding: 8% 20% 8% 20%;
+}
+
+.second {
+    padding-top: 0% !important;
+}
+
+.impactTitle {
+    text-align: center;
+}
+
+.impactSection {
+    margin-top: 12%;
+}
+
+.impactSection {
+    background-image: url("/static/images/GrayMapBlue.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 640px;
+    background-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftImpact {
+    width: 40%;
+}
+
+.leftImpact h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.rightImpact {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.smallerTitle h2 {
+    font-size: 35px;
+}
+
+.smallerTitle h2:after {
+    width: 15% !important;
+}
+
+.impactBox h4 {
+    font-weight: 600;
+}
+
+.impactBox h3 {
+    font-size: 50px;
+    color: #3aafa9;
+    letter-spacing: 1.5px;
+}
+
+.impactBox {
+    margin-bottom: 20%;
+    text-align: center;
+    color: rgb(102, 102, 102);
+}
+
+.lastImpact {
+    margin-bottom: 0 !important;
+}
+
+.featureLargeBox {
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.featuredContainer {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.featuredContainer .slick-dots {
+    bottom: -25px !important;
+    width: 100% !important;
+}
+
+/* feature prev and next */
+.featurePrev, .featureNext {
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300 !important;
+    font-size: 25px;
+    border-radius: 0 3px 3px 0;
+    height: 40px;
+    width: 20px;
+    user-select: none;
+    z-index: 3 !important;
+    transition: 0.4s ease;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+  }
+  
+.featureNext:hover {
+    transform: translate(6px, 0) scale(0.9);
+}
+  
+.featurePrev:hover {
+    transform: translate(-6px, 0) scale(0.9);
+}
+  
+  
+.featurePrev:hover, .featureNext:hover {
+    color: rgba(222, 242, 241, 0.6);
+}
+
+.slick-dots {
+    /*background-color: purple !important;*/
+    height: 2vh;
+    width: 99vw !important;
+    bottom: 3vh !important;
+    text-align: center !important;
+    margin: 0 !important;
+}
+
+
+.slick-dots li button {
+    border: 0px solid rgba(0,0,0, 0.3);
+    background: Transparent !important;
+    border-radius: 50%;
+    width: 4px !important;
+    height: 4px !important;
+    transition-duration: 0.2s;
+    -webkit-transition: 0.2s;
+    color: white;
+}
+
+.slick-dots li button:before {
+    font-size: 30px !important;
+    color: white !important;
+}
+
+.slick-dots li button:hover {
+    transform: scale(1.1);
+}
+
+#featuredSection {
+    background-image: url('../images/Feature.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0;
+}
+
+.featureTransparent {
+    background-image: linear-gradient(rgba(43, 122, 120, 0.6), rgba(145, 75, 173, 0.4));
+    padding: 8% 2% 8% 2% !important;
+}
+
+.providerTitle h2 {
+    color: white;
+}
+
+.providerTitle h2:after {
+    background: white !important;
+    width: 5%;
+}
+
+.imageInside img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.imageInside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8%;
+}
+
+.featuredImageHolder {
+    margin-right: 1%;
+    margin-left: 1%;
+    text-align: justify;
+    color: white;
+}
+
+.providerInfo h3 {
+    font-weight: 600;
+    color: white;
+}
+
+.providerInfo h4 {
+    font-weight: 400;
+    color: rgb(238, 238, 238);
+}
+
+.providerInfo {
+    margin-top: 8%;
+    text-align: center;
+}
+
+.expertSection {
+    display: flex;
+    padding: 8% 10% 0% 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.graphHolder {
+    width: 45%;
+}
+
+.graphImageHolder img {
+    width: 100%;
+}
+
+.textHolder {
+    width: 45%;
+}
+
+.textHolder p {
+    line-height: 35px;
+    padding-top: 8%;
+}
+
+/* learn more link */
+.learnMore {
+    color: #2B7A78;
+}
+
+.learn {
+    margin-left: 5px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.learnMore::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #2B7A78, #3AAFA9, #DEF2F1);
+    transition: width .3s;
+	margin-top: 5px;
+}
+
+.learnMore:hover::after  {
+    width: 55%;
+    transition: width .3s;
+}
+
+.learnMore:hover .learn {
+    transform: translate(2px, 0);
+}
+
+.learnMoreLink {
+    margin-top: 5%;
+}
+
+.longUnd:hover::after {
+    width: 100% !important;
+    transition: width .3s;
+}
+
+.longUnd {
+    padding-top: 3%;
+}
+
+.expertSectionNoPad {
+    padding: 0 !important;
+}
+
+.imageExpert img {
+    width: 100%;
+}
+
+.imageExpert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dimensionHolder {
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dimensionImageHolder {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+.dimensionImageHolder img {
+  width: 100%;
+}
+
+.dimensionText {
+    margin-top: 13%;
+    text-align: center;
+}
+
+.dimensionText h3 {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(23, 37, 42);
+}
+
+.dimensionText h4 {
+    font-weight: 400;
+    color: rgb(129, 129, 129);
+}
+
+.dimension {
+    margin: 2%;
+}
+
+table {
+    margin-top: 8%;
+}
+
+.tableImageHolder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableImageHolder img {
+    width: 70%;
+}
+
+.heading {
+    width: 30%;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-bottom: 5%;
+    padding: 2%;
+}
+
+.blueTable {
+    background-color: #def2f1;
+}
+
+.special {
+    padding: 4%;
+}
+
+.regularText {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.features {
+    text-align: left;
+}
+
+.check {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.imageCheckHolder img {
+    width: 10%;
+    padding: 5%;
+}
+
+.imageCheckHolder {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    cursor: context-menu;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.impactTitle h3 {
+    font-weight: 600;
+    color: rgb(87, 87, 87);
+    letter-spacing: 1px;
+}
+
+.costHolder {
+    padding-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageHolder {
+    width: 60%;
+}
+
+.imageHolder img {
+    width: 100%;
+}
+
+.providerSection {
+    background-image: url('/static/images/Providers3.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.providerTextBox {
+    background-color: white;
+    width: 28%;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+.providerTextBox h3 {
+    font-weight: 600;
+    line-height: 45px;
+}
+
+.providerTextBox p {
+    margin-top: 15%;
+    line-height: 35px;
+}
+
+.providerTransparent {
+    background-image: linear-gradient( rgba(145, 75, 173, 0.2), rgba(43, 122, 120, 0.2));
+    padding: 8% 10% 8% 10% !important;
+}
+
+.humanConnect {
+    text-align: left;
+}
+
+.humanConnect h2:after {
+    margin: 0 !important;
+}
+
+.innovationSection {
+    padding-top: 10%;
+}
+
+.innovation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.lastInnovation {
+    margin-bottom: 0 !important;
+}
+
+.innovationImage {
+    width: 40%;
+}
+
+.smallerImage {
+    width: 20% !important;
+}
+
+.innovationText {
+    width: 50%;
+}
+
+.innovationText h3 {
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 2%;
+}
+
+.innovationText p {
+    line-height: 33px;
+}
+
+.innovationImage img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 5px 22px 0 rgba(0, 0, 0, 0.2);
+}
+
+.around {
+    justify-content: space-around !important;
+}
+
+.whyLanding {
+    background-image: url('/static/images/FillerPicture.jpeg') !important;
+}

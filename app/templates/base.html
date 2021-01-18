@@ -1,10 +1,12 @@
+{% from "macros.html" import nav_link with context %}
+{% from "macros.html" import nav_link_inner with context %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         {% if title %}
-        <title>{{ title }} </title>
+        <title>{{ title }}</title>
         {% else %}
         <title>Hey! You forgot a title!</title>
         {% endif %}
@@ -36,53 +38,37 @@
         {% block head %} {% endblock %}
     </head>
     <body>
-        <header id = "secondBox" class = "navbar fade-in">
+        <header id = "secondBox" class = "navbar">
             <div class = "logoBox logoWhite">
-                <a class = "homepageLogo" href = "index.html"><img src = "{{ url_for('static', filename='images/Logo.png')}}"></a>
+                <a class = "homepageLogo" href = "{{ url_for('index') }}"><img src = "{{ url_for('static', filename='images/LogoShadow.png')}}"></a>
             </div>
             <div class = "logoBox logoDark">
-                <a class = "homepageLogo" href = "index.html"><img src = "{{ url_for('static', filename='images/LogoBlue.png')}}"></a>
+                <a class = "homepageLogo" href = "{{ url_for('index') }}"><img src = "{{ url_for('static', filename='images/LogoBlue.png')}}"></a>
             </div>
             <nav class = "secondBox">
                 <ul class = "headerList">
                     <div class = "dropDownAbout">
-                        <button class = "dropButtonAbout" onclick="window.location.href = 'models.html'"><a href = "models.html"> About </a> </button>
+                        {{ nav_link('about', 'About') }}
                         <div class = "dropDownContentAbout fade-in">
                             <div class = "test1">
-                            <button class = "insideButtonAbout fade-in" onclick="window.location.href = 'fulgora.html'"><a class = "name" href = "fulgora.html"> Why Us? </a><a href = "fulgora.html"><!--<i id = "rightArrow" class="fa fa-angle-right"></i>--></a></button>
-                                <!--<div class = "dropDownInsideAbout fade-in">
-                                    <a class = "name2" href = "fulgora-xe.html"> Fulgora XE</a>
-                                    <a class = "name2" href = "fulgora-xe-neoquad.html"> Fulgora XE NeoQuad </a>
-                                    <a class = "name2" href = "fulgora-xe-tergo.html"> Fulgora XE Tergo </a>
-                                </div>-->
+                                {{ nav_link_inner('why', 'Why Us?') }}
                             </div>
                             <div class = "test2">
-                            <button class = "insideButtonAbout2 fade-in" onclick="window.location.href = 'bronte.html'"><a class = "name" href = "bronte.html"> History </a><a href = "bronte.html"><!--<i id = "rightArrow" class="fa fa-angle-right"></i>--></a></button>
-                                <!--<div class = "dropDownInsideAbout2 fade-in">
-                                    <a class = "name2" href = "bronte-xfe-nitro.html"> Bronte XFE Nitro </a>
-                                    <a class = "name2" href = "bronte-xf-neoquad.html"> Bronte XF NeoQuad</a>
-                                    <a class = "name2" href = "bronte-xf-domus.html"> Bronte XF Domus</a>
-                                </div>-->
+                                {{ nav_link_inner('history', 'History') }}
                             </div>
                             <div class = "test3">
-                            <button class = "insideButtonAbout3 fade-in" onclick="window.location.href = 'astrape.html'"><a class = "name" href = "astrape.html"> Leadership </a><a href = "astrape.html"></a></button>
-                                <!--<div class = "dropDownInsideAbout3">
-                                </div>-->
+                                {{ nav_link_inner('leadership', 'Leadership') }}
                             </div>
                             <div class = "test4">
-                            <button class = "insideButtonAbout4 fade-in" onclick="window.location.href = 'pele.html'"><a class = "name" href = "pele.html"> Our Providers </a><a href = "pele.html"></a></button>
-                                <!--<div class = "dropDownInsideAbout4">
-                                </div>-->
+                                {{ nav_link_inner('providers', 'Our Providers') }}
                             </div>
                             <div class = "test5">
-                            <button class = "insideButtonAbout5 fade-in" onclick="window.location.href = 'oya.html'"><a class = "name" id = "lastLink" href = "oya.html"> NCQA and ACHC </a><a></a></button>
-                                <!--<div class = "dropDownInsideAbout5">
-                                </div>-->
+                                {{ nav_link_inner('ncqa', 'NCQA and ACHC') }}
                             </div>
                         </div>
                     </div>
                     <div class = "dropDownOverview">
-                        <button class = "dropButtonOverview" onclick="window.location.href = 'brand.html'"> <a href = "brand.html">Treatment Options </a></button>
+                        <button {% if activePageOptions == true %} class = "dropButtonOverview active" {% else %} class = "dropButtonOverview" {% endif %} onclick="window.location.href = 'brand.html'"> <a href = "brand.html">Treatment Options </a></button>
                         <div class = "dropDownContentOverview fade-in">
                             <div class = "test6">
                             <button class = "insideButtonAbout6 shorter fade-in" onclick="window.location.href = 'people.html'"><a class = "name" href = "people.html"> Medical Health Solutions </a><a href = "people.html"><i id = "rightArrow" class="fa fa-angle-right"></i></a></button>
@@ -180,13 +166,14 @@
                 </a>
             </div>
         </header>
+
         {% block content %}{% endblock %}
         
         <footer> 
             <div class = "footerFilter">
                 <div class = "footerSectionOverall">
                 <div class = "footerHolder">
-                    <div class = "footerSection sigh">
+                    <div class = "footerSection sigh show-on-scroll-up">
                         <div class = "iHateThis">
                             <img src = "{{ url_for('static', filename='images/Logo.png') }}">
                         </div>
@@ -204,10 +191,10 @@
                             <a class = "lilText" href="mailto:helpdesk@neomedica.com">helpdesk@neomedica.com</a>
                         </div>
                     </div>
-                    <div class = "footerSection">
+                    <div class = "footerSection show-on-scroll-up">
                         <a class = "underlineFooter">Learn More</a>
                         <div class = "linkHolderFooter">
-                            <a href = "people.html">Why Us?</a>
+                            <a href = "{{ url_for('why') }}">Why Us?</a>
                         </div>
                         <div class = "linkHolderFooter">
                             <a href = "history.html">History</a>
@@ -222,7 +209,7 @@
                             <a href = "awards.html">NCQA and ACHC</a>
                         </div>
                     </div>
-                    <div class = "footerSection">
+                    <div class = "footerSection show-on-scroll-up">
                         <a class = "underlineFooter">Experience</a>
                         <div class = "linkHolderFooter">
                             <a href = "news.html">Medical Health</a>
@@ -240,7 +227,7 @@
                             <a href = "social.html">Pet Therapy</a>
                         </div>
                     </div>
-                    <div class = "footerSection">
+                    <div class = "footerSection show-on-scroll-up">
                         <a class = "underlineFooter">Connect</a>
                         <div class = "linkHolderFooter">
                             <a href = "privacy.html">Request a Demo</a>
@@ -255,7 +242,7 @@
                             <a href = "guides-manuals.html">Join Us</a>
                         </div>
                     </div>
-                    <div class = "footerSection">
+                    <div class = "footerSection show-on-scroll-up">
                         <a class = "underlineFooter">Download App</a>
                         <div class = "learnMoreContainerRegular show-on-scroll-up footerButton">
                             <a href = "news.html" class="learnMoreButtonRegular">
@@ -271,7 +258,7 @@
                 </div>
                 <div class = "footerBottom">
                     <div class = "footerSocial">
-                        <div class = "footerWords">
+                        <div class = "footerWords show-on-scroll-up">
                             <a class = "social" href="https://facebook.com/weareneolectra" target="_blank" ><i class="fab fa-facebook-f"></i></a>
                             <a class = "social" href="https://instagram.com/weareneolectra" target="_blank" ><i class="fab fa-instagram"></i></a>
                             <a class = "social" href="https://twitter.com/@weareneolectra" target="_blank" ><i class="fab fa-twitter"></i></a>
@@ -279,7 +266,7 @@
                             <a class = "social" href="https://www.pinterest.com/" target="_blank" ><i class="fab fa-pinterest"></i></a>
                             <a class = "social" href="https://www.linkedin.com/" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
                         </div>
-                        <div class = "copyright">
+                        <div class = "copyright show-on-scroll-up">
                             <p>&copy; 2020-2021 Juanita High School </p>
                         </div>
                     </div>

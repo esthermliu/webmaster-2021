@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
+{% endblock %}
+
+<article>
+{% block content %}
+    <div class = "landing {{ landing }}">
+        <div class = "landingBackground">
+            <div class = "titleHolder">
+                <img class = "show-on-scroll-down fadeInDown" src = "{{ url_for('static', filename='images/LogoShadow.png') }}">
+                <h1 class = "show-on-scroll-up fadeInUp">{{ inner_title }}</h1>
+                <h2 class = "show-on-scroll-up fadeInUp">{{ description }}</h2>
+            </div>
+        </div>
+    </div>
+    {% block childcontent %}
+    {% endblock %}
+{% endblock %}
+</article>

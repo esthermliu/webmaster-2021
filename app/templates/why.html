@@ -1,0 +1,409 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/why.css') }}">
+{% endblock %}
+
+{% block childcontent %}
+    <div class = "firstSection">
+        <div class = "impactTitle show-on-scroll-up">
+            <h2> A widespread impact </h2>
+        </div>
+        <div class = "impactSection">
+            <div class = "leftImpact">
+                <div class = "impactTitle smallerTitle show-on-scroll-right">
+                    <h2> Making healthcare more accessible and affordable. </h2>
+                </div>
+            </div>
+            <div class = "rightImpact">
+                <div class = "impactBox show-on-scroll-left">
+                    <h4>We've saved an average</h4>
+                    <h3>$2150</h3>
+                    <h4>for every treatment plan</h4>
+                </div>
+                <div class = "impactBox show-on-scroll-left">
+                    <h4>We've sent over</h4>
+                    <h3>500,000</h3>
+                    <h4>treatment plans</h4>
+                </div>
+                <div class = "impactBox lastImpact show-on-scroll-left">
+                    <h4>We've saved </h4>
+                    <h3>$57M</h3>
+                    <h4>in total healthcare costs</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id = "featuredSection" class = "firstSection">
+        <div class = "featureTransparent">
+            <div class = "impactTitle providerTitle show-on-scroll">
+                <h2>Passionate providers</h2>
+            </div>
+            <div class = "featureLargeBox show-on-scroll-up">
+                <a class="featurePrev"><i class="fa fa-angle-left"></i></a>
+                <div class="featuredContainer specificFeature">
+                    <div class = "featuredImageHolder">
+                        <div class = "imageInside">
+                            <img src = "{{ url_for('static', filename='images/FillerDude.png') }}">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        <div class = "providerInfo">
+                            <h3>Sammy Urtzal, MD</h3>
+                            <h4>Neomedica Doctor</h4>
+                            <h4>Child Genius</h4>
+                        </div>
+                    </div>
+                    <div class = "featuredImageHolder">
+                        <div class = "imageInside">
+                            <img src = "{{ url_for('static', filename='images/FillerDude.png') }}">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        <div class = "providerInfo">
+                            <h3>Sammy Urtzal, MD</h3>
+                            <h4>Neomedica Doctor</h4>
+                            <h4>Child Genius</h4>
+                        </div>
+                    </div>
+                    <div class = "featuredImageHolder">
+                        <div class = "imageInside">
+                            <img src = "{{ url_for('static', filename='images/FillerDude.png') }}">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </p>
+                        <div class = "providerInfo">
+                            <h3>Sammy Urtzal, MD</h3>
+                            <h4>Neomedica Doctor</h4>
+                            <h4>Child Genius</h4>
+                        </div>
+                    </div>
+                    <div class = "featuredImageHolder">
+                        <div class = "imageInside">
+                            <img src = "{{ url_for('static', filename='images/FillerDude.png') }}">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        <div class = "providerInfo">
+                            <h3>Sammy Urtzal, MD</h3>
+                            <h4>Neomedica Doctor</h4>
+                            <h4>Child Genius</h4>
+                        </div>
+                    </div>
+                    <div class = "featuredImageHolder">
+                        <div class = "imageInside">
+                            <img src = "{{ url_for('static', filename='images/FillerDude.png') }}">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        <div class = "providerInfo">
+                            <h3>Sammy Urtzal, MD</h3>
+                            <h4>Neomedica Doctor</h4>
+                            <h4>Child Genius</h4>
+                        </div>
+                    </div>
+                    <div class = "featuredImageHolder">
+                        <div class = "imageInside">
+                            <img src = "{{ url_for('static', filename='images/FillerDude.png') }}">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        <div class = "providerInfo">
+                            <h3>Sammy Urtzal, MD</h3>
+                            <h4>Neomedica Doctor</h4>
+                            <h4>Child Genius</h4>
+                        </div>
+                    </div>       
+                </div>
+                <a class="featureNext"><i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class = "firstSection expertSectionNoPad">
+        <div class = "expertSection">
+            <div class = "graphHolder show-on-scroll-right">
+                <div class = "graphImageHolder">
+                    <img src = "{{ url_for('static', filename='images/Graphs.png') }}">
+                </div>
+            </div>
+            <div class = "textHolder">
+                <div class = "impactTitle show-on-scroll-left">
+                    <h2> Life-changing expert medical advice </h2>
+                </div>
+                <p class = "show-on-scroll-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>  
+                <div class = "learnMoreLink show-on-scroll-left">
+                    <a href = "#" class = "learnMore">Learn more about our medical experts <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class = "imageExpert show-on-scroll-up">
+            <img src = "{{ url_for('static', filename='images/Discussion.jpg') }}">
+        </div>
+    </div>
+
+    <div class = "firstSection">
+        <div class = "impactTitle show-on-scroll-up">
+            <h2> Five dimensional focus </h2>
+        </div>
+        <div class = "dimensionHolder">
+            <div class = "dimension show-on-scroll-up">
+                <div class = "dimensionImageHolder">
+                    <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
+                </div>
+                <div class = "dimensionText">
+                    <h3>People</h3>
+                    <h4>Simplify healthcare</h4>
+                </div>
+            </div>
+            <div class = "dimension show-on-scroll-up">
+                <div class = "dimensionImageHolder">
+                    <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
+                </div>
+                <div class = "dimensionText">
+                    <h3>People</h3>
+                    <h4>Simplify healthcare</h4>
+                </div>
+            </div>
+            <div class = "dimension show-on-scroll-up">
+                <div class = "dimensionImageHolder">
+                    <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
+                </div>
+                <div class = "dimensionText">
+                    <h3>People</h3>
+                    <h4>Simplify healthcare</h4>
+                </div>
+            </div>
+            <div class = "dimension show-on-scroll-up">
+                <div class = "dimensionImageHolder">
+                    <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
+                </div>
+                <div class = "dimensionText">
+                    <h3>People</h3>
+                    <h4>Simplify healthcare</h4>
+                </div>
+            </div>
+            <div class = "dimension show-on-scroll-up">
+                <div class = "dimensionImageHolder">
+                    <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
+                </div>
+                <div class = "dimensionText">
+                    <h3>People</h3>
+                    <h4>Simplify healthcare</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "firstSection second">
+        <div class = "impactTitle show-on-scroll-up">
+            <h2> A better experience </h2>
+        </div>
+        <table>
+            <tr class = "headingSection show-on-scroll-right">
+                <th class = "heading features ">Features</th>
+                <th class = "heading special">
+                    <div class = "tableImageHolder">
+                        <img src = "{{ url_for('static', filename='images/LogoBlue.png') }}">
+                    </div>
+                </th>  
+                <th class = "heading special">Traditional Healthcare</th> 
+            </tr>
+            <tr class = "blueTable row show-on-scroll-left">
+                <td class = "heading regularText">Open 24/7</td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/BlueCircle.png') }}">
+                    </div>
+                </td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/GrayX.png') }}">
+                    </div>
+                </td>
+            </tr>
+            <tr class = "row show-on-scroll-right">
+                <td class = "heading regularText">Start anytime, anywhere, any device</td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/BlueCircle.png') }}">
+                    </div>
+                </td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/GrayX.png') }}">
+                    </div>
+                </td>
+            </tr>
+            <tr class = "blueTable row show-on-scroll-left">
+                <td class = "heading regularText">No waiting rooms</td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/BlueCircle.png') }}">
+                    </div>
+                </td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/GrayX.png') }}">
+                    </div>
+                </td>
+            </tr>
+            <tr class = "row show-on-scroll-right">
+                <td class = "heading regularText">Privacy secured</td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/BlueCircle.png') }}">
+                    </div>
+                </td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/GrayX.png') }}">
+                    </div>
+                </td>
+            </tr>
+            <tr class = "blueTable row show-on-scroll-left">
+                <td class = "heading regularText">Easy-to-follow treatment plans</td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/BlueCircle.png') }}">
+                    </div>
+                </td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/GrayX.png') }}">
+                    </div>
+                </td>
+            </tr>
+            <tr class = "row show-on-scroll-right">
+                <td class = "heading regularText">Satisfaction guaranteed</td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/BlueCircle.png') }}">
+                    </div>
+                </td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/GrayX.png') }}">
+                    </div>
+                </td>
+            </tr>
+            <tr class = "blueTable row show-on-scroll-left">
+                <td class = "heading regularText">Money return guaranteed</td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/BlueCircle.png') }}">
+                    </div>
+                </td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/GrayX.png') }}">
+                    </div>
+                </td>
+            </tr>
+            <tr class = "row show-on-scroll-right">
+                <td class = "heading regularText">Free if treatment fails</td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/BlueCircle.png') }}">
+                    </div>
+                </td>
+                <td class = "check">
+                    <div class = "imageCheckHolder">
+                        <img src = "{{ url_for('static', filename='images/GrayX.png') }}">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class = "firstSection second">
+        <div class = "impactTitle show-on-scroll-up">
+            <h3>Transparent pricing</h3>
+            <h2> Compare the cost </h2>
+        </div>
+        <div class = "costHolder">
+            <div class = "imageHolder show-on-scroll-up">
+                <img src = "{{ url_for('static', filename='images/FillerGraph.svg') }}">
+            </div>
+        </div>
+    </div>
+    
+    <div class = "firstSection second">
+        <div class = "impactTitle show-on-scroll-up">
+            <h3>Pioneers of health</h3>
+            <h2> Innovation: it's in our DNA </h2>
+        </div>
+        <div class = "innovationSection">
+            <div class = "innovation">
+                <div class = "innovationImage show-on-scroll-right">
+                    <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
+                </div>
+                <div class = "innovationText show-on-scroll-left">
+                    <h3>INSERT TEXT</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+                </div>
+            </div>
+            <div class = "innovation">
+                <div class = "innovationImage show-on-scroll-right">
+                    <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
+                </div>
+                <div class = "innovationText show-on-scroll-left">
+                    <h3>INSERT TEXT</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+                </div>
+            </div>
+            <div class = "innovation lastInnovation">
+                <div class = "innovationImage show-on-scroll-right">
+                    <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
+                </div>
+                <div class = "innovationText show-on-scroll-left">
+                    <h3>INSERT TEXT</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "firstSection providerSection">
+        <div class = "featureTransparent providerTransparent">
+            <div class = "providerHolder show-on-scroll-right">
+                <div class = "providerTextBox">
+                    <div class = "impactTitle show-on-scroll-up humanConnect">
+                        <h2>Pay only when we help</h2>
+                    </div>
+                    <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "firstSection">
+        <div class = "impactTitle show-on-scroll-up">
+            <h3>For business</h3>
+            <h2> Bring Neomedica to your organization </h2>
+        </div>
+        <div class = "innovationSection">
+            <div class = "innovation around">
+                <div class = "innovationImage show-on-scroll-right smallerImage">
+                    <img src = "{{ url_for('static', filename='images/IconCircleBlue.png') }}">
+                </div>
+                <div class = "innovationText show-on-scroll-left">
+                    <h3>INSERT TEXT</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+                </div>
+            </div>
+            <div class = "innovation around">
+                <div class = "innovationImage show-on-scroll-right smallerImage">
+                    <img src = "{{ url_for('static', filename='images/IconCircleBlue.png') }}">
+                </div>
+                <div class = "innovationText show-on-scroll-left">
+                    <h3>INSERT TEXT</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+                </div>
+            </div>
+            <div class = "innovation lastInnovation around">
+                <div class = "innovationImage show-on-scroll-right smallerImage">
+                    <img src = "{{ url_for('static', filename='images/IconCircleBlue.png') }}">
+                </div>
+                <div class = "innovationText show-on-scroll-left">
+                    <h3>INSERT TEXT</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+{% endblock %}

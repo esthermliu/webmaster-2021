@@ -1,0 +1,31 @@
+{% macro nav_link(endpoint, name) %}
+    {% if request.endpoint.endswith(endpoint) %}
+        <button class = "dropButtonAbout active"  onclick="window.location.href = '{{ url_for(endpoint) }}'">
+            <a href = "{{ url_for(endpoint) }}"> {{ name }} </a> 
+        </button>
+    {% else %}
+    <button class = "dropButtonAbout"  onclick="window.location.href = '{{ url_for(endpoint) }}'">
+        <a href = "{{ url_for(endpoint) }}"> {{ name }} </a> 
+    </button>
+    {% endif %}
+{% endmacro %}
+
+{% macro nav_link_inner(endpoint, name) %}
+    {% if request.endpoint.startswith(endpoint) %}
+        <button class = "insideButtonAbout fade-in" onclick="window.location.href = '{{ url_for(endpoint) }}'">
+            <a class = "name active2 lilShorter" href = "{{ url_for(endpoint) }}"> {{ name }} </a>
+        </button>
+    {% else %}
+        <button class = "insideButtonAbout fade-in" onclick="window.location.href = '{{ url_for(endpoint) }}'">
+            <a class = "name lilShorter" href = "{{ url_for(endpoint) }}"> {{ name }} </a>
+        </button>
+    {% endif %}
+{% endmacro %}
+
+{% macro history_link(endpoint, name) %}
+    {% if request.endpoint.endswith(endpoint) %}
+        <a href = "{{ url_for('history_' + endpoint) }}" class="eventButton activeButton"><button> {{ name }} </button></a>
+    {% else %}
+        <a href = "{{ url_for('history_' + endpoint) }}" class="eventButton"><button> {{ name }} </button></a>
+    {% endif %}
+{% endmacro %}

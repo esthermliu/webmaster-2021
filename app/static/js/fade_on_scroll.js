@@ -5,6 +5,7 @@ var elementsToShow = document.querySelectorAll('.show-on-scroll');
 var elementsToShowLeft = document.querySelectorAll('.show-on-scroll-left'); 
 var elementsToShowRight = document.querySelectorAll('.show-on-scroll-right'); 
 var elementsToShowUp = document.querySelectorAll('.show-on-scroll-up'); 
+var elementsToShowDown = document.querySelectorAll('.show-on-scroll-down'); 
 
 function loop() {
 
@@ -39,6 +40,14 @@ function loop() {
         //element.classList.remove('is-visible');
       //}
     });
+
+    Array.prototype.forEach.call(elementsToShowDown, function(element){
+        if (isElementInViewport(element)) {
+          element.classList.add('fadeInDown');
+        } //else {
+          //element.classList.remove('is-visible');
+        //}
+      });
 
     scroll(loop);
 }

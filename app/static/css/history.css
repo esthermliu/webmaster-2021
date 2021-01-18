@@ -1,0 +1,100 @@
+.impactTitle {
+    text-align: center;
+}
+
+.firstSection {
+    padding: 8% 25% 8% 25%;
+}
+
+.historyHolder {
+    padding-top: 8%;
+    line-height: 35px;
+}
+
+.historyHolder p {
+    margin-bottom: 15px;
+}
+
+.imageHolder {
+    text-align: center;
+}
+
+.imageHolder img {
+    margin-bottom: 5%;
+    margin-top: 5%;
+    width: 100%;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.toSectionButtons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 80px;
+}
+
+.insideButtonContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.eventButton button {
+    text-transform: uppercase;
+    background-color: rgba(25,25,25,0);
+    border: 2px solid rgb(51, 51, 51);
+    z-index: 2;
+    padding: 20px 20px;
+    color: rgb(51, 51, 51);
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    margin: 15px;
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 2px;
+}
+
+.eventButton button:hover {
+    color: #3aafa9;
+    border-color: #3aafa9;
+}
+
+.historyTitle h2, h3 {
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(23, 37, 42);
+    text-align: center;
+}
+
+.historyTitle h3 {
+    font-size: 18px;
+    font-weight: 400; 
+    letter-spacing: 1px;
+}
+
+.historyTitle h3:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    bottom: -20px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 8%;
+    background: #3aafa9;
+}
+
+.activeButton button {
+    color: #3aafa9;
+    border-color: #3aafa9;
+}

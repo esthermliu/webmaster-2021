@@ -1,0 +1,25 @@
+{% extends "history_default.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block innerchildcontent %}
+    <div class = "historyTitle show-on-scroll-up">
+        <h2>A humble beginning </h2>
+        <h3>2018 - 2019</h3>
+    </div>
+    <div class = "historyHolder">
+        <div class = "textSection">
+            <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class = "show-on-scroll-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class = "imageHolder show-on-scroll-up">
+                <img src = "{{ url_for('static', filename='/images/FillerPicture.jpeg')}}"/>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
