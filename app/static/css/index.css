@@ -211,13 +211,13 @@ body.fade-out {
     color: rgb(23, 37, 42);
     text-transform: none;
     background-color: White;
-    border: 1px solid white;
+    border: 2px solid white;
     z-index: 2;
-    padding: 18px 30px;
+    padding: 25px 30px;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
     cursor: pointer;
-    border-radius: 2px;
+    border-radius: 50px;
     font-family: Poppins, sans-serif;
     font-weight: 600;
     font-size: 16px;

@@ -12,7 +12,7 @@ def about():
     return render_template('about.html', title='About', 
                                         activePageAbout=True, 
                                         inner_title="About Us", 
-                                        description="Who. What. When. Where.", 
+                                        description="Who. What. When. Where. Why.", 
                                         landing="aboutLanding" )
 
 @app.route('/why-us')
@@ -29,103 +29,119 @@ def history():
                                         description="Insert Text",
                                         landing="historyLanding")
 
-@app.route('/history/2006')
-def history_2006():
-    return render_template('history_2006.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding")
+@app.route('/history/<int:year>')
+def history_year(year):
+    whitelist_years = {
+        2006: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        },
+        2007: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        },
+        2008: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        }, 
+        2009: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        }, 
+        2010: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        }, 
+        2011: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        }, 
+        2012: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        }, 
+        2013: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        }, 
+        2014: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        }, 
+        2015: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        }, 
+        2016: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        }, 
+        2017: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        }, 
+        2018: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        }, 
+        2019: {
+            'template': 'history_2006.html',
+            'title': 'History 2006',
+            'inner_title': 'History',
+            'landing': 'historyLanding',
+            'description': 'Insert Text'
+        }
+    }
 
-@app.route('/history/2007')
-def history_2007():
-    return render_template('history_2007.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding")
-                                        
-@app.route('/history/2008')
-def history_2008():
-    return render_template('history_2008.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding") 
-
-@app.route('/history/2009')
-def history_2009():
-    return render_template('history_2009.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding")     
-
-@app.route('/history/2010')
-def history_2010():
-    return render_template('history_2010.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding")    
-
-@app.route('/history/2011')
-def history_2011():
-    return render_template('history_2011.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding") 
-
-@app.route('/history/2012')
-def history_2012():
-    return render_template('history_2012.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding")   
-
-@app.route('/history/2013')
-def history_2013():
-    return render_template('history_2013.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding")    
-
-@app.route('/history/2014')
-def history_2014():
-    return render_template('history_2014.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding")      
-
-@app.route('/history/2015')
-def history_2015():
-    return render_template('history_2015.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding")   
-
-@app.route('/history/2016')
-def history_2016():
-    return render_template('history_2016.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding")   
-
-@app.route('/history/2017')
-def history_2017():
-    return render_template('history_2017.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding")   
-
-@app.route('/history/2018')
-def history_2018():
-    return render_template('history_2018.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding")  
-
-@app.route('/history/2019')
-def history_2019():
-    return render_template('history_2019.html', title='History 2006', 
-                                        inner_title="History", 
-                                        description="Insert Text",
-                                        landing="historyLanding")                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+    if (year in whitelist_years):
+        specific_year = whitelist_years[year]
+        return render_template(specific_year['template'], title=specific_year['title'],
+                                                        inner_title=specific_year['inner_title'],
+                                                        landing=specific_year['landing'],
+                                                        description=specific_year['description'],
+                                                        year=year)
+    else:
+        return redirect('/history')
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
 @app.route('/leadership')
 def leadership():
@@ -134,10 +150,74 @@ def leadership():
                                         description="Insert Text",
                                         landing="leadershipLanding")
 
+@app.route('/leadership/<leader>')
+def leadership_bio(leader):
+    leaders_dict = {
+        "Sammy": {
+            'template': 'sammy.html',
+            'title': 'Sammy Urtzal', 
+            'inner_title': 'Sammy Urtzal', 
+            'description': 'Insert Text',
+            'landing': 'sammyLanding'         
+        }
+    }
+
+    if (leader in leaders_dict):
+        specific_leader = leaders_dict[leader]
+        return render_template(specific_leader['template'], title=specific_leader['title'],
+                                            inner_title=specific_leader['inner_title'], 
+                                            description=specific_leader['description'],
+                                            landing=specific_leader['landing'])
+    else:
+        return redirect(url_for('leadership'))
+
 @app.route('/providers')
 def providers():
-    return render_template('about.html', title='About')
+    return render_template('providers.html', title='Our Providers',
+                                        inner_title="Our Providers",
+                                        description="Insert Text",
+                                        landing="providersLanding")
 
 @app.route('/ncqa-and-achc')
 def ncqa():
-    return render_template('about.html', title='About')
+    return render_template('ncqa.html', title='NCQA and ACHC',
+                                        inner_title="NCQA and ACHC",
+                                        description="Insert Text",
+                                        landing="ncqaLanding")
+
+@app.route('/treatment-options')
+def treatment():
+    return render_template('treatment.html', title='Treatment Options',
+                                        inner_title="Treatment Options",
+                                        description="Insert Text",
+                                        landing="treatmentLanding")
+
+@app.route('/medical-health-solutions')
+def medical():
+    return render_template('medical.html', title='Medical Health Solutions',
+                                        inner_title="Medical Health Solutions",
+                                        description="Insert Text",
+                                        landing="medicalLanding")
+
+@app.route('/urgent-care')
+def urgent():
+    return render_template('urgent.html', title='Urgent Care',
+                                        inner_title="Urgent Care",
+                                        description="Insert Text",
+                                        landing="urgentLanding")
+
+@app.route('/urgent-care/<condition>')
+def urgent_condition(condition):
+    conditions_dict = {
+        "abrasions": {
+            'template': "abrasions.html"
+        }
+    }
+    if (condition in conditions_dict):
+        conditions_specific = conditions_dict[condition]
+        return render_template(conditions_specific['template'], title='Urgent Care',
+                                        inner_title="Urgent Care",
+                                        description="Insert Text",
+                                        landing="urgentLanding")
+    else:
+        return redirect(url_for('urgent'))

@@ -1,0 +1,67 @@
+.firstSection {
+    padding: 8% 25% 8% 25%;
+}
+
+.impactTitle h2 {
+    text-align: center;
+}
+
+.ncqaSection {
+    padding-top: 10%;
+}
+
+.ncqaSection h3 {
+    font-weight: 600;
+    color: #2b7a78;
+    margin-bottom: 15px;
+}
+
+.ncqaSection p {
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.imageHolder {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3%;
+}
+
+.imageHolder img {
+    width: 45%;
+}
+
+.moreSpace {
+    margin-top: 10%;
+}
+
+.learnMore, .centerLink {
+    color: #2B7A78;
+}
+
+.learn {
+    margin-left: 5px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.learnMore::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #2B7A78, #3AAFA9, #DEF2F1);
+    transition: width .3s;
+	margin-top: 5px;
+}
+
+.learnMore:hover::after  {
+    width: 40%;
+    transition: width .3s;
+}
+
+.learnMore:hover .learn, .centerLink:hover .learn {
+    transform: translate(2px, 0);
+}

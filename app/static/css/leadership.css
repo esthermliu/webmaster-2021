@@ -1,0 +1,50 @@
+.firstSection {
+    padding: 8% 16% 8% 16%;
+}
+
+.impactTitle h2 {
+    text-align: center;
+}
+
+.executiveHolder {
+    padding-top: 12%;
+}
+
+.executive {
+    text-align: center;
+    width: 30%;
+    line-height: 40px;
+    margin-bottom: 5%;
+}
+
+.executive h3 {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.executive h4 {
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(85, 85, 85);
+    padding-bottom: 6%;
+}
+
+.executiveImageHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+}
+
+.executiveImageHolder img {
+    border-radius: 50%;
+    width: 90%;    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+.executiveHolder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}

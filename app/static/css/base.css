@@ -97,13 +97,17 @@ header {
 }
 
 
-.active::after {
+.active::after, .active3::after {
     content: '';
     display: block;
     width: 100% !important;
     height: 2px;
     background: #3AAFA9;
     transition: width .3s;
+}
+
+.active3::after {
+    width: 40% !important;
 }
 
 .active2::after {
@@ -199,6 +203,7 @@ header {
     transition: width .3s;
 }
 
+
 .lilShorter:hover::after {
     width: 80% !important;
     transition: width .3s;
@@ -222,7 +227,6 @@ header {
     width: 40%;
     transition: width .3s;
 }
-
 
 .dropButtonAbout a, .dropButtonOverview a, .dropButtonMedia a {
 	color: white;
@@ -336,8 +340,13 @@ header {
 }
 
 .test1:hover .dropDownInsideAbout, .test2:hover .dropDownInsideAbout2, .test3:hover .dropDownInsideAbout3, .test4:hover .dropDownInsideAbout4, .test5:hover .dropDownInsideAbout5, .test6:hover .dropDownInsideAbout6, .test7:hover .dropDownInsideAbout7 {
-	display: block;
+    display: flex;
+    flex-direction: column;
 	cursor: pointer;
+}
+
+.test4:hover .dropDownInsideAbout4 {
+    flex-direction: row !important;
 }
 
 /* fade-in animation */
@@ -690,9 +699,9 @@ footer {
     color: rgb(23, 37, 42);
     text-transform: none;
     background-color: White;
-    border: 1px solid white;
+    border: 2px solid white;
     z-index: 2;
-    padding: 18px 30px;
+    padding: 20px 30px;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
     cursor: pointer;
@@ -700,6 +709,7 @@ footer {
     font-family: Poppins, sans-serif;
     font-weight: 600;
     font-size: 16px;
+    border-radius: 50px;
 }
 
 .learnMoreButton:hover button {
@@ -794,4 +804,3 @@ footer {
        transform: translateX(0);
     }
  }  
-

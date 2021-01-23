@@ -1,0 +1,405 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/providers.css') }}">
+    <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/providers_slideshow.js') }}"></script>
+{% endblock %}
+
+{% block childcontent %}
+<div class = "firstSection">
+    <div class = "impactTitle peopleTitle show-on-scroll-right">
+        <h2> Our providers </h2>
+    </div>
+    <div class = "firstSectionFlex">
+        <div class = "leftText">
+            <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class = "show-on-scroll-right lastParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+            <div class = "show-on-scroll-right">
+                <a href = "{{ url_for('ncqa') }}" class = "learnMore">Learn more about our NCQA and ACHC Certification<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+            </div>
+        </div>
+        <div class = "imageHolder show-on-scroll-left">
+            <img src = "{{ url_for('static', filename='images/Meet.jpeg') }}">
+        </div>
+    </div>
+</div>
+<div class = "secondSection">
+    <div class = "backgroundColor">
+        <div class = "impactTitle moreSpace whiteTitle show-on-scroll-down">
+            <h2> Our Statistics </h2>
+        </div>
+        <div class = "valuesSection">
+            <div class = "value show-on-scroll-right">
+                <div class = "wordHolder">
+                    <h3>90%</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                </div>
+            </div>
+            <div class = "value show-on-scroll-up">
+                <div class = "wordHolder">
+                    <h3>2%</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+                </div>
+            </div>
+            <div class = "value show-on-scroll-left">
+                <div class = "wordHolder">
+                    <h3>35</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class = "firstSection lessPad">
+    <div class = "impactTitle centerTitle show-on-scroll-right">
+        <h2> Meet the team </h2>
+    </div>
+    <div class = "providerSection">
+        <div class = "type">
+            <div class = "typeImage show-on-scroll-up">
+                <img src = "{{ url_for('static', filename='images/Meet.jpeg') }}">
+            </div>
+            <h3 class = "show-on-scroll-up">Physicians</h3>
+            <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <div class = "show-on-scroll-right">
+                <a class = "centerLink" id = "physicians" onclick = "modal('modal', 'physicians'); provider();">Meet us!<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+            </div>
+        </div>
+        <div class = "type">
+            <div class = "typeImage show-on-scroll-up">
+                <img src = "{{ url_for('static', filename='images/Meet.jpeg') }}">
+            </div>
+            <h3 class = "show-on-scroll-up">Nurse Practitioners</h3>
+            <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <div class = "show-on-scroll-right">
+                <a class = "centerLink" id = "nurse" onclick = "modal('modal2', 'nurse'); provider2();">Meet us!<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+            </div>
+        </div>
+        <div class = "type">
+            <div class = "typeImage show-on-scroll-up">
+                <img src = "{{ url_for('static', filename='images/Meet.jpeg') }}">
+            </div>
+            <h3 class = "show-on-scroll-up">Physician Assistants</h3>
+            <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <div class = "show-on-scroll-right">
+                <a class = "centerLink" id = "assistant" onclick = "modal('modal3', 'assistant'); provider3();">Meet us!<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+            </div>
+        </div>
+        <div class = "type">
+            <div class = "typeImage show-on-scroll-up">
+                <img src = "{{ url_for('static', filename='images/Meet.jpeg') }}">
+            </div>
+            <h3 class = "show-on-scroll-up">Therapists</h3>
+            <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <div class = "show-on-scroll-right">
+                <a class = "centerLink" id = "therapist" onclick = "modal('modal4', 'therapist'); provider4();">Meet us!<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modals -->
+<div id = "modal" class = "modal fade-in">
+    <a class="providerPrev firstPrev"><i class="fa fa-angle-left"></i></a>
+        <div class="providerContainer specificFeature slideshow1">
+            <div class = "featuredImageHolder">
+                <div class = "modalContent">
+                    <div class = "textModal">
+                        <div class = "textHolder">
+                            <div class = "topModal">
+                                <div class = "modalImage">
+                                    <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+                                </div>
+                                <div class = "rightModal">
+                                    <div class = "nameEx">
+                                        <h4>Physician</h4>
+                                        <h3>Sammy Urtzal, M.D.</h3>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class = "innerText">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "modalContent">
+                    <div class = "textModal">
+                        <div class = "textHolder">
+                            <div class = "topModal">
+                                <div class = "modalImage">
+                                    <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+                                </div>
+                                <div class = "rightModal">
+                                    <div class = "nameEx">
+                                        <h4>Physician</h4>
+                                        <h3>Sammy Urtzal, M.D.</h3>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class = "innerText">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "modalContent">
+                    <div class = "textModal">
+                        <div class = "textHolder">
+                            <div class = "topModal">
+                                <div class = "modalImage">
+                                    <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+                                </div>
+                                <div class = "rightModal">
+                                    <div class = "nameEx">
+                                        <h4>Physician</h4>
+                                        <h3>Sammy Urtzal, M.D.</h3>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class = "innerText">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempoolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    </div>
+    <a class="providerNext firstNext"><i class="fa fa-angle-right"></i></a>
+</div>
+
+<div id = "modal2" class = "modal fade-in">
+    <a class="providerPrev secondPrev"><i class="fa fa-angle-left"></i></a>
+        <div class="providerContainer specificFeature slideshow2"> <!-- change class -->
+            <div class = "featuredImageHolder">
+                <div class = "modalContent">
+                    <div class = "textModal">
+                        <div class = "textHolder">
+                            <div class = "topModal">
+                                <div class = "modalImage">
+                                    <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+                                </div>
+                                <div class = "rightModal">
+                                    <div class = "nameEx">
+                                        <h4>Physician</h4>
+                                        <h3>Sammy Urtzal, M.D.</h3>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class = "innerText">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "modalContent">
+                    <div class = "textModal">
+                        <div class = "textHolder">
+                            <div class = "topModal">
+                                <div class = "modalImage">
+                                    <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+                                </div>
+                                <div class = "rightModal">
+                                    <div class = "nameEx">
+                                        <h4>Physician</h4>
+                                        <h3>Sammy Urtzal, M.D.</h3>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class = "innerText">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "modalContent">
+                    <div class = "textModal">
+                        <div class = "textHolder">
+                            <div class = "topModal">
+                                <div class = "modalImage">
+                                    <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+                                </div>
+                                <div class = "rightModal">
+                                    <div class = "nameEx">
+                                        <h4>Physician</h4>
+                                        <h3>Sammy Urtzal, M.D.</h3>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class = "innerText">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempoolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    </div>
+    <a class="providerNext secondNext"><i class="fa fa-angle-right"></i></a>
+
+</div>
+<div id = "modal3" class = "modal fade-in">
+	<a class="providerPrev thirdPrev"><i class="fa fa-angle-left"></i></a>
+        <div class="providerContainer specificFeature slideshow3"> <!-- change class -->
+            <div class = "featuredImageHolder">
+                <div class = "modalContent">
+                    <div class = "textModal">
+                        <div class = "textHolder">
+                            <div class = "topModal">
+                                <div class = "modalImage">
+                                    <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+                                </div>
+                                <div class = "rightModal">
+                                    <div class = "nameEx">
+                                        <h4>Physician</h4>
+                                        <h3>Sammy Urtzal, M.D.</h3>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class = "innerText">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "modalContent">
+                    <div class = "textModal">
+                        <div class = "textHolder">
+                            <div class = "topModal">
+                                <div class = "modalImage">
+                                    <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+                                </div>
+                                <div class = "rightModal">
+                                    <div class = "nameEx">
+                                        <h4>Physician</h4>
+                                        <h3>Sammy Urtzal, M.D.</h3>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class = "innerText">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "modalContent">
+                    <div class = "textModal">
+                        <div class = "textHolder">
+                            <div class = "topModal">
+                                <div class = "modalImage">
+                                    <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+                                </div>
+                                <div class = "rightModal">
+                                    <div class = "nameEx">
+                                        <h4>Physician</h4>
+                                        <h3>Sammy Urtzal, M.D.</h3>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class = "innerText">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempoolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    </div>
+    <a class="providerNext thirdNext"><i class="fa fa-angle-right"></i></a>
+</div>
+<div id = "modal4" class = "modal fade-in">
+	<a class="providerPrev fourthPrev"><i class="fa fa-angle-left"></i></a>
+        <div class="providerContainer specificFeature slideshow4"> <!-- change class -->
+            <div class = "featuredImageHolder">
+                <div class = "modalContent">
+                    <div class = "textModal">
+                        <div class = "textHolder">
+                            <div class = "topModal">
+                                <div class = "modalImage">
+                                    <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+                                </div>
+                                <div class = "rightModal">
+                                    <div class = "nameEx">
+                                        <h4>Physician</h4>
+                                        <h3>Sammy Urtzal, M.D.</h3>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class = "innerText">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "modalContent">
+                    <div class = "textModal">
+                        <div class = "textHolder">
+                            <div class = "topModal">
+                                <div class = "modalImage">
+                                    <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+                                </div>
+                                <div class = "rightModal">
+                                    <div class = "nameEx">
+                                        <h4>Physician</h4>
+                                        <h3>Sammy Urtzal, M.D.</h3>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class = "innerText">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "modalContent">
+                    <div class = "textModal">
+                        <div class = "textHolder">
+                            <div class = "topModal">
+                                <div class = "modalImage">
+                                    <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+                                </div>
+                                <div class = "rightModal">
+                                    <div class = "nameEx">
+                                        <h4>Physician</h4>
+                                        <h3>Sammy Urtzal, M.D.</h3>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class = "innerText">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempoolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    </div>
+    <a class="providerNext fourthNext"><i class="fa fa-angle-right"></i></a>
+</div>
+{% endblock %}

@@ -1,0 +1,170 @@
+.firstSection {
+    padding: 8% 20% 8% 20%;
+    background-color: #def2f1;
+}
+
+.demoSection {
+    background-color: #534666;
+    background-image: linear-gradient(to bottom right, #534666, #138086);
+}
+
+.anotherDemo {
+    background-image: linear-gradient(to bottom right,#138086,  #534666);
+}
+
+.simpleSucks {
+    padding: 0 5% 0 5%;
+    text-align: center;
+}
+
+.leftSucks {
+    text-align: left;
+    padding: 5%;
+    width: 40%;
+    padding-left: 8%;
+}
+
+.simpleSucks h2, h3 {
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+}
+
+.simpleSucks h3 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 35px;
+}
+
+.secondSection {
+    background-color: #def2f1;
+    padding: 8% 5% 8% 5%;
+}
+
+.treatmentBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+.textHolderTreatment {
+    background-color: white;
+    padding: 8%;
+    padding-right: 15%;
+    padding-left: 15%;
+    line-height: 30px;
+}
+
+.textHolderTreatment p {
+    margin-bottom: 15px;
+}
+
+.textOverall {
+    background-color: white;
+    width: 50%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.imageHolder {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/static/images/FillerPic2.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pic2 {
+    background-image: url('/static/images/FillerPic2.jpeg');
+}
+
+.innerText {
+    margin-top: 10%;
+}
+
+.serviceTitle h2 {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.serviceTitle h2:after {
+    margin: 0 !important;
+}
+
+.leftAlign {
+    justify-content: flex-start;
+}
+
+
+.healthList {
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.healthList ul {
+    list-style-type: square;
+}
+
+.healthLi a {
+    color: black;
+}
+
+.healthLi a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #2B7A78, #3AAFA9, #DEF2F1);
+    transition: width .3s;
+	margin-top: 0px;
+}
+
+.healthLi a:hover::after  {
+    width: 100%;
+    transition: width .3s;
+}
+
+.whiteButton button {
+    color: white;
+    border-color: white;
+}
+
+.whiteButton button:hover {
+    color: #bcdfdd;
+    border-color: #bcdfdd;
+}
+
+.anotherDemo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 !important;
+}
+
+.registerImage {
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    padding-right: 8%;
+    align-self: flex-end;
+}
+
+.registerImage img {
+    width: 100%;
+}

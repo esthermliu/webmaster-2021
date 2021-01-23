@@ -1,0 +1,79 @@
+.firstSection {
+    padding: 8% 25% 8% 25%;
+}
+
+.impactTitle h2 {
+    text-align: center;
+}
+
+.treatmentText {
+    margin-top: 10%;
+    line-height: 33px;
+    text-align: center;
+}
+
+.backgroundSection2 {
+    padding-bottom: 8%;
+}
+
+.learnMoreContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.competitionLink, .eventsLink, .programsLink {
+    background-image: url("/static/images/LearnMore.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    transition: transform 0.2s;
+    background-position: center;
+    height: 40vh;
+    width: 45%;
+    margin: 1%;
+    margin-bottom: 3%;
+}
+
+.competition, .events, .programs {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Filter {
+    height: 40vh;
+    width: 100%;
+    background-color: rgba(43, 122, 120, 0.3);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition-duration: 0.3s;
+}
+
+.Filter h4 {
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 35px;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.competitionLink:hover, .eventsLink:hover, .programsLink:hover {
+	-ms-transform: scale(1.06); /* IE 9 */
+	-webkit-transform: scale(1.06); /* Safari 3-8 */
+	transform: scale(1.06); 
+	transition-duration: 0.3s;
+}
+
+.competitionLink:hover .Filter, .eventsLink:hover .Filter, .programsLink:hover .Filter {
+	background-color: rgba(51,51,51,0.1);
+	height: 35vh;
+	width: 85%;
+	border: 2px solid white;
+}
+

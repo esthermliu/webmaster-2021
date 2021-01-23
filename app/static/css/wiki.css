@@ -1,0 +1,54 @@
+.navbar {
+    background-color: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 4px 10px -10px rgba(0,0,0,.6) !important;
+    height: 85px !important;
+}
+
+.dropButtonAbout a, .dropButtonOverview a, .dropButtonMedia a, .homepageLogo, .homepageLogo p, .homepageLogo i {
+    color: rgba(23, 37, 42, 1) !important;
+}
+
+.dropDownContentAbout, .dropDownContentOverview, .dropDownContentMedia {
+    box-shadow: 0 35px 80px -40px rgba(0,0,0,.45) !important;
+    transform: translate(0px, -13px) !important;
+}
+
+.logoWhite {
+    display: none !important;
+}
+
+.logoDark {
+    display: flex !important;
+}
+
+.firstSection {
+    padding-top: 10% !important;
+}
+
+.pageNav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 5%;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    margin-top: 18px;
+}
+
+.pageNav p a {
+    color: black;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.changeColor {
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+}
+
+.changeColor:hover {
+    color: #3aafa9;
+}

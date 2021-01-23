@@ -2,9 +2,76 @@
 
 {% block head %}
     {{ super() }}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/why.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/leadership.css') }}">
 {% endblock %}
 
 {% block childcontent %}
+<div class = "firstSection">
+    <div class = "impactTitle show-on-scroll-up">
+        <h2> Our Executive Team </h2>
+    </div>
+    <div class = "executiveHolder">
+        <div class = "executive show-on-scroll-up">
+            <div class = "executiveImageHolder">
+                <img src = "{{ url_for('static', filename='images/SammyUrtzalCircle.png') }}">
+            </div>
+            <h3>Sammy Urtzal</h3>
+            <h4>CEO, Co-Founder</h4>
+            <div class = "learnMoreContainerRegular show-on-scroll-up providerButton">
+                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
+            </div>
+        </div>
+        <div class = "executive show-on-scroll-up">
+            <div class = "executiveImageHolder">
+                <img src = "{{ url_for('static', filename='images/SammyUrtzalCircle.png') }}">
+            </div>
+            <h3>Sammy Urtzal</h3>
+            <h4>CEO, Co-Founder</h4>
+            <div class = "learnMoreContainerRegular show-on-scroll-up providerButton">
+                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
+            </div>
+        </div>
+        <div class = "executive show-on-scroll-up">
+            <div class = "executiveImageHolder">
+                <img src = "{{ url_for('static', filename='images/SammyUrtzalCircle.png') }}">
+            </div>
+            <h3>Sammy Urtzal</h3>
+            <h4>CEO, Co-Founder</h4>
+            <div class = "learnMoreContainerRegular show-on-scroll-up providerButton">
+                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
+            </div>
+        </div>
 
+        <div class = "executive show-on-scroll-up">
+            <div class = "executiveImageHolder">
+                <img src = "{{ url_for('static', filename='images/SammyUrtzalCircle.png') }}">
+            </div>
+            <h3>Sammy Urtzal</h3>
+            <h4>CEO, Co-Founder</h4>
+            <div class = "learnMoreContainerRegular show-on-scroll-up providerButton">
+                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
+            </div>
+        </div>
+        <div class = "executive show-on-scroll-up">
+            <div class = "executiveImageHolder">
+                <img src = "{{ url_for('static', filename='images/SammyUrtzalCircle.png') }}">
+            </div>
+            <h3>Sammy Urtzal</h3>
+            <h4>CEO, Co-Founder</h4>
+            <div class = "learnMoreContainerRegular show-on-scroll-up providerButton">
+                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
+            </div>
+        </div>
+        <div class = "executive show-on-scroll-up">
+            <div class = "executiveImageHolder">
+                <img src = "{{ url_for('static', filename='images/SammyUrtzalCircle.png') }}">
+            </div>
+            <h3>Sammy Urtzal</h3>
+            <h4>CEO, Co-Founder</h4>
+            <div class = "learnMoreContainerRegular show-on-scroll-up providerButton">
+                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
