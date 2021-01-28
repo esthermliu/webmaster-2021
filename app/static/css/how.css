@@ -1,0 +1,154 @@
+.howLanding {
+
+}
+
+.firstSection {
+    padding: 8% 20% 8% 20%;
+}
+
+.impactTitle {
+    text-align: center;
+}
+
+.workSection {
+    padding-top: 10%;
+}
+
+.learnMore {
+    color: #2B7A78;
+}
+
+.learn {
+    margin-left: 5px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.learnMore::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #2B7A78, #3AAFA9, #DEF2F1);
+    transition: width .3s;
+	margin-top: 5px;
+}
+
+.learnMore:hover::after  {
+    width: 25%;
+    transition: width .3s;
+}
+
+.learnMore:hover .learn {
+    transform: translate(2px, 0);
+}
+
+.work {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imageHolder, .workText {
+    width: 40%;
+}
+
+.workText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.workText h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.underlineLink {
+    margin-top: 15px;
+}
+
+.workText p {
+    line-height: 30px;
+}
+
+.imageHolder img, .vid {
+    width: 100%;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.lineHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2%;
+    position: relative;
+}
+
+.line {
+    width: 1%;
+    height: 100%;
+    border-left: 2px solid #89e6e1;
+    position: absolute;
+}
+
+.dotImage {
+    width: 100%;
+    z-index: 5;
+}
+
+.anotherDemo {
+    display: flex;
+    justify-content: center;
+    padding: 0 !important;
+    background-image: linear-gradient(to bottom right,#138086,  #534666);
+}
+
+.simpleSucks {
+    padding: 0 5% 0 5%;
+    text-align: center;
+}
+
+.leftSucks {
+    text-align: left;
+    padding: 5% 0% 5% 0%;
+    width: 30%;
+}
+
+.simpleSucks h2, h3 {
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.simpleSucks h3 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 35px;
+}
+
+.whiteButton button {
+    color: white;
+    border-color: white;
+}
+
+.whiteButton button:hover {
+    color: #bcdfdd;
+    border-color: #bcdfdd;
+}
+
+.registerImage {
+    display: flex;
+    justify-content: center;
+}
+
+.registerImage img {
+    width: 100%;
+    align-self: flex-end;
+}
+
+.leftAlign {
+    justify-content: flex-start;
+}

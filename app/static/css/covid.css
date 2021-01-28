@@ -1,0 +1,40 @@
+.covidLanding {
+
+}
+
+.learnMore {
+    color: #2B7A78;
+}
+
+.learnMoreHolder {
+    margin-bottom: 15px;
+}
+
+.learn {
+    margin-left: 5px;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+
+.learnMore::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #2B7A78, #3AAFA9, #DEF2F1);
+    transition: width .3s;
+	margin-top: 5px;
+}
+
+.learnMore:hover::after  {
+    width: 50%;
+    transition: width .3s;
+}
+
+.learnMore:hover .learn {
+    transform: translate(2px, 0);
+}
+
+.lastBox {
+    margin-bottom: 0;
+}

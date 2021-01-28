@@ -1,0 +1,40 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/medical.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/return.css') }}">
+{% endblock %}
+
+{% block childcontent %}
+<div class = "firstSection"> 
+    <div class = "impactTitle show-on-scroll-up">
+        <h2> Insert Text </h2>
+    </div>
+    <div class = "treatmentText">
+        <p class = "show-on-scroll-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+<div class = "lastSection">
+    <div class = "backgroundSection2">
+        <div class = "learnContainer">
+            <div class = "learnMoreContainer show-on-scroll-up">
+            <a href = "{{ url_for('urgent') }}" class = "competitionLink"> 
+                <div class = "competition">
+                    <div class = "Filter">
+                        <h4>COVID-19 Testing</h4>
+                    </div>
+                </div>
+            </a>
+            <a href = "{{ url_for('history') }}" class = "eventsLink">
+                <div class = "events">
+                    <div class = "Filter colorFilter">
+                        <h4>COVID-19 Screening and Treatment</h4>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

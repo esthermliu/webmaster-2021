@@ -1,0 +1,230 @@
+.dogLanding {
+
+}
+
+.thirdSection {
+    background-color: white !important;
+    padding: 8% 25% 8% 25%;
+}
+
+.impactTitle {
+    text-align: center;
+}
+
+.animalSection {
+    margin-top: 10%;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+}
+
+.animalSection h3 {
+    color: #3aafa9;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 5%;
+    margin-bottom: 15px;
+}
+
+.animalSection p {
+    margin-bottom: 15px;
+}
+
+.animalImage {
+    background-color: orange;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.animalImage img {
+    width: 100%;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.try {
+    background-image: url("/static/images/SleepingDog.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tryFilter {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(67, 90, 165, 0.5), rgba(165, 103, 67, 0.5));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8% 30% 8% 30%;
+}
+
+.whiteTitle h2 {
+    color: white !important;
+}
+
+.whiteTitle h2:after {
+    background: white;
+    width: 13%;
+}
+
+.trySection {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.trySection p {
+    color: white;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+}
+
+.music {
+    margin-top: 6%;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.featureLargeBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.animalContainerFor {
+    width: 85%;
+    margin-top: 5%;
+}
+
+.animalContainer {
+    width: 100%;
+}
+
+.lessSectionPad {
+    padding: 8% 15% 8% 15%;
+}
+
+.reviewPrev, .reviewNext {
+    cursor: pointer;
+    color: rgb(23, 37, 42);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300 !important;
+    font-size: 25px;
+    border-radius: 0 3px 3px 0;
+    height: 40px;
+    width: 20px;
+    user-select: none;
+    z-index: 3 !important;
+    transition: 0.4s ease;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+  }
+  
+  
+.reviewNext:hover {
+    transform: translate(6px, 0) scale(0.9);
+}
+  
+.reviewPrev:hover {
+    transform: translate(-6px, 0) scale(0.9);
+}
+
+.reviewPrev:hover, .reviewNext:hover {
+    color: grey;
+}
+
+.featuredImageHolder {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.testFeature {
+    width: 80%;
+}
+
+.centerBox {
+    justify-content: center;
+}
+
+.slick-dots {
+    /*background-color: purple !important;*/
+    height: 2vh;
+    text-align: center !important;
+    margin: 0 !important;
+    background-color: transparent;
+}
+
+
+.slick-dots li button {
+    border: 0px solid rgba(0,0,0, 0.3);
+    background: Transparent !important;
+    border-radius: 50%;
+    width: 4px !important;
+    height: 4px !important;
+    transition-duration: 0.2s;
+    -webkit-transition: 0.2s;
+    color: white;
+}
+
+.slick-dots li button:before {
+    font-size: 30px !important;
+    color: rgb(23, 37, 42) !important;
+}
+
+.slick-dots li button:hover {
+    transform: scale(1.1);
+}
+
+.animalContainer .slick-dots  {
+    bottom: -80px !important;
+    width: 100% !important;
+}
+
+.animalContainer .slick-dots li button:before {
+    color: rgb(23, 37, 42) !important;
+}
+
+.reviewInnerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.recBox h2 {
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.recBox img {
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.reviewText {
+    cursor: pointer;
+}
+
+.noTop {
+    padding-top: 0 !important;
+}
+
+.moreSpaceTop {
+    margin-top: 10%;
+}
+
+.noTopPad {
+    padding-top: 0;
+}

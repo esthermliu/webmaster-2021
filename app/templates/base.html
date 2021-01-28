@@ -2,6 +2,7 @@
 {% from "macros.html" import nav_link_inner with context %}
 {% from "macros.html" import nav_link_inner_arrow with context %}
 {% from "macros.html" import nav_dropdown with context %}
+{% from "macros.html" import nav_dropdown_longer with context %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -78,65 +79,64 @@
                                 {{ nav_link_inner_arrow('medical', 'Medical Health Solutions', 'insideButtonAbout6 shorter', 'name') }}
                                 <div class = "dropDownInsideAbout6">
                                     {{ nav_dropdown('urgent', 'Urgent Care', 'name2') }}
-                                    <a class = "name2 fade-in" href = "peyton-everlue.html"> Men's Health </a>
-                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Women's Health </a>
-                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Teen's Health </a>
-                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Children's Health </a>
+                                    {{ nav_dropdown('mens_health', "Men's Health", 'name2') }}
+                                    {{ nav_dropdown('womens', "Women's Health", 'name2') }}
+                                    {{ nav_dropdown('teens_health', "Teen's Health", 'name2') }}
+                                    {{ nav_dropdown('childrens_health', "Children's Health", 'name2') }}
                                 </div>
                             </div>
                             <div class = "test7">
-                                <button class = "insideButtonAbout7 shorter fade-in" onclick="window.location.href = 'history.html'"><a class = "name" href = "history.html"> Behavioral Health Solutions </a><a href = "people.html"><i id = "rightArrow" class="fa fa-angle-right"></i></a></button>
+                                {{ nav_link_inner_arrow('behavioral', 'Behavioral Health Solutions', 'insideButtonAbout7 shorter', 'name') }}
                                 <div class = "dropDownInsideAbout7">
-                                    <a class = "name2 fade-in" href = "sammy-urtzal.html"> Individual Therapy and Psychiatry  </a>
-                                    <a class = "name2 fade-in" href = "peyton-everlue.html"> Couples Therapy </a>
-                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Family Therapy </a>
-                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Speech Therapy </a>
-                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Occupational Therapy </a>
+                                    {{ nav_dropdown('therapy', 'Individual Therapy and Psychiatry', 'name2') }}
+                                    {{ nav_dropdown('couples', "Couples Therapy", 'name2') }}
+                                    {{ nav_dropdown('family', "Family Therapy", 'name2') }}
+                                    {{ nav_dropdown('speech', "Speech Therapy", 'name2') }}
+                                    {{ nav_dropdown('occupational', "Occupational Therapy", 'name2') }}
                                 </div>
                             </div>
                             <div class = "test2">
-                            <button class = "insideButtonAbout2 shorter fade-in" onclick="window.location.href = 'awards.html'"><a class = "name" href = "awards.html"> Return-to-Work Solutions </a><a href = "people.html"><i id = "rightArrow" class="fa fa-angle-right"></i></a></button>
+                                {{ nav_link_inner_arrow('return_work', 'Return-to-Work Solutions', 'insideButtonAbout2 shorter', 'name') }}
                                 <div class = "dropDownInsideAbout2">
-                                    <a class = "name2 fade-in" href = "sammy-urtzal.html"> COVID-19 Testing </a>
-                                    <a class = "name2 fade-in" href = "peyton-everlue.html"> COVID-19 Screening and Treatment</a>
+                                    {{ nav_dropdown('covid_19', 'COVID-19 Testing', 'name2') }}
+                                    {{ nav_dropdown('screening', 'COVID-19 Screening and Treatment', 'name2') }}     
                                 </div>
                             </div>
                             <div class = "test3">
-                             <button class = "insideButtonAbout4 shorter fade-in" onclick="window.location.href = 'awards.html'"><a class = "name" href = "awards.html"> Virtual Reality Solutions </a><a href = "people.html"><i id = "rightArrow" class="fa fa-angle-right"></i></a></button>
+                                {{ nav_link_inner_arrow('virtual', 'Virtual Reality Solutions', 'insideButtonAbout4 shorter', 'name') }}
                                 <div class = "dropDownInsideAbout3">
-                                    <a class = "name2 fade-in" href = "sammy-urtzal.html"> Mental Disorders Therapy </a>
-                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Physical Therapy </a>
-                                    <a class = "name2 fade-in" href = "joselyn-sputak.html"> Phobia Therapy</a>
+                                    {{ nav_dropdown('mental', 'Mental Disorders Therapy', 'name2') }}
+                                    {{ nav_dropdown('physical', 'Physical Therapy', 'name2') }}
+                                    {{ nav_dropdown('phobia', 'Phobia Therapy', 'name2') }}
                                 </div>
                             </div>
                             <div class = "test4">
-                            <button class = "insideButtonAbout4 shorter fade-in" onclick="window.location.href = 'awards.html'"><a class = "name" href = "awards.html"> Pet Therapy Solutions </a><a href = "people.html"><i id = "rightArrow" class="fa fa-angle-right"></i></a></button>
+                                {{ nav_link_inner_arrow('pet', 'Pet Therapy Solutions', 'insideButtonAbout4 shorter', 'name') }}
                                 <div class = "dropDownInsideAbout4">
                                     <div class = "anotherBox">
-                                        <a class = "name2 lilShorter fade-in" href = "sammy-urtzal.html"> Therapy Dogs </a>
-                                        <a class = "name2 lilShorter fade-in" href = "joselyn-sputak.html"> Therapy Cats </a>
-                                        <a class = "name2 lilShorter fade-in" href = "joselyn-sputak.html"> Therapy Horses </a>
-                                        <a class = "name2 lilShorter fade-in" href = "joselyn-sputak.html"> Therapy Rabbits </a>
+                                        {{ nav_dropdown_longer('dogs', 'Therapy Dogs', 'name2 lilShorter') }}
+                                        {{ nav_dropdown_longer('cats', 'Therapy Cats', 'name2 lilShorter') }}
+                                        {{ nav_dropdown_longer('horses', 'Therapy Horses', 'name2 lilShorter') }}
+                                        {{ nav_dropdown_longer('rabbits', 'Therapy Rabbits', 'name2 lilShorter') }}
                                     </div>
                                     <div class = "anotherBox">
-                                        <a class = "name2 lilShorter fade-in" href = "joselyn-sputak.html"> Therapy Reptiles </a>
-                                        <a class = "name2 lilShorter fade-in" href = "joselyn-sputak.html"> Therapy Birds </a>
+                                        {{ nav_dropdown_longer('reptiles', 'Therapy Reptiles', 'name2 lilShorter') }}
+                                        {{ nav_dropdown_longer('birds', 'Therapy Birds', 'name2 lilShorter') }}
                                     </div>
                                 </div>
                             </div>
-                            <div class = "test4">
+                            <!--<div class = "test4">
                                 <button class = "insideButtonAbout4 shorter fade-in" onclick="window.location.href = 'design.html'"><a class = "name" id = "lastLink" href = "design.html"> Pet Therapy Solutions </a></button>
                                     <div class = "dropDownInsideAbout4">
                                     </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div class = "dropDownMedia">
-                        <button class = "dropButtonMedia" onclick="window.location.href = 'experience.html'"> <a href = "experience.html"> How It Works </a></button>
+                        {{ nav_link('how', 'How It Works', 'dropButtonMedia') }}
                         <div class = "dropDownContentMedia fade-in">
-                            <a href = "girl-powered.html" class = "fade-in">Deals and Offers</a>
-                            <a href = "social.html" id = "lastLink" class = "fade-in"> Our App </a>
-                            
+                            {{ nav_link_inner('pricing', 'Pricing and Insurance', 'insideButtonAbout', 'name lilShorter') }}
+                            {{ nav_link_inner('app', 'Our App', 'insideButtonAbout', 'name lilShorter') }}
                         </div>
                     </div>
                     <div class = "dropDownMedia">

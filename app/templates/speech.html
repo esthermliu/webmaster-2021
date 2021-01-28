@@ -1,0 +1,227 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/urgent.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/speech.css') }}">
+{% endblock %}
+
+{% block childcontent %}
+<div class = "firstSection demoSection">
+    <div class = "simpleSucks">
+        <h2 class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h2> 
+    </div>
+</div>
+<div class = "secondSection">
+    <div class = "treatmentBox show-on-scroll-right">
+        <div class = "imageHolder">
+        </div>
+        <div class = "textOverall">
+            <div class = "textHolderTreatment">
+                <div class = "impactTitle show-on-scroll-up serviceTitle">
+                    <h2> Emotionally Focused Therapy </h2>
+                </div>
+                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <!--<div class = "healthList show-on-scroll-up">
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "{{ url_for('therapy_condition', condition='abuse') }}">Abuse</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Insert Here </a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                    </ul>
+                </div>-->
+                <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
+                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "treatmentBox show-on-scroll-left">
+        <div class = "textOverall">
+            <div class = "textHolderTreatment">
+                <div class = "impactTitle show-on-scroll-up serviceTitle">
+                    <h2> Imago Relationship Therapy </h2>
+                </div>
+                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+                <!--<div class = "healthList show-on-scroll-up">
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                    </ul>
+                </div>-->
+                <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
+                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                </div>
+            </div>
+        </div>
+        <div class = "imageHolder pic2">
+        </div>
+    </div>
+    <div class = "treatmentBox show-on-scroll-right">
+        <div class = "imageHolder">
+        </div>
+        <div class = "textOverall">
+            <div class = "textHolderTreatment">
+                <div class = "impactTitle show-on-scroll-up serviceTitle">
+                    <h2> M - T </h2>
+                </div>
+                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+                <div class = "healthList show-on-scroll-up">
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
+                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "treatmentBox show-on-scroll-left">
+        <div class = "textOverall">
+            <div class = "textHolderTreatment">
+                <div class = "impactTitle show-on-scroll-up serviceTitle">
+                    <h2> U - Z </h2>
+                </div>
+                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+                <div class = "healthList show-on-scroll-up">
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Here Insert</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
+                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                </div>
+            </div>
+        </div>
+        <div class = "imageHolder pic2">
+        </div>
+    </div>
+</div>
+<div class = "firstSection demoSection anotherDemo">
+    <div class = "simpleSucks leftSucks">
+        <h2 class = "show-on-scroll-up">Ready to start treatment? </h2> 
+        <h3 class = "show-on-scroll-up">Request a visit quickly and privately blah blah blah blah blah lah blah blahlah blah blah.</h3>
+        <div class = "learnMoreContainerRegular leftAlign whiteButton show-on-scroll-up providerButton">
+            <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+        </div>
+    </div>
+    <div class = "registerImage show-on-scroll-up">
+        <img src = "{{ url_for('static', filename='images/Thumb.png') }}">
+    </div>
+</div>
+{% endblock %}

@@ -48,6 +48,14 @@
     {% endif %}
 {% endmacro %}
 
+{% macro nav_dropdown_longer(endpoint, name, class) %}
+    {% if endpoint in request.endpoint %}
+        <a class = "{{ class }} active2 fade-in" href = "{{ url_for(endpoint) }}"> {{ name }} </a>
+    {% else %}
+        <a class = "{{ class }} fade-in" href = "{{ url_for(endpoint) }}"> {{ name }} </a>
+    {% endif %}
+{% endmacro %}
+
 {% macro history_link(endpoint, name, currentyear) %}
     {% if currentyear == endpoint %}
         <a href = "{{ url_for('history_year', year=endpoint) }}" class="eventButton activeButton"><button> {{ name }} </button></a>

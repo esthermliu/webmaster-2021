@@ -1,0 +1,258 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/urgent.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dog.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cat.css') }}">
+    <script src="{{ url_for('static', filename='js/animal_slideshow.js') }}"></script>
+{% endblock %}
+
+{% block childcontent %}
+<div class = "thirdSection">
+    <div class = "impactTitle show-on-scroll-up">
+        <h2> Insert Text </h2>
+    </div>
+    <div class = "animalSection">
+        <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna duis convallis convallis tellus id interdum velit laoreet. Nunc eget lorem dolor sed viverra ipsum. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Sapien et ligula ullamcorper malesuada. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Blandit libero volutpat sed cras ornare arcu dui. Nunc sed blandit libero volutpat sed cras ornare arcu dui. Ornare quam viverra orci sagittis eu volutpat. Sed sed risus pretium quam vulputate dignissim suspendisse in est. Mauris nunc congue nisi vitae suscipit. A scelerisque purus semper eget. Ante metus dictum at tempor commodo ullamcorper.</p>
+        <h3 class = "show-on-scroll-right">What are Therapy Dogs?</h3>
+        <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna duis convallis convallis tellus id interdum velit laoreet. Nunc eget lorem dolor sed viverra ipsum. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Sapien et ligula ullamcorper malesuada. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Blandit libero volutpat sed cras ornare arcu dui. </p>
+        <div class = "animalImage show-on-scroll-left">
+            <img src = "{{ url_for('static', filename='images/FillerPicture.jpeg') }}">
+        </div>
+        <h3 class = "show-on-scroll-right">Gazing into a dog's eyes reduces anxiety</h3>
+        <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna duis convallis convallis tellus id interdum velit laoreet. Nunc eget lorem dolor sed viverra ipsum. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Sapien et ligula ullamcorper malesuada. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Blandit libero volutpat sed cras ornare arcu dui. </p>
+    </div>
+</div>
+<div class = "try">
+    <div class = "tryFilter">
+        <div class = "impactTitle whiteTitle show-on-scroll-up">
+            <h2> Wanna Try? </h2>
+        </div>
+        <div class = "trySection show-on-scroll-right">
+            <p>Scroll down to either of the two photo galleries, take a couple of deep breaths, find your favorite pups, and gaze into their eyes! Press the play button below if you would like to listen to some music at the same time. Some music releases oxytocin as well!</p>
+        </div>
+        <audio class = "music show-on-scroll-left" src = "{{ url_for('static', filename='images/Music.mp3') }}" controls type="audio/mp3"></audio>
+    </div>
+</div>
+<div class = "thirdSection lessSectionPad">
+    <div class = "impactTitle show-on-scroll-up">
+        <h2> Neomedica Therapy Teams </h2>
+    </div>
+    <div class = "featureLargeBox show-on-scroll-up moreSpaceTop centerBox">
+        <div class="animalContainer testFeature animal1">
+            <div class = "featuredImageHolder">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </div>
+    <div class = "featureLargeBox show-on-scroll-up noPadTop">
+        <a class="reviewPrev 1Prev"><i class="fa fa-angle-left"></i></a>
+        <div class="animalContainerFor animal1For">
+            <div class = "featuredImageHolder reviewText">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                        <h2>Insert Name</h2>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder reviewText">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                        <h2>Insert Name</h2>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder reviewText">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                        <h2>Insert Name</h2>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder reviewText">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                        <h2>Insert Name</h2>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder reviewText">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                        <h2>Insert Name</h2>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder reviewText">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                        <h2>Insert Name</h2>
+                    </div>
+                </div>
+            </div>       
+        </div>
+        <a class="reviewNext 1Next"><i class="fa fa-angle-right"></i></a>
+    </div>
+</div>
+<div class = "thirdSection noTop">
+    <div class = "impactTitle show-on-scroll-up">
+        <h2> High Quality Training </h2>
+    </div>
+    <div class = "animalSection">
+        <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna duis convallis convallis tellus id interdum velit laoreet. Nunc eget lorem dolor sed viverra ipsum. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Sapien et ligula ullamcorper malesuada. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Blandit libero volutpat sed cras ornare arcu dui. Nunc sed blandit libero volutpat sed cras ornare arcu dui. Ornare quam viverra orci sagittis eu volutpat. Sed sed risus pretium quam vulputate dignissim suspendisse in est. Mauris nunc congue nisi vitae suscipit. A scelerisque purus semper eget. Ante metus dictum at tempor commodo ullamcorper.</p>
+        <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna duis convallis convallis tellus id interdum velit laoreet. Nunc eget lorem dolor sed viverra ipsum. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Sapien et ligula ullamcorper malesuada. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Blandit libero volutpat sed cras ornare arcu dui. </p>
+        <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna duis convallis convallis tellus id interdum velit laoreet. Nunc eget lorem dolor sed viverra ipsum. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Sapien et ligula ullamcorper malesuada. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Blandit libero volutpat sed cras ornare arcu dui. </p>
+    </div>
+</div>
+<div class = "thirdSection lessSectionPad noTopPad">
+    <div class = "impactTitle show-on-scroll-up">
+        <h2> Pups in Training </h2>
+    </div>
+    <div class = "featureLargeBox show-on-scroll-up moreSpaceTop centerBox">
+        <div class="animalContainer testFeature animal2">
+            <div class = "featuredImageHolder">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </div>
+    <div class = "featureLargeBox show-on-scroll-up noPadTop">
+        <a class="reviewPrev 2Prev"><i class="fa fa-angle-left"></i></a>
+        <div class="animalContainerFor animal2For">
+            <div class = "featuredImageHolder reviewText">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                        <h2>Insert Name</h2>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder reviewText">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                        <h2>Insert Name</h2>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder reviewText">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                        <h2>Insert Name</h2>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder reviewText">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                        <h2>Insert Name</h2>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder reviewText">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                        <h2>Insert Name</h2>
+                    </div>
+                </div>
+            </div>
+            <div class = "featuredImageHolder reviewText">
+                <div class = "reviewInnerText">
+                    <div class="recBox">
+                        <img src="{{ url_for('static', filename='images/SleepingDog.jpeg') }}">
+                        <h2>Insert Name</h2>
+                    </div>
+                </div>
+            </div>       
+        </div>
+        <a class="reviewNext 2Next"><i class="fa fa-angle-right"></i></a>
+    </div>
+</div>
+{% endblock %}

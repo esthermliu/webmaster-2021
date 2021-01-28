@@ -1,0 +1,97 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/how.css') }}">
+{% endblock %}
+
+{% block childcontent %}
+    <div class = "firstSection">
+        <div class = "impactTitle show-on-scroll-up">
+            <h2> How It Works </h2>
+        </div>
+        <div class = "workSection">
+            <div class = "work">
+                <div class = "imageHolder">
+                    <video class = "vid show-on-scroll-right" autoplay muted>
+                        <source src="{{ url_for('static', filename='images/FillerVid.mp4') }}" type="video/mp4">
+                    </video>  
+                </div>
+                <div class = "lineHolder">
+                    <div class = "line show-on-scroll-up">  
+                    </div>
+                    <img class= "dotImage show-on-scroll-up" src = "{{ url_for('static', filename='images/Dot.png') }}">
+                </div>
+                <div class = "workText show-on-scroll-left">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class = "underlineLink">
+                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a> 
+                    </div>
+                </div>
+            </div>
+            <div class = "work">
+                <div class = "workText show-on-scroll-right">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class = "underlineLink">
+                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a> 
+                    </div>
+                </div>
+                <div class = "lineHolder">
+                    <div class = "line show-on-scroll-up">  
+                    </div>
+                    <img class= "dotImage show-on-scroll-up" src = "{{ url_for('static', filename='images/Dot.png') }}">
+                </div>
+                <div class = "imageHolder show-on-scroll-left">
+                    <img src="{{ url_for('static', filename='images/LessLag.jpg') }}" >  
+                </div>
+            </div>
+            <div class = "work">
+                <div class = "imageHolder show-on-scroll-right">
+                    <img src="{{ url_for('static', filename='images/LessLag.jpg') }}" > 
+                </div>
+                <div class = "lineHolder">
+                    <div class = "line show-on-scroll-up">  
+                    </div>
+                    <img class= "dotImage show-on-scroll-up" src = "{{ url_for('static', filename='images/Dot.png') }}">
+                </div>
+                <div class = "workText show-on-scroll-left">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class = "underlineLink">
+                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a> 
+                    </div>
+                </div>
+            </div>
+            <div class = "work">
+                <div class = "workText show-on-scroll-right">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class = "underlineLink">
+                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a> 
+                    </div>
+                </div>
+                <div class = "lineHolder">
+                    <div class = "line show-on-scroll-up">  
+                    </div>
+                    <img class= "dotImage show-on-scroll-up" src = "{{ url_for('static', filename='images/Dot.png') }}">
+                </div>
+                <div class = "imageHolder show-on-scroll-left">
+                    <img src="{{ url_for('static', filename='images/LessLag.jpg') }}" >
+                </div>
+            </div>
+        </div> 
+    </div>   
+    <div class = "firstSection demoSection anotherDemo">
+        <div class = "simpleSucks leftSucks">
+            <h2 class = "show-on-scroll-up">Ready for a better doctor's visit? </h2> 
+            <div class = "learnMoreContainerRegular leftAlign whiteButton show-on-scroll-up providerButton">
+                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            </div>
+        </div>
+        <div class = "registerImage show-on-scroll-left">
+            <img src = "{{ url_for('static', filename='images/DocPhone2.png') }}">
+        </div>
+    </div>
+{% endblock %}

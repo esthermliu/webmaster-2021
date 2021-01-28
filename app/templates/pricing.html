@@ -1,0 +1,189 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pricing.css') }}">
+{% endblock %}
+
+{% block childcontent %}
+<div class = "firstSection">
+    <div class = "impactTitle show-on-scroll-up">
+        <h2> Dirt cheap </h2>
+    </div>
+    <div class = "conditionSection">
+        <div class = "conditionText">
+            <h3 class = "show-on-scroll-right">Pay less for more</h3>
+            <h4 class = "show-on-scroll-right">Price: $29 </h4>
+            <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proidentid est laborum.</p>
+            <div class = "bottomLine show-on-scroll-right">
+            </div>
+        </div>
+        <div class = "conditionImage show-on-scroll-left">
+            <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
+        </div>
+    </div>
+    <div class = "conditionSection">
+        <div class = "conditionImage show-on-scroll-left smallerImage">
+            <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
+        </div>
+        <div class = "conditionText">
+            <h3 class = "show-on-scroll-right">Insert Text</h3>
+            <h4 class = "show-on-scroll-right">Neomedica Guarantee </h4>
+            <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proidentid est laborum.</p>
+            <div class = "bottomLine show-on-scroll-right">
+            </div>
+        </div>
+    </div>
+</div>
+<div class = "firstSection providerSection">
+    <div class = "featureTransparent providerTransparent">
+        <div class = "providerHolder show-on-scroll-right">
+            <div class = "providerTextBox">
+                <h3>Credit Cards</h3>
+                <div class = "impactTitle show-on-scroll-up saveTitle">
+                    <h2>Easy Payment</h2>
+                </div>
+                <p class = "saveText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <div class = "creditImage show-on-scroll-right">
+                    <img src = "{{ url_for('static', filename='images/CreditCard2.png') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class = "firstSection">
+    <div class = "impactTitle show-on-scroll-up">
+        <h2> Insert Text </h2>
+    </div>
+    <div class = "conditionSection">
+        <div class = "conditionText">
+            <h3 class = "show-on-scroll-right">Have insurance?</h3>
+            <h4 class = "show-on-scroll-right">Save even more</h4>
+            <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proidentid est laborum.</p>
+            <div class = "bottomLine show-on-scroll-right">
+            </div>
+        </div>
+        <div class = "conditionImage show-on-scroll-left">
+            <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
+        </div>
+    </div>
+    <div class = "conditionSection centerConditionSection">
+        <div class = "conditionText centerCondition">
+            <h3 class = "show-on-scroll-down">Insert Text</h3>
+            <h4 class = "show-on-scroll-down">Neomedica Guarantee </h4>
+            <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proidentid est laborum.</p>
+        </div>
+    </div>
+    <table>
+        <tr class = "headingSection show-on-scroll-right">
+            <th class = "heading features ">Company</th>
+            <th class = "heading special">Phone Number</th>  
+            <th class = "heading special">Website</th> 
+        </tr>
+        <tr class = "blueTable row show-on-scroll-left">
+            <td class = "heading regularText">
+                <a href = "https://www.aetna.com/" target = "_blank">
+                    <img src = "{{ url_for('static', filename='images/Aetna.png') }}">
+                </a>
+            </td>
+            <td class = "check">
+                <p>888-632-3862</p>
+            </td>
+            <td class = "check textLink">
+                <a href = "https://www.aetna.com/" target = "_blank">Check them out!</a>
+            </td>
+        </tr>
+        <tr class = "row show-on-scroll-right">
+            <td class = "heading regularText">
+                <a href = "https://www.aetna.com/" target = "_blank">
+                    <img src = "{{ url_for('static', filename='images/Aetna.png') }}">
+                </a>
+            </td>
+            <td class = "check">
+                <p>888-632-3862</p>
+            </td>
+            <td class = "check textLink">
+                <a href = "https://www.aetna.com/" target = "_blank">Check them out!</a>
+            </td>
+        </tr>
+        <tr class = "blueTable row show-on-scroll-left">
+            <td class = "heading regularText">
+                <a href = "https://www.aetna.com/" target = "_blank">
+                    <img src = "{{ url_for('static', filename='images/Aetna.png') }}">
+                </a>
+            </td>
+            <td class = "check">
+                <p>888-632-3862</p>
+            </td>
+            <td class = "check textLink">
+                <a href = "https://www.aetna.com/" target = "_blank">Check them out!</a>
+            </td>
+        </tr>
+        <tr class = "row show-on-scroll-right">
+            <td class = "heading regularText">
+                <a href = "https://www.aetna.com/" target = "_blank">
+                    <img src = "{{ url_for('static', filename='images/Aetna.png') }}">
+                </a>
+            </td>
+            <td class = "check">
+                <p>888-632-3862</p>
+            </td>
+            <td class = "check textLink">
+                <a href = "https://www.aetna.com/" target = "_blank">Check them out!</a>
+            </td>
+        </tr>
+        <tr class = "blueTable row show-on-scroll-left">
+            <td class = "heading regularText">
+                <a href = "https://www.aetna.com/" target = "_blank">
+                    <img src = "{{ url_for('static', filename='images/Aetna.png') }}">
+                </a>
+            </td>
+            <td class = "check">
+                <p>888-632-3862</p>
+            </td>
+            <td class = "check textLink">
+                <a href = "https://www.aetna.com/" target = "_blank">Check them out!</a>
+            </td>
+        </tr>
+        <tr class = "row show-on-scroll-right">
+            <td class = "heading regularText">
+                <a href = "https://www.aetna.com/" target = "_blank">
+                    <img src = "{{ url_for('static', filename='images/Aetna.png') }}">
+                </a>
+            </td>
+            <td class = "check">
+                <p>888-632-3862</p>
+            </td>
+            <td class = "check textLink">
+                <a href = "https://www.aetna.com/" target = "_blank">Check them out!</a>
+            </td>
+        </tr>
+        <tr class = "blueTable row show-on-scroll-left">
+            <td class = "heading regularText">
+                <a href = "https://www.aetna.com/" target = "_blank">
+                    <img src = "{{ url_for('static', filename='images/Aetna.png') }}">
+                </a>
+            </td>
+            <td class = "check">
+                <p>888-632-3862</p>
+            </td>
+            <td class = "check textLink">
+                <a href = "https://www.aetna.com/" target = "_blank">Check them out!</a>
+            </td>
+        </tr>
+        <tr class = "row show-on-scroll-right">
+            <td class = "heading regularText">
+                <a href = "https://www.aetna.com/" target = "_blank">
+                    <img src = "{{ url_for('static', filename='images/Aetna.png') }}">
+                </a>
+            </td>
+            <td class = "check">
+                <p>888-632-3862</p>
+            </td>
+            <td class = "check textLink">
+                <a href = "https://www.aetna.com/" target = "_blank">Check them out!</a>
+            </td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

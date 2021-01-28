@@ -12,6 +12,7 @@ body a {
     text-decoration: none;
 }
 
+
 header {
 	width: 100%;
 	display: flex;
@@ -804,3 +805,7 @@ footer {
        transform: translateX(0);
     }
  }  
+
+ .logoDark {
+     display: none;
+ }

@@ -1,0 +1,14 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+{% endblock %}
+
+{% block childcontent %}
+<div class = "firstSection">
+    <div class = "impactTitle show-on-scroll-up">
+        <h2> A widespread impact </h2>
+    </div>
+</div>
+{% endblock %}
