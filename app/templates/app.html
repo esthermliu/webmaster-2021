@@ -8,7 +8,30 @@
 {% block childcontent %}
 <div class = "firstSection">
     <div class = "impactTitle show-on-scroll-up">
-        <h2> A widespread impact </h2>
+        <h2> Best app ever </h2>
+    </div>
+    <div class = "conditionSection">
+        <div class = "conditionText">
+            <h3 class = "show-on-scroll-right">Insert Text</h3>
+            <h4 class = "show-on-scroll-right">Insert Text </h4>
+            <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proidentid est laborum.</p>
+            <div class = "bottomLine show-on-scroll-right">
+            </div>
+        </div>
+        <div class = "conditionImage show-on-scroll-left">
+            <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
+        </div>
+    </div>
+    <div class = "appSection">
+        <h2 class = "show-on-scroll-up">Neomedica virtual care makes your life easier. Download the Neomedica app today.</h2>
+        <div class = "appImage">
+            <a href = "https://www.apple.com/?afid=p238%7CsHI7bHWVr-dc_mtid_1870765e38482_pcrid_490032927341_pgrid_13945964767_&cid=aos-us-kwgo-apple-store-xc--slid---product-" target = "_blank">
+                <img class = "show-on-scroll-right" src = "{{ url_for('static', filename='images/ShadowApp.png') }}">
+            </a>
+            <a class = "widerImage" href = "https://play.google.com/store?&utm_source=na_Med&utm_medium=hasem&utm_content=Nov0520&utm_campaign=Evergreen&pcampaignid=MKT-EDR-na-us-1000189-Med-hasem-py-Evergreen-Nov0520-Text_Search_BKWS-id_100752_%7cEXA%7cONSEM_kwid_43700045371544949&gclid=CjwKCAiAu8SABhAxEiwAsodSZDeB8gQ51VDzYoBHHpGAyDfoVmS7PTIo8lBEy9fY_NcocIPPdA2hWhoCv34QAvD_BwE&gclsrc=aw.ds" target = "_blank">
+                <img class = "show-on-scroll-left" src = "{{ url_for('static', filename='images/GoogleShadow.png') }}">
+            </a>
+        </div>
     </div>
 </div>
 {% endblock %}

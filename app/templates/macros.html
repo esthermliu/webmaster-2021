@@ -1,5 +1,5 @@
 {% macro nav_link(endpoint, name, class) %}
-    {% if request.endpoint.endswith(endpoint) %}
+    {% if request.endpoint.startswith(endpoint) %}
         <button class = "{{ class }} active"  onclick="window.location.href = '{{ url_for(endpoint) }}'">
             <a href = "{{ url_for(endpoint) }}"> {{ name }} </a> 
         </button>

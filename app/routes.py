@@ -1,5 +1,7 @@
 from flask import render_template, flash, redirect, url_for, request
 from app import app
+from app import posts
+import math
 
 # View functions
 @app.route('/') # Decorators modify the functions that follow, both / and /index will lead to index page
@@ -488,9 +490,93 @@ def pricing():
                                         landing="priceLanding") 
 
 @app.route('/our-app')
-def app():
+def our_app():
     return render_template('app.html', title="Our App",
                                         inner_title="Our App",
                                         description="Insert Text",
                                         landing="appLanding") 
+
+@app.route('/reviews')
+def reviews():
+    reviews = posts.post
+    page = 0
+    specific_reviews = reviews[0:5]
+    total_pages = math.ceil(len(reviews) / 5) # total number of pages
+    return render_template('reviews.html', title="Reviews",
+                                        inner_title="Reviews",
+                                        description="Insert Text",
+                                        landing="reviewLanding",
+                                        reviews=specific_reviews,
+                                        current_page=page,
+                                        total_pages=total_pages) 
+
+@app.route('/reviews/page<int:page>')
+def reviews_pagination(page):
+    page = page - 1
+    reviews = posts.post
+    start = page * 5  # starting index for the list of reviews
+    end = start + 5 # ending index for the list of reviews
+    specific_reviews = reviews[start:end] # getting the specific reviews for that page
+
+    last = False
+    total_pages = math.ceil(len(reviews) / 5) # total number of pages
+    if (page == (total_pages - 1)): # if the page is the last page
+        last = True # set last to true
+    
+    
+
+    if (page <= 0):
+        return redirect(url_for('reviews'))
+    elif (page < total_pages): 
+        return render_template('reviews_page.html', title="Reviews",
+                                            inner_title="Reviews",
+                                            description="Insert Text",
+                                            landing="reviewLanding",
+                                            total_pages=total_pages,
+                                            reviews=specific_reviews,
+                                            current_page=page,
+                                            last=last) 
+    else:
+        return redirect(url_for('reviews'))
+
+
+@app.route('/reviews/filtered/<int:rating>/page<int:page>')
+def reviews_filtered(page, rating):
+    page = page - 1
+    reviews = posts.post
+    start = page * 5  # starting index for the list of reviews
+    end = start + 5 # ending index for the list of reviews
+    specific_reviews = []
+    for i in reviews:
+        if (i["rating"] == rating):
+            specific_reviews.append(i) 
+
+    start = page * 5  # starting index for the list of reviews
+    end = start + 5 # ending index for the list of reviews
+    filtered_reviews = specific_reviews[start:end]
+    
+    last = False
+    total_pages = math.ceil(len(specific_reviews) / 5) # total number of pages
+    if (page == (total_pages - 1)): # if the page is the last page
+        last = True # set last to true
+    
+    return render_template('reviews_page_filtered.html', title="Reviews",
+                                        inner_title="Reviews",
+                                        description="Insert Text",
+                                        landing="reviewLanding",
+                                        total_pages=total_pages,
+                                        reviews=filtered_reviews,
+                                        current_page=page,
+                                        last=last,
+                                        rating=rating) 
+
+@app.route('/organizations')
+def organizations():
+    return render_template('organizations.html', title="Organizations",
+                                        inner_title="Organizations",
+                                        description="Insert Text",
+                                        landing="organizationLanding") 
+    
+
+
                            

@@ -1,0 +1,224 @@
+.reviewLanding {
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.firstSection {
+    padding: 8% 25% 8% 25%;
+}
+
+.review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3aafa9;
+    padding-bottom: 6%;
+    padding-top: 6%;
+}
+
+.reviewImage {
+    width: 25%;
+}
+
+.reviewText {
+    width: 70%;
+}
+
+.reviewImage img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.reviewText h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.reviewText p {
+    line-height: 30px;
+}
+
+.reviewTitle {
+    text-align: center;
+}
+
+.reviewTitle h2:after {
+    margin: auto !important;
+}
+
+.reviewSpace {
+    margin-top: 8%;
+}
+
+.paginationLink {
+    color: rgb(23, 37, 42);
+    padding-right: 15px;
+    transition-duration: 0.3s;
+    webkit-transition-duration: 0.3s;
+}
+
+.paginationLink:hover {
+    color: #3aafa9;
+}
+
+.activePage {
+    color: #3aafa9;
+}
+
+.starHolder {
+    width: 20%;
+    margin-bottom: 10px;
+}
+
+.starHolder img {
+    width: 100%;
+}
+
+.topRibbon {
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.5rem 2rem rgba(0,0,0,.15);
+}
+
+.reviewNum {
+    width: 50%;
+    background-image: linear-gradient(to bottom right, #534666, #138086);
+    padding: 3% 5% 3% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.reviewSection {
+    padding: 3% 5% 3% 5%;
+    width: 50%;
+}
+
+.lessSpace {
+    padding-top: 3% !important;
+}
+
+.reviewCircle {
+    background-color: white;
+    border-radius: 50%;
+    height: 17rem;
+    width: 17rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 0.5rem solid #fec24c;
+    box-shadow: 0 0 3rem rgba(0,0,0,.2);
+}
+
+.reviewCircle img {
+    width: 50%;
+}
+
+.reviewCircle h3 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.reviewCircle h4 {
+    font-weight: 500;
+    color: rgb(102, 102, 102);
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+.filterHolder h4 {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5%;
+    letter-spacing: 1px;
+}
+
+.rate {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-right: 2%;
+    margin-left: 2%;
+    transition-duration: 0.3s;
+    webkit-transition-duration: 0.3s;
+}
+
+.rate img {
+    height: 25px;
+}
+
+.outerFiller {
+    width: 94%;
+    background-color: white;
+    display: flex;
+    box-shadow: 0 2px 4px 0 #d2d2d2;
+}
+
+.innerFiller {
+    width: 90%;
+    background-color: #fec24c;
+}
+
+.numRate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 2%;
+    transition-duration: 0.3s;
+    webkit-transition-duration: 0.3s;
+}
+
+.outerRate, .activeRate {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2%;
+    color: rgb(23, 37, 42);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    webkit-transition-duration: 0.3s;
+}
+
+.outerRate:hover .rate, .outerRate:hover .numRate {
+    transform: translate(10px, 0);
+}
+
+.numRate h5 {
+    font-weight: 600;
+}
+
+.inner4 {
+    width: 5% !important;
+}
+
+.inner3 {
+    width: 2% !important;
+}
+
+.inner2 {
+    width: 1% !important;
+}
+
+.pagination {
+    margin-top: 5%;
+}
+
+.moreRibbon {
+    padding-top: 85px;
+}
+
+.activeRate .rate, .activeRate .numRate {
+    font-size: 25px;
+}
+
+.allReview {
+    color: rgb(23, 37, 42);
+}

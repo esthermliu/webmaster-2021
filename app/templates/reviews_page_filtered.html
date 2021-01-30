@@ -1,0 +1,193 @@
+{% extends "wiki.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/wiki_page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/review.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class = "topRibbon moreRibbon">
+    <div class = "reviewNum">
+        <div class = "reviewCircle show-on-scroll-right">
+            <h3 class = "show-on-scroll-down">4.9</h3>
+            <img class = "show-on-scroll-up" src = "{{ url_for('static', filename='images/5Star.png') }}">
+            <h4 class = "show-on-scroll-up">10,561 Reviews</h4>
+        </div>
+    </div>
+    <div class = "reviewSection">
+        <div class = "filterHolder">
+            <h4 class = "show-on-scroll-up">Filter Reviews by Rating</h4>
+            {% if rating == 5 %}
+                <a href = "{{ url_for('reviews_filtered', page=1, rating=5) }}" class = "activeRate show-on-scroll-left">
+            {% else %}
+                <a href = "{{ url_for('reviews_filtered', page=1, rating=5) }}" class = "outerRate show-on-scroll-left">
+            {% endif %}
+                <div class = "numRate">
+                    <h5>5</h5>
+                </div>
+                <div class = "rate">
+                    <img src = "{{ url_for('static', filename='images/Star.svg') }}">
+                    <div class = "outerFiller">
+                        <div class = "innerFiller">
+                        </div>
+                    </div>
+                </div>
+                <div class = "numRate">
+                    <h5>90%</h5>
+                </div>
+            </a>
+            {% if rating == 4 %}
+                <a href = "{{ url_for('reviews_filtered', page=1, rating=4) }}" class = "activeRate show-on-scroll-left">
+            {% else %}
+                <a href = "{{ url_for('reviews_filtered', page=1, rating=4) }}" class = "outerRate show-on-scroll-left">
+            {% endif %}
+                <div class = "numRate">
+                    <h5>4</h5>
+                </div>
+                <div class = "rate">
+                    <img src = "{{ url_for('static', filename='images/Star.svg') }}">
+                    <div class = "outerFiller">
+                        <div class = "innerFiller inner4">
+                        </div>
+                    </div>
+                </div>
+                <div class = "numRate">
+                    <h5>5%</h5>
+                </div>
+            </a>
+            {% if rating == 3 %}
+                <a href = "{{ url_for('reviews_filtered', page=1, rating=3) }}" class = "activeRate show-on-scroll-left">
+            {% else %}
+                <a href = "{{ url_for('reviews_filtered', page=1, rating=3) }}" class = "outerRate show-on-scroll-left">
+            {% endif %}
+                <div class = "numRate">
+                    <h5>3</h5>
+                </div>
+                <div class = "rate">
+                    <img src = "{{ url_for('static', filename='images/Star.svg') }}">
+                    <div class = "outerFiller">
+                        <div class = "innerFiller inner2">
+                        </div>
+                    </div>
+                </div>
+                <div class = "numRate">
+                    <h5>1%</h5>
+                </div>
+            </a>
+            {% if rating == 2 %}
+                <a href = "{{ url_for('reviews_filtered', page=1, rating=2) }}" class = "activeRate show-on-scroll-left">
+            {% else %}
+                <a href = "{{ url_for('reviews_filtered', page=1, rating=2) }}" class = "outerRate show-on-scroll-left">
+            {% endif %}
+                <div class = "numRate">
+                    <h5>2</h5>
+                </div>
+                <div class = "rate">
+                    <img src = "{{ url_for('static', filename='images/Star.svg') }}">
+                    <div class = "outerFiller">
+                        <div class = "innerFiller inner3">
+                        </div>
+                    </div>
+                </div>
+                <div class = "numRate">
+                    <h5>2%</h5>
+                </div>
+            </a>
+            {% if rating == 1 %}
+                <a href = "{{ url_for('reviews_filtered', page=1, rating=1) }}" class = "activeRate show-on-scroll-left">
+            {% else %}
+                <a href = "{{ url_for('reviews_filtered', page=1, rating=1) }}" class = "outerRate show-on-scroll-left">
+            {% endif %}
+                <div class = "numRate">
+                    <h5>1</h5>
+                </div>
+                <div class = "rate">
+                    <img src = "{{ url_for('static', filename='images/Star.svg') }}">
+                    <div class = "outerFiller">
+                        <div class = "innerFiller inner2">
+                        </div>
+                    </div>
+                </div>
+                <div class = "numRate">
+                    <h5>1%</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class = "firstSection lessSpace">
+    <!--<div class = "impactTitle reviewTitle show-on-scroll-right">
+        <h2> Reviews :D </h2>
+    </div>-->
+    <div class = "reviewHolder">
+        {% for review in reviews %}
+        <div class = "review">
+            <div class = "reviewImage show-on-scroll-right">
+                <!--<img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">-->
+                <img src = "{{ url_for('static', filename='images/' + review['image']) }}">
+            </div>
+            <div class = "reviewText show-on-scroll-left">
+                <div class = "starHolder">
+                    <img src = "{{ url_for('static', filename='images/' + review['star']) }}">
+                </div>
+                <h3>{{ review['name'] }}</h3>
+                <p>{{ review['text'] }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+        
+    <div class = "pagination">
+        {% if current_page != 0 %}
+            <a class = "paginationLink" href = "{{ url_for('reviews_filtered', page=1, rating=rating) }}"> 
+                <i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i>
+            </a>
+            <a class = "paginationLink" href = "{{ url_for('reviews_filtered', page=(current_page), rating=rating) }}"> <i class="fa fa-angle-left"></i></a>
+        {% endif %}
+
+        {% if total_pages < 6 %}
+            {% for i in range(0, total_pages) %}
+                {% if i == current_page %}
+                    <a class = "paginationLink activePage" href = "{{ url_for('reviews_filtered', page=(i+1), rating=rating) }}"> {{ i + 1 }}</a> 
+                {% else %}
+                    <a class = "paginationLink" href = "{{ url_for('reviews_filtered', page=(i+1), rating=rating) }}"> {{ i + 1 }}</a>
+                {% endif %}
+            {% endfor %}
+        {% elif current_page < 3 %}
+            {% for i in range(0, 5) %}
+                {% if i == current_page %}
+                    <a class = "paginationLink activePage" href = "{{ url_for('reviews_filtered', page=(i+1), rating=rating) }}"> {{ i + 1 }}</a> 
+                {% else %}
+                    <a class = "paginationLink" href = "{{ url_for('reviews_filtered', page=(i+1), rating=rating) }}"> {{ i + 1 }}</a>
+                {% endif %}
+            {% endfor %}
+        {% elif current_page > total_pages - 3 %}
+            <!--<p>Current page: {{ current_page }}</p>
+            <p>total page: {{ total_pages }}</p>-->
+            {% for i in range(total_pages - 5, total_pages) %}
+                {% if i == current_page %}
+                    <a class = "paginationLink activePage" href = "{{ url_for('reviews_filtered', page=(i+1), rating=rating) }}"> {{ i + 1 }}</a> 
+                {% else %}
+                    <a class = "paginationLink" href = "{{ url_for('reviews_filtered', page=(i+1), rating=rating) }}"> {{ i + 1 }}</a>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% for i in range(current_page - 2, current_page + 3) %}
+                {% if i == current_page %}
+                    <a class = "paginationLink activePage" href = "{{ url_for('reviews_filtered', page=(i+1), rating=rating) }}"> {{ i + 1 }}</a> 
+                {% else %}
+                    <a class = "paginationLink" href = "{{ url_for('reviews_filtered', page=(i+1), rating=rating) }}"> {{ i + 1 }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        {% if last == false %}
+            <a class = "paginationLink" href = "{{ url_for('reviews_filtered', page=(current_page + 2), rating=rating) }}"> <i class="fa fa-angle-right"></i> </a>
+            <a class = "paginationLink" href = "{{ url_for('reviews_filtered', page=(total_pages), rating=rating) }}"> 
+                <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i> 
+            </a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
