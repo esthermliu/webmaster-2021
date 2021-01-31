@@ -143,18 +143,18 @@
                         {{ nav_link('reviews', 'Reviews', 'dropButtonMedia') }}
                     </div>
                     <div class = "dropDownMedia">
-                        <button class = "dropButtonMedia" onclick="window.location.href = 'lifestyle.html'"><a href = "lifestyle.html"> Organizations </a></button>
+                        {{ nav_link('organizations', 'Organizations', 'dropButtonMedia') }}
                         <div id = "Ownership"  class = "dropDownContentMedia fade-in">
-                            <a href = "privacy-legal.html"> Employer Groups </a>
-                            <a href = "warranties.html"> Hospitals and Health Systems </a>
-                            <a href = "warranties.html"> Unions and Associations </a>
-                            <a href = "warranties.html"> Government and Education </a>
-                            <a href = "warranties.html"> Brokers and Advisors </a>
-                            <a href = "services.html" id = "lastLink"> Distribution Partners </a>
+                            {{ nav_link_inner('employer', 'Employer Groups', 'insideButtonAbout', 'name lilShorter') }}
+                            {{ nav_link_inner('hospitals', 'Hospitals and Health Systems', 'insideButtonAbout', 'name lilShorter') }}
+                            {{ nav_link_inner('unions', 'Unions and Associations', 'insideButtonAbout', 'name lilShorter') }}
+                            {{ nav_link_inner('government', 'Government and Education', 'insideButtonAbout', 'name lilShorter') }}
+                            {{ nav_link_inner('brokers', 'Brokers and Advisors', 'insideButtonAbout', 'name lilShorter') }}
+                            {{ nav_link_inner('distribution', 'Distribution Partners', 'insideButtonAbout', 'name lilShorter') }}
                         </div>
                     </div>
                     <div class = "dropDownMedia">
-                        <button class = "dropButtonMedia" onclick="window.location.href = 'contact.html'"><a href = "contact.html"> News </a></button>
+                        {{ nav_link('news', 'News', 'dropButtonMedia') }}
                     </div>
                     <div class = "dropDownMedia">
                         <button class = "dropButtonMedia" onclick="window.location.href = 'contact.html'"><a href = "contact.html"> Blog </a></button>

@@ -671,6 +671,7 @@ footer {
     border-radius: 50px !important;
     margin-top: 15px;
     margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
 .footerButton button {

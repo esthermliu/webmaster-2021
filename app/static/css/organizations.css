@@ -1,3 +1,237 @@
 .organizationLanding {
-    
+
+}
+
+.firstSection {
+    padding: 8% 20% 8% 20%;
+}
+
+.textSection {
+    margin-top: 8%;
+    line-height: 30px;
+}
+
+.impactTitle {
+    text-align: center;
+}
+
+.orgTitle {
+    text-align: left;
+}
+
+.orgTitle h2 {
+    font-size: 35px;
+}
+
+.orgTitle h2:after {
+    margin: 0 !important;
+}
+
+.flexFirst {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightFirst, .leftFirst {
+    width: 47%;
+}
+
+.orgImageHolder {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0,0,0,0), rgba(0,0,0,0) 100%), 
+                linear-gradient(45deg,  #3AAFA9, #3AAFA9, #2B7A78  100%), 
+                linear-gradient(225deg,  #3AAFA9, #3AAFA9, #2B7A78 100%), 
+                linear-gradient(45deg, rgba(0,0,0,0), rgba(0,0,0,0) 100%);
+    background-size: 50% 50%;
+    background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.orgImageHolder img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.3);
+   
+}
+
+.secondSection {
+    background-image: url("/static/images/FillerPicture.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Roboto, sans-serif;
+    color: #323232;
+    line-height: 30px;
+}
+
+.backgroundColor {
+    background-image: linear-gradient(rgba(67, 90, 165, 0.5), rgba(117, 70, 70, 0.5));
+    /* background-image: linear-gradient(rgba(165, 103, 67, 0.5), rgba(117, 70, 70, 0.5)); */
+    padding: 8% 20% 8% 20%;
+}
+
+.valuesSection {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 12%;
+    line-height: 35px;
+    color: white;
+}
+
+.value {
+    text-align: center;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 6%;
+    width: 22%;
+}
+
+.value img {
+    height: 90px;
+}
+
+.moreSpace h2:after {
+    bottom: -40px !important;
+    width: 6% !important;
+}
+
+
+.whiteTitle, .whiteTitle h2 {
+    color: white !important;
+}
+
+.whiteTitle h2 {
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+.whiteTitle h2:after {
+    background: white;
+}
+
+.whiteTitle h3 {
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+.wordHolder h3 {
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.learnMoreContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 8%;
+    flex-wrap: wrap;
+}
+
+.competitionLink, .eventsLink, .programsLink {
+    background-image: url("/static/images/LearnMore.jpeg");
+    background-size: cover;
+    /*background-attachment: fixed;*/
+    transition: transform 0.2s;
+    background-position: center;
+    height: 30vh;
+    width: 30%;
+    margin-right: 2%;
+    margin-bottom: 3%;
+}
+
+.competition, .events, .programs {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Filter {
+    height: 30vh;
+    width: 100%;
+    background-color: rgba(51,51,51, 0.4);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition-duration: 0.3s;
+    text-align: center;
+}
+
+.Filter h4 {
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 35px;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+}
+
+.competitionLink:hover, .eventsLink:hover, .programsLink:hover {
+	-ms-transform: scale(1.5); /* IE 9 */
+	-webkit-transform: scale(1.5); /* Safari 3-8 */
+	transform: scale(1.1); 
+	transition-duration: 0.3s;
+}
+
+.competitionLink:hover .Filter, .eventsLink:hover .Filter, .programsLink:hover .Filter {
+	background-color: rgba(51,51,51,0.1);
+	height: 25vh;
+	width: 85%;
+	border: 2px solid white;
+}
+
+.anotherDemo {
+    background-image: linear-gradient(to bottom right,#138086,  #534666);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.simpleSucks {
+    padding: 5%;
+    text-align: center;
+    width: 50%;
+}
+
+
+.simpleSucks h2, h3 {
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+}
+
+.simpleSucks h3 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 35px;
+}
+
+.whiteButton button {
+    border-color: white;
+    color: white;
+}
+
+.whiteButton button:hover {
+    color: #def2f1;
+    border-color: #b2d1d0;
 }

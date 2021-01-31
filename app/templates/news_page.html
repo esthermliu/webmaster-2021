@@ -1,0 +1,77 @@
+{% extends "wiki.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/wiki.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
+{% endblock %}
+
+
+{% block content %}
+<div class = "firstSection">
+    <div class = "newsHolder noNewsPad">
+        {% for new in news %}
+            <div class = "news">
+                <div class = "newsImage show-on-scroll-up">
+                    <img src = "{{ url_for('static', filename='images/' + new['image']) }}">
+                </div>
+                <h3 class = "show-on-scroll-up">{{ new['title'] }}</h3>
+                <h4 class = "show-on-scroll-up">{{ new['date'] }}</h4>
+                <p class = "show-on-scroll-up">{{ new['text'] }}</p>
+                <div class = "readLink show-on-scroll-up">
+                    <a href = "#" class = "learnMore">Read article <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class = "pagination">
+        <a class = "paginationLink" href = "{{ url_for('news') }}"> 
+            <i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i>
+        </a>
+        <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(current_page)) }}"> <i class="fa fa-angle-left"></i></a>
+
+        {% if total_pages < 6 %}
+            {% for i in range(0, total_pages) %}
+                {% if i == current_page %}
+                    <a class = "paginationLink activePage" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
+                {% else %}
+                    <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
+                {% endif %}
+            {% endfor %}
+        {% elif current_page < 3 %}
+            {% for i in range(0, 5) %}
+                {% if i == current_page %}
+                    <a class = "paginationLink activePage" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
+                {% else %}
+                    <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
+                {% endif %}
+            {% endfor %}
+        {% elif current_page > total_pages - 3 %}
+            <!--<p>Current page: {{ current_page }}</p>
+            <p>total page: {{ total_pages }}</p>-->
+            {% for i in range(total_pages - 5, total_pages) %}
+                {% if i == current_page %}
+                    <a class = "paginationLink activePage" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
+                {% else %}
+                    <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% for i in range(current_page - 2, current_page + 3) %}
+                {% if i == current_page %}
+                    <a class = "paginationLink activePage" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
+                {% else %}
+                    <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        {% if last == false %}
+            <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(current_page + 2)) }}"> <i class="fa fa-angle-right"></i> </a>
+            <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(total_pages)) }}"> 
+                <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i> 
+            </a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

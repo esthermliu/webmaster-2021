@@ -1,0 +1,64 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/organization_default.css') }}">
+{% endblock %}
+
+{% block childcontent %}
+<div class = "firstSection">
+    <div class = "treatmentBox show-on-scroll-right">
+        <div class = "imageHolder">
+        </div>
+        <div class = "textOverall">
+            <div class = "textHolderTreatment">
+                <div class = "impactTitle show-on-scroll-up serviceTitle">
+                    <h2> Insert Text </h2>
+                </div>
+                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <!--<div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
+                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <div class = "treatmentBox show-on-scroll-left">
+        <div class = "textOverall">
+            <div class = "textHolderTreatment">
+                <div class = "impactTitle show-on-scroll-up serviceTitle">
+                    <h2> Insert Text </h2>
+                </div>
+                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+            </div>
+        </div>
+        <div class = "imageHolder">
+        </div>
+    </div>
+    <div class = "treatmentBox show-on-scroll-right">
+        <div class = "imageHolder">
+        </div>
+        <div class = "textOverall">
+            <div class = "textHolderTreatment">
+                <div class = "impactTitle show-on-scroll-up serviceTitle">
+                    <h2> Insert Text </h2>
+                </div>
+                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class = "firstSection demoSection anotherDemo">
+    <div class = "demoTransparent">
+        <div class = "simpleSucks leftSucks">
+            <h2 class = "show-on-scroll-up">Request a Demo </h2> 
+            <h3 class = "show-on-scroll-up">Discover the Neomedica difference.</h3>
+            <div class = "learnMoreContainerRegular whiteButton show-on-scroll-up providerButton">
+                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

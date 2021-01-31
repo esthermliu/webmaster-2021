@@ -1,7 +1,9 @@
 from flask import render_template, flash, redirect, url_for, request
 from app import app
 from app import posts
+from app import news_articles
 import math
+from flaskext.markdown import Markdown
 
 # View functions
 @app.route('/') # Decorators modify the functions that follow, both / and /index will lead to index page
@@ -577,6 +579,102 @@ def organizations():
                                         description="Insert Text",
                                         landing="organizationLanding") 
     
+@app.route('/employer-groups')
+def employer():
+    return render_template('employer.html', title="Employer Groups",
+                                        inner_title="Employer Groups",
+                                        description="Insert Text",
+                                        landing="employerLanding") 
+
+@app.route('/hospitals-and-health-systems')
+def hospitals():
+    return render_template('hospitals.html', title="Hospitals and Health Systems",
+                                        inner_title="Hospitals and Health Systems",
+                                        description="Insert Text",
+                                        landing="hospitalLanding") 
+
+@app.route('/unions-and-associations')
+def unions():
+    return render_template('unions.html', title="Unions and Associations",
+                                        inner_title="Unions and Associations",
+                                        description="Insert Text",
+                                        landing="unionLanding") 
+
+@app.route('/government-and-education')
+def government():
+    return render_template('government.html', title="Government and Education",
+                                        inner_title="Government and Education",
+                                        description="Insert Text",
+                                        landing="govLanding") 
+
+@app.route('/brokers-and-advisors')
+def brokers():
+    return render_template('brokers.html', title="Brokers and Advisors",
+                                        inner_title="Brokers and Advisors",
+                                        description="Insert Text",
+                                        landing="brokerLanding") 
+                                        
+@app.route('/distribution-partners')
+def distribution():
+    return render_template('distribution.html', title="Distribution Partners",
+                                        inner_title="Distribution Partners",
+                                        description="Insert Text",
+                                        landing="distributionLanding") 
+
+@app.route('/news')
+def news():
+    news_list = news_articles.news
+    page = 0
+    specific_news = news_list[0:12]
+    total_pages = math.ceil(len(news_list) / 12)
+    return render_template('news.html', title="News",
+                                        inner_title="News",
+                                        description="Insert Text",
+                                        landing="newsLanding",
+                                        news=specific_news,
+                                        current_page=page,
+                                        total_pages=total_pages) 
+
+@app.route('/news/page<int:page>')
+def news_pagination(page):
+    news_list = news_articles.news
+    page = page - 1
+    start = page * 12
+    end = start + 12
+    specific_news = news_list[start:end]
+
+    last = False
+    total_pages = math.ceil(len(news_list) / 12) # total number of pages
+    if (page == (total_pages - 1)):
+        last = True
+    
+    if (page <= 0):
+        return redirect(url_for('news'))
+    elif (page < total_pages):
+        return render_template('news_page.html', title="News",
+                                        inner_title="News",
+                                        description="Insert Text",
+                                        landing="newsLanding",
+                                        total_pages=total_pages,
+                                        news=specific_news,
+                                        current_page=page,
+                                        last=last) 
+    else:
+        return redirect(url_for('news'))
+
+@app.route('/news/article/<article_link>')
+def news_article(article_link):
+    news_list = news_articles.news
+    actual_news = []
+    for i in news_list:
+        if (i["link"] == article_link):
+            actual_news.append(i)
+    if not actual_news:
+        return redirect(url_for('news'))
+    return render_template('news_article.html', title="News",
+                                        inner_title="News",
+                                        description="Insert Text",
+                                        landing="newsLanding",
+                                        article=actual_news)
 
 
-                           

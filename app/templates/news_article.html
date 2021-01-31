@@ -1,0 +1,49 @@
+{% extends "wiki.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/wiki.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news_article.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class = "firstSection">
+    <div class = "articleHolder">
+        <div class = "learnMoreHolder show-on-scroll-right">
+            <a href = "{{ url_for('news') }}" class = "learnMore"><i id = "rightArrow" class="fa fa-angle-left learn"></i>Return to news list</a>
+        </div>
+        <div class = 'articleImage show-on-scroll-up'>
+            <img src = "{{ url_for('static', filename='images/FillerPicture.jpeg') }}">
+        </div>
+        <div class = "articleBig">
+            <div class = "articleText">
+                <h4 class = "show-on-scroll-up">{{ article[0].date }}</h4>
+                <h2 class = "show-on-scroll-up">{{ article[0].title }}</h2>
+                <div class = "show-on-scroll-up">
+                    {{ article[0].article|markdown }}
+                </div>
+            </div>
+            <div class = "shareHolder show-on-scroll-left">
+                <h4>Share</h4>
+                <div class = "shareBox">
+                    <a class = "shareSocial" href = "https://www.facebook.com/" target = "_blank">
+                        <div class = "socialFlex">
+                            <p><i class="fa fa-facebook-f specialCenter"></i></p>
+                        </div>
+                    </a>
+                    <a class = "shareSocial" href = "https://twitter.com/" target = "_blank">
+                        <div class = "socialFlex">
+                            <p><i class="fab fa-twitter specialCenter"></i></p>
+                        </div>
+                    </a>
+                    <a class = "shareSocial" href = "https://www.linkedin.com/" target = "_blank">
+                        <div class = "socialFlex">
+                            <p><i class="fab fa-linkedin-in specialCenter"></i></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
+{% endblock %}
+
+{% block childcontent %}
+<div class = "firstSection">
+    <div class = "impactTitle show-on-scroll-up">
+        <h2> What's New </h2>
+    </div>
+    <div class = "newsHolder">
+        {% for new in news %}
+            <div class = "news">
+                <div class = "newsImage show-on-scroll-up">
+                    <img src = "{{ url_for('static', filename='images/' + new['image']) }}">
+                </div>
+                <h3 class = "show-on-scroll-up">{{ new['title'] }}</h3>
+                <h4 class = "show-on-scroll-up">{{ new['date'] }}</h4>
+                <p class = "show-on-scroll-up">{{ new['text'] }}</p>
+                <div class = "readLink show-on-scroll-up">
+                    <a href = "{{ url_for('news_article', article_link=new['link']) }}" class = "learnMore">Read article <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class = "pagination">
+        {% if total_pages < 6 %}
+            {% for i in range(0, total_pages) %}
+                    {% if i == current_page %}
+                        <a class = "paginationLink activePage" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
+                    {% else %}
+                        <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
+                    {% endif %}
+            {% endfor %}
+        {% else %}
+            {% for i in range(0, 5) %}
+                {% if i == current_page %}
+                    <a class = "paginationLink activePage" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
+                {% else %}
+                    <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% if total_pages != 1 %}
+            <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(current_page + 2)) }}"> <i class="fa fa-angle-right"></i>  </a>
+            <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(total_pages)) }}"> 
+                <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i>
+            </a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
