@@ -2,6 +2,7 @@ from flask import render_template, flash, redirect, url_for, request
 from app import app
 from app import posts
 from app import news_articles
+from app import blog_articles
 import math
 from flaskext.markdown import Markdown
 
@@ -678,3 +679,74 @@ def news_article(article_link):
                                         article=actual_news)
 
 
+@app.route('/blog')
+def blog():
+    news_list = blog_articles.blogs
+    page = 0
+    specific_news = news_list[0:12]
+    total_pages = math.ceil(len(news_list) / 12)
+    return render_template('blog.html', title="Blog",
+                                        inner_title="Blog",
+                                        description="Insert Text",
+                                        landing="blogLanding",
+                                        news=specific_news,
+                                        current_page=page,
+                                        total_pages=total_pages) 
+
+@app.route('/blog/page<int:page>')
+def blog_pagination(page):
+    news_list = blog_articles.blogs
+    page = page - 1
+    start = page * 12
+    end = start + 12
+    specific_news = news_list[start:end]
+
+    last = False
+    total_pages = math.ceil(len(news_list) / 12) # total number of pages
+    if (page == (total_pages - 1)):
+        last = True
+    
+    if (page <= 0):
+        return redirect(url_for('blog'))
+    elif (page < total_pages):
+        return render_template('blog_page.html', title="Blog",
+                                        inner_title="Blog",
+                                        description="Insert Text",
+                                        landing="blogLanding",
+                                        total_pages=total_pages,
+                                        news=specific_news,
+                                        current_page=page,
+                                        last=last) 
+    else:
+        return redirect(url_for('blog'))
+
+@app.route('/blog/article/<article_link>')
+def blog_article(article_link):
+    news_list = blog_articles.blogs
+    blogs_recent = news_list[0:3]
+    actual_news = []
+    for i in news_list:
+        if (i["link"] == article_link):
+            actual_news.append(i)
+    if not actual_news:
+        return redirect(url_for('blog'))
+    return render_template('blog_article.html', title="Blog",
+                                        inner_title="Blog",
+                                        description="Insert Text",
+                                        landing="blogLanding",
+                                        article=actual_news,
+                                        blogs=blogs_recent)
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html', title="Contact",
+                                        inner_title="Contact",
+                                        description="Insert Text",
+                                        landing="contactLanding") 
+
+@app.route('/faq')
+def faq():
+    return render_template('faq.html', title="FAQ",
+                                        inner_title="FAQ",
+                                        description="Insert Text",
+                                        landing="faqLanding") 

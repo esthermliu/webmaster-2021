@@ -19,31 +19,31 @@
                 <h4 class = "show-on-scroll-up">{{ new['date'] }}</h4>
                 <div class = "show-on-scroll-up">{{ new['article']|truncate(230, True)|markdown }}</div>
                 <div class = "readLink show-on-scroll-up">
-                    <a href = "{{ url_for('news_article', article_link=new['link']) }}" class = "learnMore">Read article <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    <a href = "{{ url_for('blog_article', article_link=new['link']) }}" class = "learnMore">Read article <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
                 </div>
             </div>
         {% endfor %}
     </div>
     <div class = "pagination">
-        <a class = "paginationLink" href = "{{ url_for('news') }}"> 
+        <a class = "paginationLink" href = "{{ url_for('blog') }}"> 
             <i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i>
         </a>
-        <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(current_page)) }}"> <i class="fa fa-angle-left"></i></a>
+        <a class = "paginationLink" href = "{{ url_for('blog_pagination', page=(current_page)) }}"> <i class="fa fa-angle-left"></i></a>
 
         {% if total_pages < 6 %}
             {% for i in range(0, total_pages) %}
                 {% if i == current_page %}
-                    <a class = "paginationLink activePage" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
+                    <a class = "paginationLink activePage" href = "{{ url_for('blog_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
                 {% else %}
-                    <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
+                    <a class = "paginationLink" href = "{{ url_for('blog_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
                 {% endif %}
             {% endfor %}
         {% elif current_page < 3 %}
             {% for i in range(0, 5) %}
                 {% if i == current_page %}
-                    <a class = "paginationLink activePage" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
+                    <a class = "paginationLink activePage" href = "{{ url_for('blog_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
                 {% else %}
-                    <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
+                    <a class = "paginationLink" href = "{{ url_for('blog_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
                 {% endif %}
             {% endfor %}
         {% elif current_page > total_pages - 3 %}
@@ -51,24 +51,24 @@
             <p>total page: {{ total_pages }}</p>-->
             {% for i in range(total_pages - 5, total_pages) %}
                 {% if i == current_page %}
-                    <a class = "paginationLink activePage" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
+                    <a class = "paginationLink activePage" href = "{{ url_for('blog_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
                 {% else %}
-                    <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
+                    <a class = "paginationLink" href = "{{ url_for('blog_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
                 {% endif %}
             {% endfor %}
         {% else %}
             {% for i in range(current_page - 2, current_page + 3) %}
                 {% if i == current_page %}
-                    <a class = "paginationLink activePage" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
+                    <a class = "paginationLink activePage" href = "{{ url_for('blog_pagination', page=(i+1)) }}"> {{ i + 1 }}</a> 
                 {% else %}
-                    <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
+                    <a class = "paginationLink" href = "{{ url_for('blog_pagination', page=(i+1)) }}"> {{ i + 1 }}</a>
                 {% endif %}
             {% endfor %}
         {% endif %}
 
         {% if last == false %}
-            <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(current_page + 2)) }}"> <i class="fa fa-angle-right"></i> </a>
-            <a class = "paginationLink" href = "{{ url_for('news_pagination', page=(total_pages)) }}"> 
+            <a class = "paginationLink" href = "{{ url_for('blog_pagination', page=(current_page + 2)) }}"> <i class="fa fa-angle-right"></i> </a>
+            <a class = "paginationLink" href = "{{ url_for('blog_pagination', page=(total_pages)) }}"> 
                 <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i> 
             </a>
         {% endif %}

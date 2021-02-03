@@ -168,8 +168,12 @@ header {
 	width: 5px;
 }
 
-.test1:hover .fa-angle-right, .test2:hover .fa-angle-right, .test3:hover .fa-angle-right, .test4:hover .fa-angle-right, .test5:hover .fa-angle-right, .test6:hover .fa-angle-right, .test7:hover .fa-angle-right{
+.test1:hover .fa-angle-right, .test2:hover .fa-angle-right, .test3:hover .fa-angle-right, .test4:hover .fa-angle-right, .test5:hover .fa-angle-right, .test6:hover .fa-angle-right, .test7:hover .fa-angle-right {
 	color: #3AAFA9;
+}
+
+.test1:hover .name::after, .test2:hover .name::after, .test3:hover .name::after, .test4:hover .name::after, .test5:hover .name::after, .test6:hover .name::after, .test7:hover .name::after {
+    width: 100%;
 }
 
 .name, .name2 {

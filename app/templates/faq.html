@@ -1,0 +1,10 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }} <!-- Have to include the super to get the default css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/faq.css') }}">
+{% endblock %}
+
+{% block childcontent %}
+
+{% endblock %}

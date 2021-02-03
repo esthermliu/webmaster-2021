@@ -157,12 +157,12 @@
                         {{ nav_link('news', 'News', 'dropButtonMedia') }}
                     </div>
                     <div class = "dropDownMedia">
-                        <button class = "dropButtonMedia" onclick="window.location.href = 'contact.html'"><a href = "contact.html"> Blog </a></button>
+                        {{ nav_link('blog', 'Blog', 'dropButtonMedia') }}
                     </div>
                     <div class = "dropDownMedia">
-                        <button class = "dropButtonMedia" onclick="window.location.href = 'contact.html'"><a href = "contact.html"> Contact </a></button>
+                        {{ nav_link('contact', 'Contact', 'dropButtonMedia') }}
                         <div id = "Ownership"  class = "dropDownContentMedia fade-in">
-                            <a href = "privacy-legal.html"> FAQ </a>
+                            {{ nav_link_inner('faq', 'FAQ', 'insideButtonAbout', 'name lilShorter') }}
                             <a href = "warranties.html"> Our Social </a>
                             <a href = "services.html" id = "lastLink"> Join Us </a>
                         </div>

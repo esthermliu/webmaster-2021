@@ -4,13 +4,14 @@
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/wiki.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/news_article.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blog_article.css') }}">
 {% endblock %}
 
 {% block content %}
 <div class = "firstSection">
     <div class = "articleHolder">
         <div class = "learnMoreHolder show-on-scroll-right">
-            <a href = "{{ url_for('news') }}" class = "learnMore"><i id = "rightArrow" class="fa fa-angle-left learn"></i>Return to news list</a>
+            <a href = "{{ url_for('blog') }}" class = "learnMore"><i id = "rightArrow" class="fa fa-angle-left learn"></i>Return to blog list</a>
         </div>
         <div class = 'articleImage show-on-scroll-up'>
             <img src = "{{ url_for('static', filename='images/FillerPicture.jpeg') }}">
@@ -44,6 +45,26 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class = "recentBlogs">
+    <div class = "impactTitle blogTitle show-on-scroll-up">
+        <h2> Recent Posts </h2>
+    </div>
+    <div class = "newsHolder noNewsPad">
+        {% for blog in blogs %}
+            <div class = "news">
+                <div class = "newsImage show-on-scroll-up">
+                    <img src = "{{ url_for('static', filename='images/' + blog['image']) }}">
+                </div>
+                <h3 class = "show-on-scroll-up">{{ blog['title'] }}</h3>
+                <h4 class = "show-on-scroll-up">{{ blog['date'] }}</h4>
+                <div class = "show-on-scroll-up">{{ blog['article']|truncate(230, True)|markdown }}</div>
+                <div class = "readLink show-on-scroll-up">
+                    <a href = "{{ url_for('blog_article', article_link=blog['link']) }}" class = "learnMore">Read article <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                </div>
+            </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
