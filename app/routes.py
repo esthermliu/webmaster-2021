@@ -750,3 +750,17 @@ def faq():
                                         inner_title="FAQ",
                                         description="Insert Text",
                                         landing="faqLanding") 
+
+@app.route('/our-social')
+def social():
+    return render_template('social.html', title="Our Social",
+                                        inner_title="Our Social",
+                                        description="Insert Text",
+                                        landing="socialLanding") 
+
+@app.route('/join-us')
+def join():
+    return render_template('join.html', title="Join Us",
+                                        inner_title="Join Us",
+                                        description="Insert Text",
+                                        landing="joinLanding") 

@@ -1,0 +1,64 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }} <!-- Have to include the super to get the default css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/social.css') }}"> 
+{% endblock %}
+
+{% block childcontent %}
+<div class = "firstSection">
+    <div class = "impactTitle show-on-scroll-up">
+        <h2> Check us out! </h2>
+    </div>
+    <div class = "solutionsHolder">
+        <div class = "solution show-on-scroll-up">
+            <div class = "solutionCircle">
+                <img src = "{{ url_for('static', filename='images/Facebook.png') }}">
+            </div>
+            <div class = "spaceAbove show-on-scroll-up">
+                <a href = "#" class = "learnMore longUnd">@neomedica_replace</a>
+            </div>
+        </div>
+        <div class = "solution show-on-scroll-up">
+            <div class = "solutionCircle otherWay">
+                <img src = "{{ url_for('static', filename='images/Instagram.png') }}">
+            </div>
+            <div class = "spaceAbove show-on-scroll-up">
+                <a href = "#" class = "learnMore longUnd">@neomedica_replace</a>
+            </div>
+        </div>
+        <div class = "solution show-on-scroll-up">
+            <div class = "solutionCircle">
+                <img src = "{{ url_for('static', filename='images/Twitter.png') }}">
+            </div>
+            <div class = "spaceAbove show-on-scroll-up">
+                <a href = "#" class = "learnMore longUnd">@neomedica_replace</a>
+            </div>
+        </div>
+        <div class = "solution show-on-scroll-up">
+            <div class = "solutionCircle otherWay">
+                <img src = "{{ url_for('static', filename='images/Youtube.png') }}">
+            </div>
+            <div class = "spaceAbove show-on-scroll-up">
+                <a href = "#" class = "learnMore longUnd">@neomedica_replace</a>
+            </div>
+        </div>
+        <div class = "solution show-on-scroll-up">
+            <div class = "solutionCircle">
+                <img src = "{{ url_for('static', filename='images/Linked.png') }}">
+            </div>
+            <div class = "spaceAbove show-on-scroll-up">
+                <a href = "#" class = "learnMore longUnd">@neomedica_replace</a>
+            </div>
+        </div>
+        <div class = "solution show-on-scroll-up">
+            <div class = "solutionCircle otherWay">
+                <img src = "{{ url_for('static', filename='images/Pinterest.png') }}">
+            </div>
+            <div class = "spaceAbove show-on-scroll-up">
+                <a href = "#" class = "learnMore longUnd">@neomedica_replace</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

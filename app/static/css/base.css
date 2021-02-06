@@ -798,9 +798,9 @@ footer {
        opacity: 1;
        -webkit-transform: translateX(0);
     }
- }
+}
 
- @keyframes fadeInRight {
+@keyframes fadeInRight {
     0% {
        opacity: 0;
        transform: translateX(-80px);
@@ -809,8 +809,17 @@ footer {
        opacity: 1;
        transform: translateX(0);
     }
- }  
+}  
 
- .logoDark {
+.logoDark {
      display: none;
- }
+}
+
+/* hiding media elements */
+.mediaHolder {
+    display: none;
+}
+
+#navLinks {
+    display: none;
+}

@@ -63,3 +63,62 @@
         <a href = "{{ url_for('history_year', year=endpoint) }}" class="eventButton"><button> {{ name }} </button></a>
     {% endif %}
 {% endmacro %}
+
+{% macro phone_nav(endpoint, name) %}
+    {% if endpoint in request.endpoint %}
+        <a class = "activeMedia" href="{{ url_for(endpoint) }}">{{ name }}</a>
+    {% else %}
+        <a href="{{ url_for(endpoint) }}">{{ name }}</a>
+    {% endif %}
+{% endmacro %}
+
+{% macro phone_nav_class(endpoint, name, class) %}
+    {% if endpoint in request.endpoint %}
+        <a class = "{{ class }} activeMedia" href="{{ url_for(endpoint) }}">{{ name }}</a>
+    {% else %}
+        <a class = "{{ class }}" href="{{ url_for(endpoint) }}">{{ name }}</a>
+    {% endif %}
+{% endmacro %}
+
+{% macro phone_dropdown(class, id, endpoint_array) %}
+    {% set found =  {'foo': False} %}
+    {% for endpoint in endpoint_array %}
+        {% if endpoint in request.endpoint %}
+            {% if found.update({'foo': True}) %} {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% if found.foo %}
+        <div class="{{ class }} displayBlock" id = "{{ id }}">
+    {% else %}
+        <div class="{{ class }}" id = "{{ id }}">
+    {% endif %}
+{% endmacro %}
+
+{% macro phone_plus(phone, plus_id, plus_id_js, minus_id, endpoint_array) %}
+    {% set found2 =  {'foo': False} %}
+    {% for endpoint in endpoint_array %}
+        {% if endpoint in request.endpoint %}
+            {% if found2.update({'foo': True}) %} {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% if found2.foo %}
+        <p id = "{{ plus_id }}" class = "plus displayNone" onclick="phoneNav('{{ phone }}', '{{ plus_id_js }}', '{{ minus_id }}')">+</p>
+    {% else %}
+        <p id = "{{ plus_id }}" class = "plus displayBlock" onclick="phoneNav('{{ phone }}', '{{ plus_id_js }}', '{{ minus_id }}')">+</p>
+    {% endif %}
+{% endmacro %}
+
+{% macro phone_minus(phone, minus_id, plus_id_js, minus_id_js, endpoint_array) %}
+    {% set found2 =  {'foo': False} %}
+    {% for endpoint in endpoint_array %}
+        {% if endpoint in request.endpoint %}
+            {% if found2.update({'foo': True}) %} {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% if found2.foo %}
+        <p id = "{{ minus_id }}" class = "minus displayBlock" onclick="phoneNav('{{ phone }}', '{{ plus_id_js }}', '{{ minus_id_js }}')">&#8211;</p>
+    {% else %}
+        <p id = "{{ minus_id }}" class = "minus displayNone" onclick="phoneNav('{{ phone }}', '{{ plus_id_js }}', '{{ minus_id_js }}')">&#8211;</p>
+    {% endif %}
+{% endmacro %}
+

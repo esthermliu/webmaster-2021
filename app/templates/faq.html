@@ -3,8 +3,171 @@
 {% block head %}
     {{ super() }} <!-- Have to include the super to get the default css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/faq.css') }}">
+    <script src="{{ url_for('static', filename='js/toggle.js')}}"></script> 
+    <script src="{{ url_for('static', filename='js/faq.js')}}"></script> 
 {% endblock %}
 
 {% block childcontent %}
-
+<div class = "firstSection">
+    <div class = "impactTitle show-on-scroll-up">
+        <h2> View answers by topic </h2>
+    </div>
+    <div class = "topics show-on-scroll-right">
+        <a id = "serviceLink" class = "topicLink serviceLink firstLink" rel = "hello">Service</a>
+        <a id = "treatmentLink" class = "topicLink treatmentLink" rel = "hello2">Treatment</a>
+        <a id = "prescriptionLink" class = "topicLink prescriptionLink" rel = "hello3">Prescriptions</a>
+        <a id = "covidLink" class = "topicLink covidLink" rel = "hello4">COVID-19</a>
+    </div>
+    <div class = "overallHolder">
+        <div id = "hello" class = "questionSection serviceSection">
+            <div class = "eachQuestion show-on-scroll-left">
+                <div class = "buttonTopHolder">
+                    <button class = "hide" id="Hide"  onclick="toggle('.inside1', '.vert1')">When should I use Neomedica?</button>
+                    <div class = "minusHolder">
+                        <p id = "showMinus" class = "horizontalMinus"  onclick="toggle('.inside1', '.vert1')">&minus;</p>
+                        <p id = "hideMinus" class = "verticalMinus vert1"  onclick="toggle('.inside1', '.vert1')">&minus;</p>
+                    </div>
+                </div>
+                <div class="insideInfo inside1 show-on-scroll-up">
+                    <div class = "detailSection">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div> 
+                </div>
+            </div>
+            <div class = "eachQuestion show-on-scroll-left">
+                <div class = "buttonTopHolder">
+                    <button class = "hide" id="Hide"  onclick="toggle('.inside2', '.vert2')">Lorem ipsum dolor sit amet?</button>
+                    <div class = "minusHolder">
+                        <p id = "showMinus" class = "horizontalMinus"  onclick="toggle('.inside2', '.vert2')">&minus;</p>
+                        <p id = "hideMinus" class = "verticalMinus vert2"  onclick="toggle('.inside2', '.vert2')">&minus;</p>
+                    </div>
+                </div>
+                <div class="insideInfo inside2 show-on-scroll-up">
+                    <div class = "detailSection">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div> 
+                </div>
+            </div>
+            <div class = "eachQuestion show-on-scroll-left">
+                <div class = "buttonTopHolder">
+                    <button class = "hide" id="Hide"  onclick="toggle('.inside3', '.vert3')">Lorem ipsum dolor sit amet?</button>
+                    <div class = "minusHolder">
+                        <p id = "showMinus" class = "horizontalMinus"  onclick="toggle('.inside3', '.vert3')">&minus;</p>
+                        <p id = "hideMinus" class = "verticalMinus vert3"  onclick="toggle('.inside3', '.vert3')">&minus;</p>
+                    </div>
+                </div>
+                <div class="insideInfo inside3 show-on-scroll-up">
+                    <div class = "detailSection">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div id = "hello2" class = "questionSection treatmentSection">
+            <div class = "eachQuestion show-on-scroll-left">
+                <div class = "buttonTopHolder">
+                    <button class = "hide" id="Hide"  onclick="toggle('.inside1', '.vert1')">Treatment Question?</button>
+                    <div class = "minusHolder">
+                        <p id = "showMinus" class = "horizontalMinus"  onclick="toggle('.inside1', '.vert1')">&minus;</p>
+                        <p id = "hideMinus" class = "verticalMinus vert1"  onclick="toggle('.inside1', '.vert1')">&minus;</p>
+                    </div>
+                </div>
+                <div class="insideInfo inside1 show-on-scroll-up">
+                    <div class = "detailSection">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div> 
+                </div>
+            </div>
+            <div class = "eachQuestion show-on-scroll-left">
+                <div class = "buttonTopHolder">
+                    <button class = "hide" id="Hide"  onclick="toggle('.inside2', '.vert2')">Lorem ipsum dolor sit amet?</button>
+                    <div class = "minusHolder">
+                        <p id = "showMinus" class = "horizontalMinus"  onclick="toggle('.inside2', '.vert2')">&minus;</p>
+                        <p id = "hideMinus" class = "verticalMinus vert2"  onclick="toggle('.inside2', '.vert2')">&minus;</p>
+                    </div>
+                </div>
+                <div class="insideInfo inside2 show-on-scroll-up">
+                    <div class = "detailSection">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div> 
+                </div>
+            </div>
+            <div class = "eachQuestion show-on-scroll-left">
+                <div class = "buttonTopHolder">
+                    <button class = "hide" id="Hide"  onclick="toggle('.inside3', '.vert3')">Lorem ipsum dolor sit amet?</button>
+                    <div class = "minusHolder">
+                        <p id = "showMinus" class = "horizontalMinus"  onclick="toggle('.inside3', '.vert3')">&minus;</p>
+                        <p id = "hideMinus" class = "verticalMinus vert3"  onclick="toggle('.inside3', '.vert3')">&minus;</p>
+                    </div>
+                </div>
+                <div class="insideInfo inside3 show-on-scroll-up">
+                    <div class = "detailSection">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div id = "hello3" class = "questionSection prescriptionSection">
+            <div class = "eachQuestion show-on-scroll-left">
+                <div class = "buttonTopHolder">
+                    <button class = "hide" id="Hide"  onclick="toggle('.inside1', '.vert1')">Prescription Question here?</button>
+                    <div class = "minusHolder">
+                        <p id = "showMinus" class = "horizontalMinus"  onclick="toggle('.inside1', '.vert1')">&minus;</p>
+                        <p id = "hideMinus" class = "verticalMinus vert1"  onclick="toggle('.inside1', '.vert1')">&minus;</p>
+                    </div>
+                </div>
+                <div class="insideInfo inside1 show-on-scroll-up">
+                    <div class = "detailSection">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div> 
+                </div>
+            </div>
+            <div class = "eachQuestion show-on-scroll-left">
+                <div class = "buttonTopHolder">
+                    <button class = "hide" id="Hide"  onclick="toggle('.inside2', '.vert2')">Lorem ipsum dolor sit amet?</button>
+                    <div class = "minusHolder">
+                        <p id = "showMinus" class = "horizontalMinus"  onclick="toggle('.inside2', '.vert2')">&minus;</p>
+                        <p id = "hideMinus" class = "verticalMinus vert2"  onclick="toggle('.inside2', '.vert2')">&minus;</p>
+                    </div>
+                </div>
+                <div class="insideInfo inside2 show-on-scroll-up">
+                    <div class = "detailSection">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div id = "hello4" class = "questionSection covidSection">
+            <div class = "eachQuestion show-on-scroll-left">
+                <div class = "buttonTopHolder">
+                    <button class = "hide" id="Hide"  onclick="toggle('.inside1', '.vert1')">COVID-19 Question here?</button>
+                    <div class = "minusHolder">
+                        <p id = "showMinus" class = "horizontalMinus"  onclick="toggle('.inside1', '.vert1')">&minus;</p>
+                        <p id = "hideMinus" class = "verticalMinus vert1"  onclick="toggle('.inside1', '.vert1')">&minus;</p>
+                    </div>
+                </div>
+                <div class="insideInfo inside1 show-on-scroll-up">
+                    <div class = "detailSection">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div> 
+                </div>
+            </div>
+            <div class = "eachQuestion show-on-scroll-left">
+                <div class = "buttonTopHolder">
+                    <button class = "hide" id="Hide"  onclick="toggle('.inside3', '.vert3')">Lorem ipsum dolor sit amet?</button>
+                    <div class = "minusHolder">
+                        <p id = "showMinus" class = "horizontalMinus"  onclick="toggle('.inside3', '.vert3')">&minus;</p>
+                        <p id = "hideMinus" class = "verticalMinus vert3"  onclick="toggle('.inside3', '.vert3')">&minus;</p>
+                    </div>
+                </div>
+                <div class="insideInfo inside3 show-on-scroll-up">
+                    <div class = "detailSection">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/faq.js')}}"></script> 
 {% endblock %}

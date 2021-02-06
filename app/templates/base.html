@@ -3,6 +3,11 @@
 {% from "macros.html" import nav_link_inner_arrow with context %}
 {% from "macros.html" import nav_dropdown with context %}
 {% from "macros.html" import nav_dropdown_longer with context %}
+{% from "macros.html" import phone_nav with context %}
+{% from "macros.html" import phone_nav_class with context %}
+{% from "macros.html" import phone_dropdown with context %}
+{% from "macros.html" import phone_plus with context %}
+{% from "macros.html" import phone_minus with context %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,8 +18,11 @@
         {% else %}
         <title>Hey! You forgot a title!</title>
         {% endif %}
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Favicon.png') }}" size = "20x20"/>
         <!-- css stylesheets -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base_media.css') }}">
         <!-- font family -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
@@ -40,6 +48,7 @@
         <script src="{{ url_for('static', filename='js/feature_slideshow.js') }}"></script>
         <script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
         <script src="{{ url_for('static', filename='js/review_slideshow.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
         {% block head %} {% endblock %}
     </head>
     <body>
@@ -163,8 +172,8 @@
                         {{ nav_link('contact', 'Contact', 'dropButtonMedia') }}
                         <div id = "Ownership"  class = "dropDownContentMedia fade-in">
                             {{ nav_link_inner('faq', 'FAQ', 'insideButtonAbout', 'name lilShorter') }}
-                            <a href = "warranties.html"> Our Social </a>
-                            <a href = "services.html" id = "lastLink"> Join Us </a>
+                            {{ nav_link_inner('social', 'Our Social', 'insideButtonAbout', 'name lilShorter') }}
+                            {{ nav_link_inner('join', 'Join Us', 'insideButtonAbout', 'name lilShorter') }}
                         </div>
                     </div>
                 </ul>
@@ -174,6 +183,167 @@
                     <p>Login</p><i class="far fa-user"></i>
                 </a>
             </div>
+
+            <!-- Media hamburger -->
+            <div class = "mediaHolder"> 
+                <div class = "logoBox logoWhite">
+                    <a class = "homepageLogo" href = "{{ url_for('index') }}"><img src = "{{ url_for('static', filename='images/LogoShadow.png')}}"></a>
+                </div>
+                <div class = "logoBox logoDark">
+                    <a class = "homepageLogo" href = "{{ url_for('index') }}"><img src = "{{ url_for('static', filename='images/LogoBlue.png')}}"></a>
+                </div>
+                <div id="hamburgerMenu" onclick="menuClicked(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+            </div>    
+            <nav>
+                {% set aboutDropdown = ['about', 'why', 'history', 'leadership', 'providers', 'ncqa'] %}
+                {% set treatmentDropdown = ['treatment', 'medical', 'urgent', 'mens_health', 'womens','teens_health', 'childrens_health', 'therapy', 'couples', 'family', 'speech', 'occupational'] %}
+                {% set inner_treatmentDropdown = ['urgent', 'mens_health', 'womens', 'teens_health', 'childrens_health'] %}
+                {% set inner_treatmentDropdown2 = ['therapy', 'couples', 'family', 'speech', 'occupational'] %}
+                <ul id="navLinks">
+                    <div class = "innerNav">
+                        <li>
+                            {{ phone_nav_class('index', 'Home', 'firstNav') }}
+                        </li>
+                        <li>
+                            {{ phone_nav('about', 'About Us') }}
+                            <div class = "minusHolder2">
+                                {{ phone_plus('#phone1', 'plus6', '#plus6', '#minus6', aboutDropdown) }}
+                                {{ phone_minus('#phone1', 'minus6', '#plus6', '#minus6', aboutDropdown) }}
+                            </div>
+                        </li>
+                            {{ phone_dropdown('phoneDropdown', 'phone1', aboutDropdown) }}
+                                <li> 
+                                    {{ phone_nav('why', 'Why Us') }}
+                                    <!--<div class = "minusHolder2 lilMinus">
+                                        <p id = "plus7" class = "plus" onclick="phoneNav('#phone5', '#plus7', '#minus7')">+</p>
+                                        <p id = "minus7" class = "minus" onclick="phoneNav('#phone5', '#plus7', '#minus7')">&#8211;</p>
+                                    </div>-->
+                                </li>
+                                <!--<div class="phoneDropdown evenSmaller" id = "phone5">
+                                    <li>
+                                        <a href = "#">Insert</a>
+                                    </li>
+                                </div> --><!-- end of history dropdown -->
+                                <li> 
+                                    {{ phone_nav('history', 'History') }}
+                                </li>
+                                <li> 
+                                    {{ phone_nav('leadership', 'Leadership') }}
+                                </li>
+                                <li> 
+                                    {{ phone_nav('providers', 'Our Providers') }}
+                                </li>
+                                <li> 
+                                    {{ phone_nav('ncqa', 'NCQA and ACHC') }}
+                                </li>                              
+                            </div>
+                        <li>
+                            {{ phone_nav('treatment', 'Treatment Options') }}
+                            <div class = "minusHolder2">
+                                {{ phone_plus('#phone2', 'plus5', '#plus5', '#minus5', treatmentDropdown) }}
+                                {{ phone_minus('#phone2', 'minus5', '#plus5', '#minus5', treatmentDropdown) }}
+                            </div>
+                        </li> 
+                            {{ phone_dropdown('phoneDropdown', 'phone2', treatmentDropdown) }}
+                                <li class = "phonePad"> <!-- Competitions dropdown -->
+                                    {{ phone_nav('medical', 'Medical Health Solutions') }}
+                                    <div class = "minusHolder2 lilMinus">
+                                        {{ phone_plus('#phone11', 'plus13', '#plus13', '#minus13', inner_treatmentDropdown) }}
+                                        {{ phone_minus('#phone11', 'minus13', '#plus13', '#minus13', inner_treatmentDropdown) }}
+                                    </div>
+                                </li>
+                            {{ phone_dropdown('phoneDropdown evenSmaller', 'phone11', inner_treatmentDropdown) }}
+                                <li>
+                                    {{ phone_nav('urgent', 'Urgent Care') }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('mens_health', "Men's Health") }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('womens', "Women's Health") }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('teens_health', "Teen's Health") }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('childrens_health', "Children's Health") }}
+                                </li>
+                            </div> 
+                                <li class = "phonePad"> <!-- start dropdown -->
+                                    {{ phone_nav('behavioral', 'Behavioral Health Solutions') }}
+                                    <div class = "minusHolder2 lilMinus">
+                                        {{ phone_plus('#phone12', 'plus14', '#plus14', '#minus14', inner_treatmentDropdown2) }}
+                                        {{ phone_minus('#phone12', 'minus14', '#plus14', '#minus14', inner_treatmentDropdown2) }}
+                                    </div>
+                                </li>
+                            {{ phone_dropdown('phoneDropdown evenSmaller', 'phone12', inner_treatmentDropdown2) }}
+                                <li class = "phonePad">
+                                    {{ phone_nav('therapy', 'Individual Therapy and Psychiatry') }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('couples', "Couples Therapy") }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('family', "Family Therapy") }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('speech', "Speech Therapy") }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('occupational', "Occupational Therapy") }}
+                                </li>
+                            </div> <!-- end of dropdown -->
+                            </div>
+                        <li>
+                            <a href="#">Media</a>
+                            <div class = "minusHolder2">
+                                <p id = "plus4" class = "plus">+</p>
+                                <p id = "minus4" class = "minus">&#8211;</p>
+                            </div>
+                        </li>
+                              <div class="phoneDropdown" id = "phone3">
+                                <li>
+                                    <a href = "#">Insert</a>
+                                </li>
+                              </div>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Resources</a>
+                            <div class = "minusHolder2">
+                                <p id = "plus3" class = "plus">+</p>
+                                <p id = "minus3" class = "minus">&#8211;</p>
+                            </div>
+                        </li>
+                            <div class="phoneDropdown" id = "phone4">
+                                <li>
+                                    <a href = "#">Insert</a>
+                                </li>
+                            </div>
+                        <li>
+                            <a href="#">Sponsors</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                            <div class = "minusHolder2">
+                                <p id = "plus14" class = "plus">+</p>
+                                <p id = "minus14" class = "minus">&#8211;</p>
+                            </div>
+                        </li>
+                            <div class="phoneDropdown" id = "phone12">
+                                <li>
+                                    <a href = "#">Insert</a>
+                                </li>
+                            </div>
+                    </div> <!-- end of inner nav -->
+                </ul>
+            </nav> 
+
         </header>
 
         {% block content %}{% endblock %}

@@ -1,0 +1,132 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }} <!-- Have to include the super to get the default css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/join.css') }}"> 
+{% endblock %}
+
+{% block childcontent %}
+<div class = "firstSection join">
+    <div class = "joinImage show-on-scroll-right">
+        <img src = "{{ url_for('static', filename='images/FillerProvider.jpg') }}">
+    </div>
+    <div class = "joinRight">
+        <div class = "impactTitle joinTitle show-on-scroll-left">
+            <h2> Be a part of future healthcare </h2>
+        </div>
+        <div class = "joinSection">
+            <p class = "show-on-scroll-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+</div>
+<div class = "secondSection">
+    <div class = "impactTitle joinTitle patientTitle show-on-scroll-right">
+        <h2> Join us in helping patients </h2>
+    </div>
+    <div class = "joinSection centered">
+        <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class = "careerHolder">
+            <div class = "career show-on-scroll-right">
+                <div class = "careerImage">
+                    <img src = "{{ url_for('static', filename='images/FillerPicture.jpeg') }}">
+                </div>
+                <h4>Become a Neomedica</h4>
+                <h3>Medical Provider</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class = "career show-on-scroll-up">
+                <div class = "careerImage">
+                    <img src = "{{ url_for('static', filename='images/FillerPicture.jpeg') }}">
+                </div>
+                <h4>Become a Neomedica</h4>
+                <h3>Therapist</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class = "career show-on-scroll-left">
+                <div class = "careerImage">
+                    <img src = "{{ url_for('static', filename='images/FillerPicture.jpeg') }}">
+                </div>
+                <h4>Become a Neomedica</h4>
+                <h3>Psychiatric Provider</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class = "firstSection blueSection" id = "treatmentSection">
+    <div class = "impactTitle joinTitle patientTitle show-on-scroll-right">
+        <h2> Why work here </h2>
+    </div>
+    <div class = "treatmentBox firstBox">
+        <div class = "imageHolder show-on-scroll-right">
+        </div>
+        <div class = "textOverall show-on-scroll-left">
+            <div class = "textHolderTreatment">
+                <div class = "impactTitle show-on-scroll-up serviceTitle">
+                    <h2> Mission-driven Organization </h2>
+                </div>
+                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+            </div>
+        </div>
+    </div>
+    <div class = "treatmentBox">
+        <div class = "textOverall show-on-scroll-right">
+            <div class = "textHolderTreatment">
+                <div class = "impactTitle show-on-scroll-up serviceTitle">
+                    <h2> Innovative Culture </h2>
+                </div>
+                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+            </div>
+        </div>
+        <div class = "imageHolder pic2 show-on-scroll-left">
+        </div>
+    </div>
+    <div class = "treatmentBox">
+        <div class = "imageHolder show-on-scroll-right">
+        </div>
+        <div class = "textOverall show-on-scroll-left">
+            <div class = "textHolderTreatment">
+                <div class = "impactTitle show-on-scroll-up serviceTitle">
+                    <h2> Breadth of Opportunities </h2>
+                </div>
+                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+            </div>
+        </div>
+    </div>
+    <div class = "treatmentBox">
+        <div class = "textOverall show-on-scroll-right">
+            <div class = "textHolderTreatment">
+                <div class = "impactTitle show-on-scroll-up serviceTitle">
+                    <h2> Great Benefits </h2>
+                </div>
+                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+            </div>
+        </div>
+        <div class = "imageHolder pic2 show-on-scroll-left">
+        </div>
+    </div>
+    <div class = "treatmentBox">
+        <div class = "imageHolder show-on-scroll-right">
+        </div>
+        <div class = "textOverall show-on-scroll-left">
+            <div class = "textHolderTreatment">
+                <div class = "impactTitle show-on-scroll-up serviceTitle">
+                    <h2> Medical Health Solutions </h2>
+                </div>
+                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class = "firstSection demoSection anotherDemo">
+    <div class = "demoTransparent">
+        <div class = "simpleSucks leftSucks">
+            <h2 class = "show-on-scroll-up">Ready to join our team? </h2> 
+            <h3 class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur.</h3>
+            <div class = "learnMoreContainerRegular whiteButton show-on-scroll-up providerButton">
+                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Apply Today</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
