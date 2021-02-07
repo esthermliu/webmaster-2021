@@ -3,6 +3,8 @@
 {% block head %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/why.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/why_media.css') }}">
+    <script src = "{{ url_for('static', filename='js/feature_slideshow2.js') }}"></script>
 {% endblock %}
 
 {% block childcontent %}
@@ -12,7 +14,7 @@
         </div>
         <div class = "impactSection">
             <div class = "leftImpact">
-                <div class = "impactTitle smallerTitle show-on-scroll-right">
+                <div class = "healthcareTitle smallerTitle show-on-scroll-right">
                     <h2> Making healthcare more accessible and affordable. </h2>
                 </div>
             </div>
@@ -43,7 +45,7 @@
             </div>
             <div class = "featureLargeBox show-on-scroll-up">
                 <a class="featurePrev"><i class="fa fa-angle-left"></i></a>
-                <div class="featuredContainer specificFeature">
+                <div class="featuredContainer2 specificFeature">
                     <div class = "featuredImageHolder">
                         <div class = "imageInside">
                             <img src = "{{ url_for('static', filename='images/FillerDude.png') }}">

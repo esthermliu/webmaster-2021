@@ -2,9 +2,8 @@
 
 function provider() {
     $('.slideshow1').slick({
-        autoplay: true,
+        autoplay: false,
         dots: false,
-        autoplaySpeed: 3000,
         prevArrow: $('.firstPrev'),
         nextArrow: $('.firstNext'),
         adaptiveHeight: true,
@@ -14,9 +13,8 @@ function provider() {
 
 function provider2() {
     $('.slideshow2').slick({
-        autoplay: true,
+        autoplay: false,
         dots: false,
-        autoplaySpeed: 3000,
         prevArrow: $('.secondPrev'),
         nextArrow: $('.secondNext'),
         adaptiveHeight: true,
@@ -26,9 +24,8 @@ function provider2() {
 
 function provider3() {
     $('.slideshow3').slick({
-        autoplay: true,
+        autoplay: false,
         dots: false,
-        autoplaySpeed: 3000,
         prevArrow: $('.thirdPrev'),
         nextArrow: $('.thirdNext'),
         adaptiveHeight: true,
@@ -38,9 +35,8 @@ function provider3() {
 
  function provider4() {
     $('.slideshow4').slick({
-        autoplay: true,
+        autoplay: false,
         dots: false,
-        autoplaySpeed: 3000,
         prevArrow: $('.fourthPrev'),
         nextArrow: $('.fourthNext'),
         adaptiveHeight: true,

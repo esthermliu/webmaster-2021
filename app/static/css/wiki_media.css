@@ -1,0 +1,36 @@
+@media screen and (max-width: 750px) { 
+
+    .firstSection {
+        padding: 15% 5% 15% 5% !important;
+    }
+
+    .pageNav {
+        padding-top: 20px !important;
+    }
+
+    .conditionSection {
+        margin-top: 10% !important;
+        flex-wrap: wrap-reverse !important;
+    }
+
+    .conditionText {
+        width: 100% !important;
+        margin-top: 8%;
+    }
+
+    .conditionImage {
+        width: 100% !important;
+    }
+
+    .noFlex {
+        width: 100% !important;
+        align-items: flex-end !important;
+    }
+
+}   
+
+@media screen and (max-width: 1050px) { 
+    .bar1, .bar2, .bar3 {
+        background-color: #3aafa9 !important;
+    }
+}

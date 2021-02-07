@@ -22,6 +22,10 @@ jQuery(document).ready(function($){
         
         $('.logoWhite').css("display", "flex");
         $('.logoDark').css("display", "none");
+
+        $('.bar1').css("background-color", "white");
+		$('.bar2').css("background-color", "white");
+		$('.bar3').css("background-color", "white");
 	} else {
 		$('.navbar').css("background-color", "rgba(255, 255, 255, 1)");
         $('.dropDownContentAbout').css("transform", "translate(0px, -13px)");
@@ -42,7 +46,11 @@ jQuery(document).ready(function($){
         
         $('.dropDownContentAbout').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
 		$('.dropDownContentOverview').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
-		$('.dropDownContentMedia').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
+        $('.dropDownContentMedia').css("box-shadow", "0 35px 80px -40px rgba(0,0,0,.45)");
+        
+        $('.bar1').css("background-color", "#3aafa9");
+		$('.bar2').css("background-color", "#3aafa9");
+		$('.bar3').css("background-color", "#3aafa9");
 	}
 	$(window).scroll(function(){
 		if ($(this).scrollTop() < 190) {
@@ -70,6 +78,10 @@ jQuery(document).ready(function($){
             
             $('.logoWhite').css("display", "flex");
             $('.logoDark').css("display", "none");
+
+            $('.bar1').css("background-color", "white");
+            $('.bar2').css("background-color", "white");
+            $('.bar3').css("background-color", "white");
 		} else {
 			$('.navbar').css("background-color", "rgba(255, 255, 255, 1)");
             $('.navbar').css("height", "85px");
@@ -92,7 +104,11 @@ jQuery(document).ready(function($){
             
             $('.logoWhite').css("display", "none");
             $('.logoDark').css("display", "flex");
-		    
+            
+            $('.bar1').css("background-color", "#3aafa9");
+            $('.bar2').css("background-color", "#3aafa9");
+            $('.bar3').css("background-color", "#3aafa9");
+        
 			/*$('.dropDownContentAbout').css("background-color", "rgba(225, 225, 225, 1)");
 			$('.dropDownContentOverview').css("background-color", "rgba(225, 225, 225, 1)");
 			$('.dropDownContentMedia').css("background-color", "rgba(225, 225, 225, 1)");*/
@@ -120,6 +136,10 @@ jQuery(document).ready(function($){
             
             $('.logoWhite').css("display", "none");
             $('.logoDark').css("display", "flex");
+
+            $('.bar1').css("background-color", "#3aafa9");
+            $('.bar2').css("background-color", "#3aafa9");
+            $('.bar3').css("background-color", "#3aafa9");
 		} else {
 			$('.navbar').css("background-color", "transparent");
             $('.navbar').css("height", "110px");
@@ -145,6 +165,10 @@ jQuery(document).ready(function($){
             
             $('.logoWhite').css("display", "flex");
             $('.logoDark').css("display", "none");
+
+            $('.bar1').css("background-color", "white");
+            $('.bar2').css("background-color", "white");
+            $('.bar3').css("background-color", "white");
 		}
 		
 

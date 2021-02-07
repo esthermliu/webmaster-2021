@@ -1,5 +1,5 @@
 $(window).on('load', function(){
-    $('.featuredContainer').slick({
+    $('.featuredContainer2').slick({
         centerMode: true,
         centerPadding: '20px',
         autoplay: true,
@@ -9,12 +9,16 @@ $(window).on('load', function(){
         nextArrow: $('.featureNext'),
         slidesToShow: 3,
         responsive: [{
-            breakpoint: 550,
+            breakpoint: 1050,
             settings: {
                 slidesToShow: 1            
             }
         }]
     });
+
+    $('.featuredContainer2').show();
+    $('.featurePrev').show();
+    $('.featureNext').show();
       
   });
 

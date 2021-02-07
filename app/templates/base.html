@@ -186,12 +186,7 @@
 
             <!-- Media hamburger -->
             <div class = "mediaHolder"> 
-                <div class = "logoBox logoWhite">
-                    <a class = "homepageLogo" href = "{{ url_for('index') }}"><img src = "{{ url_for('static', filename='images/LogoShadow.png')}}"></a>
-                </div>
-                <div class = "logoBox logoDark">
-                    <a class = "homepageLogo" href = "{{ url_for('index') }}"><img src = "{{ url_for('static', filename='images/LogoBlue.png')}}"></a>
-                </div>
+                
                 <div id="hamburgerMenu" onclick="menuClicked(this)">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
@@ -200,9 +195,17 @@
             </div>    
             <nav>
                 {% set aboutDropdown = ['about', 'why', 'history', 'leadership', 'providers', 'ncqa'] %}
-                {% set treatmentDropdown = ['treatment', 'medical', 'urgent', 'mens_health', 'womens','teens_health', 'childrens_health', 'therapy', 'couples', 'family', 'speech', 'occupational'] %}
-                {% set inner_treatmentDropdown = ['urgent', 'mens_health', 'womens', 'teens_health', 'childrens_health'] %}
-                {% set inner_treatmentDropdown2 = ['therapy', 'couples', 'family', 'speech', 'occupational'] %}
+                {% set treatmentDropdown = ['treatment', 'medical', 'urgent', 'mens_health', 'womens','teens_health', 'childrens_health', 'therapy', 'couples', 'family', 'speech', 'occupational', 'covid_19', 'screening', 'return_work', 'mental', 'physical', 'phobia', 'virtual', 'dogs', 'cats', 'horses', 'reptiles', 'birds', 'rabbits', 'pet', 'behavioral'] %}
+                {% set inner_treatmentDropdown = ['urgent', 'mens_health', 'womens', 'teens_health', 'childrens_health', 'medical'] %}
+                {% set inner_treatmentDropdown2 = ['therapy', 'couples', 'family', 'speech', 'occupational', 'behavioral'] %}
+                {% set inner_treatmentDropdown3 = ['covid_19', 'screening', 'return_work'] %}
+                {% set inner_treatmentDropdown4 = ['mental', 'physical', 'phobia', 'virtual'] %}
+                {% set inner_treatmentDropdown5 = ['dogs', 'cats', 'horses', 'reptiles', 'birds', 'rabbits', 'pet'] %}
+
+                {% set howDropdown = ['how', 'pricing', 'our_app'] %}
+                {% set organizationDropdown = ['organizations', 'employer', 'hospitals', 'unions', 'government', 'brokers', 'distribution'] %}
+                {% set contactDropdown = ['contact', 'faq', 'social', 'join'] %}
+
                 <ul id="navLinks">
                     <div class = "innerNav">
                         <li>
@@ -297,47 +300,134 @@
                                     {{ phone_nav('occupational', "Occupational Therapy") }}
                                 </li>
                             </div> <!-- end of dropdown -->
+                            <li class = "phonePad"> <!-- start dropdown -->
+                                {{ phone_nav('return_work', 'Return-to-Work Solutions') }}
+                                <div class = "minusHolder2 lilMinus">
+                                    {{ phone_plus('#phone13', 'plus15', '#plus15', '#minus15', inner_treatmentDropdown3) }}
+                                    {{ phone_minus('#phone13', 'minus15', '#plus15', '#minus15', inner_treatmentDropdown3) }}
+                                </div>
+                            </li>
+                            {{ phone_dropdown('phoneDropdown evenSmaller', 'phone13', inner_treatmentDropdown3) }}
+                            <li>
+                                {{ phone_nav('covid_19', 'COVID-19 Testing') }}
+                            </li>
+                            <li class = "phonePad">
+                                {{ phone_nav('screening', "COVID-19 Screening and Treatment") }}
+                            </li>                    
+                            </div> <!-- end of dropdown -->
+                            <li class = "phonePad"> <!-- start dropdown -->
+                                {{ phone_nav('virtual', 'Virtual Reality Solutions') }}
+                                <div class = "minusHolder2 lilMinus">
+                                    {{ phone_plus('#phone14', 'plus16', '#plus16', '#minus16', inner_treatmentDropdown4) }}
+                                    {{ phone_minus('#phone14', 'minus16', '#plus16', '#minus16', inner_treatmentDropdown4) }}
+                                </div>
+                            </li>
+                            {{ phone_dropdown('phoneDropdown evenSmaller', 'phone14', inner_treatmentDropdown4) }}
+                            <li>
+                                {{ phone_nav('mental', 'Mental Disorders Therapy') }}
+                            </li>
+                            <li>
+                                {{ phone_nav('physical', "Physical Therapy") }}
+                            </li>                    
+                            <li>
+                                {{ phone_nav('phobia', "Phobia Therapy") }}
+                            </li>                    
+                            </div> <!-- end of dropdown -->
+                            <li class = "phonePad"> <!-- start dropdown -->
+                                {{ phone_nav('pet', 'Pet Therapy Solutions') }}
+                                <div class = "minusHolder2 lilMinus">
+                                    {{ phone_plus('#phone15', 'plus17', '#plus17', '#minus17', inner_treatmentDropdown5) }}
+                                    {{ phone_minus('#phone15', 'minus17', '#plus17', '#minus17', inner_treatmentDropdown5) }}
+                                </div>
+                            </li>
+                            {{ phone_dropdown('phoneDropdown evenSmaller', 'phone15', inner_treatmentDropdown5) }}
+                            <li>
+                                {{ phone_nav('dogs', 'Therapy Dogs') }}
+                            </li>
+                            <li>
+                                {{ phone_nav('cats', 'Therapy Cats') }}
+                            </li>                    
+                            <li>
+                                {{ phone_nav('horses', 'Therapy Horses') }}
+                            </li>                    
+                            <li>
+                                {{ phone_nav('rabbits', 'Therapy Rabbits') }}
+                            </li>                    
+                            <li>
+                                {{ phone_nav('reptiles', 'Therapy Reptiles') }}
+                            </li>                    
+                            <li>
+                                {{ phone_nav('birds', 'Therapy Birds') }}
+                            </li>                    
+                            </div> <!-- end of dropdown -->
                             </div>
                         <li>
-                            <a href="#">Media</a>
+                            {{ phone_nav('how', 'How It Works') }}
                             <div class = "minusHolder2">
-                                <p id = "plus4" class = "plus">+</p>
-                                <p id = "minus4" class = "minus">&#8211;</p>
+                                {{ phone_plus('#phone16', 'plus18', '#plus18', '#minus18', howDropdown) }}
+                                {{ phone_minus('#phone16', 'minus18', '#plus18', '#minus18', howDropdown) }}
                             </div>
                         </li>
-                              <div class="phoneDropdown" id = "phone3">
+                            {{ phone_dropdown('phoneDropdown', 'phone16', howDropdown) }}
+                            <li>
+                                {{ phone_nav('pricing', 'Pricing and Insurance') }}
+                            </li>
+                            <li>
+                                {{ phone_nav('our_app', 'Our App') }}
+                            </li>                                
+                            </div> <!-- end of dropdown -->
+                        <li>
+                            {{ phone_nav('reviews', 'Reviews') }}
+                        </li>
+                        <li>
+                            {{ phone_nav('organizations', 'Organizations') }}
+                            <div class = "minusHolder2">
+                                {{ phone_plus('#phone17', 'plus19', '#plus19', '#minus19', organizationDropdown) }}
+                                {{ phone_minus('#phone17', 'minus19', '#plus19', '#minus19', organizationDropdown) }}
+                            </div>
+                        </li>
+                            {{ phone_dropdown('phoneDropdown', 'phone17', organizationDropdown) }}
                                 <li>
-                                    <a href = "#">Insert</a>
+                                    {{ phone_nav('employer', 'Employer Groups') }}
                                 </li>
-                              </div>
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#">Resources</a>
-                            <div class = "minusHolder2">
-                                <p id = "plus3" class = "plus">+</p>
-                                <p id = "minus3" class = "minus">&#8211;</p>
-                            </div>
-                        </li>
-                            <div class="phoneDropdown" id = "phone4">
                                 <li>
-                                    <a href = "#">Insert</a>
+                                    {{ phone_nav('hospitals', 'Hospitals and Health Systems') }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('unions', 'Unions and Associations') }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('government', 'Government and Education') }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('brokers', 'Brokers and Advisors') }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('distribution', 'Distribution Partners') }}
                                 </li>
                             </div>
                         <li>
-                            <a href="#">Sponsors</a>
+                            {{ phone_nav('news', 'News') }}
                         </li>
                         <li>
-                            <a href="#">Contact Us</a>
+                            {{ phone_nav('blog', 'Blog') }}
+                        </li>
+                        <li>
+                            {{ phone_nav('contact', 'Contact') }}
                             <div class = "minusHolder2">
-                                <p id = "plus14" class = "plus">+</p>
-                                <p id = "minus14" class = "minus">&#8211;</p>
+                                {{ phone_plus('#phone18', 'plus20', '#plus20', '#minus20', contactDropdown) }}
+                                {{ phone_minus('#phone18', 'minus20', '#plus20', '#minus20', contactDropdown) }}
                             </div>
                         </li>
-                            <div class="phoneDropdown" id = "phone12">
+                            {{ phone_dropdown('phoneDropdown', 'phone18', contactDropdown) }}
                                 <li>
-                                    <a href = "#">Insert</a>
+                                    {{ phone_nav('faq', 'FAQ') }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('social', 'Our Social') }}
+                                </li>
+                                <li>
+                                    {{ phone_nav('join', 'Join Us') }}
                                 </li>
                             </div>
                     </div> <!-- end of inner nav -->
@@ -353,18 +443,18 @@
                 <div class = "footerSectionOverall">
                 <div class = "footerHolder">
                     <div class = "footerSection sigh show-on-scroll-up">
-                        <div class = "iHateThis">
+                        <div class = "footerImage">
                             <img src = "{{ url_for('static', filename='images/Logo.png') }}">
                         </div>
                         <p>Doctor visits made easy online 24/7/365.</p>
                         <div class = "lilLogo">
-                            <div class = "iHateThis aLot">
+                            <div class = "footerImage aLot">
                                 <img src = "{{ url_for('static', filename='images/Phone.png') }}">
                             </div>
                             <p>1-855-269-4712</p>
                         </div>
                         <div class = "lilLogo">
-                            <div class = "iHateThis aLot">
+                            <div class = "footerImage aLot">
                                 <img src = "{{ url_for('static', filename='images/Mail.png') }}">
                             </div>
                             <a class = "lilText" href="mailto:helpdesk@neomedica.com">helpdesk@neomedica.com</a>
@@ -376,34 +466,34 @@
                             <a href = "{{ url_for('why') }}">Why Us?</a>
                         </div>
                         <div class = "linkHolderFooter">
-                            <a href = "history.html">History</a>
+                            <a href = "{{ url_for('history') }}">History</a>
                         </div>
                         <div class = "linkHolderFooter">
-                            <a href = "masterpieces.html">Leadership</a>
+                            <a href = "{{ url_for('leadership') }}">Leadership</a>
                         </div>
                         <div class = "linkHolderFooter">
-                            <a href = "design.html">Our Providers</a>
+                            <a href = "{{ url_for('providers') }}">Our Providers</a>
                         </div>
                         <div class = "linkHolderFooter">
-                            <a href = "awards.html">NCQA and ACHC</a>
+                            <a href = "{{ url_for('ncqa') }}">NCQA and ACHC</a>
                         </div>
                     </div>
-                    <div class = "footerSection show-on-scroll-up">
+                    <div class = "footerSection rightAlign show-on-scroll-up">
                         <a class = "underlineFooter">Experience</a>
                         <div class = "linkHolderFooter">
-                            <a href = "news.html">Medical Health</a>
+                            <a href = "{{ url_for('medical') }}">Medical Health</a>
                         </div>
                         <div class = "linkHolderFooter">
-                            <a href = "events.html">Behavioral Health</a>
+                            <a href = "{{ url_for('behavioral') }}">Behavioral Health</a>
                         </div>
                         <div class = "linkHolderFooter">
-                            <a href = "museum.html">COVID-19</a>
+                            <a href = "{{ url_for('return_work') }}">COVID-19</a>
                         </div>
                         <div class = "linkHolderFooter">
-                            <a href = "girl-powered.html">Virtual Reality</a>
+                            <a href = "{{ url_for('virtual') }}">Virtual Reality</a>
                         </div>
                         <div class = "linkHolderFooter">
-                            <a href = "social.html">Pet Therapy</a>
+                            <a href = "{{ url_for('pet') }}">Pet Therapy</a>
                         </div>
                     </div>
                     <div class = "footerSection show-on-scroll-up">
@@ -412,24 +502,24 @@
                             <a href = "privacy.html">Request a Demo</a>
                         </div>
                         <div class = "linkHolderFooter">
-                            <a href = "warranties.html">FAQ</a>
+                            <a href = "{{ url_for('faq') }}">FAQ</a>
                         </div>
                         <div class = "linkHolderFooter">
-                            <a href = "accessories.html">Our Social</a>
+                            <a href = "{{ url_for('social') }}">Our Social</a>
                         </div>
                         <div class = "linkHolderFooter">
-                            <a href = "guides-manuals.html">Join Us</a>
+                            <a href = "{{ url_for('join') }}">Join Us</a>
                         </div>
                     </div>
-                    <div class = "footerSection show-on-scroll-up">
+                    <div class = "footerSection rightAlign show-on-scroll-up">
                         <a class = "underlineFooter">Download App</a>
                         <div class = "learnMoreContainerRegular show-on-scroll-up footerButton">
-                            <a href = "news.html" class="learnMoreButtonRegular">
+                            <a href = "https://www.apple.com/shop" target = "_blank" class="learnMoreButtonRegular footerRegular">
                                 <button>Apple</button>
                             </a>
                         </div>
                         <div class = "learnMoreContainerRegular show-on-scroll-up footerButton">
-                            <a href = "news.html" class="learnMoreButtonRegular">
+                            <a href = "https://play.google.com/store/apps?hl=en_US&gl=US" target = "_blank" class="learnMoreButtonRegular footerRegular">
                                 <button>Android</button>
                             </a>
                         </div>
@@ -446,7 +536,7 @@
                             <a class = "social" href="https://www.linkedin.com/" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
                         </div>
                         <div class = "copyright show-on-scroll-up">
-                            <p>&copy; 2020-2021 Juanita High School </p>
+                            <p>&copy; 2020-2021 Neomedica </p>
                         </div>
                     </div>
                 </div>

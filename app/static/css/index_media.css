@@ -1,0 +1,183 @@
+@media screen and (max-width: 750px) { 
+
+    .specialLargeBox {
+        flex-wrap: wrap;
+    }
+
+    .specialBox {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    .specialInsideContainer {
+        padding: 8% 5% 8% 5%;
+        background: linear-gradient(
+            to bottom,
+            #DEF2F1,
+            #DEF2F1 90%,
+            transparent 10%,
+            transparent 100%
+          )
+    }
+
+    .whyText {
+        margin-top: 15%;
+        margin-bottom: 8%;
+    }
+
+    .specialText {
+        width: 100%;
+    }
+
+    .slideTitle {
+        text-align: center;
+    }
+
+    .slideTextHolder h1 {
+        font-size: 35px;
+        line-height: 60px;
+        margin-bottom: 15px;
+    }
+
+    .slideTextHolder h2 {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+
+    .transparentBackground {
+        width: 100vw;
+    }
+
+    .firstSection, .secondSection {
+        padding: 15% 5% 15% 5%;
+    }
+
+    .slick-dots {
+        bottom: 5vh !important;
+    }
+
+    .impactBox {
+        margin-top: 15%;
+        justify-content: center;
+    }
+
+    .impactImageHolder {
+        width: 45vh;
+        height: 45vh;
+    }
+
+    .impactImageHolder img {
+        width: 42vh;
+        height: 42vh;
+    }
+
+    .impactText {
+        width: 100%;
+        margin-top: 8%;
+    }
+
+    .largeMessage {
+        flex-wrap: wrap;
+    }
+    
+    .messageHolder {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .virusImageHolder {
+        width: 100%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+
+    .virusImageHolder img {
+        width: 100%;
+    }
+
+    .textSection p {
+        margin-bottom: 15px;
+    }
+
+    .solution {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    .contentHolder {
+        margin-top: 15%;
+    }
+
+    .featureTransparent {
+        padding: 15% 2% 15% 2% !important;
+    }
+
+    .featureLargeBox {
+        margin-top: 15%;
+    }
+
+    .featuredContainer {
+        width: 90%;
+    }
+
+    .featuredImageHolder img {
+        height: 100%;
+    }
+
+    .providerTextBox {
+        width: 80%;
+        padding: 8%;
+    }
+
+    .providerHolder {
+        justify-content: center !important;
+    }
+
+    .quoteHolder {
+        padding-top: 15%;
+    }
+
+    .reviewActualText {
+        width: 95%;
+    }
+
+    .reviewContainer .slick-dots {
+        bottom: -30px !important;
+    }
+
+    .buttonHolder {
+        flex-wrap: wrap;
+    }
+
+    .simpleSucks h2 {
+        font-size: 45px;
+    }
+
+    #whySection {
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+
+
+}
+
+@media screen and (min-width: 751px) and (max-width: 1420px) { /* pad media */
+    .impactImageHolder {
+        width: 300px;
+        height: 300px;
+    }
+
+    .impactImageHolder img {
+        width: 270px;
+        height: 270px;
+    }
+
+    .impactText {
+        width: 40%;
+    }
+
+    .slideTitle {
+        text-align: center;
+    }
+}

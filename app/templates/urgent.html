@@ -3,6 +3,7 @@
 {% block head %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/urgent.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/urgent_media.css') }}">
 {% endblock %}
 
 {% block childcontent %}
@@ -69,7 +70,7 @@
             </div>
         </div>
     </div>
-    <div class = "treatmentBox show-on-scroll-left">
+    <div class = "treatmentBox reverseWrap show-on-scroll-left">
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
@@ -163,7 +164,7 @@
             </div>
         </div>
     </div>
-    <div class = "treatmentBox show-on-scroll-left">
+    <div class = "treatmentBox reverseWrap show-on-scroll-left">
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">

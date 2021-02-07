@@ -362,8 +362,8 @@ body.fade-out {
 
 .impactImageHolder {
     background: linear-gradient(45deg, #3AAFA9, #3AAFA9, #2B7A78 100%), linear-gradient(135deg, rgba(0,0,0,0), rgba(0,0,0,0)), linear-gradient(225deg, rgba(0,0,0,0), rgba(0,0,0,0)) , linear-gradient(225deg, rgba(0,0,0,0), rgba(0,0,0,0));
-    width: 65vh;
-    height: 65vh;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -374,8 +374,8 @@ body.fade-out {
 }
 
 .impactImageHolder img {
-    width: 93%;
-    height: 93%;
+    width: 460px;
+    height: 460px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.3);
@@ -591,7 +591,7 @@ body.fade-out {
 .solutionsHolder {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
 }
 

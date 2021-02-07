@@ -66,9 +66,9 @@
 
 {% macro phone_nav(endpoint, name) %}
     {% if endpoint in request.endpoint %}
-        <a class = "activeMedia" href="{{ url_for(endpoint) }}">{{ name }}</a>
+        <a class = "activeMedia show-on-scroll-right" href="{{ url_for(endpoint) }}">{{ name }}</a>
     {% else %}
-        <a href="{{ url_for(endpoint) }}">{{ name }}</a>
+        <a class = "show-on-scroll-right" href="{{ url_for(endpoint) }}">{{ name }}</a>
     {% endif %}
 {% endmacro %}
 
@@ -88,9 +88,9 @@
         {% endif %}
     {% endfor %}
     {% if found.foo %}
-        <div class="{{ class }} displayBlock" id = "{{ id }}">
+        <div class="{{ class }} displayBlock show-on-scroll-right" id = "{{ id }}">
     {% else %}
-        <div class="{{ class }}" id = "{{ id }}">
+        <div class="{{ class }} show-on-scroll-right" id = "{{ id }}">
     {% endif %}
 {% endmacro %}
 

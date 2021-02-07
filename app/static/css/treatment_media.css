@@ -1,0 +1,28 @@
+@media screen and (max-width: 750px) { 
+    .firstSection, .secondSection {
+        padding: 15% 5% 15% 5%;
+    }
+
+    .treatmentBox {
+        flex-wrap: wrap;
+        margin-bottom: 15%;
+    }
+
+    .reverseWrap {
+        flex-wrap: wrap-reverse !important;
+    }
+
+    .imageHolder, .textOverall {
+        width: 100%;
+    }
+
+    .imageHolder {
+        margin-bottom: 5%;
+    }
+
+    .textHolderTreatment {
+        padding-right: 8% !important;
+        padding-left: 8% !important;
+    }
+
+}

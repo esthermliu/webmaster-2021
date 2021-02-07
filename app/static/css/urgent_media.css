@@ -1,0 +1,88 @@
+@media screen and (max-width: 750px) { 
+    .firstSection, .secondSection {
+        padding: 15% 5% 15% 5%;
+    }
+
+    .simpleSucks h2, h3 {
+        font-size: 30px;
+    }
+
+    .treatmentBox {
+        flex-wrap: wrap;
+        margin-bottom: 10%;
+    }
+
+    .reverseWrap {
+        flex-wrap: wrap-reverse;
+    }
+
+    .imageHolder {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .textOverall {
+        width: 100%;
+    }
+
+    .textHolderTreatment {
+        padding-right: 8% !important;
+        padding-left: 8% !important;
+    }
+
+    .healthList {
+        flex-wrap: wrap;
+    }
+
+    .healthList ul {
+        width: 20%;
+    }
+
+    .healthLi a:hover::after {
+        width: 100%;
+    }
+
+    
+}
+
+@media screen and (max-width: 650px) { 
+    .healthList ul {
+        width: 50%;
+    }
+
+    .healthLi a:hover::after {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 550px) { 
+    .anotherDemo {
+        flex-wrap: wrap;
+        padding-top: 15% !important;
+    }
+
+    .leftSucks {
+        width: 100%;
+        text-align: center;
+    }
+
+    .leftAlign {
+        justify-content: center !important;
+    }
+
+    .registerImage {
+        width: 100% !important;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .registerImage img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1000px) { 
+    .registerImage {
+        width: 35%;
+    }
+}

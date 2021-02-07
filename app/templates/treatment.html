@@ -3,6 +3,7 @@
 {% block head %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/treatment.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/treatment_media.css') }}">
     <script src = "{{ url_for('static', filename='js/scroll_to.js') }}"></script> <!-- included at top to prevent glitchy thing -->
 {% endblock %}
 
@@ -32,12 +33,12 @@
                 </div>
                 <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
+                    <a href = "{{ url_for('medical')}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
                 </div>
             </div>
         </div>
     </div>
-    <div class = "treatmentBox">
+    <div class = "treatmentBox reverseWrap">
         <div class = "textOverall show-on-scroll-right">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
@@ -45,7 +46,7 @@
                 </div>
                 <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
+                    <a href = "{{ url_for('behavioral')}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
                 </div>
             </div>
         </div>
@@ -58,24 +59,24 @@
         <div class = "textOverall show-on-scroll-left">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Medical Health Solutions </h2>
+                    <h2> Return-to-Work Solutions </h2>
                 </div>
                 <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
+                    <a href = "{{ url_for('return_work')}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
                 </div>
             </div>
         </div>
     </div>
-    <div class = "treatmentBox">
+    <div class = "treatmentBox reverseWrap">
         <div class = "textOverall show-on-scroll-right">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Behavioral Health Solutions </h2>
+                    <h2> Virtual Reality Solutions </h2>
                 </div>
                 <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
+                    <a href = "{{ url_for('virtual')}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
                 </div>
             </div>
         </div>
@@ -88,11 +89,11 @@
         <div class = "textOverall show-on-scroll-left">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Medical Health Solutions </h2>
+                    <h2> Pet Therapy Solutions </h2>
                 </div>
                 <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
+                    <a href = "{{ url_for('pet')}}" class="learnMoreButtonRegular"><button>Learn More</button></a>
                 </div>
             </div>
         </div>

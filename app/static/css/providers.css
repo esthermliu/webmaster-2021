@@ -298,6 +298,12 @@
     padding: 3%;
     padding-top: 5%;
     padding-bottom: 5%;
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.innerText p {
+    margin-bottom: 15px;
 }
 
 .rightModal {

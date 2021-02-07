@@ -3,6 +3,7 @@
 {% block head %}
     {{ super() }} <!-- Have to include the super to get the default css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about_media.css') }}">
 {% endblock %}
 
 {% block childcontent %}
@@ -66,7 +67,7 @@
     </div>
     <div id = "future" class = "secondSection">
         <div id = "futureBackground" class = "backgroundColor">
-            <div class = "impactTitle whiteTitle show-on-scroll-up">
+            <div class = "impactTitle moreSpace whiteTitle show-on-scroll-up">
                 <h2>Our Vision for the Future </h2>
             </div>
             <div class = "valuesSection">
@@ -84,7 +85,7 @@
                         <p>Maintain our reputation as a top-tier robotics club </p>
                     </div>
                 </div>
-                <div class = "value valSpace show-on-scroll-left">
+                <div class = "value valSpace show-on-scroll-left lastValue">
                     <img src = "{{ url_for('static', filename='images/FillerLogo.png') }}"/>
                     <div class = "wordHolder">
                         <h3>COMMUNITY</h3>
@@ -130,7 +131,7 @@
     <div class = "lastSection">
         <div class = "backgroundSection2">
             <div class = "impactTitle show-on-scroll-up">
-                <h2>Learn More About Us </h2>
+                <h2>Learn more about us </h2>
             </div>
             <div class = "learnContainer">
                 <div class = "learnMoreContainer show-on-scroll-left">

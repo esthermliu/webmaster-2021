@@ -1,0 +1,67 @@
+@media screen and (max-width: 750px) { 
+    .firstSection {
+        padding: 15% 5% 15% 5%;
+    }
+    
+    .aboutUsSection {
+        margin: 0;
+    }
+
+    .backgroundColor {
+        padding: 15% 5% 15% 5%;
+    }
+
+    .valuesSection {
+        padding-top: 23%;
+    }
+
+    .value {
+        width: 100%;
+    }
+
+    .value {
+        margin-bottom: 10%;
+    }
+
+    .lastValue {
+        margin-bottom: 0;
+    }
+
+    .thirdSection {
+        padding: 15% 5% 15% 5%;
+    }
+
+    .aboutUsArticle {
+        padding-top: 10%;
+    }
+
+    .whiteTitle {
+        line-height: 50px;
+    }
+
+    .moreSpace h2:after {
+        bottom: -20px !important;
+    }
+
+    .valSpace {
+        width: 100% !important;
+        margin-bottom: 10% !important;
+    }
+
+    .backgroundSection2 {
+        padding-bottom: 15%;
+        padding-top: 15%;
+        margin: 0 5% 0 5%;
+    }
+
+    .learnMoreContainer {
+        padding-top: 15%;
+    }
+
+    .competitionLink, .eventsLink, .programsLink {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10%;
+    }
+
+}

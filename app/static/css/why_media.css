@@ -1,0 +1,125 @@
+@media screen and (max-width: 750px) { 
+    .firstSection {
+        padding: 15% 5% 15% 5%;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .impactSection {
+        flex-wrap: wrap;
+    }
+
+    .leftImpact, .rightImpact {
+        width: 100%;
+    }
+
+    .leftImpact h2 {
+        text-align: center;
+        font-size: 22px;
+        width: 70%;
+    }
+
+    .healthcareTitle {
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .impactBox {
+        margin-bottom: 10% !important;
+    }
+
+    .featureTransparent {
+        padding: 15% 2% 15% 2% !important;
+    }
+
+    .featuredContainer2 {
+        margin-top: 10%;
+        width: 90%;
+    }
+
+    .featuredImageHolder {
+        margin-right: 0.5%;
+        margin-left: 0.5%;
+    }
+
+    .expertSection {
+        flex-wrap: wrap;
+    }
+
+    .expertSectionNoPad {
+        padding: 15% 0% 0% 0% !important;
+    }
+
+    .graphHolder, .textHolder {
+        width: 100%;
+    }
+
+    .textHolder {
+        margin-top: 10%;
+    }
+
+    .dimensionHolder {
+        margin-top: 15%;
+    }
+
+    .textHolder p {
+        padding-top: 15%;
+    }
+
+    .dimension {
+        margin-bottom: 8%;
+    }
+
+    .tableImageHolder img {
+        width: 100%;
+    }
+
+    table {
+        margin-top: 15%;
+    }
+
+    .imageCheckHolder img {
+        width: 30%;
+    }
+
+    .costHolder {
+        padding-top: 15%;
+    }
+
+    .innovationSection {
+        padding-top: 15%;
+        flex-wrap: wrap;
+    }
+
+    .innovation {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .innovationImage {
+        width: 75%;
+    }
+
+    .innovationText {
+        width: 95%;
+        text-align: center;
+        margin-top: 8%;
+    }
+
+    .providerTextBox {
+        width: 80%;
+    }
+
+    .providerHolder {
+        display: flex;
+        justify-content: center;
+    }
+
+    .smallerImage {
+        width: 40% !important;
+    }
+
+}

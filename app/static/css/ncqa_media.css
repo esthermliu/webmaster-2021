@@ -1,0 +1,19 @@
+@media screen and (max-width: 750px) { 
+    .firstSection {
+        padding: 15% 5% 15% 5%;
+    }
+
+}
+
+
+@media screen and (max-width: 550px) { 
+    .imageHolder {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .imageHolder img {
+        width: 70%;
+        margin-bottom: 5%;
+    }
+}

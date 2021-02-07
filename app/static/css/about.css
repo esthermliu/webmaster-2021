@@ -76,6 +76,10 @@
     color: white !important;
 }
 
+.whiteTitle h2:after {
+    background: white !important;
+}
+
 .wordHolder {
     margin-top: 5%;
 }
