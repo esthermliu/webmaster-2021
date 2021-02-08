@@ -1,0 +1,63 @@
+@media screen and (max-width: 750px) { 
+    .firstSection, .backgroundColor {
+        padding: 15% 5% 15% 5% !important;
+    }
+
+    .flexFirst {
+        flex-wrap: wrap;
+    }
+
+    .leftFirst {
+        width: 100%;
+    }
+
+    .rightFirst {
+        width: 100%;
+    }
+
+    .whiteTitle h3 {
+        line-height: 30px !important;
+    }
+
+    .whiteTitle h2 {
+        line-height: 50px !important;
+    }
+
+    .moreSpace h2:after {
+        bottom: -20px !important;
+    }
+
+    .value {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    .wordHolder h3 {
+        width: 60%;
+    }
+
+    .wordHolder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .valuesSection {
+        padding-top: 23%;
+    }
+
+    .textSection {
+        margin-top: 10%;
+    }
+
+    .competitionLink, .eventsLink, .programsLink {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-bottom: 10% !important;
+    }
+
+    .simpleSucks {
+        width: 100%;
+    }
+
+}

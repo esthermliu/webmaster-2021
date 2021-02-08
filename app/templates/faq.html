@@ -3,6 +3,7 @@
 {% block head %}
     {{ super() }} <!-- Have to include the super to get the default css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/faq.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/faq_media.css') }}">
     <script src="{{ url_for('static', filename='js/toggle.js')}}"></script> 
     <script src="{{ url_for('static', filename='js/faq.js')}}"></script> 
 {% endblock %}

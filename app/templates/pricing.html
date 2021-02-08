@@ -3,6 +3,7 @@
 {% block head %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pricing.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pricing_media.css') }}">
 {% endblock %}
 
 {% block childcontent %}
@@ -22,7 +23,7 @@
             <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
         </div>
     </div>
-    <div class = "conditionSection">
+    <div class = "conditionSection noReverse">
         <div class = "conditionImage show-on-scroll-left smallerImage">
             <img src = "{{ url_for('static', filename='images/CircularFiller.png') }}">
         </div>

@@ -1,0 +1,80 @@
+@media screen and (max-width: 750px) { 
+    .firstSection, .demoTransparent {
+        padding: 15% 5% 15% 5%;
+    }
+
+    .secondSection {
+        padding: 0 5% 15% 5%;  
+    }
+
+    .join {
+        flex-wrap: wrap-reverse;
+    }
+
+    .joinImage, .joinRight {
+        width: 100%;
+    }
+
+    .joinImage {
+        margin-top: 5%;
+    }
+
+    .careerHolder p {
+        width: 80%;
+    }
+
+    .career {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 10%;
+    }
+
+    .treatmentBox {
+        flex-wrap: wrap;
+        margin-bottom: 10%;
+    }
+
+    .reverseWrap {
+        flex-wrap: wrap-reverse;
+    }
+
+    .imageHolder {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .textOverall {
+        width: 100%;
+    }
+
+    .firstBox {
+        margin-top: 15%;
+    }
+
+    .anotherDemo {
+        padding: 0 !important;
+    }
+
+    .simpleSucks {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1250px) { 
+    .careerHolder p {
+        width: 60%;
+    }
+
+    .career {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 10%;
+    }
+}

@@ -95,6 +95,10 @@
     font-size: 18px;
 }
 
+.career h3 {
+    color: black;
+}
+
 .blueSection {
     background-color: #def2f1;
     padding: 8% 5% 8% 5%;

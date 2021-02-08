@@ -1,0 +1,30 @@
+@media screen and (max-width: 750px) { 
+    .reviewNum, .reviewSection {
+        width: 100%;
+    }
+
+    .topRibbon {
+        flex-wrap: wrap;
+    }
+
+    .reviewSection {
+        padding: 5%;
+    }
+
+    .outerRate:hover .rate, .outerRate:hover .numRate {
+        transform: translate(4px, 0) !important;
+    }
+
+    .firstSection {
+        padding: 15% 5% 15% 5%;
+    }
+
+    .starHolder {
+        width: 40% !important;
+    }
+
+    .moreSectionSpace {
+        padding-top: 25% !important;
+    }
+
+}

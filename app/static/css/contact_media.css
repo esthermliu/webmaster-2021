@@ -1,0 +1,10 @@
+@media screen and (max-width: 750px) { 
+    .firstSection {
+        padding: 15% 5% 15% 5%;
+    }
+
+    .aboutUsArticle {
+        padding-top: 10%;
+    }
+
+}

@@ -1,0 +1,22 @@
+@media screen and (max-width: 750px) { 
+    .firstSection, .thirdSection {
+        padding: 15% 5% 15% 5% !important;
+    }
+
+    .animalImage {
+        margin-bottom: 30px;
+    }
+
+    .tryFilter {
+        padding: 8% 5% 8% 5%;
+    }
+
+    .moreSpaceTop {
+        margin-top: 15%;
+    }
+
+    .noTopPad {
+        padding-top: 0 !important;
+    }
+
+}

@@ -1,0 +1,45 @@
+@media screen and (max-width: 750px) { 
+    .firstSection {
+        padding: 15% 5% 15% 5%;
+    }
+
+    .work {
+        padding-top: 15%;
+        flex-wrap: wrap;
+    }
+
+    .imageHolder {
+        width: 100%;
+    }
+
+    .workText {
+        width: 100%;
+    }
+
+    .reverseWrap {
+        flex-wrap: wrap-reverse;
+    }
+
+    .lineHolder {
+        display: none;
+    }
+
+    .imageHolder {
+        margin-bottom: 5%;
+    }
+
+    .anotherDemo {
+        flex-wrap: wrap;
+        padding-top: 15% !important;
+    }
+
+    .leftSucks {
+        width: 100%;
+        text-align: center !important;
+    }
+
+    .leftAlign {
+        justify-content: center !important;
+    }
+
+}

@@ -1,0 +1,46 @@
+@media screen and (max-width: 750px) { 
+    .articleHolder {
+        margin-top: 15% !important;
+    }
+
+    .articleBig {
+        flex-wrap: wrap;
+    }
+
+    .articleText {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .shareHolder {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .shareSocial {
+        margin-right: 20px; 
+    }
+
+    .learnMore:hover::after  {
+        width: 40%;
+        transition: width .3s;
+    }
+
+    .newsHolder {
+        margin-top: 15% !important;
+    }
+
+    .recentBlogs {
+        padding: 0 5% 10% 5% !important;
+    }
+
+    .news {
+        width: 100% !important;
+        margin-bottom: 10%;
+    }
+
+    .blogTitle h2:after {
+        width: 5% !important;
+    }
+
+}

@@ -4,12 +4,13 @@
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/wiki.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news_media.css') }}">
 {% endblock %}
 
 
 {% block content %}
 <div class = "firstSection">
-    <div class = "newsHolder noNewsPad">
+    <div class = "newsHolder noNewsPad moreMediaPad">
         {% for new in news %}
             <div class = "news">
                 <div class = "newsImage show-on-scroll-up">

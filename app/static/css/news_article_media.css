@@ -1,0 +1,29 @@
+@media screen and (max-width: 750px) { 
+    .articleHolder {
+        margin-top: 15% !important;
+    }
+
+    .articleBig {
+        flex-wrap: wrap;
+    }
+
+    .articleText {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .shareHolder {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .shareSocial {
+        margin-right: 20px; 
+    }
+
+    .learnMore:hover::after  {
+        width: 40%;
+        transition: width .3s;
+    }
+
+}

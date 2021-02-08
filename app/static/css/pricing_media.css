@@ -1,0 +1,46 @@
+@media screen and (max-width: 750px) { 
+    .firstSection {
+        padding: 15% 5% 15% 5%;
+    }
+
+    body {
+        overflow-x: hidden !important;
+    }
+
+    .conditionSection {
+        flex-wrap: wrap-reverse;
+    }
+
+    .conditionText {
+        width: 100%;
+    }
+
+    .conditionImage {
+        width: 100%;
+    }
+
+    .conditionSection {
+        margin-top: 15%;
+    }
+
+    .conditionText {
+        margin-top: 10%;
+    }
+
+    .noReverse {
+        flex-wrap: wrap !important;
+    }
+
+    .featureTransparent {
+        padding: 15% 5% 15% 5% !important;
+    }
+
+    .providerTextBox {
+        width: 100%;
+    }
+
+    .check {
+        padding: 10px;
+    }
+
+}

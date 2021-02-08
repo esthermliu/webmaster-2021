@@ -1,0 +1,41 @@
+@media screen and (max-width: 750px) { 
+    .treatmentBox {
+        flex-wrap: wrap;
+    }
+
+    .imageHolder, .textOverall {
+        width: 100%;
+    }
+
+    .imageHolder {
+        min-height: 350px;
+    }
+
+    .textHolderTreatment {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .reverseWrap {
+        flex-wrap: wrap-reverse;
+    }
+
+    .simpleSucks {
+        width: 100%;
+    }
+
+    .demoTransparent {
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+
+    .firstSection {
+        padding-top: 15%;
+    }
+
+    .anotherDemo {
+        padding-top: 0 !important;
+    }
+
+
+}

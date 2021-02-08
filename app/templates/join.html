@@ -3,6 +3,7 @@
 {% block head %}
     {{ super() }} <!-- Have to include the super to get the default css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/join.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/join_media.css') }}"> 
 {% endblock %}
 
 {% block childcontent %}
@@ -69,7 +70,7 @@
             </div>
         </div>
     </div>
-    <div class = "treatmentBox">
+    <div class = "treatmentBox reverseWrap">
         <div class = "textOverall show-on-scroll-right">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
@@ -93,7 +94,7 @@
             </div>
         </div>
     </div>
-    <div class = "treatmentBox">
+    <div class = "treatmentBox reverseWrap">
         <div class = "textOverall show-on-scroll-right">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">

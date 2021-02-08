@@ -17,7 +17,13 @@ $(document).ready(function(){
         focusOnSelect: true,
         adaptiveHeight: true,
         prevArrow: $('.1Prev'),
-        nextArrow: $('.1Next')   
+        nextArrow: $('.1Next'),
+        responsive: [{
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1            
+            }
+        }]   
     }); 
     
     $('.animal2').slick({
@@ -38,7 +44,13 @@ $(document).ready(function(){
         focusOnSelect: true,
         adaptiveHeight: true,
         prevArrow: $('.2Prev'),
-        nextArrow: $('.2Next')   
+        nextArrow: $('.2Next'),
+        responsive: [{
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1            
+            }
+        }]   
     });
    
     

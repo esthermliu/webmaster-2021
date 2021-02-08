@@ -1,0 +1,27 @@
+@media screen and (max-width: 750px) { 
+    .firstSection {
+        padding: 15% 5% 15% 5%;
+    }
+
+    .conditionSection {
+        flex-wrap: wrap-reverse;
+        margin-top: 15%;
+    }
+
+    .conditionText {
+        width: 100%;
+    }
+
+    .conditionImage {
+        width: 100%;
+    }
+
+    .conditionText {
+        margin-top: 10%;
+    }
+
+    .appImage {
+        width: 100%;
+    }
+
+}
