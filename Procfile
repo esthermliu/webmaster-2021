@@ -1,1 +1,1 @@
-web: composer.json
+web: composer.json gunicorn telemedicine:app
