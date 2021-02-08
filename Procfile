@@ -1,1 +1,1 @@
-web: composer.json; gunicorn telemedicine:app
+web: flask db upgrade; gunicorn telemedicine:app
