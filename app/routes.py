@@ -1,8 +1,11 @@
 from flask import render_template, flash, redirect, url_for, request
-from app import app
-from app import posts
-from app import news_articles
-from app import blog_articles
+from app import app, posts, news_articles, blog_articles, login
+from app import db
+from app.forms import LoginForm, RegistrationForm
+from app.models import User
+from flask_login import logout_user, login_required
+from flask_login import current_user, login_user
+from werkzeug.urls import url_parse
 import math
 from flaskext.markdown import Markdown
 
@@ -764,3 +767,47 @@ def join():
                                         inner_title="Join Us",
                                         description="Insert Text",
                                         landing="joinLanding") 
+
+
+# login route
+@app.route('/login', methods=['GET', 'POST']) # methods arguments tells Flask that the function accepts GET and POST requests, default is only GET
+def login():
+    if current_user.is_authenticated: # if a logged in user goes to the login page, they will be redirected to the homepage
+        return redirect(url_for('index'))
+    form = LoginForm() 
+    if form.validate_on_submit(): # when the browser sends the GET request to receive the webpage with the form, the method is going to return false, skipping to the redirect line
+        user = User.query.filter_by(username=form.username.data).first() # loading the user from the database
+        if user is None or not user.check_password(form.password.data): # checking whether the user's password or username is invalid
+            flash ('Invalid username or password', 'error')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data) # if both username and password are correct, then call the login_user function which comes with Flask-Login, meaning that any future pages the user navogates to will ave the current_user set to that uesr
+        next_page = request.args.get('next')
+        if not next_page or url_parse(next_page).netloc != '':
+            next_page = url_for('index')
+        return redirect(next_page) 
+    return render_template('login.html', title='Sign In', form=form)
+
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        user = User(username=form.username.data, email=form.email.data)
+        user.set_password(form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        flash('Congratulations, you are now a registered user!', 'info')
+        return redirect(url_for('login'))
+    return render_template('register.html', title='Register', form=form)
+
+@app.route('/database')
+def database():
+    user_all = User.query.all()
+    return render_template('database.html', title='Database', user_all=user_all)

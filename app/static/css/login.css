@@ -1,0 +1,114 @@
+.outerForm {
+    background-image: url("/static/images/FillerPicture.jpeg");
+    min-height: 100vh;
+}
+
+header, footer {
+    display: none !important;
+}
+
+.formHolder {
+    background-color: white;
+    padding: 5% 2% 5% 2%;
+    margin-top: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+.outerTransparent {
+    background-image: linear-gradient(rgba(43, 122, 120, 0.6), rgba(145, 75, 173, 0.4));
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 2px solid rgb(23, 37, 42);
+    color: rgb(23, 37, 42);
+    text-align: center;
+    letter-spacing: 1px;   
+    line-height: 25px;
+}
+
+.usernameSection {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.signTitle {
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.signTitle h1 {
+    font-weight: 500;
+    width: 50%;
+    font-size: 25px;
+}
+
+#submit {
+    padding: 15px 35px;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    background-color: #3aafa9;
+    border: 2px solid #3aafa9 !important;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    margin-top: 15px;
+    animation: MoveUpDown 2s linear infinite;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+#submit:hover {
+    background-color: transparent;
+    color: #3aafa9;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+}
+
+@keyframes MoveUpOther {
+    0%, 100% {
+      transform: translateY(-3px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+}
+
+.learnMore::after {
+    content: '';
+    display: block;
+    width: 0;
+    margin: auto;
+    height: 2px;
+    background: linear-gradient(to right, #2B7A78, #3AAFA9, #2B7A78);
+    transition: width .3s;
+	margin-top: 5px;
+}
+
+.learnMore:hover::after  {
+    width: 60%;
+    transition: width .3s;
+}
+
+.learnMore {
+    color: rgb(72, 80, 83);
+    margin-top: 10px;
+}

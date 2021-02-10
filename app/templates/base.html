@@ -49,6 +49,7 @@
         <script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
         <script src="{{ url_for('static', filename='js/review_slideshow.js') }}"></script>
         <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/flash_messages.js') }}"></script>
         {% block head %} {% endblock %}
     </head>
     <body>
@@ -179,9 +180,15 @@
                 </ul>
             </nav>
             <div class = "loginBox">
-                <a class = "homepageLogo loginThing" href = "index.html" id = "loginButton">
+                {% if current_user.is_anonymous %}
+                <a class = "homepageLogo loginThing" href = "{{ url_for('login') }}" id = "loginButton">
                     <p>Login</p><i class="far fa-user"></i>
                 </a>
+                {% else %}
+                <a class = "homepageLogo loginThing" href = "{{ url_for('logout') }}" id = "loginButton">
+                    <p>Logout</p><i class="far fa-user"></i>
+                </a>
+                {% endif %}
             </div>
 
             <!-- Media hamburger -->
@@ -430,11 +437,27 @@
                                     {{ phone_nav('join', 'Join Us') }}
                                 </li>
                             </div>
+                            <li>
+                                {{ phone_nav('login', 'Login') }}
+                            </li>
                     </div> <!-- end of inner nav -->
                 </ul>
             </nav> 
 
         </header>
+        <!-- flashed messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <ul class = "flashHolder">
+                {% for category, message in messages %} 
+                    <li class = "{{ category }}" id = "fadeFlash"> {{ message }}</li>
+                    <script type="text/javascript">
+                        hide();
+                    </script>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        {% endwith %}
 
         {% block content %}{% endblock %}
         
@@ -446,7 +469,7 @@
                         <div class = "footerImage">
                             <img src = "{{ url_for('static', filename='images/Logo.png') }}">
                         </div>
-                        <p>Doctor visits made easy online 24/7/365.</p>
+                        <p>Online doctor visits made easy 24/7/365.</p>
                         <div class = "lilLogo">
                             <div class = "footerImage aLot">
                                 <img src = "{{ url_for('static', filename='images/Phone.png') }}">
