@@ -49,5 +49,5 @@ wincertstore==0.2
 WTForms==2.3.3
 
 # requirements for Heroku
-psycopg2==2.7.3.1
+
 gunicorn==19.7.1
