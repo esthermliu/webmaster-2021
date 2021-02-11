@@ -859,3 +859,7 @@ footer {
 .info {
     background-color:  #A9D099 !important;
 }
+
+.hideNav {
+    display: none !important;
+}
