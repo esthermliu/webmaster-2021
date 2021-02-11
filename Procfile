@@ -1,1 +1,1 @@
-web: flask db upgrade; flask translate compile; gunicorn telemedicine:app   
+web: flask db upgrade; gunicorn telemedicine:app   
