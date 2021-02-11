@@ -438,7 +438,11 @@
                                 </li>
                             </div>
                             <li>
-                                {{ phone_nav('login', 'Login') }}
+                                {% if current_user.is_anonymous %}
+                                    {{ phone_nav('login', 'Login') }}
+                                {% else %}
+                                    {{ phone_nav('logout', 'Logout') }}
+                                {% endif %}
                             </li>
                     </div> <!-- end of inner nav -->
                 </ul>
