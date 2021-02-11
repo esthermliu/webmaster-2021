@@ -10,7 +10,6 @@ header, footer {
 .formHolder {
     background-color: white;
     padding: 5% 2% 5% 2%;
-    margin-top: 3%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -110,5 +109,10 @@ input {
 
 .learnMore {
     color: rgb(72, 80, 83);
+    margin-top: 10px;
+}
+
+.errorSpan {
+    color: #F76C6C;
     margin-top: 10px;
 }

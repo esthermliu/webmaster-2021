@@ -9,7 +9,19 @@ app = Flask(__name__) # __name__ is a Python predefined variable, set to the nam
 Markdown(app) 
 app.config.from_object(Config)  
 db = SQLAlchemy(app) # this db object represents the database
-migrate = Migrate(app, db) # this object represents the migration engine
+migrate = Migrate(app, db, render_as_batch=True) # this object represents the migration engine
 login = LoginManager(app)
+login.login_view = 'login'
+
+def create_app(config_class=Config):
+    app = Flask(__name__)
+    app.config.from_object(config_class)
+
+    db.init_app(app)
+    migrate.init_app(app, db)
+    login.init_app(app)
+    moment.init_app(app)
+
+    return app
 
 from app import routes, models # Importing the routes module, imported at the bottom to avoid circular imports, also imports models module

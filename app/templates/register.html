@@ -1,42 +1,50 @@
-{% extends "wiki.html" %}
+{% extends "base.html" %}
 
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}"> 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/wiki.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}"> 
 {% endblock %}
 
 {% block content %}
-    <h1>Register</h1>
-    <form action="", method="post">
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}
-            {% for error in form.username.errors %}
-                <span>[{{ error}}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.email.label }}<br>
-            {{ form.email(size=64) }}
-            {% for error in form.email.errors %}
-                <span>[{{ error}}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }} <!-- you can add css classes or IDs to the form fields by having extra arguments-->
-            {% for error in form.password.errors %}
-                <span>[{{ error}}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.password2.label }}<br>
-            {{ form.password2(size=32) }} <!-- you can add css classes or IDs to the form fields by having extra arguments-->
-            {% for error in form.password2.errors %}
-                <span>[{{ error}}]</span>
-            {% endfor %}
-        </p>
-        <p>{{ form.submit() }}</p>
-    </form>
+<div class = "outerForm">
+    <div class = "outerTransparent">
+        <div class = "formHolder">
+            <div class = "signTitle">
+                <h1>Register</h1>
+            </div>
+            <form action="", method="post">
+                {{ form.hidden_tag() }}
+                <div class = "usernameSection">
+                    {{ form.username.label }}<br>
+                    {{ form.username(size=32) }}
+                    {% for error in form.username.errors %}
+                        <p class = "errorSpan">[{{ error}}]</p>
+                    {% endfor %}
+                </div>
+                <div class = "usernameSection">
+                    {{ form.email.label }}<br>
+                    {{ form.email(size=64) }}
+                    {% for error in form.email.errors %}
+                        <p class = "errorSpan">[{{ error}}]</p>
+                    {% endfor %}
+                </div>
+                <div class = "usernameSection">
+                    {{ form.password.label }}<br>
+                    {{ form.password(size=32) }} <!-- you can add css classes or IDs to the form fields by having extra arguments-->
+                    {% for error in form.password.errors %}
+                        <p class = "errorSpan">[{{ error}}]</p>
+                    {% endfor %}
+                </div>
+                <div class = "usernameSection">
+                    {{ form.password2.label }}<br>
+                    {{ form.password2(size=32) }} <!-- you can add css classes or IDs to the form fields by having extra arguments-->
+                    {% for error in form.password2.errors %}
+                        <p class = "errorSpan">[{{ error}}]</p> 
+                    {% endfor %}
+                </div>
+                <p class = "usernameSection">{{ form.submit() }}</p>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
