@@ -1,0 +1,496 @@
+@media screen and (max-width: 750px) { 
+  .impactTitle h2 {
+    font-size: 35px;
+  }
+}
+
+* {
+	margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0 !important;
+  overflow-x: hidden;
+}
+
+.logo-box {
+  width: 50% !important;
+}
+  
+.headerList {
+    display: none !important;
+}
+
+.second-box {
+  display: none !important;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    text-transform: uppercase;
+}
+    
+.mediaHolder {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+.logoBox a img {
+  height: 100%;
+}
+
+    
+.DropDownContent {
+  display: none;
+}
+
+.DropDownContent a {
+  display: none !important;
+}
+
+.secondBox {
+    display: none !important;
+}
+
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 0;
+  position: fixed;
+  display: flex;
+  height: 48px;
+  justify-content: flex-start;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index:999 !important;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: block !important;
+}
+    
+.hamLogo {
+    display: block !important;
+}
+
+.active {
+  color: rgb(213,220,59) !important; 
+}
+
+.Hamburger  {
+  position: fixed;
+  z-index: 9999999999999 !important;
+  color: white;
+  height: 60px;
+  margin-left: 80%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.overlay-content {
+  position: relative;
+  top: 10%;
+  margin-top: 30px;
+  z-index:9999999 !important;
+  padding-bottom: 15%;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  text-transform: none !important;
+  letter-spacing: 1.5px;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.CloseButton {
+  position: absolute !important;
+  font-size: 60px !important;
+  z-index: 30 !important;
+  margin-top: 60px;
+  padding: 0 !important;
+  display: none;
+}
+
+
+
+
+
+/*@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .CloseButton {
+  font-size: 40px !important;
+  top: 15px !important;
+  right: 35px !important;
+  }
+}*/
+
+
+.phoneDropdown {
+  margin-left: 10%;
+  display: none;
+}
+
+
+.phoneDropdown a {
+    font-size: 18px !important;
+}
+    
+.evenSmaller a {
+    font-size: 16px !important;
+}
+
+
+.footer2 {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.footer {
+  display: none;
+}
+
+.footer2 img {
+  height: 100%;
+  margin-top: 3vh;
+}
+
+.footer2 p {
+  font-size: 2vh;
+  text-align: center;
+  color: #ababab;
+}
+
+.FooterBottom {
+  margin-top: 0;
+}
+
+.footer {
+  display: none;
+}
+
+a:link {
+  text-decoration: none;
+  font-family: "Poppins",sans-serif;
+}
+
+.CloseButton {
+  position: absolute !important;
+  left: 80% !important;
+  font-size: 60px !important;
+  z-index: 30 !important;
+  height: auto !important;
+  width: auto !important;
+}
+
+
+.footer2 {
+    height: 70px;
+    width: 100%;
+    background-color: #595959;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer2 p {
+  margin: 0px;
+  padding: 0px;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, sans-serif;
+  color: white;
+}
+
+.footer {
+  display: none !important;
+}
+
+
+
+#landingVideo {
+    overflow: hidden !important;
+    min-height: 100vh !important;
+    min-width: 100vw !important;
+}
+
+.imageHolder img {
+    width: 100%;
+}
+
+.landing h2 {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
+.titleHolder {
+    width: 60vw;
+}
+
+footer {
+    flex-wrap: wrap;
+}
+
+.leftSection {
+    width: 100%;
+    margin: 0 !important;
+    margin-top: 10% !important;
+    flex-wrap: wrap !important;
+}
+
+.footerLogoHolder  img{
+    width: 100% ;
+}
+
+.footerLogoHolder {
+    margin-left: 3%;
+}
+
+.leftTopSection {
+    width: 100%;
+}
+
+.wordsSection {
+    width: 80%;
+}
+
+.rightSectionFooter {
+    width: 100%;
+    margin: 10% 5% 10% 5% !important;
+    
+}
+
+.FooterLinks {
+    margin-top: 3%;
+}
+
+.footerLogoHolder img {
+    width: 120px;
+}
+    
+/* start of new hamburger menu */ 
+    
+#hamburgerMenu {
+    z-index: 999999999999 !important;
+    display: inline;
+    cursor: pointer;
+    position: fixed;
+    left: 5%;
+    transition: visibility 0s, opacity 0.2s linear;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 3px;
+    background-color: #3aafa9;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 4px);
+  background-color: white !important;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -4px);
+  background-color: white !important;
+}
+    
+header nav ul {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: rgb(23, 37, 42);
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    transition: 0.3s;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: 3px 0px 12px -0px rgba(0, 0, 0, 0.6);
+}
+    
+
+header nav ul.openMenu {
+    width: 25%;
+}
+
+
+#navLinks li {
+    list-style-type: none;
+    font-size: 25px;
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navLinks li a {
+    color: white;
+    letter-spacing: 1px;
+}
+    
+/* minus holder css */
+    
+.minusHolder2 p {
+    font-size: 25px !important;
+}
+    
+.lilMinus p {
+    font-size: 20px !important;
+}
+
+.minusHolder2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    
+.plus, .minus {
+  color: white;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.minus {
+  display: none;
+}
+
+    
+/* inner nav css */
+
+    
+#navLinks {
+  overflow: hidden;
+} 
+    
+.innerNav {
+  top: 80px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
+}
+    
+.innerNav::-webkit-scrollbar {
+  display: none;
+}
+
+.innerNav li {
+  width: 100%;
+}
+
+.loginBox {
+  display: none;
+}    
+
+.activeMedia {
+  color: #3aafa9 !important;
+}
+
+.phonePad a {
+  margin-right: 8px;
+}
+
+.phonePad {
+  line-height: 30px;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}
+  
+.logoBox {
+  max-width: 40%;
+}
+
+.footerHolder {
+  flex-wrap: wrap;
+}
+
+.footerSection {
+  width: 50%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.sigh {
+  width: 100% !important;
+  margin-right: 0;
+}
+
+.footerFilter {
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.rightAlign {
+  text-align: right;
+}
+
+
+.rightAlign .linkHolderFooter a::after {
+  right: 0;
+  position: absolute;
+}
+
+.footerRegular {
+  width: 100% !important;
+}
+
+.hideNav {
+  display: block;
+}
+
+.mediaHolder {
+  background-color:white;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 10px -10px;
+}
+
+.logoBox {
+  height: 50%;
+}

@@ -1,0 +1,118 @@
+{% from "macros.html" import phone_nav with context %}
+{% from "macros.html" import phone_nav_class with context %}
+{% from "macros.html" import phone_nav_class_username with context %}
+{% from "macros.html" import phone_dropdown with context %}
+{% from "macros.html" import phone_plus with context %}
+{% from "macros.html" import phone_minus with context %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>Hey! You forgot a title!</title>
+        {% endif %}
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Favicon.png') }}" size = "20x20"/>
+        <!-- css stylesheets -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/backend_base.css') }}">
+        <!-- font family -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- slick carousel -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slick.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slick-theme.css') }}"/>
+        <!-- jquery -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- slick -->
+        <script type="text/javascript" src="{{ url_for('static', filename='js/slick.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
+        <!-- scripts -->
+        <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/flash_messages.js') }}"></script>
+        {% block head %} {% endblock %}
+    </head>
+    <body>
+        <header id = "secondBox" class = "navbar">
+            <!-- Media hamburger -->
+            <div class = "mediaHolder"> 
+                <div id="hamburgerMenu" onclick="menuClicked(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                </div>
+                <div class = "logoBox logoDark">
+                    <a class = "homepageLogo" href = "{{ url_for('index') }}"><img src = "{{ url_for('static', filename='images/LogoBlue.png')}}"></a>
+                </div>
+            </div>    
+            <nav class = "hideNav">
+                {% set aboutDropdown = ['about', 'why', 'history', 'leadership', 'providers', 'ncqa'] %}
+                {% set treatmentDropdown = ['treatment', 'medical', 'urgent', 'mens_health', 'womens','teens_health', 'childrens_health', 'therapy', 'couples', 'family', 'speech', 'occupational', 'covid_19', 'screening', 'return_work', 'mental', 'physical', 'phobia', 'virtual', 'dogs', 'cats', 'horses', 'reptiles', 'birds', 'rabbits', 'pet', 'behavioral'] %}
+                {% set inner_treatmentDropdown = ['urgent', 'mens_health', 'womens', 'teens_health', 'childrens_health', 'medical'] %}
+                {% set inner_treatmentDropdown2 = ['therapy', 'couples', 'family', 'speech', 'occupational', 'behavioral'] %}
+                {% set inner_treatmentDropdown3 = ['covid_19', 'screening', 'return_work'] %}
+                {% set inner_treatmentDropdown4 = ['mental', 'physical', 'phobia', 'virtual'] %}
+                {% set inner_treatmentDropdown5 = ['dogs', 'cats', 'horses', 'reptiles', 'birds', 'rabbits', 'pet'] %}
+
+                {% set howDropdown = ['how', 'pricing', 'our_app'] %}
+                {% set organizationDropdown = ['organizations', 'employer', 'hospitals', 'unions', 'government', 'brokers', 'distribution'] %}
+                {% set contactDropdown = ['contact', 'faq', 'social', 'join'] %}
+
+                {% set username = user.username %}
+
+                <ul id="navLinks">
+                    <div class = "innerNav">
+                        <li>
+                            {{ phone_nav_class_username('dashboard', 'Dashboard', 'firstNav', username) }}
+                        </li>
+                        <li>
+                            {{ phone_nav('about', 'My Account') }} 
+                        </li>
+                        <li>
+                            {{ phone_nav('treatment', 'Health Profile') }}
+                        </li> 
+                        <li>
+                            {{ phone_nav_class_username('appointments', 'Appointments', 'firstNav', username) }}
+                        </li>
+                        <li>
+                            {{ phone_nav('logout', 'Logout') }}
+                        </li>
+                    </div> <!-- end of inner nav -->
+                </ul>
+            </nav> 
+
+        </header>
+        <!-- flashed messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <ul class = "flashHolder">
+                {% for category, message in messages %} 
+                    <li class = "{{ category }}" id = "fadeFlash"> {{ message }}</li>
+                    <script type="text/javascript">
+                        hide();
+                    </script>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+        
+        <!-- js -->
+        <script src="{{ url_for('static', filename='js/fade_on_scroll.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/body_fade.js') }}"></script>
+        
+    </body>
+</html>

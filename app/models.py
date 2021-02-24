@@ -5,12 +5,14 @@ from flask_login import UserMixin # A class that Flask-Login provides with gener
 from time import time
 import jwt
 from app import app
+from datetime import datetime
 
 class User(UserMixin, db.Model): # inherits from db.Model, a base class for all models from Flask-SQLAlchemy
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True) # Username must be unique
     email = db.Column(db.String(120), index=True, unique=True) # Email must be unique
     password_hash = db.Column(db.String(128))
+    appointments = db.relationship('Appointments', backref='patient', lazy='dynamic')
 
     def __repr__(self): # Tells Python how to print objects of this class
         return '<User {}>'.format(self.username)
@@ -38,3 +40,15 @@ class User(UserMixin, db.Model): # inherits from db.Model, a base class for all 
 @login.user_loader #Flask login needs the app's help in loading the user
 def load_user(id): 
         return User.query.get(int(id))
+
+class Appointments(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    start_time = db.Column(db.DateTime, index=True)
+    end_time = db.Column(db.DateTime, index=True)
+    description = db.Column(db.String(220))
+    doctor = db.Column(db.Integer)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+
+    def __repr__(self):
+        return '<Appointments {} {} {}>'.format(self.id, self.user_id, self.timestamp)

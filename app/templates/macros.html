@@ -80,6 +80,14 @@
     {% endif %}
 {% endmacro %}
 
+{% macro phone_nav_class_username(endpoint, name, class, username) %}
+    {% if endpoint in request.endpoint %}
+        <a class = "{{ class }} activeMedia" href="{{ url_for(endpoint,  username=username )}}">{{ name }}</a>
+    {% else %}
+        <a class = "{{ class }}" href="{{ url_for(endpoint,  username=username ) }}">{{ name }}</a>
+    {% endif %}
+{% endmacro %}
+
 {% macro phone_dropdown(class, id, endpoint_array) %}
     {% set found =  {'foo': False} %}
     {% for endpoint in endpoint_array %}

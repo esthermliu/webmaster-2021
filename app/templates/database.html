@@ -15,3 +15,27 @@
     </tr>
 {% endfor %}
 </table>
+<br>
+<h2>Appointments</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>User</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Description</th>
+        <th>Doctor</th>
+        <th>Timestamp</th>
+    </tr>
+    {% for a in appointments_all %}
+        <tr>
+            <td>{{ a.id }}</td>
+            <td>{{ a.patient }}</td>
+            <td>{{ a.start_time }}</td>
+            <td>{{ a.end_time }}</td>
+            <td>{{ a.description }}</td>
+            <td>{{ a.doctor }}</td>
+            <td>{{ a.timestamp }}</td>
+        </tr>
+    {% endfor %}
+    </table>

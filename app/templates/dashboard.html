@@ -1,0 +1,11 @@
+{% extends "backend_base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+{% endblock %}
+
+{% block content %}
+<h2>Hello {{ user.username }}!</h2>
+<a href = "{{ url_for('schedule_appointment', username=user.username )}}">Schedule Appointment</a>
+{% endblock %}

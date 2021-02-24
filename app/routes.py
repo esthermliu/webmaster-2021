@@ -1,14 +1,16 @@
 from flask import render_template, flash, redirect, url_for, request
 from app import app, posts, news_articles, blog_articles, login
 from app import db
-from app.forms import LoginForm, RegistrationForm, ResetPasswordRequestForm, ResetPasswordForm
-from app.models import User
+from app.forms import LoginForm, RegistrationForm, ResetPasswordRequestForm, ResetPasswordForm, MakeAppointmentForm
+from app.models import User, Appointments
 from flask_login import logout_user, login_required
 from flask_login import current_user, login_user
 from werkzeug.urls import url_parse
 import math
 from flaskext.markdown import Markdown
 from app.email import send_password_reset_email
+from datetime import datetime, timedelta
+import datetime
 
 # View functions
 @app.route('/') # Decorators modify the functions that follow, both / and /index will lead to index page
@@ -774,7 +776,7 @@ def join():
 @app.route('/login', methods=['GET', 'POST']) # methods arguments tells Flask that the function accepts GET and POST requests, default is only GET
 def login():
     if current_user.is_authenticated: # if a logged in user goes to the login page, they will be redirected to the homepage
-        return redirect(url_for('index'))
+        return redirect(url_for('dashboard', username=current_user.username))
     form = LoginForm() 
     if form.validate_on_submit(): # when the browser sends the GET request to receive the webpage with the form, the method is going to return false, skipping to the redirect line
         user = User.query.filter_by(username=form.username.data).first() # loading the user from the database
@@ -784,7 +786,7 @@ def login():
         login_user(user, remember=form.remember_me.data) # if both username and password are correct, then call the login_user function which comes with Flask-Login, meaning that any future pages the user navogates to will ave the current_user set to that uesr
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
-            next_page = url_for('index')
+            next_page = url_for('dashboard', username=current_user.username)
         return redirect(next_page) 
     return render_template('login.html', title='Sign In', form=form)
 
@@ -811,7 +813,11 @@ def register():
 @app.route('/database')
 def database():
     user_all = User.query.all()
-    return render_template('database.html', title='Database', user_all=user_all)
+    appointments_all = Appointments.query.all()
+    return render_template('database.html', title='Database', 
+                                            user_all=user_all,
+                                            appointments_all=appointments_all
+                                            )
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():
@@ -843,3 +849,50 @@ def reset_password(token):
         return redirect(url_for('login'))
     return render_template('reset_password.html', form=form, title="Reset Password")
 
+# User dashboard
+@app.route('/<username>/dashboard')
+@login_required
+def dashboard(username):
+    user_actual = User.query.filter_by(username=username).first()
+    return render_template('dashboard.html', title='Patient Dashboard', user=user_actual)
+
+@app.route('/<username>/schedule-appointment', methods=['GET', 'POST'])
+@login_required
+def schedule_appointment(username):
+    user = User.query.filter_by(username=username).first()
+    form = MakeAppointmentForm()
+    if form.validate_on_submit():
+        date = form.datepicker.data
+        description = form.description.data
+        doctor = form.doctor.data
+
+        # adding the appointment
+        a = Appointments(user_id=user.id, start_time=date, end_time=date, description=description, doctor=doctor)
+        db.session.add(a)
+        db.session.commit()
+
+        # getting the start time
+        hour = form.hour.data
+        minute = form.minute.data
+        newdatetime = a.start_time.replace(hour=hour, minute=minute)
+        a.start_time = newdatetime
+        db.session.commit()
+
+        # getting the end time
+        duration = form.duration.data
+        minutes_added = datetime.timedelta(minutes=duration)
+        future_time = a.start_time + minutes_added
+        a.end_time = future_time
+        db.session.commit()
+
+        return redirect(url_for('dashboard', username=username))
+    return render_template('make_appointment.html', title='Schedule Appointment',
+                                                    form=form, 
+                                                    user=user)
+
+@app.route('/<username>/appointments')
+@login_required
+def appointments(username):
+    user = User.query.filter_by(username=username).first()
+    
+    return render_template('appointments.html', title="Appointments", user=user)
