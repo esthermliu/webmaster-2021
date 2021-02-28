@@ -1,3 +1,19 @@
 .familyLanding {
-    
+    background-image: url('/static/images/HappyFamily.jpeg');
+}
+
+.pic1 {
+    background-image: url('/static/images/FamilyBeach.jpeg');
+}
+
+.pic2 {
+    background-image: url('/static/images/FamilySunset.jpeg');
+}
+
+.pic3 {
+    background-image: url('/static/images/DomesticAbuse2.jpeg');
+}
+
+.pic4 {
+    background-image: url('/static/images/ChildTrauma.jpeg');
 }

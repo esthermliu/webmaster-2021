@@ -10,63 +10,27 @@
 {% block childcontent %}
 <div class = "firstSection demoSection">
     <div class = "simpleSucks">
-        <h2 class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h2> 
+        <h2 class = "show-on-scroll-up">“Youth comes but once in a lifetime” </h2> 
+        <h4 class = "littleAnon show-on-scroll-up"><i>- Henry Longfellow - </i></h4>
     </div>
 </div>
 <div class = "secondSection">
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
                     <h2> Physical </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
-                <div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "{{ url_for('teens_health_condition', condition='dandruff') }}">Dandruff</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Insert Here </a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>
+                <p class = "innerText show-on-scroll-up">Although you may be at a prime age, as an adolescent you are still susceptible to injuries and physical issues. High-impact sports, especially if done with little rest, can strain bones, muscles, and tendons. We understand that the recovery process can often be frustrating as injuries may give a considerable disadvantage in the highly competitive athletic environment. Here at Neomedica we equip adolescents with proper knowledge of body mechanics and an estimated recovery timeline. Empowering you to control your own body, we can help you reach your athletic goals and along the way create robust bodies that will sustain you throughout your adult life.  </p>
+                <p class = "show-on-scroll-up">Click below to find the right physical therapist for you.</p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -75,43 +39,16 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Emotional </h2>
+                    <h2> Mental </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>
+                <p class = "innerText show-on-scroll-up">Your body is changing and so is your mind. Mental instability that comes and goes can be normal and is expected, however, if your anxiety or rage lasts for several months or is seemingly unending, you may need to contact a therapist. Our therapists understand your struggle and will work to repair your relationships with not only others but also with yourself. </p>
+                <p class = "show-on-scroll-up">Warning: Do not contact or rely on Neomedica if you, a loved one, or a friend are currently contemplating suicide. Instead, immediately contact the National suicide prevention hotline at 1-800-273-8255. The hotline is available 24/7 for you. Once you are free from any immediate danger we can provide personalized, professional help for all issues you. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -119,48 +56,21 @@
         </div>
     </div>
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic3">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert </h2>
+                    <h2> Sleep </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>
+                <p class = "innerText show-on-scroll-up">You’re not alone! Research shows that 73% of teens don’t receive the minimum amount of sleep required to function at their best. During puberty, the body’s circadian rhythm (which tells you when to sleep and wake up) resets and may tell you to sleep later than you should be. Insomnia is another major factor that affects quantity and quality of sleep. If you think getting enough rest and you still wake up tired at the start of the day, it may be helpful to contact one of our therapists. They can help you deal with almost all kinds of sleeping challenges.</p>
+                <p class = "show-on-scroll-up">Click below to find the right therapist for you. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -169,56 +79,33 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert </h2>
+                    <h2> Diet </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>
+                <p class = "innerText show-on-scroll-up">We know you need to look good! That’s why we provide our customers with therapists trained in the most modern dietary practices. If you have trouble eating more or eating less, Neomedica can help you. Not only will we help you look good, but with a personalized and flexible diet, we can help you feel like yourself again. Don’t wait!  </p>
+                <p class = "show-on-scroll-up">Click below to find the right dietary therapist for you.</p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
-        <div class = "imageHolder pic2">
+        <div class = "imageHolder pic4">
         </div>
     </div>
 </div>
 <div class = "firstSection demoSection anotherDemo">
     <div class = "simpleSucks leftSucks">
         <h2 class = "show-on-scroll-up">Ready to start treatment? </h2> 
-        <h3 class = "show-on-scroll-up">Request a visit quickly and privately blah blah blah blah blah lah blah blahlah blah blah.</h3>
+        <h3 class = "show-on-scroll-up">Request a visit quickly and privately.</h3>
         <div class = "learnMoreContainerRegular leftAlign whiteButton show-on-scroll-up providerButton">
-            <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% if current_user.is_anonymous %}
+                <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% else %}
+                <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% endif %}
         </div>
     </div>
     <div class = "registerImage show-on-scroll-up">

@@ -1,4 +1,19 @@
 .menLanding {
-    background-image: url("/static/images/FillerPic2.jpeg");
+    background-image: url("/static/images/ManRunning.jpeg");
 }
 
+.pic1 {
+    background-image: url('/static/images/ManSleeping.jpeg');
+}
+
+.pic2 {
+    background-image: url('/static/images/MenDiet.jpeg');
+}
+
+.pic3 {
+    background-image: url('/static/images/ManExercise.jpeg');
+}
+
+.pic4 {
+    background-image: url('/static/images/ManHygiene.jpeg');
+}

@@ -10,63 +10,27 @@
 {% block childcontent %}
 <div class = "firstSection demoSection">
     <div class = "simpleSucks">
-        <h2 class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h2> 
+        <h2 class = "show-on-scroll-up">“Family is not an important thing. It’s everything.” </h2> 
+        <h4 class = "littleAnon show-on-scroll-up"><i>- Michael J. Fox - </i></h4>
     </div>
 </div>
 <div class = "secondSection">
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
                     <h2> Emotionally Focused Therapy </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
-                <!--<div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "{{ url_for('therapy_condition', condition='abuse') }}">Abuse</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Insert Here </a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>-->
+                <p class = "innerText show-on-scroll-up">Our deeply understanding psychiatrists understand the importance of emotional support in family therapy. Choose from a range of therapist personalities to match your family’s exact needs. Whether your household is experiencing behavioral problems, relational issues, stress, addiction, or divorce, understanding one another’s emotions is the best way to find the root of the issue.  </p>
+                <p class = "show-on-scroll-up">Click below to find a qualified family therapist for you today. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -77,41 +41,13 @@
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
                     <h2> Imago Relationship Therapy </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <!--<div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>-->
+                <p class = "innerText show-on-scroll-up">Imago Relationship Theory was developed in 1980 by Dr. Harville Hendrix and Dr. Helen LaKelly Hunt. It operates on the principle of entirely converting conflict into personal growth and healing through relational connection. Although traditionally used for couple’s therapy, Neomedica’s philosophy is that the same fundamental concept applies to familial healing. Here, we believe that strong-standing relationships are the key to familial bliss. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -119,48 +55,21 @@
         </div>
     </div>
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic3">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> M - T </h2>
+                    <h2> Domestic Abuse Recovery Therapy </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>
+                <p class = "innerText show-on-scroll-up">Warning: Do not contact or rely on Neomedica if you, a loved one, or a friend are currently experiencing domestic abuse. If you, a loved one, or a friend are currently experiencing domestic abuse, immediately contact the National Domestic Violence Hotline at 1-800-799-SAFE. After you have addressed the immediate physical danger, seeking professional help for all trauma-related issues you experience is important. </p>
+                <p class = "show-on-scroll-up">Click below to find a domestic abuse recovery specialist for you, a loved one, or a friend today. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -169,56 +78,33 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> U - Z </h2>
+                    <h2> Childhood Trauma Recovery Therapy</h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>
+                <p class = "innerText show-on-scroll-up">There is as often a clear association between childhood abuse and adult relationships. Childhood experiences of isolation, fear, violence, or abandonment will frequently emerge in a parental, marital, or intimate relationship. When such core issues more than once appear, they can quickly damage the integrity of household relationships, leaving each other to deal with deeply rooted issues that cannot be fixed by those without professional experience. </p>
+                <p class = "show-on-scroll-up">Click below to seek a professional who can address any traumatic childhood experiences that may be affecting you or your family’s mental health and relationships today. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
-        <div class = "imageHolder pic2">
+        <div class = "imageHolder pic4">
         </div>
     </div>
 </div>
 <div class = "firstSection demoSection anotherDemo">
     <div class = "simpleSucks leftSucks">
         <h2 class = "show-on-scroll-up">Ready to start treatment? </h2> 
-        <h3 class = "show-on-scroll-up">Request a visit quickly and privately blah blah blah blah blah lah blah blahlah blah blah.</h3>
+        <h3 class = "show-on-scroll-up">Click below to request a private 1-on-1 session with one of our seasoned professionals. </h3>
         <div class = "learnMoreContainerRegular leftAlign whiteButton show-on-scroll-up providerButton">
-            <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% if current_user.is_anonymous %}
+                <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% else %}
+                <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% endif %}
         </div>
     </div>
     <div class = "registerImage show-on-scroll-up">

@@ -1,3 +1,7 @@
 .petLanding {
-    
+    background-image: url('/static/images/DogDoc2.jpeg');
+}
+
+.competitionLink, .eventsLink, .programsLink {
+    background-image: url('/static/images/DogCat.jpeg');
 }

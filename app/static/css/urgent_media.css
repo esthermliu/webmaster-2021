@@ -35,12 +35,13 @@
     }
 
     .healthList ul {
-        width: 20%;
+        width: 100%;
     }
 
     .healthLi a:hover::after {
         width: 100%;
     }
+
 
     
 }

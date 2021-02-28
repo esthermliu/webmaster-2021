@@ -1,3 +1,19 @@
 .speechLanding {
-    
+    background-image: url('/static/images/Speech.jpeg');
+}
+
+.pic1 {
+    background-image: url('/static/images/Presentation.jpeg');
+}
+
+.pic2 {
+    background-image: url('/static/images/Microphone.jpeg');
+}
+
+.pic3 {
+    background-image: url('/static/images/ChildTalking.jpeg');
+}
+
+.pic4 {
+    background-image: url('/static/images/AdultSpeech.jpeg');
 }

@@ -1,3 +1,19 @@
 .teenLanding {
-    
+    background-image: url('/static/images/TeenHealth.jpeg');
+}
+
+.pic1 {
+    background-image: url('/static/images/TeenPhysical.jpeg');
+}
+
+.pic2 {
+    background-image: url('/static/images/TeenMental2.jpeg');
+}
+
+.pic3 {
+    background-image: url('/static/images/TeenSleep.jpeg');
+}
+
+.pic4 {
+    background-image: url('/static/images/TeenDiet.jpeg');
 }

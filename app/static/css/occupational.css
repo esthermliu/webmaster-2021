@@ -1,3 +1,19 @@
 .occupationalLanding {
-    
+    background-image: url('/static/images/Occupational.jpeg');
+}
+
+.pic1 {
+    background-image: url('/static/images/Handicapped.jpeg');
+}
+
+.pic2 {
+    background-image: url('/static/images/Cognitive.jpeg');
+}
+
+.pic3 {
+    background-image: url('/static/images/Patient.jpeg');
+}
+
+.pic4 {
+    background-image: url('/static/images/Veteran.jpeg');
 }

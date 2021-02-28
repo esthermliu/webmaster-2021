@@ -9,63 +9,74 @@
 {% block childcontent %}
 <div class = "firstSection demoSection">
     <div class = "simpleSucks">
-        <h2 class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h2> 
+        <h2 class = "show-on-scroll-up">“Nothing is as urgent as self-care"</h2> 
+        <h4 class = "littleAnon show-on-scroll-up"><i>- Bhavik Soni - </i></h4>
     </div>
 </div>
 <div class = "secondSection">
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> A - F</h2>
+                    <h2> A - C</h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">If you are in life-threatening emergency, Neomedica may not be able to help you, immediately contact 911.  </p>
+                <p class = "show-on-scroll-up">Telehealth urgent care is a live, online visit with a doctor, nurse practitioner, or physical assistant. We provide care for non-life-threatening conditions. Our doctors will discuss symptoms, ask questions, and if needed, fill a prescription. Our team can evaluate and help you treat: </p>
                 <div class = "healthList show-on-scroll-up">
                     <ul>
                         <li class = "healthLi">
                             <a href = "{{ url_for('urgent_condition', condition='abrasions') }}"> Abrasions</a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Insert Here </a>
+                            <a href = "#"> Acne </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Allergies </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Asthma </a>
                         </li>
                     </ul>
                     <ul>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Bacterial vaginosis </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Birth control </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Bites and Stings </a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Body Aches </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Bronchitis </a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Bruises </a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> COVID-19 Antibody Testing </a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> COVID-19 Screening </a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Cough </a>
                         </li>
                     </ul>
                 </div>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -74,43 +85,55 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> G - L </h2>
+                    <h2> D - L </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "healthList show-on-scroll-up">
+                <div class = "healthList show-on-scroll-up moreSpaceAbove">
                     <ul>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Dehydration </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Diarrhea </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Earache </a>
                         </li>
                     </ul>
                     <ul>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Fever </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Flu </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Frostbite </a>
                         </li>
                     </ul>
                     <ul>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Gout</a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Headaches</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Hives</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Itchy Eyes</a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Lice </a>
                         </li>
                     </ul>
                 </div>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -118,48 +141,46 @@
         </div>
     </div>
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic3">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> M - T</h2>
+                    <h2> T - R</h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "healthList show-on-scroll-up">
+                <div class = "healthList show-on-scroll-up moreSpaceAbove">
                     <ul>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Medication Refills </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Migraines </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Mild Lacerations </a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Nasal Congestion </a>
                         </li>
                     </ul>
                     <ul>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Nausea </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Pink Eye </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Respiratory infections  </a>
                         </li>
                     </ul>
                 </div>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -168,56 +189,69 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> U - Z </h2>
+                    <h2> S - Z </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "healthList show-on-scroll-up">
+                <div class = "healthList show-on-scroll-up moreSpaceAbove">
                     <ul>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Sexually Transmitted Infections </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Sinus Infections </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Sinus Symptoms </a>
                         </li>
                     </ul>
                     <ul>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Skin Infections </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Sore Throat  </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Sprains and Strains </a>
                         </li>
                     </ul>
                     <ul>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Travel Medications </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Urinary Tract Infections </a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Vomiting  </a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Yeast Infections  </a>
                         </li>
                     </ul>
                 </div>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
-        <div class = "imageHolder pic2">
+        <div class = "imageHolder pic4">
         </div>
     </div>
 </div>
 <div class = "firstSection demoSection anotherDemo">
     <div class = "simpleSucks leftSucks">
         <h2 class = "show-on-scroll-up">Ready to start treatment? </h2> 
-        <h3 class = "show-on-scroll-up">Request a visit quickly and privately blah blah blah blah blah lah blah blahlah blah blah.</h3>
+        <h3 class = "show-on-scroll-up">Request a visit quickly and privately.</h3>
         <div class = "learnMoreContainerRegular leftAlign whiteButton show-on-scroll-up providerButton">
-            <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% if current_user.is_anonymous %}
+                <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% else %}
+                <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% endif %}
         </div>
     </div>
     <div class = "registerImage show-on-scroll-up">

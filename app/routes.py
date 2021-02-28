@@ -206,7 +206,7 @@ def treatment():
 def medical():
     return render_template('medical.html', title='Medical Health Solutions',
                                         inner_title="Medical Health Solutions",
-                                        description="Insert Text",
+                                        description="Physical Care, Done Virtually",
                                         landing="medicalLanding")
 
 @app.route('/behavioral-health-solutions')
@@ -311,14 +311,14 @@ def birds():
 def pet():
     return render_template('pet.html', title='Pet Therapy Solutions',
                                         inner_title="Pet Therapy Solutions",
-                                        description="Insert Text",
+                                        description="Release Endorphins",
                                         landing="petLanding")                                        
 
 @app.route('/urgent-care')
 def urgent():
     return render_template('urgent.html', title='Urgent Care',
                                         inner_title="Urgent Care",
-                                        description="Insert Text",
+                                        description="24/7",
                                         landing="urgentLanding")
 
 @app.route('/urgent-care/<condition>')
@@ -339,7 +339,7 @@ def urgent_condition(condition):
 def mens_health():
     return render_template('men_health.html', title="Men's Health",
                                         inner_title="Men's Health",
-                                        description="Insert Text",
+                                        description="Feel like a man again",
                                         landing="menLanding")
 
 @app.route('/mens-health/<condition>')
@@ -382,7 +382,7 @@ def womens_health_condition(condition):
 def teens_health():
     return render_template('teens_health.html', title="Teen's Health",
                                         inner_title="Teen's Health",
-                                        description="Insert Text",
+                                        description="Get back out there",
                                         landing="teenLanding")
 
 @app.route('/teens-health/<condition>')
@@ -403,7 +403,7 @@ def teens_health_condition(condition):
 def childrens_health():
     return render_template('childrens_health.html', title="Children's Health",
                                         inner_title="Children's Health",
-                                        description="Insert Text",
+                                        description="Developing the Youth",
                                         landing="childrenLanding")
 
 @app.route('/childrens-health/<condition>')
@@ -452,21 +452,21 @@ def couples():
 def family():
     return render_template('family.html', title="Family Therapy",
                                         inner_title="Family Therapy",
-                                        description="Insert Text",
+                                        description="Strengthening Households",
                                         landing="familyLanding")  
 
 @app.route('/speech-therapy')
 def speech():
     return render_template('speech.html', title="Speech Therapy",
                                         inner_title="Speech Therapy",
-                                        description="Insert Text",
+                                        description="Learn to Love to Speak",
                                         landing="speechLanding")  
 
 @app.route('/occupational-therapy')
 def occupational():
     return render_template('occupational.html', title="Occupational Therapy",
                                         inner_title="Occupational Therapy",
-                                        description="Insert Text",
+                                        description="Adapt and Surpass",
                                         landing="occupationalLanding")        
 
 @app.route('/covid-19-testing')

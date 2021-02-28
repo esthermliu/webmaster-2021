@@ -1,3 +1,19 @@
 .childrenLanding {
-    
+    background-image: url('/static/images/ChildrensHealth.jpeg');
+}
+
+.pic1 {
+    background-image: url('/static/images/RunningChild.jpeg');
+}
+
+.pic2 {
+    background-image: url('/static/images/ChildEmotional.jpeg');
+}
+
+.pic3 {
+    background-image: url('/static/images/ChildBehavioral.jpeg');
+}
+
+.pic4 {
+    background-image: url('/static/images/ChildSports.jpeg');
 }

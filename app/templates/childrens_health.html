@@ -10,63 +10,57 @@
 {% block childcontent %}
 <div class = "firstSection demoSection">
     <div class = "simpleSucks">
-        <h2 class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h2> 
+        <h2 class = "show-on-scroll-up">"A characteristic of the normal child is he doesn’t act that way very often"</h2> 
+        <h4 class = "littleAnon show-on-scroll-up"><i>- Bhavik Soni - </i></h4>
     </div>
 </div>
 <div class = "secondSection">
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
                     <h2> Physical </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">A child’s physical development begins before conception and is highly influenced by parental health and genetic inheritance. Naturally, there is a vital connection between the fetus’s pediatric considerations as well as the mother’s obstetric concerns. (Mothers can check out the Women’s Health section for a more personalized experience) After birth there are many matters to address including, breastfeeding, vaccinations, screening tests and sleeping safety. Our licensed therapists recognize these classic stages of development as well as the need for a flexible treatment suited for your child.</p>
+                <p class = "show-on-scroll-up">At our appointments, you can expect laid-back care for: </p>
                 <div class = "healthList show-on-scroll-up">
                     <ul>
                         <li class = "healthLi">
-                            <a href = "{{ url_for('childrens_health_condition', condition='dandruff') }}">Dandruff</a>
+                            <a href = "#">Injuries </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Insert Here </a>
+                            <a href = "#"> Posture </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Tone </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Reflex </a>
                         </li>
                     </ul>
                     <ul>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Balance </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Strength </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Range of Motion </a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Weight Control </a>
                         </li>
                     </ul>
                 </div>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -77,41 +71,46 @@
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
                     <h2> Emotional </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+                <p class = "innerText show-on-scroll-up">In addition to your child’s physical health, there are also concerns about emotional health. While young, children can be tormented by nightmares and irrational fears. They can have trouble expressing their thoughts and (as you probably know) may easily get sucked up playing video games and watching videos. Here at Neomedica, our therapists are always equipped with statistically proven treatment approaches to get your child feeling comfortable and making friends again. </p>
+                <p class = "show-on-scroll-up">You can expect treatment for a variety of challenges: </p>
                 <div class = "healthList show-on-scroll-up">
                     <ul>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> ADHD </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Anorexia </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Bulimia </a>
                         </li>
                     </ul>
                     <ul>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Autism </a>
                         </li>
                         <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
+                            <a href = "#"> Asperger Syndrome </a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Learning Disorders </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class = "healthLi">
+                            <a href = "#"> Anxiety </a>
+                        </li>
+                        <li class = "healthLi">
+                            <a href = "#"> Depression </a>
                         </li>
                     </ul>
                 </div>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -119,48 +118,21 @@
         </div>
     </div>
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic3">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert </h2>
+                    <h2> Behavioral </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>
+                <p class = "innerText show-on-scroll-up">Children can and will experience behavioral ups and downs. Life-changing events can take a toll on kids and lead to changes in their behavior. It’s important for parents to recognize the difference between normal changes and behavioral problems. We provide professional care to help not only children but also their parents to aid parents in promoting desirable behavior and reducing unwanted behaviors. </p>
+                <p class = "show-on-scroll-up"> Click below to find a qualified behavioral therapist for your child today. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -169,56 +141,33 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert </h2>
+                    <h2> Sports Injuries  </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>
+                <p class = "innerText show-on-scroll-up">Young athletes are more prone to sports injuries than adults. Sports injuries, such as a sprain, bruise, or strain can lead to acute (temporary) pain. In certain cases, your child may develop chronic pain - a pain that lasts for more than three months. If your young athlete complains about pain for longer than three months, it’s important to see an expert in diagnosing and treating chronic pain. Neomedica provides your child with qualified therapists trained in the most modern practices. </p>
+                <p class = "show-on-scroll-up">Click below to find a qualified sport therapist for your child today. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
-        <div class = "imageHolder pic2">
+        <div class = "imageHolder pic4">
         </div>
     </div>
 </div>
 <div class = "firstSection demoSection anotherDemo">
     <div class = "simpleSucks leftSucks">
         <h2 class = "show-on-scroll-up">Ready to start treatment? </h2> 
-        <h3 class = "show-on-scroll-up">Request a visit quickly and privately blah blah blah blah blah lah blah blahlah blah blah.</h3>
+        <h3 class = "show-on-scroll-up">Your child's health includes physical, social, and mental well-being. It is important for your children to receive visits from health care providers as a chance to examine their development and prevent problems. </h3>
         <div class = "learnMoreContainerRegular leftAlign whiteButton show-on-scroll-up providerButton">
-            <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% if current_user.is_anonymous %}
+                <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% else %}
+                <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% endif %}
         </div>
     </div>
     <div class = "registerImage show-on-scroll-up">
