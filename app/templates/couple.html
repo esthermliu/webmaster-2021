@@ -5,68 +5,33 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/urgent.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/urgent_media.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/therapy.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/couple.css') }}">
 {% endblock %}
 
 {% block childcontent %}
 <div class = "firstSection demoSection">
     <div class = "simpleSucks">
-        <h2 class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h2> 
+        <h2 class = "show-on-scroll-up">"True love is about growing as a couple, learning about each other, and never giving up on each other." </h2> 
+        <h4 class = "littleAnon show-on-scroll-up"><i>- Anonymous - </i></h4>
     </div>
 </div>
 <div class = "secondSection">
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
                     <h2> Emotionally Focused Therapy </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
-                <!--<div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "{{ url_for('therapy_condition', condition='abuse') }}">Abuse</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Insert Here </a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>-->
+                <p class = "innerText show-on-scroll-up">Our psychiatrists believe in the importance of emotional support in couple's therapy. That’s why we allow you to choose from a range of therapists to cater directly to you and your loved one’s needs. Whether it’s trust issues, a lack of intimacy, or continuous fights, our team of therapists will help you and your loved one understand and work towards meeting each other’s emotional needs.  </p>
+                <p>Click below to find a qualified couple’s therapist for you and your partner today. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -77,41 +42,13 @@
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
                     <h2> Imago Relationship Therapy </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <!--<div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>-->
+                <p class = "innerText show-on-scroll-up">Imago Relationship Theory was developed in 1980 by Dr. Harville Hendrix and Dr. Helen LaKelly Hunt. It operates on the principle of entirely converting conflict into personal growth and healing through relational connection. Our therapists are specially and extensively trained to best provide this type of therapy to you and your loved one. Neomedica strongly believes that strong-standing relationships are key to keeping both you and your partner happy and intimately connected.</p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -119,48 +56,21 @@
         </div>
     </div>
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic3">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> M - T </h2>
+                    <h2> Domestic Abuse Recovery Therapy  </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>
+                <p class = "innerText show-on-scroll-up">Warning: Do not contact or rely on Neomedica if you, a loved one, or a friend are currently experiencing domestic abuse. If you, a loved one, or a friend are currently experiencing domestic abuse, immediately contact the National Domestic Violence Hotline at 1-800-799-SAFE. After you have addressed the immediate physical danger, seeking professional help for all trauma-related issues you experience is important. </p>
+                <p>Click below to find a domestic abuse recovery specialist for you, a loved one, or a friend today. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -169,7 +79,7 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> U - Z </h2>
+                    <h2> Childhood Trauma Recovery Therapy  </h2>
                 </div>
                 <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
                 <div class = "healthList show-on-scroll-up">
@@ -209,7 +119,7 @@
                 </div>
             </div>
         </div>
-        <div class = "imageHolder pic2">
+        <div class = "imageHolder pic4">
         </div>
     </div>
 </div>

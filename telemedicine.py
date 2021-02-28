@@ -1,5 +1,5 @@
 from app import app, db # Imports the application instance
-from app.models import User, Appointments
+from app.models import User, Appointments, Allergies, Surgeries, Conditions
 import datetime
 
 
@@ -9,5 +9,8 @@ def make_shell_context():
         'db': db,
         'User': User,
         'Appointments': Appointments,
-        'datetime': datetime
+        'datetime': datetime,
+        'Allergies': Allergies,
+        'Surgeries': Surgeries,
+        'Conditions': Conditions
     }

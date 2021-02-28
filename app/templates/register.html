@@ -3,47 +3,116 @@
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}"> 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}"> 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src = "{{ url_for('static', filename='js/birthday.js')}}"></script>
 {% endblock %}
 
 {% block content %}
 <div class = "outerForm">
     <div class = "outerTransparent">
-        <div class = "formHolder">
-            <div class = "signTitle">
-                <h1>Register</h1>
+        <div class = "formHolderOuter">
+            <div class = "formHolder">
+                <div class = "signTitle">
+                    <h1>Register</h1>
+                </div>
+                <form action="", method="post">
+                    {{ form.hidden_tag() }}
+                    <div class = "usernameSection">
+                        {{ form.username.label }}<br>
+                        {{ form.username(size=32) }}
+                        {% for error in form.username.errors %}
+                            <p class = "errorSpan">[{{ error}}]</p>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.email.label }}<br>
+                        {{ form.email(size=64) }}
+                        {% for error in form.email.errors %}
+                            <p class = "errorSpan">[{{ error}}]</p>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.password.label }}<br>
+                        {{ form.password(size=32) }} <!-- you can add css classes or IDs to the form fields by having extra arguments-->
+                        {% for error in form.password.errors %}
+                            <p class = "errorSpan">[{{ error}}]</p>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.password2.label }}<br>
+                        {{ form.password2(size=32) }} <!-- you can add css classes or IDs to the form fields by having extra arguments-->
+                        {% for error in form.password2.errors %}
+                            <p class = "errorSpan">[{{ error}}]</p> 
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.first_name.label }}<br>
+                        {{ form.first_name }}<br>
+                        {% for error in form.first_name.errors %}
+                            <span class = "errorSpan">[{{ error }}]</span>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.last_name.label }}<br>
+                        {{ form.last_name }}<br>
+                        {% for error in form.last_name.errors %}
+                            <span class = "errorSpan">[{{ error }}]</span>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.phone.label }}<br>
+                        {{ form.phone }}<br>
+                        {% for error in form.phone.errors %}
+                            <span class = "errorSpan">[{{ error }}]</span>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.gender.label }}<br>
+                        {{ form.gender }}<br>
+                        {% for error in form.gender.errors %}
+                            <span class = "errorSpan">[{{ error }}]</span>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.datepicker.label }}<br>
+                        {{ form.datepicker(autocomplete="off") }}<br>
+                        {% for error in form.datepicker.errors %}
+                            <span class = "errorSpan">[{{ error }}]</span>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.address.label }}<br>
+                        {{ form.address }}<br>
+                        {% for error in form.address.errors %}
+                            <span class = "errorSpan">[{{ error }}]</span>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.city.label }}<br>
+                        {{ form.city }}<br>
+                        {% for error in form.city.errors %}
+                            <span class = "errorSpan">[{{ error }}]</span>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.state.label }}<br>
+                        {{ form.state }}<br>
+                        {% for error in form.state.errors %}
+                            <span class = "errorSpan">[{{ error }}]</span>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.zip_code.label }}<br>
+                        {{ form.zip_code }}<br>
+                        {% for error in form.zip_code.errors %}
+                            <span class = "errorSpan">[{{ error }}]</span>
+                        {% endfor %}
+                    </div>
+                    <p class = "usernameSection">{{ form.submit() }}</p>
+                </form>
             </div>
-            <form action="", method="post">
-                {{ form.hidden_tag() }}
-                <div class = "usernameSection">
-                    {{ form.username.label }}<br>
-                    {{ form.username(size=32) }}
-                    {% for error in form.username.errors %}
-                        <p class = "errorSpan">[{{ error}}]</p>
-                    {% endfor %}
-                </div>
-                <div class = "usernameSection">
-                    {{ form.email.label }}<br>
-                    {{ form.email(size=64) }}
-                    {% for error in form.email.errors %}
-                        <p class = "errorSpan">[{{ error}}]</p>
-                    {% endfor %}
-                </div>
-                <div class = "usernameSection">
-                    {{ form.password.label }}<br>
-                    {{ form.password(size=32) }} <!-- you can add css classes or IDs to the form fields by having extra arguments-->
-                    {% for error in form.password.errors %}
-                        <p class = "errorSpan">[{{ error}}]</p>
-                    {% endfor %}
-                </div>
-                <div class = "usernameSection">
-                    {{ form.password2.label }}<br>
-                    {{ form.password2(size=32) }} <!-- you can add css classes or IDs to the form fields by having extra arguments-->
-                    {% for error in form.password2.errors %}
-                        <p class = "errorSpan">[{{ error}}]</p> 
-                    {% endfor %}
-                </div>
-                <p class = "usernameSection">{{ form.submit() }}</p>
-            </form>
         </div>
     </div>
 </div>

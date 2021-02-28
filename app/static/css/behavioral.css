@@ -1,3 +1,7 @@
 .behavioralLanding {
-    
+    background-image: url("/static/images/Behavioral.jpeg");
+}
+
+.competitionLink, .eventsLink, .programsLink {
+    background-image: url("/static/images/IndividualTherapy.jpeg");
 }

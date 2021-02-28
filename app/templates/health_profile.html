@@ -1,0 +1,89 @@
+{% extends "backend_base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/health_profile.css') }}">
+    <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class = "firstSection">
+    <h2>Health Profile</h2>
+    <h3>Allergies</h3>
+    <a class = "centerLink" id = "physicians" onclick = "modal('modal', 'physicians');">Add Allergen</a>
+    {% for a in allergies %}
+        <p>{{ a.allergy }} </p>
+    {% endfor %}
+
+    <h3>Surgical History</h3>
+    <a class = "centerLink" id = "physicians" onclick = "modal('modal2', 'physicians');">Add Surgery</a>
+    {% for s in surgeries %}
+        <p>{{ s.surgery }} </p>
+    {% endfor %}
+
+    <h3>Medical Conditions</h3>
+    <a class = "centerLink" id = "physicians" onclick = "modal('modal3', 'physicians');">Add Medical Condition</a>
+    {% for c in conditions %}
+        <p>{{ c.condition }} </p>
+    {% endfor %}
+
+    <!-- modals -->
+    <div id = "modal" class = "modal fade-in">
+        <div class = "featuredImageHolder">
+            <div class = "modalContent">
+                <form action="" method="POST">
+                    {{ form.hidden_tag() }}
+                    <div class = "usernameSection">
+                        {{ form.allergy.label }}<br>
+                        {{ form.allergy }}<br>
+                        {% for error in form.allergy.errors %}
+                            <span class = "errorSpan">[{{ error }}]</span>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ form.submit() }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id = "modal2" class = "modal fade-in">
+        <div class = "featuredImageHolder">
+            <div class = "modalContent">
+                <form action="" method="POST">
+                    {{ surgery_form.hidden_tag() }}
+                    <div class = "usernameSection">
+                        {{ surgery_form.surgery.label }}<br>
+                        {{ surgery_form.surgery }}<br>
+                        {% for error in surgery_form.surgery.errors %}
+                            <span class = "errorSpan">[{{ error }}]</span>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ surgery_form.submit() }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id = "modal3" class = "modal fade-in">
+        <div class = "featuredImageHolder">
+            <div class = "modalContent">
+                <form action="" method="POST">
+                    {{ condition_form.hidden_tag() }}
+                    <div class = "usernameSection">
+                        {{ condition_form.condition.label }}<br>
+                        {{ condition_form.condition }}<br>
+                        {% for error in condition_form.condition.errors %}
+                            <span class = "errorSpan">[{{ error }}]</span>
+                        {% endfor %}
+                    </div>
+                    <div class = "usernameSection">
+                        {{ condition_form.submit() }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -42,6 +42,9 @@
         <!-- scripts -->
         <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
         <script src="{{ url_for('static', filename='js/flash_messages.js') }}"></script>
+        {% block scripts %} 
+            {{ moment.include_moment() }} <!-- Making sure that the moment library will always be available on each page -->
+        {% endblock %}
         {% block head %} {% endblock %}
     </head>
     <body>
@@ -78,10 +81,10 @@
                             {{ phone_nav_class_username('dashboard', 'Dashboard', 'firstNav', username) }}
                         </li>
                         <li>
-                            {{ phone_nav('about', 'My Account') }} 
+                            {{ phone_nav_class_username('user_account', 'My Account', 'firstNav', username) }} 
                         </li>
                         <li>
-                            {{ phone_nav('treatment', 'Health Profile') }}
+                            {{ phone_nav_class_username('health_profile', 'Health Profile', 'firstNav', username) }}
                         </li> 
                         <li>
                             {{ phone_nav_class_username('appointments', 'Appointments', 'firstNav', username) }}

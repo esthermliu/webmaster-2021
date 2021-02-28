@@ -24,3 +24,13 @@ def send_password_reset_email(user):
                 html_body=render_template('email/reset_password.html',
                                             user=user, token=token))
 
+def send_appointment_email(user, appointment):
+    send_email('[Neomedica] Confirm Scheduled Appointment',
+                sender=app.config['ADMINS'][0],
+                recipients=[user.email],
+                text_body=render_template('email/appointment_email.txt',
+                                            user=user, 
+                                            appointment=appointment),
+                html_body=render_template('email/appointment_email.html',
+                                            user=user,
+                                            appointment=appointment))

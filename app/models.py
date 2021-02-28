@@ -12,7 +12,19 @@ class User(UserMixin, db.Model): # inherits from db.Model, a base class for all 
     username = db.Column(db.String(64), index=True, unique=True) # Username must be unique
     email = db.Column(db.String(120), index=True, unique=True) # Email must be unique
     password_hash = db.Column(db.String(128))
+    first_name = db.Column(db.String(64), index=False, unique=False)
+    last_name = db.Column(db.String(64), index=False, unique=False)
+    phone = db.Column(db.Integer, index=True, unique=True)
+    gender = db.Column(db.Integer, index=False, unique=False)
+    birthday = db.Column(db.DateTime, index=False, unique=False)
+    address = db.Column(db.Integer)
+    city = db.Column(db.String(64))
+    state = db.Column(db.Integer)
+    zip_code = db.Column(db.Integer)
     appointments = db.relationship('Appointments', backref='patient', lazy='dynamic')
+    allergies = db.relationship('Allergies', backref='patient_allergy', lazy='dynamic')
+    surgeries = db.relationship('Surgeries', backref='patient_surgery', lazy='dynamic')
+    conditions = db.relationship('Conditions', backref='patient_condition', lazy='dynamic')
 
     def __repr__(self): # Tells Python how to print objects of this class
         return '<User {}>'.format(self.username)
@@ -52,3 +64,30 @@ class Appointments(db.Model):
 
     def __repr__(self):
         return '<Appointments {} {} {}>'.format(self.id, self.user_id, self.timestamp)
+
+class Allergies(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    allergy = db.Column(db.String(200))
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+
+    def __repr__(self):
+        return '<Allergies {} {} {}>'.format(self.id, self.user_id, self.allergy)
+
+class Surgeries(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    surgery = db.Column(db.String(200))
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+
+    def __repr__(self):
+        return '<Surgeries {} {} {}>'.format(self.id, self.user_id, self.surgery)
+
+class Conditions(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    condition = db.Column(db.String(200))
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+
+    def __repr__(self):
+        return '<Conditions {} {} {}>'.format(self.id, self.user_id, self.condition)

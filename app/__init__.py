@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
+from flask_moment import Moment
 
 app = Flask(__name__) # __name__ is a Python predefined variable, set to the name of the module in which it is used
 Markdown(app) 
@@ -14,6 +15,7 @@ migrate = Migrate(app, db, render_as_batch=True) # this object represents the mi
 login = LoginManager(app)
 login.login_view = 'login'
 mail = Mail(app)
+moment = Moment(app)
 
 def create_app(config_class=Config):
     app = Flask(__name__)

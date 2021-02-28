@@ -3,6 +3,15 @@
 <tr>
     <th>ID</th>
     <th>Username</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone</th>
+    <th>Gender</th>
+    <th>Birthday</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>ZIP Code</th>
     <th>Email</th>
     <th>Password Hash</th>
 </tr>
@@ -10,6 +19,15 @@
     <tr>
         <td>{{ user.id }}</td>
         <td>{{ user.username }}</td>
+        <td>{{ user.first_name }}</td>
+        <td>{{ user.last_name }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.gender }}</td>
+        <td>{{ user.birthday }}</td>
+        <td>{{ user.address }}</td> 
+        <td>{{ user.city }}</td> 
+        <td>{{ user.state }}</td> 
+        <td>{{ user.zip_code }}</td> 
         <td>{{ user.email }}</td>
         <td>{{ user.password_hash }}</td>
     </tr>
@@ -38,4 +56,58 @@
             <td>{{ a.timestamp }}</td>
         </tr>
     {% endfor %}
-    </table>
+</table>
+<br>
+<h2>Allergies</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>User</th>
+        <th>Allergy</th>
+        <th>Timestamp</th>
+    </tr>
+    {% for a in allergies_all %}
+        <tr>
+            <td>{{ a.id }}</td>
+            <td>{{ a.patient_allergy }}</td>
+            <td>{{ a.allergy }}</td>
+            <td>{{ a.timestamp }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<br>
+<h2>Surgeries</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>User</th>
+        <th>Allergy</th>
+        <th>Timestamp</th>
+    </tr>
+    {% for s in surgeries_all %}
+        <tr>
+            <td>{{ s.id }}</td>
+            <td>{{ s.patient_surgery }}</td>
+            <td>{{ s.surgery }}</td>
+            <td>{{ s.timestamp }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<br>
+<h2>Conditions</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>User</th>
+        <th>Condition</th>
+        <th>Timestamp</th>
+    </tr>
+    {% for c in conditions_all %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.user_id }}</td>
+            <td>{{ c.condition }}</td>
+            <td>{{ c.timestamp }}</td>
+        </tr>
+    {% endfor %}
+</table>

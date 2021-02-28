@@ -1,16 +1,15 @@
 from flask import render_template, flash, redirect, url_for, request
 from app import app, posts, news_articles, blog_articles, login
 from app import db
-from app.forms import LoginForm, RegistrationForm, ResetPasswordRequestForm, ResetPasswordForm, MakeAppointmentForm
-from app.models import User, Appointments
+from app.forms import LoginForm, RegistrationForm, ResetPasswordRequestForm, ResetPasswordForm, MakeAppointmentForm, UserAccount, AllergyForm, SurgeryForm, ConditionForm
+from app.models import User, Appointments, Allergies, Surgeries, Conditions
 from flask_login import logout_user, login_required
 from flask_login import current_user, login_user
 from werkzeug.urls import url_parse
 import math
 from flaskext.markdown import Markdown
-from app.email import send_password_reset_email
-from datetime import datetime, timedelta
-import datetime
+from app.email import send_password_reset_email, send_appointment_email
+from datetime import datetime, timedelta, timezone
 
 # View functions
 @app.route('/') # Decorators modify the functions that follow, both / and /index will lead to index page
@@ -214,7 +213,7 @@ def medical():
 def behavioral():
     return render_template('behavioral.html', title='Behavioral Health Solutions',
                                         inner_title="Behavioral Health Solutions",
-                                        description="Insert Text",
+                                        description="Prioritizing Mental Health",
                                         landing="behavioralLanding")
 
 @app.route('/return-to-work-solutions')
@@ -446,7 +445,7 @@ def therapy_condition(condition):
 def couples():
     return render_template('couple.html', title="Couples Therapy",
                                         inner_title="Couples Therapy",
-                                        description="Insert Text",
+                                        description="Saving Relationships",
                                         landing="coupleLanding")
 
 @app.route('/family-therapy')
@@ -802,7 +801,16 @@ def register():
         return redirect(url_for('index'))
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = User(username=form.username.data, email=form.email.data)
+        user = User(username=form.username.data, email=form.email.data,
+                                                first_name=form.first_name.data,
+                                                last_name=form.last_name.data,
+                                                phone=form.phone.data,
+                                                gender=form.gender.data,
+                                                birthday=form.datepicker.data,
+                                                address=form.address.data,
+                                                city=form.city.data,
+                                                state=form.state.data,
+                                                zip_code=form.zip_code.data)
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
@@ -814,10 +822,15 @@ def register():
 def database():
     user_all = User.query.all()
     appointments_all = Appointments.query.all()
+    allergies_all = Allergies.query.all()
+    surgeries_all = Surgeries.query.all()
+    conditions_all = Conditions.query.all()
     return render_template('database.html', title='Database', 
                                             user_all=user_all,
-                                            appointments_all=appointments_all
-                                            )
+                                            appointments_all=appointments_all,
+                                            allergies_all=allergies_all,
+                                            surgeries_all=surgeries_all,
+                                            conditions_all=conditions_all)
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():
@@ -861,30 +874,37 @@ def dashboard(username):
 def schedule_appointment(username):
     user = User.query.filter_by(username=username).first()
     form = MakeAppointmentForm()
+    user_appointments = Appointments.query.filter_by(user_id=user.id).all()
     if form.validate_on_submit():
+
         date = form.datepicker.data
+
         description = form.description.data
         doctor = form.doctor.data
-
-        # adding the appointment
-        a = Appointments(user_id=user.id, start_time=date, end_time=date, description=description, doctor=doctor)
-        db.session.add(a)
-        db.session.commit()
-
-        # getting the start time
         hour = form.hour.data
         minute = form.minute.data
-        newdatetime = a.start_time.replace(hour=hour, minute=minute)
-        a.start_time = newdatetime
-        db.session.commit()
-
-        # getting the end time
         duration = form.duration.data
-        minutes_added = datetime.timedelta(minutes=duration)
-        future_time = a.start_time + minutes_added
-        a.end_time = future_time
-        db.session.commit()
 
+        stringdate = datetime(date.year, date.month, date.day)
+        newdatetime = stringdate.replace(date.year, date.month, date.day, hour, minute)
+
+        
+        minutes_added = timedelta(minutes=duration)
+        future_time = newdatetime + minutes_added
+
+        if user_appointments is not None:
+            for u in user_appointments:
+                if u.start_time == newdatetime:
+                    flash('You have already scheduled an appointment at this time', 'error')
+                    return redirect(url_for('schedule_appointment', username=username))
+        
+        # adding the appointment
+        a = Appointments(user_id=user.id, start_time=newdatetime, end_time=future_time, description=description, doctor=doctor)
+        print("HELLO")
+        db.session.add(a)
+        db.session.commit()
+        send_appointment_email(user, a)
+        flash('Appointment successfully scheduled. Please check your email.', 'info')
         return redirect(url_for('dashboard', username=username))
     return render_template('make_appointment.html', title='Schedule Appointment',
                                                     form=form, 
@@ -894,5 +914,116 @@ def schedule_appointment(username):
 @login_required
 def appointments(username):
     user = User.query.filter_by(username=username).first()
+    appointments = Appointments.query.filter_by(user_id=user.id).order_by(Appointments.start_time.asc()).all() # getting the user's appointments from most recent
+    return render_template('appointments.html', title="Appointments", user=user,
+                                                                    appointments=appointments)
+
+@app.route('/<username>/appointments/<appointment_id>')
+@login_required
+def appointments_specific(username, appointment_id):
+    user = User.query.filter_by(username=username).first()
+    appointment = Appointments.query.get(appointment_id)
+
+    return render_template('appointments_specific.html', title='Appointment Information', user=user,
+                                                                                        appointment=appointment)
+
+@app.route('/<username>/my-account', methods=['GET', 'POST'])
+@login_required
+def user_account(username):
+    user = User.query.filter_by(username=username).first()
+    form = UserAccount()
+    if form.validate_on_submit():
+        user.username = form.username.data
+        user.email = form.email.data
+        user.first_name = form.first_name.data
+        user.last_name = form.last_name.data
+        user.phone = form.phone.data
+        user.gender = form.gender.data 
+        user.address = form.address.data
+        user.city = form.city.data 
+        user.state = form.state.data
+        user.zip_code = form.zip_code.data
+        
+        db.session.commit()
+        flash('Your changes have been saved', 'info')
+    elif request.method == 'GET':
+        form.username.data = user.username 
+        form.email.data = user.email
+        form.first_name.data = user.first_name
+        form.last_name.data = user.last_name
+        form.phone.data = user.phone
+        form.gender.data = user.gender
+        form.address.data = user.address
+        form.city.data = user.city
+        form.state.data = user.state
+        form.zip_code.data = user.zip_code
+    return render_template('user_account.html', title='My Account', user=user, 
+                                                                    form=form)
+
+@app.route('/<username>/health-profile', methods=['GET', 'POST'])
+@login_required
+def health_profile(username):
+    user = User.query.filter_by(username=username).first()
+    allergies = Allergies.query.filter_by(user_id=user.id)
+    form = AllergyForm()
+    if form.validate_on_submit():
+        if allergies is not None:
+            for a in allergies:
+                if a.allergy == form.allergy.data.capitalize():
+                    flash('You already have "' + a.allergy + '" listed as an allergen', 'error')
+                    return redirect(url_for('health_profile', username=username))
+        user_allergy = Allergies(user_id=user.id, allergy=form.allergy.data.capitalize())
+        db.session.add(user_allergy)
+        db.session.commit()
+        flash('Your changes have been updated', 'info')
+
+    surgeries = Surgeries.query.filter_by(user_id=user.id)
+    surgery_form = SurgeryForm()
+    if surgery_form.validate_on_submit():
+        if surgeries is not None:
+            for s in surgeries:
+                if s.surgery == surgery_form.surgery.data.capitalize():
+                    flash('You already have "' + s.surgery + '" listed as a surgery', 'error')
+                    return redirect(url_for('health_profile', username=username))
+        user_surgery = Surgeries(user_id=user.id, surgery=surgery_form.surgery.data.capitalize())
+        db.session.add(user_surgery)
+        db.session.commit()
+        flash('Your changes have ben updated', 'info')
+
+    conditions = Conditions.query.filter_by(user_id=user.id)
+    condition_form = ConditionForm()
+    if condition_form.validate_on_submit():
+        if conditions is not None:
+            for c in conditions:
+                if c.condition == condition_form.condition.data.capitalize():
+                    flash('You already have "' + c.condition + '" listed as a medical condition', 'error')
+                    return redirect(url_for('health_profile', username=username))
+        user_condition = Conditions(user_id=user.id, condition=condition_form.condition.data.capitalize())
+        db.session.add(user_condition)
+        db.session.commit()
+        flash('Your changes have ben updated', 'info')
     
-    return render_template('appointments.html', title="Appointments", user=user)
+    return render_template('health_profile.html', title='Health Profile', user=user,
+                                                                        allergies=allergies,
+                                                                        form=form,
+                                                                        surgeries=surgeries,
+                                                                        surgery_form=surgery_form,
+                                                                        conditions=conditions,
+                                                                        condition_form=condition_form)
+                                                        
+
+# # Edit Profile function
+# @app.route('/edit_profile', methods=['GET', 'POST'])
+# @login_required
+# def edit_profile():
+#     form = EditProfileForm()
+#     if form.validate_on_submit(): # If the form successfully submitted
+#         current_user.username = form.username.data # Set the user's username to what they entered in the form
+#         current_user.about_me = form.about_me.data # Set about me for current user to input from the form
+#         db.session.commit() # Commit changes to the database
+#         flash('Your changes have been saved', 'info')
+#         return redirect(url_for('user', username=current_user.username))
+#     elif request.method == 'GET': # If this is the first time that the form has been requested
+#         form.username.data = current_user.username # Then pre-populate the fields with the data in the database
+#         form.about_me.data = current_user.about_me
+#     return render_template('edit_profile.html', form=form, title="Edit Profile")

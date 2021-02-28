@@ -1,0 +1,25 @@
+Hi {{ user.username }}
+
+You have scheduled an appointment for {{ appointment.start_time.strftime('%A %B %w, %Y') }} at 
+{{ appointment.start_time.strftime("%I:%M %p") }} - {{ appointment.end_time.strftime("%I:%M %p") }}
+
+Description of Health Problem: {{ appointment.description }}
+
+Your medical provider for this appointment will be 
+    {% if appointment.doctor == 0 %}
+        Sammy Urtzal
+    {% elif appointment.doctor == 1 %}
+        Peyton Everlue
+    {% else %}
+        Joselyn Sputak
+    {% endif %} 
+
+Appointment ID: {{ appointment.id }}
+
+If you have not requested an appointment, please ignore this message.
+
+Sincerely,
+
+The Neomedica Team
+
+

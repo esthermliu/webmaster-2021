@@ -1,0 +1,23 @@
+<h2>Hi {{ user.username }},</h2>
+
+<p>You have scheduled an appointment for {{ appointment.start_time.strftime('%A %B %w, %Y') }} at 
+{{ appointment.start_time.strftime("%I:%M %p") }} - {{ appointment.end_time.strftime("%I:%M %p") }}</p>
+
+<p>Description of Health Problem: {{ appointment.description }}</p>
+
+<p>Your medical provider for this appointment will be 
+    {% if appointment.doctor == 0 %}
+        Sammy Urtzal
+    {% elif appointment.doctor == 1 %}
+        Peyton Everlue
+    {% else %}
+        Joselyn Sputak
+    {% endif %}</p> 
+
+<p>Appointment ID: {{ appointment.id }}</p>
+
+<p>If you have not requested an appointment, please ignore this message.</p>
+
+<p>Sincerely,</p>
+
+<p>The Neomedica Team</p>

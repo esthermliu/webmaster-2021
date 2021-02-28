@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, DateTimeField, SelectField, DateField, TextAreaField, RadioField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, DateTimeField, SelectField, DateField, TextAreaField, RadioField, IntegerField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from app.models import User
 from datetime import date
@@ -13,6 +13,15 @@ class LoginForm(FlaskForm):
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
+    first_name = StringField('First Name', validators=[DataRequired()])
+    last_name = StringField('Last Name', validators=[DataRequired()])
+    phone = IntegerField('Phone', validators=[DataRequired()])
+    gender = SelectField('Gender', choices=[(0, 'Male'), (1, 'Female'), (2, 'Other')], coerce=int)
+    address = StringField('Address', validators=[Length(min=5)])
+    city = StringField('City', validators=[DataRequired()])
+    state = SelectField('State', choices=[(0, 'Alabama'), (1, 'Alaska')], coerce=int)
+    zip_code = IntegerField('ZIP', validators=[DataRequired()])
+    datepicker = DateField('Birthday', format='%m/%d/%Y', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
     password2 = PasswordField(
         'Repeat Password', validators=[DataRequired(), EqualTo('password')]) # checking whether this re-entered password is equal to the first password
@@ -51,5 +60,27 @@ class MakeAppointmentForm(FlaskForm):
     consent = BooleanField('By clicking you consent for treatment', validators=[DataRequired()])
     submit = SubmitField('Make Appointment')
 
-    
+class UserAccount(FlaskForm):
+    username = StringField('Username', validators=[DataRequired()])
+    first_name = StringField('First Name', validators=[DataRequired()])
+    last_name = StringField('Last Name', validators=[DataRequired()])
+    phone = IntegerField('Phone', validators=[DataRequired()])
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    gender = SelectField('Gender', choices=[(0, 'Male'), (1, 'Female'), (2, 'Other')], coerce=int)
+    address = StringField('Address', validators=[Length(min=5)])
+    city = StringField('City', validators=[DataRequired()])
+    state = SelectField('State', choices=[(0, 'Alabama'), (1, 'Alaska')], coerce=int)
+    zip_code = IntegerField('ZIP', validators=[DataRequired()])
+    submit = SubmitField('Save')
 
+class AllergyForm(FlaskForm):
+    allergy = StringField('Allergy', validators=[DataRequired()])
+    submit = SubmitField('Add Allergen')
+
+class SurgeryForm(FlaskForm):
+    surgery = StringField('Surgery', validators=[DataRequired()])
+    submit = SubmitField('Add Surgery')
+
+class ConditionForm(FlaskForm):
+    condition = StringField('Condition', validators=[DataRequired()])
+    submit = SubmitField('Add Medical Condition')

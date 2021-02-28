@@ -6,6 +6,8 @@
 {% endblock %}
 
 {% block content %}
-<h2>Hello {{ user.username }}!</h2>
-<a href = "{{ url_for('schedule_appointment', username=user.username )}}">Schedule Appointment</a>
+<div class = "firstSection">
+    <h2>Hello {{ user.username }}!</h2>
+    <a href = "{{ url_for('schedule_appointment', username=user.username )}}">Schedule Appointment</a>
+</div>
 {% endblock %}
