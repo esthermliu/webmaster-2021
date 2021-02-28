@@ -220,7 +220,7 @@ def behavioral():
 def return_work():
     return render_template('return.html', title='Return-to-Work Solutions',
                                         inner_title="Return-to-Work Solutions",
-                                        description="Insert Text",
+                                        description="Addressing the pandemic, together",
                                         landing="returnLanding")
 
 @app.route('/virtual-reality-solutions')

@@ -1,3 +1,7 @@
 .returnLanding {
-    
+    background-image: url('/static/images/BusinessCovid.jpeg');
+}
+
+.competitionLink, .eventsLink {
+    background-image: url('/static/images/CovidBusiness2.jpeg');
 }
