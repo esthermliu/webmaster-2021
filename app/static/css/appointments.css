@@ -1,0 +1,93 @@
+.spanTitle {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.titleHolder2 {
+    text-align: center;
+}
+
+.titleHolder2 h2 {
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.linkAnimation {
+    display: inline-block;
+    padding: 18px 25px;
+    margin-bottom: 5%;
+    text-align: center;
+    color: white;
+    background: salmon;
+    background: linear-gradient(to left, #3aafa9 50%, #2b7a78 50%) right;
+    background-size: 201%;
+    transition: 0.3s;
+}
+
+.linkAnimation:hover {
+    background-position: left;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.4);
+}
+
+.appointmentHolder {
+    margin-top: 5%;
+}
+
+.scheduleButton {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.appointmentHolder {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.appointmentBox {
+    background-color: #6Fb3b8;
+    width: 30%;
+    margin: 1%;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+}
+
+.appointmentBox:hover {
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.4);
+}
+
+.appointment {
+    padding: 20%;
+    text-align: center;
+}
+
+.appointment {
+    color: white;
+    line-height: 30px;
+}
+
+.appointmentInfo {
+    margin-top: 5%;
+    text-align: center;
+    line-height: 35px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.accountImageHolder {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accountImageHolder img {
+    width: 15%;
+}

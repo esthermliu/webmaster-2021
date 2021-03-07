@@ -867,7 +867,14 @@ def reset_password(token):
 @login_required
 def dashboard(username):
     user_actual = User.query.filter_by(username=username).first()
-    return render_template('dashboard.html', title='Patient Dashboard', user=user_actual)
+    user_appointments = Appointments.query.filter_by(user_id=user_actual.id).filter(Appointments.start_time>datetime.utcnow()).order_by(Appointments.start_time.asc()).all()
+    scheduled = False
+    print(user_appointments)
+    if len(user_appointments) != 0: 
+        scheduled = True
+    return render_template('dashboard.html', title='Patient Dashboard', user=user_actual,
+                                                                        user_appointments=user_appointments,
+                                                                        scheduled=scheduled)
 
 @app.route('/<username>/schedule-appointment', methods=['GET', 'POST'])
 @login_required

@@ -27,7 +27,7 @@ input {
 
 /* Track */
 .formHolder::-webkit-scrollbar-track {
-    background-color: #def2f1;
+    /*background-color: #def2f1;*/
     border-radius: 80px;
 }
 
@@ -42,4 +42,18 @@ input {
     background: #389696 !important; 
     transition-duration: 0.3s;
     -webkit-transition-duration: 0.3s;
+}
+
+select {
+    margin-top: 10px;
+    border: 0;
+    padding: 15px 25px;
+    border-bottom: 2px solid black;
+    letter-spacing: 1px;
+    color: black;
+}
+
+option {
+    background-color: white;
+    color: black;
 }

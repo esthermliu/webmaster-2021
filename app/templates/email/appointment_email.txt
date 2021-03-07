@@ -1,4 +1,4 @@
-Hi {{ user.username }}
+Hi {{ user.username }},
 
 You have scheduled an appointment for {{ appointment.start_time.strftime('%A %B %w, %Y') }} at 
 {{ appointment.start_time.strftime("%I:%M %p") }} - {{ appointment.end_time.strftime("%I:%M %p") }}

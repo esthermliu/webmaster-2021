@@ -3,6 +3,8 @@
 {% block head %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/make_appointment.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/make_appointment_media.css') }}">
     <!-- Datepicker -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -12,59 +14,65 @@
 
 {% block content %}
 <div class = "firstSection">
-    <form action="" method="post">
-        {{ form.hidden_tag() }}
-        <div class = "usernameSection">
-            {{ form.datepicker.label }}<br>
-            {{ form.datepicker(autocomplete="off") }}<br>
-            {% for error in form.datepicker.errors %}
-                <span class = "errorSpan">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        <div class = "usernameSection">
-            {{ form.hour.label }}<br>
-            {{ form.hour }}<br>
-            {% for error in form.hour.errors %}
-                <span class = "errorSpan">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        <div class = "usernameSection">
-            {{ form.minute.label }}<br>
-            {{ form.minute }}<br>
-            {% for error in form.minute.errors %}
-                <span class = "errorSpan">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        <div class = "usernameSection">
-            {{ form.duration.label }}<br>
-            {{ form.duration }}<br>
-            {% for error in form.duration.errors %}
-                <span class = "errorSpan">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        <div class = "usernameSection">
-            {{ form.description.label }}<br>
-            {{ form.description(placeholder="Share any information you would like your provider to know.") }}<br>
-            {% for error in form.description.errors %}
-                <span class = "errorSpan">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        <div class = "usernameSection">
-            {{ form.doctor.label }}<br>
-            {{ form.doctor }}<br>
-            {% for error in form.doctor.errors %}
-                <span class = "errorSpan">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        <div class = "usernameSection">
-            {{ form.consent.label }}<br>
-            {{ form.consent }}<br>
-            {% for error in form.consent.errors %}
-                <span class = "errorSpan">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        
-        <div class = "usernameSection">{{ form.submit() }}</div>
-    </form>
+    <div class = "titleHolder2">
+        <h2>Schedule an <span class = "spanTitle">Appointment</span></h2>
+    </div>
+    <div class = "formHolder">
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <div class = "usernameSection">
+                {{ form.datepicker.label }}
+                {{ form.datepicker(autocomplete="off") }}<br>
+                {% for error in form.datepicker.errors %}
+                    <span class = "errorSpan">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div class = "usernameSection">
+                <h3>Meeting Time</h3>
+                <div class = "timeHolder">
+                {{ form.hour }} :               
+                {{ form.minute }}<br>
+                {% for error in form.hour.errors %}
+                    <span class = "errorSpan">[{{ error }}]</span>
+                {% endfor %}
+                {% for error in form.minute.errors %}
+                    <span class = "errorSpan">[{{ error }}]</span>
+                {% endfor %}
+                </div>
+            </div>
+            <div class = "usernameSection">
+                {{ form.duration.label }}
+                {{ form.duration }}<br>
+                {% for error in form.duration.errors %}
+                    <span class = "errorSpan">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div class = "usernameSection">
+                {{ form.description.label }}
+                {{ form.description(placeholder="Share any information you would like your provider to know.") }}<br>
+                {% for error in form.description.errors %}
+                    <span class = "errorSpan">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div class = "usernameSection">
+                {{ form.doctor.label }}
+                {{ form.doctor }}<br>
+                {% for error in form.doctor.errors %}
+                    <span class = "errorSpan">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div class = "usernameSection">
+                <div class = "labelNext">
+                {{ form.consent }}
+                {{ form.consent.label(class="specialLabel") }}
+                </div>
+                {% for error in form.consent.errors %}
+                    <span class = "errorSpan">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            
+            <div class = "usernameSection submitSection">{{ form.submit() }}</div>
+        </form>
+    </div>
 </div>
 {% endblock %}

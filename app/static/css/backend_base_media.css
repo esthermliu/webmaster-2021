@@ -1,0 +1,15 @@
+@media screen and (max-width: 650px) {
+    header nav ul.openMenu {
+        width: 100%;
+    }
+
+    #hamburgerMenu {
+        z-index: 999999999999 !important;
+        display: inline;
+        cursor: pointer;
+        position: fixed;
+        left: 10% !important;
+        transition: visibility 0s, opacity 0.2s linear;
+    }
+}
+

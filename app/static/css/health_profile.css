@@ -1,6 +1,5 @@
 .modal {
     display: none;
-    background-color: orange; 
     position: fixed;
     z-index: 999;
     left: 0;
@@ -15,14 +14,76 @@
 }
 
 .modalContent {
-    background-color: pink;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .featuredImageHolder {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    background-color: purple;
+    width: 30%;
+}
+
+.formNot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3% !important;
+    width: 70%;
+    justify-content: center;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+    padding: 5%;
+}
+
+.linkAnimation {
+    display: inline-block;
+    padding: 18px 25px;
+    margin-bottom: 5%;
+    text-align: center;
+    color: white;
+    background: salmon;
+    background: linear-gradient(to left, #3aafa9 50%, #2b7a78 50%) right;
+    background-size: 201%;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.linkAnimation:hover {
+    background-position: left;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0);
+}
+
+.conditionHolder {
+    margin-bottom: 4%;
+    padding-bottom: 4%;
+    border-bottom: 2px solid grey;
+    width: 100%;
+}
+
+.lilGrey {
+    color: grey;
+}
+
+.overallCondition {
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.noMargin {
+    margin-top: 0 !important;
+    background-color: white;
+    width: 100% !important;
+}
+
+.noBot {
+    margin-bottom: 0 !important;
+    padding-top: 5% !important;
+}
+
+.noBot h3 {
+    margin-bottom: 5px;
 }

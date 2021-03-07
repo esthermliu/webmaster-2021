@@ -18,6 +18,7 @@
         <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Favicon.png') }}" size = "20x20"/>
         <!-- css stylesheets -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/backend_base.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/backend_base_media.css') }}">
         <!-- font family -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
@@ -57,7 +58,7 @@
                         <div class="bar3"></div>
                 </div>
                 <div class = "logoBox logoDark">
-                    <a class = "homepageLogo" href = "{{ url_for('index') }}"><img src = "{{ url_for('static', filename='images/LogoBlue.png')}}"></a>
+                    <a class = "homepageLogo" href = "{{ url_for('index') }}"><img src = "{{ url_for('static', filename='images/Logo.png')}}"></a>
                 </div>
             </div>    
             <nav class = "hideNav">
@@ -78,19 +79,34 @@
                 <ul id="navLinks">
                     <div class = "innerNav">
                         <li>
+                            <a href = "{{ url_for('dashboard', username=username) }}" class = "navImage">
+                                <img src = "{{ url_for('static', filename='images/Home.png') }}">
+                            </a>
                             {{ phone_nav_class_username('dashboard', 'Dashboard', 'firstNav', username) }}
                         </li>
                         <li>
+                            <a href = "{{ url_for('dashboard', username=username) }}" class = "navImage">
+                                <img src = "{{ url_for('static', filename='images/AccountWhite.png') }}">
+                            </a>
                             {{ phone_nav_class_username('user_account', 'My Account', 'firstNav', username) }} 
                         </li>
                         <li>
+                            <a href = "{{ url_for('dashboard', username=username) }}" class = "navImage">
+                                <img src = "{{ url_for('static', filename='images/HealthWhite.png') }}">
+                            </a>
                             {{ phone_nav_class_username('health_profile', 'Health Profile', 'firstNav', username) }}
                         </li> 
                         <li>
+                            <a href = "{{ url_for('dashboard', username=username) }}" class = "navImage">
+                                <img src = "{{ url_for('static', filename='images/ScheduleWhite.png') }}">
+                            </a>
                             {{ phone_nav_class_username('appointments', 'Appointments', 'firstNav', username) }}
                         </li>
                         <li>
-                            {{ phone_nav('logout', 'Logout') }}
+                            <a href = "{{ url_for('dashboard', username=username) }}" class = "navImage">
+                                <img src = "{{ url_for('static', filename='images/Logout.png') }}">
+                            </a>
+                            {{ phone_nav_class('logout', 'Logout', 'firstNav') }}
                         </li>
                     </div> <!-- end of inner nav -->
                 </ul>

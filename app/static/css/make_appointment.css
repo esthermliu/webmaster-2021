@@ -1,0 +1,137 @@
+.titleHolder2 {
+    text-align: center;
+}
+
+.titleHolder2 h2 {
+    font-weight: 400;
+    font-size: 40px;
+}
+
+input {
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 2px solid rgb(23, 37, 42);
+    color: rgb(23, 37, 42);
+    text-align: center;
+    letter-spacing: 1px;   
+    line-height: 25px;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.submitSection {
+    width: 60%;
+    align-self: center;
+}
+
+#submit {
+    letter-spacing: 2px;
+    border: 0 !important;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    display: inline-block;
+    padding: 18px 25px;
+    background: #3aafa9;
+    background: linear-gradient(to left, #3aafa9 50%, #2b7a78 50%) right;
+    background-size: 201%;
+}
+
+#submit:hover {
+    background-position: left;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.4);
+}
+
+.spanTitle {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.formHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+    padding: 5%;
+}
+
+#description {
+    width: 100%;
+    height: 100px;
+    border: 0;
+    border-bottom: 2px solid rgb(23, 37, 42);
+    letter-spacing: 1px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+select {
+    margin-top: 10px;
+    border: 0;
+    padding: 15px 25px;
+    border-bottom: 2px solid black;
+    letter-spacing: 1px;
+    color: black;
+}
+
+option {
+    background-color: white;
+    color: black;
+}
+
+.usernameSection {
+    margin-bottom: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.labelNext {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#consent {
+    width: auto !important;
+    margin: 10px;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.specialLabel {
+    margin-bottom: 0 !important;
+}
+
+.usernameSection h3 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.ui-datepicker-header {
+    font-weight: 600 !important;
+}
+
+th span {
+    font-weight: 600 !important;
+}

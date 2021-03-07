@@ -7,13 +7,27 @@
 
 {% block content %}
 <div class = "firstSection">
-    <h2>{{ user.username }}'s Appointments</h2>
-    <a href = "{{ url_for('schedule_appointment', username=user.username )}}">Schedule Appointment</a>
-    {% for a in appointments %}
-        <a href = "{{ url_for('appointments_specific', username=user.username, appointment_id=a.id) }}">
-            <p>{{ moment(a.start_time).format('MMMM D YYYY') }} </p>
-            <p>{{ a.start_time.strftime("%I:%M %p") }} </p>
+    <div class = "titleHolder2">
+        <h2>Your <span class = "spanTitle">Appointments</span></h2>
+    </div>
+    <div class = "scheduleButton">
+        <a href = "{{ url_for('schedule_appointment', username=user.username) }}">
+            <div class = "linkAnimation">
+                <p>Schedule Appointment</p>
+            </div>
         </a>
-    {% endfor %}
+    </div>
+    <div class = "appointmentHolder">
+        {% for a in appointments %}
+        <a href = "{{ url_for('appointments_specific', username=user.username, appointment_id=a.id) }}" class = "appointmentBox">
+            <div class = "appointment">
+                <div>
+                    <p>{{ moment(a.start_time).format('MMMM D, YYYY') }} </p>
+                    <p>{{ a.start_time.strftime("%I:%M") }} - {{ a.end_time.strftime("%I:%M %p") }}</p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}

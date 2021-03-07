@@ -3,11 +3,134 @@
 {% block head %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard_media.css') }}">
 {% endblock %}
 
 {% block content %}
 <div class = "firstSection">
-    <h2>Hello {{ user.username }}!</h2>
-    <a href = "{{ url_for('schedule_appointment', username=user.username )}}">Schedule Appointment</a>
+    <div class = "welcomeTitle">
+        <h2>Hey <span class = "usernameBold">{{ user.username }}!</span></h2>
+    </div>
+    <div class = "dashboardInfo">
+        <div class = "userInfo">
+            <div class = "accountBox">
+                <h2>Need Care Today?</h2>
+                <div class = "imageHolder">
+                    <img src = "{{ url_for('static', filename='images/User.png') }}">
+                </div>
+                <a href = "{{ url_for('schedule_appointment', username=user.username) }}">
+                    <div class = "linkAnimation">
+                        <p>Request a Visit</p>
+                    </div>
+                </a>
+            </div>
+            <div class = "accountBox">
+                <div class = "iconHolder">
+                    <img class = "smallerIcon" src = "{{ url_for('static', filename='images/Account.png') }}">
+                </div>
+                <div class = "text">
+                    <h2>My Account</h2>
+                    <p>Your personal information.</p>
+                </div>
+                <a href = "{{ url_for('user_account', username=user.username )}}">
+                    <div class = "linkAnimation">
+                        <p>Edit My Account</p>
+                    </div>
+                </a>
+            </div>
+            <div class = "accountBox">
+                <div class = "iconHolder">
+                    <img class = "smallerIcon" src = "{{ url_for('static', filename='images/Health.png') }}">
+                </div>
+                <div class = "text">
+                    <h2>Health Profile</h2>
+                    <p>Your medical conditions and other health related issues. Help Neomedica providers get to know you! </p>
+                </div>
+                <a href = "{{ url_for('health_profile', username=user.username) }}">
+                    <div class = "linkAnimation">
+                        <p>Edit My Profile</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class = "serviceSection">
+            <div class = "accountBox specialAccount">
+                <div class = "iconHolder">
+                    <img class = "smallerIcon" src = "{{ url_for('static', filename='images/Schedule.png') }}">
+                </div>
+                <div class = "text">
+                    <h2>Scheduled Appointments</h2>
+                    <h3>Your Upcoming Visits</h3>
+                    <div class = "upcoming">
+                    {% if scheduled %}
+                        {% for a in user_appointments[:3] %}
+                        <div class = "timeslot">
+                            <div class = "scheduleIcon">
+                                <img class = "smaller" src = "{{ url_for('static', filename='images/Appointment.png') }}">
+                            </div>
+                            <div class = "timeInfo">
+                                <p>{{ moment(a.start_time).format('MMMM D, YYYY') }} </p>
+                                <p>{{ a.start_time.strftime("%I:%M ") }} -  {{ a.end_time.strftime("%I:%M %p") }} </p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>There are no scheduled appointments at this time.</p>
+                    {% endif %}
+                    </div>
+                    <a href = "{{ url_for('appointments', username=user.username) }}">
+                        <div class = "linkAnimation moreSpace">
+                            <p>View All Appointments</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class = "accountBox">
+                <h2>Learn More About Our Services</h2>
+                <div class = "anotherBox">
+                    <a href = "{{ url_for('medical') }}" class = "learnMore red">
+                        <div class = "padHolder">
+                            <div class = "learnHolder">
+                                <img src = "{{ url_for('static', filename='images/Medical.png') }}">
+                            </div>
+                            <p>Medical Health</p>
+                        </div>
+                    </a>
+                    <a href = "{{ url_for('behavioral') }}" class = "learnMore blue">
+                        <div class = "padHolder">
+                            <div class = "learnHolder">
+                                <img src = "{{ url_for('static', filename='images/Mental.png') }}">
+                            </div>
+                            <p>Behavioral Health</p>
+                        </div>
+                    </a>
+                    <a href = "{{ url_for('return_work') }}" class = "learnMore purple">
+                        <div class = "padHolder">
+                            <div class = "learnHolder">
+                                <img src = "{{ url_for('static', filename='images/Briefcase.png') }}">
+                            </div>
+                            <p>Return-to-Work</p>
+                        </div>
+                    </a>
+                    <a href = "{{ url_for('virtual') }}" class = "learnMore green">
+                        <div class = "padHolder">
+                            <div class = "learnHolder">
+                                <img src = "{{ url_for('static', filename='images/VirtualReality.png') }}">
+                            </div>
+                            <p>Virtual Reality</p>
+                        </div>
+                    </a>
+                    <a href = "{{ url_for('pet') }}" class = "learnMore yellow">
+                        <div class = "padHolder">
+                            <div class = "learnHolder">
+                                <img src = "{{ url_for('static', filename='images/Pet.png') }}">
+                            </div>
+                            <p>Pet Therapy</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

@@ -11,7 +11,7 @@
 }
 
 .firstSection {
-  padding: 10% 25% 8% 25%;
+  padding: 10% 20% 8% 20%;
 }
 
 body {
@@ -311,14 +311,14 @@ footer {
     display: inline;
     cursor: pointer;
     position: fixed;
-    left: 5%;
+    left: 75px;
     transition: visibility 0s, opacity 0.2s linear;
 }
 
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 3px;
-    background-color: #3aafa9;
+    background-color: white;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -357,13 +357,13 @@ header nav ul {
     
 
 header nav ul.openMenu {
-    width: 25%;
+    width: 350px;
 }
 
 
 #navLinks li {
     list-style-type: none;
-    font-size: 25px;
+    font-size: 20px;
     width: 100%;
     padding-bottom: 20px;
     display: flex;
@@ -415,6 +415,10 @@ header nav ul.openMenu {
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
     
 .innerNav::-webkit-scrollbar {
@@ -492,7 +496,7 @@ header nav ul.openMenu {
 }
 
 .mediaHolder {
-  background-color:white;
+  background-color: rgb(23, 37, 42);
   box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 10px -10px;
 }
 
@@ -514,7 +518,7 @@ header nav ul.openMenu {
 }
 
 .flashHolder li {
-  z-index: 100;
+  z-index: 999999999999999999;
   width: 80%;
   max-width: 400px;
   display: flex;
@@ -587,3 +591,28 @@ header nav ul.openMenu {
     opacity:1;
   }
 }
+
+.navImage {
+  width: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navImage img {
+  width: 100%;
+}
+
+#navLinks li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 15px;
+}
+
+.firstNav {
+  width: 70%;
+}
+
+
