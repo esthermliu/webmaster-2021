@@ -1,0 +1,10 @@
+@media screen and (max-width: 700px) {
+    .appointmentHolder {
+        flex-wrap: wrap;
+    }
+
+    .appointmentBox {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+}

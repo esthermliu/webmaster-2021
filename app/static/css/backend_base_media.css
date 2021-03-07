@@ -11,5 +11,10 @@
         left: 10% !important;
         transition: visibility 0s, opacity 0.2s linear;
     }
+
+    .firstSection {
+        padding: 25% 5% 20% 5% !important;
+    }
+    
 }
 
