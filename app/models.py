@@ -14,7 +14,7 @@ class User(UserMixin, db.Model): # inherits from db.Model, a base class for all 
     password_hash = db.Column(db.String(128))
     first_name = db.Column(db.String(64), index=False, unique=False)
     last_name = db.Column(db.String(64), index=False, unique=False)
-    
+    phone = db.Column(db.String(64), index=True, unique=True)
     gender = db.Column(db.Integer, index=False, unique=False)
     birthday = db.Column(db.DateTime, index=False, unique=False)
     address = db.Column(db.String(128), index=False, unique=False)
