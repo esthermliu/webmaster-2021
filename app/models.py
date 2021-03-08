@@ -17,7 +17,7 @@ class User(UserMixin, db.Model): # inherits from db.Model, a base class for all 
     phone = db.Column(db.String(64), index=True, unique=True)
     gender = db.Column(db.Integer, index=False, unique=False)
     birthday = db.Column(db.DateTime, index=False, unique=False)
-    
+    address = db.Column(db.String(128), index=False, unique=False)
     city = db.Column(db.String(64))
     state = db.Column(db.Integer)
     zip_code = db.Column(db.Integer)
