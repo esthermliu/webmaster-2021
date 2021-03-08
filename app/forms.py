@@ -67,7 +67,7 @@ class UserAccount(FlaskForm):
     phone = IntegerField('Phone', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
     gender = SelectField('Gender', choices=[(0, 'Male'), (1, 'Female'), (2, 'Other')], coerce=int)
-    address = StringField('Address', validators=[Length(min=5)])
+    address = StringField('Address', validators=[DataRequired()])
     city = StringField('City', validators=[DataRequired()])
     state = SelectField('State', choices=[(0, 'Alabama'), (1, 'Alaska'), (2, 'Arizona'), (3, 'Arkansas'), (4, 'California'),
                                             (5, 'Colorado'), (6, 'Connecticut'), (7, 'Delaware'), (8, 'Florida'), (9, 'Georgia'),
