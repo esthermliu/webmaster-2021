@@ -615,4 +615,8 @@ header nav ul.openMenu {
   width: 70%;
 }
 
+.errorSpan {
+  color: red;
+}
+
 

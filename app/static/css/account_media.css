@@ -2,4 +2,12 @@
     .accountForm {
         width: 100% !important;
     }
+
+    .nameSection {
+        flex-wrap: wrap;
+    }
+
+    .nameWoot2 {
+        width: 100% !important;
+    }
 }  
