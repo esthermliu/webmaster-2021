@@ -964,6 +964,8 @@ def user_account(username):
         form.city.data = user.city
         form.state.data = user.state
         form.zip_code.data = user.zip_code
+    else:
+        flash('There are errors in your changes', 'error')
     return render_template('user_account.html', title='My Account', user=user, 
                                                                     form=form)
 
