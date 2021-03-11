@@ -10,25 +10,29 @@
 {% block childcontent %}
 <div class = "firstSection demoSection">
     <div class = "simpleSucks">
-        <h2 class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h2> 
+        <h2 class = "show-on-scroll-up">"There is hope, even when your brain tells you there isn’t."</h2> 
+        <h4 class = "littleAnon show-on-scroll-up"><i>- John Green - </i></h4>
     </div>
 </div>
 <div class = "secondSection">
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Depression </h2>
+                    <h2> Accessible </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
-                <div class = "learnMoreHolder show-on-scroll-up">
+                <p class = "innerText show-on-scroll-up">Don’t worry about having to find the nearest treatment center. With Neomedica, you don’t have to locate the closest location or check the times that it is open. We remove the burden of commuting to and from your appointments. You also don’t have to sit in waiting rooms. Schedule an appointment at your convenience, join, leave, and get back to whatever you were just doing. </p>
+                <!--<div class = "learnMoreHolder show-on-scroll-up">
                     <a href = "{{ url_for('mental_condition', condition='depression' )}}" class = "learnMore">Learn more<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
-                </div>
+                </div>-->
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -37,14 +41,18 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Eating Disorders and Body Dysmorphia </h2>
+                    <h2> Uses </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+                <p class = "innerText show-on-scroll-up">VR therapy uses a non-intrusive visual immersion technology to create an interactable artificial environment, allowing for a doctors to monitor patients and for patients to interact with things without any fear. It has been used in conjunction with cognitive behavior therapy and has been proven to work effectively for a multitude of disorders including panic disorder, body image disturbances, binge eating disorders, fear of flying and far more. </p>
                 <div class = "learnMoreHolder show-on-scroll-up">
-                    <a href = "#" class = "learnMore">Learn more<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    <a href = "{{ url_for('behavioral') }}" class = "learnMore">Learn more about what we treat<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
                 </div>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -52,19 +60,20 @@
         </div>
     </div>
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic3">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Gender Dysphoria </h2>
+                    <h2> Gear </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "learnMoreHolder show-on-scroll-up">
-                    <a href = "#" class = "learnMore">Learn more<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
-                </div>
+                <p class = "innerText show-on-scroll-up">Suit up! We have designed a VR app compatible with the majority of modern VR sets. Don’t have one? Don’t worry! We sell fine-tuned VR sets which give an amazing experience, tailored to provide comfort and flexibility in your movements. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('mental_condition', condition='depression' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -73,9 +82,13 @@
 <div class = "firstSection demoSection anotherDemo">
     <div class = "simpleSucks leftSucks">
         <h2 class = "show-on-scroll-up">Ready to start treatment? </h2> 
-        <h3 class = "show-on-scroll-up">Request a visit quickly and privately blah blah blah blah blah lah blah blahlah blah blah.</h3>
+        <h3 class = "show-on-scroll-up">Request a visit quickly and privately.</h3>
         <div class = "learnMoreContainerRegular leftAlign whiteButton show-on-scroll-up providerButton">
-            <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% if current_user.is_anonymous %}
+                <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% else %}
+                <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% endif %}
         </div>
     </div>
     <div class = "registerImage show-on-scroll-up">

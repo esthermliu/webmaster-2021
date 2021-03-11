@@ -1,5 +1,5 @@
 .mentalLanding {
-
+    background-image: url("/static/images/MentalDisorder.jpeg");
 }
 
 .learnMore {
@@ -33,4 +33,16 @@
 
 .learnMore:hover .learn {
     transform: translate(2px, 0);
+}
+
+.pic1 {
+    background-image: url("/static/images/Accessible.jpeg");
+}
+
+.pic2 {
+    background-image: url("/static/images/VRMedicine.jpeg");
+}
+
+.pic3 {
+    background-image: url("/static/images/VRGear.jpeg");
 }

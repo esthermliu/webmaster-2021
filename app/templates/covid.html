@@ -10,66 +10,28 @@
 {% block childcontent %}
 <div class = "firstSection demoSection">
     <div class = "simpleSucks">
-        <h2 class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h2> 
+        <h2 class = "show-on-scroll-up">Reliable testing, all from the comfort of your home. </h2> 
     </div>
 </div>
 <div class = "secondSection">
     <div class = "treatmentBox show-on-scroll-right lastBox">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Emotionally Focused Therapy </h2>
+                    <h2> COVID-19 Testing </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
-                <div class = "learnMoreHolder show-on-scroll-up">
-                    <a href = "#" class = "learnMore">Stay informed about COVID-19<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
-                </div>
-                <!--<div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "{{ url_for('therapy_condition', condition='abuse') }}">Abuse</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Insert Here </a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>-->
+                <p class = "innerText show-on-scroll-up">After the hectic year that was 2020, there’s not a lot to be sure about. The virus turned our lives upside down, and just as we thought that cases were trending down and we would be able to reopen, they spiked. It can be frustrating, especially as someone who always does their part to wash their hands, wear a mask, and socially distance as much as possible. </p>
+
+                <p class = "show-on-scroll-up">Neomedica realized this sentiment, and we acted. Our high-quality testing program ensures that you’ll be able to get a test quickly and reliably, all from the comfort of your home. Simply request a kit on our website and we will mail it to your address in 3 days or less! You’ll always be able to view your results 3 days after we process your test. If you test positive, Neomedica is still here to help; we provide screening and treatment options as well!  </p>
+
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -78,9 +40,13 @@
 <div class = "firstSection demoSection anotherDemo">
     <div class = "simpleSucks leftSucks">
         <h2 class = "show-on-scroll-up">Ready to start treatment? </h2> 
-        <h3 class = "show-on-scroll-up">Request a visit quickly and privately blah blah blah blah blah lah blah blahlah blah blah.</h3>
+        <h3 class = "show-on-scroll-up">Request a visit quickly and privately.</h3>
         <div class = "learnMoreContainerRegular leftAlign whiteButton show-on-scroll-up providerButton">
-            <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% if current_user.is_anonymous %}
+                <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% else %}
+                <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% endif %}
         </div>
     </div>
     <div class = "registerImage show-on-scroll-up">

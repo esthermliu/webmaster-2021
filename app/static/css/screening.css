@@ -1,5 +1,5 @@
 .screeningLanding {
-
+    background-image: url("/static/images/Screening.jpeg");
 }
 
 .learnMore {
@@ -33,4 +33,12 @@
 
 .learnMore:hover .learn {
     transform: translate(2px, 0);
+}
+
+.pic1 {
+    background-image: url("/static/images/Mask.jpeg");
+}
+
+.pic2 {
+    background-image: url("/static/images/Sick.jpeg");
 }

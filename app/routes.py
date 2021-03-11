@@ -227,14 +227,14 @@ def return_work():
 def virtual():
     return render_template('virtual.html', title='Virtual Reality Solutions',
                                         inner_title="Virtual Reality Solutions",
-                                        description="Insert Text",
+                                        description="Pioneers of Medical VR",
                                         landing="virtualLanding") 
 
 @app.route('/mental-disorders-therapy')
 def mental():
     return render_template('mental.html', title='Mental Disorders Therapy',
                                         inner_title="Mental Disorders Therapy",
-                                        description="Insert Text",
+                                        description="Get started now",
                                         landing="mentalLanding") 
 
 @app.route('/mental-disorders-therapy/<condition>')
@@ -255,21 +255,21 @@ def mental_condition(condition):
 def physical():
     return render_template('physical.html', title='Physical Therapy',
                                         inner_title="Physical Therapy",
-                                        description="Insert Text",
+                                        description="Wait what?",
                                         landing="physicalLanding") 
 
 @app.route('/phobia-therapy')
 def phobia():
     return render_template('phobia.html', title='Phobia Therapy',
                                         inner_title="Phobia Therapy",
-                                        description="Insert Text",
+                                        description="A new approach to fear",
                                         landing="phobiaLanding") 
 
 @app.route('/therapy-dogs')
 def dogs():
     return render_template('dog.html', title='Therapy Dogs',
                                         inner_title="Therapy Dogs",
-                                        description="Insert Text",
+                                        description="Man's Best Therapist",
                                         landing="dogLanding") 
 
 @app.route('/therapy-cats')
@@ -473,14 +473,14 @@ def occupational():
 def covid_19():
     return render_template('covid.html', title="COVID-19 Testing",
                                         inner_title="COVID-19 Testing",
-                                        description="Insert Text",
+                                        description="Certainty in the midst of uncertainty",
                                         landing="covidLanding")  
 
 @app.route('/covid-19-screening-and-treatment')
 def screening():
     return render_template('screening.html', title="COVID-19 Screening and Treatment",
                                         inner_title="COVID-19 Screening and Treatment",
-                                        description="Insert Text",
+                                        description="Get Well Soon",
                                         landing="screeningLanding")  
 
 @app.route('/how-it-works')

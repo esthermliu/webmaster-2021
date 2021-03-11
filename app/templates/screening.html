@@ -10,23 +10,24 @@
 {% block childcontent %}
 <div class = "firstSection demoSection">
     <div class = "simpleSucks">
-        <h2 class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h2> 
+        <h2 class = "show-on-scroll-up">"Nothing in life is to be feared; it is only to be understood. Now is the time to understand more, so that we may fear less."</h2>
+        <h4 class = "littleAnon show-on-scroll-up"><i>- Marie Curie - </i></h4> 
     </div>
 </div>
 <div class = "secondSection">
     <div class = "treatmentBox show-on-scroll-right lastBox">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Emotionally Focused Therapy </h2>
+                    <h2> Screening and triaging for Covid-19 Symptoms </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
-                <div class = "learnMoreHolder">
+                <p class = "innerText show-on-scroll-up">Yes! You can use Neomedica to screen Covid-19 symptoms. Once we access the severity of the symptoms, we can decide if you need to be visited physically, attend the hospital or isolate at home. By conducting a remote evaluation, you reduce the time before your screening, limit your stress, and reduce exposure to other personnel, such as health-care workers at hospitals.  </p>
+                <p class = "show-on-scroll-up">Click below to get the latest updates for Covid-19 and get started with your screening: </p>
+                <!--<div class = "learnMoreHolder">
                     <a href = "#" class = "learnMore">Stay informed about COVID-19<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
-                </div>
+                </div>-->
                 <!--<div class = "healthList show-on-scroll-up">
                     <ul>
                         <li class = "healthLi">
@@ -69,7 +70,11 @@
                     </ul>
                 </div>-->
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -78,43 +83,16 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Emotional </h2>
+                    <h2> Treatment </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "healthList show-on-scroll-up">
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                        <li class = "healthLi">
-                            <a href = "#"> Here Insert</a>
-                        </li>
-                    </ul>
-                </div>
+                <p class = "innerText show-on-scroll-up">If you’re stuck at a bed at home or a hospital, Neomedica is here to help. We provide 24/7 calling for any problems that may arise, we’re even here if you just need someone to talk to. If you are isolating at home with Covid-19, we can monitor your symptoms and provide expert guidance – such as telling you when you are good to go, and when you may need additional care. By maintaining continuity of care, permanent negative consequences are prevented by the maximum extent possible. </p>
+                <p class = "show-on-scroll-up">Click below to get started with your Covid-19 treatment:  </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -125,9 +103,13 @@
 <div class = "firstSection demoSection anotherDemo">
     <div class = "simpleSucks leftSucks">
         <h2 class = "show-on-scroll-up">Ready to start treatment? </h2> 
-        <h3 class = "show-on-scroll-up">Request a visit quickly and privately blah blah blah blah blah lah blah blahlah blah blah.</h3>
+        <h3 class = "show-on-scroll-up">Request a visit quickly and privately. </h3>
         <div class = "learnMoreContainerRegular leftAlign whiteButton show-on-scroll-up providerButton">
-            <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% if current_user.is_anonymous %}
+                <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% else %}
+                <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% endif %}
         </div>
     </div>
     <div class = "registerImage show-on-scroll-up">

@@ -10,22 +10,26 @@
 {% block childcontent %}
 <div class = "firstSection demoSection">
     <div class = "simpleSucks">
-        <h2 class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </h2> 
+        <h2 class = "show-on-scroll-up">"There are as many applications for VR as you can think of, it’s restricted by your imagination."</h2> 
+        <h4 class = "littleAnon show-on-scroll-up"><i>- John Goddard - </i></h4>
     </div>
 </div>
 <div class = "secondSection">
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Stroke </h2>
+                    <h2> Accessible </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">Don’t worry about having to find the nearest treatment center. With Neomedica, you don’t have to locate the closest location or check the times that it is open. We remove the burden of commuting to and from your appointments. You also don’t have to sit in waiting rooms. Schedule an appointment at your convenience, join, leave, and get back to whatever you were just doing. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -34,11 +38,15 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Parkinson's Disease </h2>
+                    <h2> Effective </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+                <p class = "innerText show-on-scroll-up">Patients who partake in our VR physical therapy solutions are far more likely to remain dedicated to their exercise programs. Many report satisfactions with the VR experience, expressing that they felt supported and connected with their trainers even through the digitized platform. That’s no surprise! Our expert trainers provide safe and effective exercises that are designed just for you. Studies even show that this virtual physical therapy can produce equal or even better outcomes. </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -46,42 +54,35 @@
         </div>
     </div>
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic3">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Wound Care </h2>
+                    <h2> Immersion </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
+                <p class = "innerText show-on-scroll-up">Our special developer team provide various modes and settings. Your experience with us is meant to feel like a game, enjoyable and at the same time helpful. New features are always being added and you’ll always look forward to joining the treatment - no motivation required!  </p>
                 <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('mental_condition', condition='depression' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% if current_user.is_anonymous %}
+                        <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% else %}
+                        <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                    {% endif %}
                 </div>
             </div>
-        </div>
-    </div>
-    <div class = "treatmentBox reverseWrap show-on-scroll-left">
-        <div class = "textOverall">
-            <div class = "textHolderTreatment">
-                <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2>Cardiovascular </h2>
-                </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
-                    <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
-                </div>
-            </div>
-        </div>
-        <div class = "imageHolder pic2">
         </div>
     </div>
 </div>
 <div class = "firstSection demoSection anotherDemo">
     <div class = "simpleSucks leftSucks">
         <h2 class = "show-on-scroll-up">Ready to start treatment? </h2> 
-        <h3 class = "show-on-scroll-up">Request a visit quickly and privately blah blah blah blah blah lah blah blahlah blah blah.</h3>
+        <h3 class = "show-on-scroll-up">Request a visit quickly and privately.</h3>
         <div class = "learnMoreContainerRegular leftAlign whiteButton show-on-scroll-up providerButton">
-            <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% if current_user.is_anonymous %}
+                <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% else %}
+                <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+            {% endif %}
         </div>
     </div>
     <div class = "registerImage show-on-scroll-up">

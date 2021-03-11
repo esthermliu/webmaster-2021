@@ -1,5 +1,5 @@
 .covidLanding {
-
+    background-image: url("/static/images/Certainty.jpeg");
 }
 
 .learnMore {
@@ -37,4 +37,8 @@
 
 .lastBox {
     margin-bottom: 0;
+}
+
+.pic1 {
+    background-image: url("/static/images/Tested.jpeg");
 }

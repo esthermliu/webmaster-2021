@@ -1,3 +1,7 @@
 .virtualLanding {
-    
+    background-image: url("/static/images/VirtualReality.jpeg");
+}
+
+.competitionLink, .eventsLink {
+    background-image: url("/static/images/VrTherapy.jpeg");
 }

@@ -1,3 +1,15 @@
 .physicalLanding {
-    
+    background-image: url("/static/images/PhysicalVR2.jpeg");
+}
+
+.pic1 {
+    background-image: url("/static/images/KidWorking.jpeg");
+}
+
+.pic2 {
+    background-image: url("/static/images/HeckYeah.jpeg");
+}
+
+.pic3 {
+    background-image: url("/static/images/Game.jpeg");
 }

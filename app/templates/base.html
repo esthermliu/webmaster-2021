@@ -5,6 +5,7 @@
 {% from "macros.html" import nav_dropdown_longer with context %}
 {% from "macros.html" import phone_nav with context %}
 {% from "macros.html" import phone_nav_class with context %}
+{% from "macros.html" import phone_nav_class_username with context %}
 {% from "macros.html" import phone_dropdown with context %}
 {% from "macros.html" import phone_plus with context %}
 {% from "macros.html" import phone_minus with context %}
@@ -180,8 +181,11 @@
                     <p>Login</p><i class="far fa-user"></i>
                 </a>
                 {% else %}
+                <a class = "homepageLogo loginThing" href = "{{ url_for('dashboard', username=current_user.username) }}" id = "loginButton">
+                    <p>Dashboard</p>
+                </a>
                 <a class = "homepageLogo loginThing" href = "{{ url_for('logout') }}" id = "loginButton">
-                    <p>Logout</p><i class="far fa-user"></i>
+                    <p>Logout</p><i class="fa fa-sign-out" aria-hidden="true"></i>
                 </a>
                 {% endif %}
             </div>
@@ -423,13 +427,19 @@
                                     {{ phone_nav('join', 'Join Us') }}
                                 </li>
                             </div>
-                            <li>
+                            
                                 {% if current_user.is_anonymous %}
+                                <li>
                                     {{ phone_nav('login', 'Login') }}
+                                </li>
                                 {% else %}
+                                <li>
+                                    {{ phone_nav_class_username('dashboard', 'Dashboard', 'show-on-scroll-right', current_user.username) }}
+                                </li>
+                                <li>
                                     {{ phone_nav('logout', 'Logout') }}
                                 {% endif %}
-                            </li>
+                            
                     </div> <!-- end of inner nav -->
                 </ul>
             </nav> 
@@ -464,7 +474,7 @@
                             <div class = "footerImage aLot">
                                 <img src = "{{ url_for('static', filename='images/Phone.png') }}">
                             </div>
-                            <p>1-855-269-4712</p>
+                            <p>1-800-NEOMEDIC</p>
                         </div>
                         <div class = "lilLogo">
                             <div class = "footerImage aLot">

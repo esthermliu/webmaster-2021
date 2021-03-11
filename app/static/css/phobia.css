@@ -1,3 +1,11 @@
 .phobiaLanding {
-    
+    background-image: url("/static/images/Phobia2.jpeg");
+}
+
+.pic1 {
+    background-image: url("/static/images/Phobia.jpeg");
+}
+
+.pic2 {
+    background-image: url("/static/images/Immersive.jpeg");
 }
