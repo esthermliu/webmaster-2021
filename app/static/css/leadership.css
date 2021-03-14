@@ -48,3 +48,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+.leadershipLanding {
+    background-image: url("/static/images/Leadership.jpeg");
+}

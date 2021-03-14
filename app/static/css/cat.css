@@ -1,3 +1,7 @@
 .catLanding {
-    
+    background-image: url("/static/images/SleepingCats.jpeg");
+}
+
+.try {
+    background-image: url("/static/images/CatEyes.jpeg");
 }

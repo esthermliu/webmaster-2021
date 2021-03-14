@@ -127,3 +127,27 @@
 .changeColor:hover {
     color: #3aafa9;
 }
+
+.historyLanding {
+    background-image: url("/static/images/History2.jpeg");
+}
+
+.humbleLanding {
+    background-image: url("/static/images/GirlSwing.jpg");
+}
+
+.teamLanding {
+    background-image: url("/static/images/TeamSide.jpeg");
+}
+
+.landing2009 {
+    background-image: url("/static/images/Expansion.jpeg");
+}
+
+.landing2012 {
+    background-image: url("/static/images/WebsiteTraffic.jpeg");
+}
+
+.landing2016 {
+    background-image: url("/static/images/Meeting.jpeg");
+}

@@ -136,3 +136,20 @@
 .changeColor:hover {
     color: #3aafa9;
 }
+
+.notCenter {
+    width: 80% !important;
+    text-align: center;
+}
+
+.flexCenter {
+    justify-content: center !important;
+}
+
+.sammyLanding {
+    background-image: url("/static/images/SammySun.jpeg");
+}
+
+.joLanding {
+    background-image: url("/static/images/JoBalance.jpeg");
+}

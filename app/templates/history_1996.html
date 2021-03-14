@@ -1,0 +1,24 @@
+{% extends "history_default.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block innerchildcontent %}
+    <div class = "historyTitle show-on-scroll-up">
+        <h2>A humble beginning </h2>
+        <h3>1996</h3>
+    </div>
+    <div class = "historyHolder">
+        <div class = "textSection">
+            <p class = "show-on-scroll-right">In 1996, aspiring surgeon and excited third-grader, Sammy Urtzal, joyfully sat on her living room floor, playing ‘doctor,’ bandaging her dolls and applying any and every medical spray she could find in her family’s bathroom. She looked up from her toys and marveled at the news channel playing on the boxy 20-inch TV: “Telemedicine: The Future of Health?” She stared at the illuminated screen in awe, her tiny eight-year-old mind comprehending none of the information but recognizing a place for innovation and revolutionization. Walking to school later that morning, Urtzal tripped on a rock and twisted her ankle, falling onto the pavement. Young Sammy knew that telemedicine was the exact solution she needed. Wanting to share her newfound vision for a more convenient way of doctor visits from that point onwards, Urtzal made it her mission to take her dream to great heights. Nearly 25 years later, her telemedicine service, Neomedica, would go on to become one of America’s leaders in the industry. </p>
+            <div class = "imageHolder show-on-scroll-up">
+                <img src = "{{ url_for('static', filename='/images/SammyYoung.jpeg')}}"/>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+

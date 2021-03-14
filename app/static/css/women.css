@@ -1,0 +1,19 @@
+.womenLanding {
+    background-image: url("/static/images/Women.jpeg");
+}
+
+.pic1 {
+    background-image: url("/static/images/WomenSleep.jpeg");
+}
+
+.pic2 {
+    background-image: url("/static/images/WomenDiet.jpeg");
+}
+
+.pic3 {
+    background-image: url("/static/images/WomenExercise.jpeg");
+}
+
+.pic4 {
+    background-image: url("/static/images/WomenHygiene.jpeg");
+}

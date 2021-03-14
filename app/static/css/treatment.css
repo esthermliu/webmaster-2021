@@ -113,3 +113,29 @@
     color: #2b7a78;
     transform: translateY(2px);
 }
+
+.treatmentLanding {
+    background-image: url("/static/images/DoctorTeam.jpeg");
+}
+
+.pic1 {
+    background-image: url("/static/images/SickDude.jpeg");
+}
+
+.pic2 {
+    background-image: url("/static/images/Depression.jpeg");
+}
+
+.pic3 {
+    background-image: url("/static/images/Work.jpeg");
+}
+
+.pic4 {
+    background-image: url("/static/images/VirtualRealityKid.jpeg");
+}
+
+.pic5 {
+    background-image: url("/static/images/DogDocAgain.jpeg");
+}
+
+

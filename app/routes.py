@@ -36,109 +36,46 @@ def why():
 def history():
     return render_template('history.html', title='History', 
                                         inner_title="History", 
-                                        description="Insert Text",
+                                        description="Our story thus far",
                                         landing="historyLanding")
 
 @app.route('/history/<int:year>')
 def history_year(year):
     whitelist_years = {
+        1996: {
+            'template': 'history_1996.html',
+            'title': 'History 1996',
+            'inner_title': 'History',
+            'landing': 'humbleLanding',
+            'description': '1996'
+        },
         2006: {
             'template': 'history_2006.html',
             'title': 'History 2006',
             'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
+            'landing': 'teamLanding',
+            'description': '2006 - 2009'
         },
-        2007: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
-            'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
-        },
-        2008: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
-            'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
-        }, 
         2009: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
+            'template': 'history_2009.html',
+            'title': 'History 2009',
             'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
-        }, 
-        2010: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
-            'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
-        }, 
-        2011: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
-            'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
-        }, 
+            'landing': 'landing2009',
+            'description': '2009 - 2012'
+        },  
         2012: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
+            'template': 'history_2012.html',
+            'title': 'History 2012',
             'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
-        }, 
-        2013: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
-            'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
-        }, 
-        2014: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
-            'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
-        }, 
-        2015: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
-            'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
+            'landing': 'landing2012',
+            'description': '2012-2016'
         }, 
         2016: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
+            'template': 'history_2016.html',
+            'title': 'History 2016',
             'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
-        }, 
-        2017: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
-            'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
-        }, 
-        2018: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
-            'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
-        }, 
-        2019: {
-            'template': 'history_2006.html',
-            'title': 'History 2006',
-            'inner_title': 'History',
-            'landing': 'historyLanding',
-            'description': 'Insert Text'
+            'landing': 'landing2016',
+            'description': '2016-2021'
         }
     }
 
@@ -157,7 +94,7 @@ def history_year(year):
 def leadership():
     return render_template('leadership.html', title='Leadership',
                                         inner_title="Leadership", 
-                                        description="Insert Text",
+                                        description="The People Behind the Magic",
                                         landing="leadershipLanding")
 
 @app.route('/leadership/<leader>')
@@ -167,8 +104,15 @@ def leadership_bio(leader):
             'template': 'sammy.html',
             'title': 'Sammy Urtzal', 
             'inner_title': 'Sammy Urtzal', 
-            'description': 'Insert Text',
+            'description': 'Founder & CEO',
             'landing': 'sammyLanding'         
+        },
+        "Josephine": {
+            'template': 'josephine.html',
+            'title': 'Josephine Greenberg', 
+            'inner_title': 'Josephine Greenberg', 
+            'description': 'COO',
+            'landing': 'joLanding'         
         }
     }
 
@@ -199,7 +143,7 @@ def ncqa():
 def treatment():
     return render_template('treatment.html', title='Treatment Options',
                                         inner_title="Treatment Options",
-                                        description="Insert Text",
+                                        description="Our Solutions",
                                         landing="treatmentLanding")
 
 @app.route('/medical-health-solutions')
@@ -276,7 +220,7 @@ def dogs():
 def cats():
     return render_template('cat.html', title='Therapy Cats',
                                         inner_title="Therapy Cats",
-                                        description="Insert Text",
+                                        description="Feline Finesse",
                                         landing="catLanding")   
 
 @app.route('/therapy-horses')
@@ -290,7 +234,7 @@ def horses():
 def rabbits():
     return render_template('rabbit.html', title='Therapy Rabbits',
                                         inner_title="Therapy Rabbits",
-                                        description="Insert Text",
+                                        description="Beautiful Lil' Souls",
                                         landing="rabbitLanding")  
 
 @app.route('/therapy-reptiles')
@@ -361,7 +305,7 @@ def mens_health_condition(condition):
 def womens():
     return render_template('womens_health.html', title="Women's Health",
                                         inner_title="Women's Health",
-                                        description="Insert Text",
+                                        description="Redefining Women",
                                         landing="womenLanding")
 
 @app.route('/womens-health/<condition>')

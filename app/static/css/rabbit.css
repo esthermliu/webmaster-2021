@@ -1,3 +1,7 @@
 .rabbitLanding {
-    
+    background-image: url("/static/images/Rabbits.jpg");
+}
+
+.try {
+    background-image: url("/static/images/RabbitEating.jpeg");
 }

@@ -213,6 +213,11 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
+.noShadow img {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 50px;
+}
+
 .reviewText {
     cursor: pointer;
 }
