@@ -14,9 +14,10 @@
         <div class = "workSection">
             <div class = "work">
                 <div class = "imageHolder">
-                    <video class = "vid show-on-scroll-right" autoplay muted>
+                    <!--<video class = "vid show-on-scroll-right" autoplay muted>
                         <source src="{{ url_for('static', filename='images/FillerVid.mp4') }}" type="video/mp4">
-                    </video>  
+                    </video>--> 
+                    <img src = "{{ url_for('static', filename='images/RegisterHow2.png')}}"> 
                 </div>
                 <div class = "lineHolder">
                     <div class = "line show-on-scroll-up">  
@@ -24,19 +25,18 @@
                     <img class= "dotImage show-on-scroll-up" src = "{{ url_for('static', filename='images/Dot.png') }}">
                 </div>
                 <div class = "workText show-on-scroll-left">
-                    <h2>Lorem ipsum dolor sit amet</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h2>Open up the app</h2>
+                    <p>Get yourself set up through the Neomedica website or app. Make sure to set a recognizable username and strong password. </p>
                     <div class = "underlineLink">
-                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a> 
                     </div>
                 </div>
             </div>
             <div class = "work reverseWrap">
                 <div class = "workText show-on-scroll-right">
-                    <h2>Lorem ipsum dolor sit amet</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h2>Add details</h2>
+                    <p>Plug in your medical history. For our doctors to give you the most meaningful and tailored advice, it’s important for them to know about any medical conditions you may already have.</p>
                     <div class = "underlineLink">
-                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a> 
+                        <!--<a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>--> 
                     </div>
                 </div>
                 <div class = "lineHolder">
@@ -45,12 +45,12 @@
                     <img class= "dotImage show-on-scroll-up" src = "{{ url_for('static', filename='images/Dot.png') }}">
                 </div>
                 <div class = "imageHolder show-on-scroll-left">
-                    <img src="{{ url_for('static', filename='images/LessLag.jpg') }}" >  
+                    <img src="{{ url_for('static', filename='images/AddDetails.png') }}" >  
                 </div>
             </div>
             <div class = "work">
                 <div class = "imageHolder show-on-scroll-right">
-                    <img src="{{ url_for('static', filename='images/LessLag.jpg') }}" > 
+                    <img src="{{ url_for('static', filename='images/AppointmentScreenshot.png') }}">
                 </div>
                 <div class = "lineHolder">
                     <div class = "line show-on-scroll-up">  
@@ -58,19 +58,17 @@
                     <img class= "dotImage show-on-scroll-up" src = "{{ url_for('static', filename='images/Dot.png') }}">
                 </div>
                 <div class = "workText show-on-scroll-left">
-                    <h2>Lorem ipsum dolor sit amet</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h2>Chat with your provider</h2>
+                    <p>After thoroughly reviewing your data, your certified medical provider will schedule and start the meeting. There, you can discuss any of your symptoms and treatment options. </p>
                     <div class = "underlineLink">
-                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a> 
                     </div>
                 </div>
             </div>
             <div class = "work reverseWrap">
                 <div class = "workText show-on-scroll-right">
-                    <h2>Lorem ipsum dolor sit amet</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h2>Receive treatment</h2>
+                    <p>If necessary, your medical provider will provide you with a prescription which you will be able to pick up at most of your local pharmacies. Your provider may schedule other therapies through our exciting VR systems. </p>
                     <div class = "underlineLink">
-                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a> 
                     </div>
                 </div>
                 <div class = "lineHolder">
@@ -88,7 +86,11 @@
         <div class = "simpleSucks leftSucks">
             <h2 class = "show-on-scroll-up">Ready for a better doctor's visit? </h2> 
             <div class = "learnMoreContainerRegular leftAlign whiteButton show-on-scroll-up providerButton">
-                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                {% if current_user.is_anonymous %}
+                    <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                {% else %}
+                    <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                {% endif %}
             </div>
         </div>
         <div class = "registerImage show-on-scroll-left">

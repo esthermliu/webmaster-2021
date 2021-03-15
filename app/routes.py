@@ -129,14 +129,14 @@ def leadership_bio(leader):
 def providers():
     return render_template('providers.html', title='Our Providers',
                                         inner_title="Our Providers",
-                                        description="Insert Text",
+                                        description="Trained and Trustworthy",
                                         landing="providersLanding")
 
 @app.route('/ncqa-and-achc')
 def ncqa():
     return render_template('ncqa.html', title='NCQA and ACHC',
                                         inner_title="NCQA and ACHC",
-                                        description="Insert Text",
+                                        description="Quality Care, Accredited",
                                         landing="ncqaLanding")
 
 @app.route('/treatment-options')
@@ -431,21 +431,21 @@ def screening():
 def how():
     return render_template('how.html', title="How It Works",
                                         inner_title="How It Works",
-                                        description="Insert Text",
+                                        description="It's Simple",
                                         landing="howLanding") 
 
 @app.route('/pricing-and-insurance')
 def pricing():
     return render_template('pricing.html', title="Pricing and Insurance",
                                         inner_title="Pricing and Insurance",
-                                        description="Insert Text",
+                                        description="Get More for Less",
                                         landing="priceLanding") 
 
 @app.route('/our-app')
 def our_app():
     return render_template('app.html', title="Our App",
                                         inner_title="Our App",
-                                        description="Insert Text",
+                                        description="Healthcare, from your phone",
                                         landing="appLanding") 
 
 @app.route('/reviews')
@@ -526,60 +526,60 @@ def reviews_filtered(page, rating):
 def organizations():
     return render_template('organizations.html', title="Organizations",
                                         inner_title="Organizations",
-                                        description="Insert Text",
+                                        description="Offers for Your Company",
                                         landing="organizationLanding") 
     
 @app.route('/employer-groups')
 def employer():
     return render_template('employer.html', title="Employer Groups",
                                         inner_title="Employer Groups",
-                                        description="Insert Text",
+                                        description="Contain Costs",
                                         landing="employerLanding") 
 
 @app.route('/hospitals-and-health-systems')
 def hospitals():
     return render_template('hospitals.html', title="Hospitals and Health Systems",
                                         inner_title="Hospitals and Health Systems",
-                                        description="Insert Text",
+                                        description="Step up your game",
                                         landing="hospitalLanding") 
 
 @app.route('/unions-and-associations')
 def unions():
     return render_template('unions.html', title="Unions and Associations",
                                         inner_title="Unions and Associations",
-                                        description="Insert Text",
+                                        description="Healthy Workplace, Healthy Customers",
                                         landing="unionLanding") 
 
 @app.route('/government-and-education')
 def government():
     return render_template('government.html', title="Government and Education",
                                         inner_title="Government and Education",
-                                        description="Insert Text",
+                                        description="Serving the public sector",
                                         landing="govLanding") 
 
 @app.route('/brokers-and-advisors')
 def brokers():
     return render_template('brokers.html', title="Brokers and Advisors",
                                         inner_title="Brokers and Advisors",
-                                        description="Insert Text",
+                                        description="Choose the Best",
                                         landing="brokerLanding") 
                                         
 @app.route('/distribution-partners')
 def distribution():
     return render_template('distribution.html', title="Distribution Partners",
                                         inner_title="Distribution Partners",
-                                        description="Insert Text",
+                                        description="Stand Out",
                                         landing="distributionLanding") 
 
 @app.route('/news')
 def news():
     news_list = news_articles.news
     page = 0
-    specific_news = news_list[0:12]
-    total_pages = math.ceil(len(news_list) / 12)
+    specific_news = news_list[0:6]
+    total_pages = math.ceil(len(news_list) / 6)
     return render_template('news.html', title="News",
                                         inner_title="News",
-                                        description="Insert Text",
+                                        description="Stay Updated",
                                         landing="newsLanding",
                                         news=specific_news,
                                         current_page=page,
@@ -589,12 +589,12 @@ def news():
 def news_pagination(page):
     news_list = news_articles.news
     page = page - 1
-    start = page * 12
-    end = start + 12
+    start = page * 6
+    end = start + 6
     specific_news = news_list[start:end]
 
     last = False
-    total_pages = math.ceil(len(news_list) / 12) # total number of pages
+    total_pages = math.ceil(len(news_list) / 6) # total number of pages
     if (page == (total_pages - 1)):
         last = True
     
@@ -632,11 +632,11 @@ def news_article(article_link):
 def blog():
     news_list = blog_articles.blogs
     page = 0
-    specific_news = news_list[0:12]
-    total_pages = math.ceil(len(news_list) / 12)
+    specific_news = news_list[0:6]
+    total_pages = math.ceil(len(news_list) / 6)
     return render_template('blog.html', title="Blog",
                                         inner_title="Blog",
-                                        description="Insert Text",
+                                        description="The Latest",
                                         landing="blogLanding",
                                         news=specific_news,
                                         current_page=page,
@@ -646,12 +646,12 @@ def blog():
 def blog_pagination(page):
     news_list = blog_articles.blogs
     page = page - 1
-    start = page * 12
-    end = start + 12
+    start = page * 6
+    end = start + 6
     specific_news = news_list[start:end]
 
     last = False
-    total_pages = math.ceil(len(news_list) / 12) # total number of pages
+    total_pages = math.ceil(len(news_list) / 6) # total number of pages
     if (page == (total_pages - 1)):
         last = True
     

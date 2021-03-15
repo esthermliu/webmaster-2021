@@ -3,21 +3,21 @@
 {% block head %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/organization_default.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/brokers.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/organization_default_media.css') }}">
 {% endblock %}
 
 {% block childcontent %}
 <div class = "firstSection">
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert Text </h2>
+                    <h2> Save money </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">We provide packages for all kinds of employer groups. Providing customizable and flexible package, we help reduce healthcare costs. </p>
                 <!--<div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
                     <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
                 </div>-->
@@ -28,25 +28,23 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert Text </h2>
+                    <h2> Streamlined </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">Our entire process is streamlined, it can be effortlessly integrated to both new and existing health plans. We provide meaningful data directly through a simple user interface to employers and groups, so you always know what’s going on with your services.</p>
             </div>
         </div>
-        <div class = "imageHolder">
+        <div class = "imageHolder pic2">
         </div>
     </div>
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic3">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert Text </h2>
+                    <h2> Effective </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">Demani tech is one of the latest companies to invest in Neomedica telehealth. Out of their 10,000+ employees, 47% have utilized our services, generating a 112% ROI. Your company could be next! </p>
             </div>
         </div>
     </div>
@@ -57,7 +55,7 @@
             <h2 class = "show-on-scroll-up">Request a Demo </h2> 
             <h3 class = "show-on-scroll-up">Discover the Neomedica difference.</h3>
             <div class = "learnMoreContainerRegular whiteButton show-on-scroll-up providerButton">
-                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                <a href = "{{ url_for('login' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
             </div>
         </div>
     </div>

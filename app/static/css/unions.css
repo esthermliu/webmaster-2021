@@ -1,0 +1,19 @@
+.unionLanding {
+    background-image: url("/static/images/LaborUnion.jpeg");
+}
+
+.pic1 {
+    background-image: url("/static/images/Engineer.jpg");
+}
+
+.pic2 {
+    background-image: url("/static/images/MentalHealth.jpg");
+}
+
+.pic3 {
+    background-image: url("/static/images/Telehealth.jpg");
+}
+
+.anotherDemo {
+    background-image: url("/static/images/Demo3.jpg");
+}

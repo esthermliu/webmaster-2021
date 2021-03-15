@@ -65,3 +65,7 @@
 .learnMore:hover .learn, .centerLink:hover .learn {
     transform: translate(2px, 0);
 }
+
+.ncqaLanding {
+    background-image: url("/static/images/Certification.jpeg");
+}

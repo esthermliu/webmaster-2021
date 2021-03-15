@@ -1,5 +1,5 @@
 .organizationLanding {
-
+    background-image: url("/static/images/Organizations.jpeg");
 }
 
 .firstSection {
@@ -61,12 +61,12 @@
 }
 
 .secondSection {
-    background-image: url("/static/images/FillerPicture.jpeg");
+    background-image: url("/static/images/Laptop.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Roboto, sans-serif;
-    color: #323232;
+    color: #323232; 
     line-height: 30px;
 }
 
@@ -234,4 +234,9 @@
 .whiteButton button:hover {
     color: #def2f1;
     border-color: #b2d1d0;
+}
+
+.competitionLink, .programsLink, .eventsLink {
+    background-image: url("/static/images/EmployerGroup.jpeg");
+    background-attachment: fixed;
 }

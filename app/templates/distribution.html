@@ -3,21 +3,21 @@
 {% block head %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/organization_default.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/distribution.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/organization_default_media.css') }}">
 {% endblock %}
 
 {% block childcontent %}
 <div class = "firstSection">
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert Text </h2>
+                    <h2> Telehealth, how you want it </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">Neomedica can be sold individually, pairs, and even groups. Our packages are flexible and customizable and meticulously tailored to your needs and can be bundled with a variety of other benefits.</p>
                 <!--<div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
                     <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
                 </div>-->
@@ -28,25 +28,23 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert Text </h2>
+                    <h2> Distinguish yourself </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">Providing cutting edge technology and streamlined designs to our partners, we equip them with the only versatile telehealth service they’ll ever need.  </p>
             </div>
         </div>
-        <div class = "imageHolder">
+        <div class = "imageHolder pic2">
         </div>
     </div>
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic3">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert Text </h2>
+                    <h2> So what?  </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">Joining our large and interconnected network means you can provide telehealth consultations to your ever-growing panel of patients. We provide and experience like you’ve never felt before.   </p>
             </div>
         </div>
     </div>
@@ -57,7 +55,7 @@
             <h2 class = "show-on-scroll-up">Request a Demo </h2> 
             <h3 class = "show-on-scroll-up">Discover the Neomedica difference.</h3>
             <div class = "learnMoreContainerRegular whiteButton show-on-scroll-up providerButton">
-                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                <a href = "{{ url_for('login' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
             </div>
         </div>
     </div>

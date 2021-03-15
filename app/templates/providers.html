@@ -15,8 +15,8 @@
     </div>
     <div class = "firstSectionFlex">
         <div class = "leftText">
-            <p class = "show-on-scroll-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p class = "show-on-scroll-right lastParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+            <p class = "show-on-scroll-right">Neomedica partners with some of the world’s most prestigious developers, employers, hospitals, and health systems to offer industry-leading virtual treatment. Just like any other healthcare provided, you can expect that every provider is credentialed, accredited, highly qualified and working their finest to provide every patient with swift and effective care.</p>
+            <p class = "show-on-scroll-right lastParagraph">In fact, we go a step further, ensuring that all of our providers undergo a rigorous credentialing process based upon guidelines set by the National Committee for Quality Assurance (NCQA) and the Accreditation Commission for Health Care (ACHC).  </p>
             <div class = "show-on-scroll-right">
                 <a href = "{{ url_for('ncqa') }}" class = "learnMore">Learn more about our NCQA and ACHC Certification<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
             </div>
@@ -34,20 +34,20 @@
         <div class = "valuesSection">
             <div class = "value show-on-scroll-right">
                 <div class = "wordHolder">
-                    <h3>90%</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                    <h3>95%</h3>
+                    <p>member satisfaction, one of the top percentages in our industry</p>
                 </div>
             </div>
             <div class = "value show-on-scroll-up">
                 <div class = "wordHolder">
-                    <h3>2%</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+                    <h3>35</h3>
+                    <p> million visits since the opening of our services in 2018 </p>
                 </div>
             </div>
             <div class = "value show-on-scroll-left">
                 <div class = "wordHolder">
-                    <h3>35</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <h3>2%</h3>
+                    <p>chance you don’t recommend Neomedica to your friends and family</p>
                 </div>
             </div>
         </div>
@@ -60,40 +60,40 @@
     <div class = "providerSection">
         <div class = "type">
             <div class = "typeImage show-on-scroll-up">
-                <img src = "{{ url_for('static', filename='images/Meet.jpeg') }}">
+                <img src = "{{ url_for('static', filename='images/Physician.jpeg') }}">
             </div>
             <h3 class = "show-on-scroll-up">Physicians</h3>
-            <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p class = "show-on-scroll-up">Our physicians are medically trained, U.S. board certified in their fields, and licensed and credentialed. Neomedica physicians hold bachelor’s (B.A. or B.S.) Doctor of Medicine (M.D.) or Doctor of Osteopathic Medicine (D.O.) degrees. </p>
             <div class = "show-on-scroll-right">
                 <a class = "centerLink" id = "physicians" onclick = "modal('modal', 'physicians'); provider();">Meet us!<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
             </div>
         </div>
         <div class = "type">
             <div class = "typeImage show-on-scroll-up">
-                <img src = "{{ url_for('static', filename='images/Meet.jpeg') }}">
+                <img src = "{{ url_for('static', filename='images/Nurse.jpeg') }}">
             </div>
             <h3 class = "show-on-scroll-up">Nurse Practitioners</h3>
-            <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p class = "show-on-scroll-up">Our nurse practitioners are medically trained, ANCC or AANP accredited, registered, and credentialed in their fields. Neomedica nurse practitioners hold Bachelor of Science in Nursing (BSN) and Master of Science in Nursing (MSN) degrees. </p>
             <div class = "show-on-scroll-right">
                 <a class = "centerLink" id = "nurse" onclick = "modal('modal2', 'nurse'); provider2();">Meet us!<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
             </div>
         </div>
         <div class = "type">
             <div class = "typeImage show-on-scroll-up">
-                <img src = "{{ url_for('static', filename='images/Meet.jpeg') }}">
+                <img src = "{{ url_for('static', filename='images/Assistant.jpeg') }}">
             </div>
             <h3 class = "show-on-scroll-up">Physician Assistants</h3>
-            <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p class = "show-on-scroll-up">Our physician assistants are medically trained, NCCPA certified, licensed and credentialed. MeMD physician assistants hold bachelor’s (B.A. or B.S.) and Physician Assistant Studies (MPAS), Health Science (MHS) or Medical Science (MMSc) degrees. </p>
             <div class = "show-on-scroll-right">
                 <a class = "centerLink" id = "assistant" onclick = "modal('modal3', 'assistant'); provider3();">Meet us!<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
             </div>
         </div>
         <div class = "type">
             <div class = "typeImage show-on-scroll-up">
-                <img src = "{{ url_for('static', filename='images/Meet.jpeg') }}">
+                <img src = "{{ url_for('static', filename='images/Therapist.jpeg') }}">
             </div>
             <h3 class = "show-on-scroll-up">Therapists</h3>
-            <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p class = "show-on-scroll-up">Our behavioral health team of masters-level professionals includes experienced and accredited Licensed Professional Counselors, Licensed Clinical Social Workers, Marriage and Family Therapists and equivalent licensed professionals. </p>
             <div class = "show-on-scroll-right">
                 <a class = "centerLink" id = "therapist" onclick = "modal('modal4', 'therapist'); provider4();">Meet us!<i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
             </div>

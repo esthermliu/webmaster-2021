@@ -3,21 +3,21 @@
 {% block head %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/organization_default.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/employer.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/organization_default_media.css') }}">
 {% endblock %}
 
 {% block childcontent %}
 <div class = "firstSection padTop">
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert Text </h2>
+                    <h2> Save more for your whole company </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">Connecting with Neomedica as part of a portfolio or as an added employee benefit is an excellent way to contain healthcare costs for your company. Telemedicine helps drop office co-pays for employees and it also reduces the claims to your company’s group healthcare provider. One study shows that savings can reach up to 45% in unnecessary doctor and emergency room visits. Choose Neomedica to save more! </p>
                 <!--<div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
                     <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
                 </div>-->
@@ -28,25 +28,23 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert Text </h2>
+                    <h2> Why Us? </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">Choosing telemedicine as a more seamless, convenient group healthcare plan for your employees can boost morale and thus increase their productivity and longevity at your firm. Aside from the big savings, especially for self-insured employers, the added benefit of telemedicine will make your company more attractive to prospective employees. Finally, we provide 24/7 access to our seamless, world-class services for all employees. </p>
             </div>
         </div>
-        <div class = "imageHolder">
+        <div class = "imageHolder pic2">
         </div>
     </div>
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic3">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert Text </h2>
+                    <h2> Employee Access  </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">Employees may access our services any time of day, any day of the week, and any day of the year. They may choose to visit via website, phone, or mobile app. Neomedica provides an extremely diverse wealth of healthcare options that covers all bases in terms of healthcare and therapy. Furthermore, they may choose to engage in mental health therapy, which is sure to boost their morale, keeping them happy and safe. </p>
             </div>
         </div>
     </div>
@@ -57,7 +55,11 @@
             <h2 class = "show-on-scroll-up">Request a Demo </h2> 
             <h3 class = "show-on-scroll-up">Discover the Neomedica difference.</h3>
             <div class = "learnMoreContainerRegular whiteButton show-on-scroll-up providerButton">
-                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                {% if current_user.is_anonymous %}
+                    <a href = "{{ url_for('login')}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                {% else %}
+                    <a href = "{{ url_for('schedule_appointment', username=current_user.username )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                {% endif %}
             </div>
         </div>
     </div>

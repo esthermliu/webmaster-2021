@@ -92,7 +92,7 @@
 }
 
 .secondSection {
-    background-image: url("/static/images/FillerPicture.jpeg");
+    background-image: url("/static/images/TelemedicineMeeting.jpeg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -331,3 +331,8 @@
     letter-spacing: 1.5px;
     font-size: 25px;
 }
+
+.providersLanding {
+    background-image: url("/static/images/ProviderLanding.jpeg");
+}
+

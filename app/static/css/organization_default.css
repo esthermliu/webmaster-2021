@@ -123,3 +123,7 @@ body {
     color: #def2f1;
     border-color: #b2d1d0;
 }
+
+.employerLanding {
+    background-image: url("/static/images/EmployerLanding.jpeg");
+}

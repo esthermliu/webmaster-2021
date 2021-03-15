@@ -129,3 +129,24 @@
     flex-wrap: wrap;
     margin-top: 20px;
 }
+
+.newImage {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+ol li {
+    line-height: 35px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+.blogLink {
+    color: #3aafa9;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+}
+
+.blogLink:hover {
+    color: #2B7A78;
+}

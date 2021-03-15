@@ -1,0 +1,19 @@
+.hospitalLanding {
+    background-image: url("/static/images/Hospitals.jpg");
+}
+
+.pic1 {
+    background-image: url("/static/images/HospitalTeam.jpeg");
+}
+
+.pic2 {
+    background-image: url("/static/images/Time.jpg");
+}
+
+.pic3 {
+    background-image: url("/static/images/Technology.jpg");
+}
+
+.anotherDemo {
+    background-image: url("/static/images/Demo.jpg");
+}

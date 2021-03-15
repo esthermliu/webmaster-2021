@@ -1,5 +1,5 @@
 .newsLanding {
-
+    background-image: url("/static/images/News.jpg");
 }
 
 .firstSection {
@@ -97,3 +97,8 @@
 .learnMore:hover .learn {
     transform: translate(2px, 0);
 }
+
+.blogLanding {
+    background-image: url("/static/images/Blog.jpg");
+}
+

@@ -1,5 +1,5 @@
 .priceLanding {
-
+    background-image: url("/static/images/InsuranceLanding.jpeg");
 }
 
 .firstSection {
@@ -233,3 +233,6 @@ table {
     border-collapse: collapse;
 }
 
+.conditionText h3 {
+    line-height: 30px;
+}

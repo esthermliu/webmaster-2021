@@ -1,0 +1,15 @@
+.pic1 {
+    background-image: url("/static/images/EmployerWoman.jpeg");
+}
+
+.pic2 {
+    background-image: url("/static/images/MedicalCall.jpeg");
+}
+
+.pic3 {
+    background-image: url("/static/images/EmployerCalling.jpg");
+}
+
+.anotherDemo {
+    background-image: url("/static/images/Demo2.jpg");
+}

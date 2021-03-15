@@ -3,21 +3,21 @@
 {% block head %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/organization_default.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/unions.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/organization_default_media.css') }}">
 {% endblock %}
 
 {% block childcontent %}
 <div class = "firstSection">
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic1">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert Text </h2>
+                    <h2> Unions </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">Employees deserve the right wages. Employees deserve a healthy workplace. Employees deserve a say in decisions that relate to them. That’s why Neomedica supports our employees’ unions. We recognize the power of a health workplace environment; if our doctors, nurses, therapists, and psychiatrists aren’t happy, they can’t do their best work. If they can’t do their best work, our patients won’t get the treatment they need and deserve. If you are a Neomedica employee, contact us today to learn about your union options. </p>
                 <!--<div class = "learnMoreContainerRegular leftAlign show-on-scroll-up providerButton">
                     <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
                 </div>-->
@@ -28,25 +28,23 @@
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert Text </h2>
+                    <h2> Mental Health Work </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">Neomedica works with several associations to promote mental health issues and self-care methods. Mental health is very important, and following the pandemic, it has become more apparent to many people whose lives slowed down. As such, our specialized therapists work with mental health advocacy organizations, such as Mental Health America, to promote and share information about mental health issues, and connect with everyday people to understand and assist them in their mental health struggles. Contact us today to learn more! </p>
             </div>
         </div>
-        <div class = "imageHolder">
+        <div class = "imageHolder pic2">
         </div>
     </div>
     <div class = "treatmentBox show-on-scroll-right">
-        <div class = "imageHolder">
+        <div class = "imageHolder pic3">
         </div>
         <div class = "textOverall">
             <div class = "textHolderTreatment">
                 <div class = "impactTitle show-on-scroll-up serviceTitle">
-                    <h2> Insert Text </h2>
+                    <h2> Telehealth Work </h2>
                 </div>
-                <p class = "innerText show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli. </p>
-                <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m</p>
+                <p class = "innerText show-on-scroll-up">Neomedica also works with several associations that promote telehealth. One part of making healthcare accessible to everyone is making Neomedica known to as many people as possible. In fact, our internal study found that around 70% of those who learnt about telehealth through one of these associations attended at least one appointment with a Neomedica specialist. Contact us today to learn more about how you can help spread the word about telehealth! </p>
             </div>
         </div>
     </div>
@@ -57,7 +55,7 @@
             <h2 class = "show-on-scroll-up">Request a Demo </h2> 
             <h3 class = "show-on-scroll-up">Discover the Neomedica difference.</h3>
             <div class = "learnMoreContainerRegular whiteButton show-on-scroll-up providerButton">
-                <a href = "{{ url_for('leadership_bio', leader='Sammy' )}}" class="learnMoreButtonRegular"><button>Get Started</button></a>
+                <a href = "{{ url_for('login') }}" class="learnMoreButtonRegular"><button>Get Started</button></a>
             </div>
         </div>
     </div>
