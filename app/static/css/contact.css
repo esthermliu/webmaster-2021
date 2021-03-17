@@ -41,3 +41,7 @@
 .contactUsLink:hover {
     color:  #2B7A78;
 }
+
+.contactLanding {
+    background-image: url("/static/images/Contact.jpg");
+}

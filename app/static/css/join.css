@@ -230,3 +230,7 @@
 .firstBox {
     margin-top: 10%;
 }
+
+.joinLanding {
+    background-image: url("/static/images/JoinUs.jpg");
+}

@@ -1,5 +1,5 @@
 blogs = [
-    {   'image': "FillerPicture.jpeg",
+    {   'image': "TurbanPhone.jpg",
         'title': '8 Safe Activities to Cope During the Pandemic',
         'author': 'Jared Cole',
         'article': '<p>Last week, the world shut down. Offices have closed, schools have closed, and masks, handwashing, and social distancing have become necessary in order to slow the spread of the pandemic. It’s important to stay at home to stay safe and keep others safe, but that doesn’t mean you’re not allowed to have fun! So, here are ten safe, COVID-friendly activities that you can do from the safety of your home. </p><ol><li>Video chat with friends and family: the most important thing to remember during the pandemic is that your physical and mental health matters the most. For many, that means keeping in touch with the outside world, especially the friends and family that you can’t see in person. Try FaceTime, Zoom, Skype, Google Meet, or any other video calling platform to see those you love from the safety of your home. </li><li>Have a virtual Netflix Party: Missing the grand excitement of the movie theater? Don’t fret! The next best thing is to have a virtual Netflix party with your friends and family. Just have your group install the TeleParty extension on your Chrome browsers, select a title, click the red ‘NP’ button, and send the pop-up URL to your buddies. Now, you can enjoy your favorite shows and movies with your friends during the pandemic! </li><li>Bake some new desserts or pastries: Baking is nothing short of magic – throw some cookie dough into an oven and fifteen minutes later, you have warm, crispy delights. Try our delicious protein bar recipe! </li><li>Learn to cook: Culinary skills are very important. So, sharpen your knife, bust out those utensils, and let’s get cooking! There are tons of helpful recipes <a class = "blogLink" href = "https://www.allrecipes.com/recipes/" target="_blank"> here.</a></li><li>Try an at-home workout: Wellness is important during these strange times. Try this bodyweight workout for a quick burn: <ul><li>Push-ups 10x3 </li><li>Sit-ups 25x4  </li><li>Wide grip push-ups 10x3 </li><li>Burpees 10x4 </li><li>Plank until failure </li></ul></li><li>Learn a new skill: Before the pandemic, all you wanted was some more time to try new things. Now, you have that time; learn to juggle, type fast, code, play an instrument, or knit! </li><li>Optimize your at-home work setup: Listen, if the next few months of life are going to be spent working from home, you might as well make your setup the most efficient, epic, productive area as possible. Try a standing desk, an ergonomic keyboard, or a programmable mouse. </li><li>If negative feelings persist, check out Neomedica’s telehealth solutions: Neomedica is always available to help. Whether it’s depression, anxiety, fear, grief, or any other mental health issue, feel free to explore Neomedica’s health solutions. </li></ol>',
@@ -7,7 +7,7 @@ blogs = [
         'link': "8-safe-activities-to-cope-during-the-pandemic"
     },
 
-    {   'image': "FillerPicture.jpeg",
+    {   'image': "Fruits.jpg",
         'title': 'How You Can Be More Mindful of Your Meals',
         'author': 'Rob Sokratis',
         'article': '<p>Everybody overeats at times. Who doesn’t have a full belly after Thanksgiving feast? However, it is important to make sure you don’t do it too often. A feeling of guilt after consumption of food is a typical sign of overeating. Over-eating is certainly something to be addressed as it can reduce your physical and mental health. But don’t worry! We have made a quick list you can follow to ramp up your eating game in the comfort of your home.</p><ol><li>You need to know when you’re overeating: <p></p> <p>Create a list using a journal or your phone, not the food, time, and possible trigger. Although it may initially be a pain, as you collect more data points, you may be able to draw patterns and pinpoint what you need to focus on. Common reasons are listed below. </p></li><li>Distractions: <p></p><p>While distracted, you may find yourself eating without really being ‘present’ to eat the food. This often happens while engaging in another task such as watching TV, driving, or working at your desk. A vital part of reducing how much you eat is learning to eat without distraction, so you know exactly how much you’re eating. </p></li><li>Emotional Eating: <p></p><p>Emotions are something that can easily take control over you and dealing with those emotions can be a real problem for many people. Our therapists help out with controlling your emotions throughout your life, not only while eating. </p></li><li>Lack of sleep: <p></p><p>Every so often, people sleep for less time than they’re supposed to, and this doesn’t do any harm. However, a consistent lack of sleep can mess with your hormones, resulting in excessive cravings and hunger cues. </p></li><li>Taking Action: <p></p><p>Just because you have identified a specific problem with a specific food doesn’t mean that you should only actively try to reduce your consumption of that food. Typically, there is a larger problem at work, and once you stop eating, for example, chips, you may begin to consume more soda. The key is to take small steps without falling back. Instead of stopping your chip consumption entirely, tell yourself to eat half a portion instead. There is a lot to work on it can be very difficult to remain logical when faced with food. That’s why here at Neomedica we provide top notch therapists 24/7 to help support you with your goals sustainably without you feeling restricted. </p></li></ol>',
@@ -15,7 +15,7 @@ blogs = [
         'link': "how-you-can-be-more-mindful-of-your-meals"
     },
 
-    {   'image': "FillerPicture.jpeg",
+    {   'image': "HoldFruit.jpg",
         'title': 'Ways to Step up Your Wellness Routine',
         'author': 'Amanda Smitherson',
         'article': '<p>Summer is coming up, and that means fun on beaches, playing sports, and enjoying the sunshine. Here are some ways to step up your wellness routine and get that summer body you’ve been dreaming of! </p><ol><li>Switch up your diet: <p></p><p>Eating the same stuff every day can get boring. Look up a couple new recipes and explore new areas of the supermarket. New foods can help your body gain the nutrients it needs and can also keep your appetite fresh. Make sure that your new foods and recipes are healthy and don’t deviate too much from your previous habits, sudden changes can be more harmful than helpful.</p></li><li>Try out a new workout: <p></p><p>If you don’t already work out, now is the perfect time to start. Working out not only keeps you physically healthy, but also has countless mental benefits. For those who already work out, tweaking a few things can help you be more effective and make working out more interesting. For example, instead of using the gym’s treadmill or bike, take a nice scenic route around the neighborhood or through a trail for your cardio. </p></li><li>Find a buddy: <p></p><p>Finding a buddy to do stuff with completely changes your routine. If you develop a competition, you may find yourself more motivated to go out and do something. If you can’t find a friend or family member who would like to get sweaty, puzzles and games are always an option. Puzzles are proven to help reduce stress levels and reduce cravings. </p></li><li>Step out of your comfort zone: <p></p><p>Exposing yourself to new challenges gets your brain and body working in different ways. At a microscopic level, new challenges actually force your brain to build new neural pathways while doing the same repetitive stuff may encourage it to trim away any that are unused. For some, stepping out of comfort may be adding a new topping to your pizza while for others it maybe be finally taking that job you always wanted. Either way, it is important to stay in control, stepping out of your comfort zone doesn’t mean you have to take large risks.  </p></li></ol>',
@@ -23,104 +23,27 @@ blogs = [
         'link': "ways-to-step-up-your-wellness-routine"
     },
 
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
-    },
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
-    },
-    
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
+    {   'image': "GranolaBar.jpg",
+        'title': 'No-Bake Chocolate Oats Protein Bars',
+        'author': 'Kenny Lamar',
+        'article': "<p>If you’ve been looking for a healthy and satisfying protein source with fresh and wholesome ingredients (none of that gimmicky stuff) that doesn’t have a bitter artificial chocolate taste like in so many of the protein shakes and bars have on the market, you’ve found the right recipe. These no-bake chocolate protein bars are a great snack for on-the-go and only require a simple mixture that is cooked lightly on a pan.</p><p>What does a healthy snack look like? </p><p>The goal of a healthy snack is to prevent hunger between while maintaining blood sugar and providing your body with essential nutrients that keep you running at your peak. A reasonable estimate would be a snack with about 200 calories, a few grams of fiber, under 150mg of sodium and around 10 grams of protein (if you want it protein packed). The presence of fiber is important, we make sure all our snacks have them. Fiber is a natural detoxifier, as it can't be processed by your body’s systems - but that doesn’t stop it from being helpful! Fiber aids your body in pushing food remains and toxins, it can prevent your colon from filling with food and prevent you from feeling constipated. </p><p>On to the recipe~</p><p><b>Ingredients:</b> </p><p>1 ¼ cup vanilla pea protein powder** (ideally organic) </p><p>1 cup oats</p><p>2 tablespoons ground flaxseed </p><p>3 tablespoons cacao (or cocoa) powder </p><p>⅓ cup dried cherries (can substitute any dried fruit) </p><p>½ cup almond butter </p><p>¼ cup honey </p><p>5-6 tablespoons water </p><p>1 teaspoon vanilla extract </p><p><b>Directions: </b></p><ol><li>Combine protein powder, oats, flax, cacao, and dried cherries in a large bowl. </li><li>In a microwave-safe bowl, combine the almond butter and honey. Microwave for 45 seconds, until honey is melted, and almond butter is loose. </li><li>Add the water and vanilla to the hot almond butter/honey mixture and whisk to combine. </li><li>Pour the liquid ingredients into the dry ingredients and mix until a dough-like mixture forms (We started out with a spatula and ended up kneading the mixture a bit with our hands to get it all incorporated).</li><li>Line a loaf pan or 8×8 pan with parchment paper. Press the mixture evenly into the pan, cover with parchment paper, and refrigerate for at least an hour to set. </li><li>Remove the bars from the pan and peel away the parchment paper. Cut into 16 bars. </li><li>Store bars wrapped or in an airtight container in the fridge. Bars will last for several weeks in the fridge.</li></ol><p><b>*notes:</b></p><p>**If you’d like a less chewy version, you can decrease the protein powder to ¾ cup protein powder and the water to 4 tablespoons of water. To keep the bars at 150 calories per bar, increase the cherries to 1/2 cup of cherries but note that the protein will decrease to 8 grams, which is still more than many bars out there. Be aware that this version may not satisfy you as long, however, some of our clients prefer the texture. </p><p>Chocolate or other flavored protein powders can be used. This recipe was tested with pea protein and whey protein powders, others should work as well. </p><p>Feel free to substitute other dried fruits for the dried cherries – dried cranberries or chopped dates would also be great! </p><p>Be sure to use a runny almond butter rather than a stiff almond butter. I find that the almond butter you can buy in jars is runnier than the grind-your-own almond butters in the bulk section of grocery stores. Runny almond butter will melt easier and help hold everything together! </p><p>If your mixture is too dry (different protein powders may absorb liquid differently), simply add water 1 tbsp at a time until the mixture holds together. It will feel like a stiff cookie dough that can be pressed (not poured) into a pan. </p>",
+        'date': 'December 15, 2020',
+        'link': "no-bake-chocolate-oats-protein-bars"
     },
 
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
+    {   'image': "ChildMask.jpg",
+        'title': 'COVID-19: Symptoms and What You Should Do',
+        'author': 'Bethany Fernando',
+        'article': '<p>The novel coronavirus spreads through droplet transmission and causes COVID-19. The COVID-19 pandemic is causing widespread mask-wearing, social distancing, and international efforts to control it. Here’s everything you need to know in order to stay safe and healthy. </p><p><b>First off, symptoms:</b> If you are experiencing any of the following symptoms of COVID-19, please contact 1-800-NEOMEDIC to get tested immediately. Read on to learn about what you should do in case you have it. </p><p>Likely Symptoms: Loss of Smell, Loss of Taste, Fever, Feeling Feverish, Chills, Cough (usually dry) </p><p>Moderate Symptoms: Shortness of Breath, Muscle Pain, Sore Throat, Headaches, Fatigue, 	Nausea, Diarrhea </p><p>Non-Symptoms: Runny Nose, Stuffy Nose, Sneezing </p><p><b>What to Do:</b> Regardless of whether you are experiencing symptoms or not, everyone must follow a set of CDC guidelines to help slow the spread of the virus. These include mask-wearing in public places, social distancing, and regular handwashing. A complete list of guidelines can be found <a class = "blogLink" href = "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html" target="_blank">here.</a> You may test for the virus via a virtual consultation through Neomedica. </p><p>If you have tested positive for the virus, stay home at all costs; physically separate from any housemates and have them do your grocery shopping. Ensure that you remain in one place as much as possible. Avoid exercise and bright lights and screens. Stay hydrated and rested, and make sure to monitor your symptoms. Call your healthcare provider if symptoms worsen significantly. If possible, use a separate bathroom from others. </p>',
+        'date': 'March 11, 2020 ',
+        'link': "covid-19-symptoms-and-what-you-should-do"
     },
 
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
-    },
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
-    },
-    
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
-    },
-
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
-    },
-
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
-    },
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
-    },
-    
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
-    },
-
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
-    },
-
-    {   'image': "FillerPicture.jpeg",
-        'title': 'Insert Title',
-        'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat [...] ',
-        'article': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
-        'date': 'January 30, 2021',
-        'link': "insert-title"
+    {   'image': "DeliveryBoy.jpg",
+        'title': 'COVID FAQs Answered',
+        'author': 'Benjamin Ronaldson',
+        'article': '<p>Here are the nation’s top questions about the virus, answered concisely and clearly:</p><p>Q: Is it okay to go outside for runs, walks, etc.? </p><p>A: Outdoor exercise is great for your mental and physical health during the pandemic. <b>Yes,</b> although you must ensure that you are staying a minimum of six feet away from others on the street or trail. Additionally, you may want to wear a mask if you are venturing into a populated area. </p><p>Q: Can I see my friends in person? </p><p>A: This is a tricky question. Although some states allow small gatherings, it is advised that you do not gather with any friends. If you must, keep your group to 2-3 people, outdoors, masked, and socially distanced for optimal safety. </p><p>Q: Should I not eat in restaurants? </p><p>A: No. It is advised that you do not dine in. Although, takeout is fine as long as you are taking the proper precautions.</p><p>Q: Should I sanitize my groceries? </p><p>A: This is an optional but excellent step you can take to slow the spread. Carefully wipe each item with a disinfectant wipe. Separate the disinfected items with the non-disinfected ones. Wash your hands before and after. </p><p>Q: What should I do if I get the virus? </p><p>A: Isolate from others, rest, stay hydrated, monitor your symptoms, and take care of yourself. Check out our <a class = "blogLink" href = "/blog/article/covid-19-symptoms-and-what-you-should-do">blog post</a> on the matter. </p>',
+        'date': 'April 9, 2020 ',
+        'link': "covid-faqs-answered"
     }
 ]

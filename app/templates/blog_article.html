@@ -15,7 +15,7 @@
             <a href = "{{ url_for('blog') }}" class = "learnMore"><i id = "rightArrow" class="fa fa-angle-left learn"></i>Return to blog list</a>
         </div>
         <div class = 'articleImage show-on-scroll-up'>
-            <img src = "{{ url_for('static', filename='images/FillerPicture.jpeg') }}">
+            <img src = "{{ url_for('static', filename='images/' + article[0]['image']) }}">
         </div>
         <div class = "articleBig">
             <div class = "articleText">

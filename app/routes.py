@@ -690,14 +690,14 @@ def blog_article(article_link):
 def contact():
     return render_template('contact.html', title="Contact",
                                         inner_title="Contact",
-                                        description="Insert Text",
+                                        description="We're Here to Help",
                                         landing="contactLanding") 
 
 @app.route('/faq')
 def faq():
     return render_template('faq.html', title="FAQ",
                                         inner_title="FAQ",
-                                        description="Insert Text",
+                                        description="Everything Answered",
                                         landing="faqLanding") 
 
 @app.route('/our-social')
@@ -711,7 +711,7 @@ def social():
 def join():
     return render_template('join.html', title="Join Us",
                                         inner_title="Join Us",
-                                        description="Insert Text",
+                                        description="Help Shape the future",
                                         landing="joinLanding") 
 
 
