@@ -32,7 +32,7 @@
 }
 
 .secondSection {
-    background-image: url("/static/images/FillerPicture.jpeg");
+    background-image: url("/static/images/OurValues.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -112,7 +112,7 @@
 }
 
 #future {
-    background-image: url("/static/images/FillerPic2.jpeg");
+    background-image: url("/static/images/ToFuture.jpg");
 }
 
 .when {
@@ -209,4 +209,24 @@
 
 .aboutLanding {
     background-image: url("/static/images/FillerPic2.jpeg") !important;
+}
+
+.whyLink {
+    background-image: url("/static/images/WhyUs.jpg");
+}
+
+.historyLink {
+    background-image: url("/static/images/History2.jpeg");
+}
+
+.leadershipLink {
+    background-image: url("/static/images/Leadership.jpeg");
+}
+
+.providersLink {
+    background-image: url("/static/images/ProviderLanding.jpeg");
+}
+
+.ncqaLink {
+    background-image: url("/static/images/Certification.jpeg");
 }

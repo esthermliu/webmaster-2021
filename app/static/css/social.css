@@ -113,3 +113,7 @@
 .spaceAbove {
     margin-top: 20px;
 }
+
+.socialLanding {
+    background-image: url("/static/images/Social.jpg");
+}

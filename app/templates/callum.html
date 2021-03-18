@@ -1,0 +1,77 @@
+{% extends "default.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/people.css') }}">
+{% endblock %}
+
+{% block childcontent %}
+<div class = "pageNav show-on-scroll-right">
+    <p>
+        <a class = "changeColor" href = "{{ url_for('about') }}">About</a>
+        /
+        <a class = "changeColor" href = "{{ url_for('leadership') }}">Leadership</a>
+        /
+        <a href = "{{ url_for('leadership_bio', leader='Callum') }}"><b class = "bold">Callum Hodge</b></a>
+    </p>
+</div>
+<div class = "firstSection">
+    <div class = "impactTitle peopleTitle show-on-scroll-right">
+        <h2> Overview </h2>
+    </div>
+    <div class = "firstSectionFlex">
+        <div class = "leftText">
+            <p class = "show-on-scroll-right">An experienced technician and data scientist with an engineering background, Callum Hodge has served as Neomedica’s Chief Information Officer since 2013. With decades of healthcare industry experience collaborating with leaders, stakeholders and patients alike, Callum brings an unprecedented level of experience and perspective to the Neomedica executive team.  </p>
+        </div>
+        <div class = "imageHolder show-on-scroll-left">
+            <img src = "{{ url_for('static', filename='images/CallumHodge.png') }}">
+        </div>
+    </div>
+</div>
+<div class = "firstSection second">
+    <div class = "quoteBack">
+        <div class = "line show-on-scroll-left"></div>
+        <div class = "quoteBox"> 
+            <div class = "quoteHolder show-on-scroll-up">
+                <img src = "{{ url_for('static', filename='images/Quotes2.png') }}">
+            </div>
+            <p class = "show-on-scroll-right">Harnessing information has the potential to change lives.</p>
+            <h4 class = "show-on-scroll-left"><span> &mdash; </span>Callum Hodge <span> &mdash; </span></h4>
+        </div>
+        <div class = "lineBottom show-on-scroll-right"></div>
+    </div>
+</div>
+<div class = "firstSection second">
+    <div class = "impactTitle peopleTitle centerAlign show-on-scroll-right">
+        <h2> Early Life </h2>
+    </div>
+    <div class = "firstSectionFlex">
+        <div class = "leftText centerText">
+            <p class = "show-on-scroll-left">As a young lad growing up on the outskirts of Sheffield, UK, Callum had two priorities in life: kicking a ball around with his mates and tinkering with just about any electronic device he could. After returning home from a long day of football (soccer), he would sit himself down at his father’s workstation to work with circuits, often forgetting to complete his schoolwork. </p>
+        </div>
+    </div>  
+    <div class = "imageHolder fullImage show-on-scroll-right">
+        <img src = "{{ url_for('static', filename='images/CallumSoccer.jpg') }}">
+    </div>
+</div>
+<div class = "firstSection second">
+    <div class = "impactTitle peopleTitle centerAlign show-on-scroll-left">
+        <h2> University Days </h2>
+    </div>
+    <div class = "firstSectionFlex">
+        <div class = "leftText centerText">
+            <p class = "show-on-scroll-left">Luckily, Callum’s sharp wit and work ethic landed him admission in the prestigious Cambridge University’s School of Engineering to study Electrical Engineering. While Callum was often holed up in his dormitory poring over his projects, he could never say no to a game of football with his friends! </p>
+        </div>
+    </div>
+</div>
+<div class = "firstSection second">
+    <div class = "impactTitle peopleTitle centerAlign show-on-scroll-right">
+        <h2> Chasing a Dream </h2>
+    </div>
+    <div class = "firstSectionFlex">
+        <div class = "leftText centerText">
+            <p class = "show-on-scroll-left"> Callum went on to work in industry for nearly 15 years after his graduation for well-established health care companies in the United Kingdom. Tired of routine with big name companies and their bureaucracies, Callum was on the hunt for a cutting edge, bold work environment. He stumbled across a job posting by Sammy, and immediately knew Neomedica was the place for him.   </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

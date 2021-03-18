@@ -152,6 +152,7 @@
 
 .healthLi {
     padding-right: 10px;
+    cursor: auto;
 }
 
 .healthLi a::after {
@@ -164,10 +165,10 @@
 	margin-top: 0px;
 }
 
-.healthLi a:hover::after  {
+/*.healthLi a:hover::after  {
     width: 50%;
     transition: width .3s;
-}
+}*/
 
 .withoutLinks {
     width: 48%;

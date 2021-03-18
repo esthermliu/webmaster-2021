@@ -113,6 +113,34 @@ def leadership_bio(leader):
             'inner_title': 'Josephine Greenberg', 
             'description': 'COO',
             'landing': 'joLanding'         
+        },
+        "Joao": {
+            'template': 'joao.html',
+            'title': 'Joao Santos', 
+            'inner_title': 'Joao Santos', 
+            'description': 'CFO',
+            'landing': 'joaoLanding'         
+        },
+        "Callum": {
+            'template': 'callum.html',
+            'title': 'Callum Hodge', 
+            'inner_title': 'Callum Hodge', 
+            'description': 'CIO',
+            'landing': 'callumLanding'         
+        },
+        "Sandra": {
+            'template': 'sandra.html',
+            'title': 'Sandra Nguyen', 
+            'inner_title': 'Sandra Nguyen', 
+            'description': 'CCO',
+            'landing': 'sandraLanding'         
+        },
+        "Paul": {
+            'template': 'paul.html',
+            'title': 'Paul Zhang', 
+            'inner_title': 'Paul Zhang', 
+            'description': 'CMO',
+            'landing': 'paulLanding'         
         }
     }
 
@@ -199,7 +227,7 @@ def mental_condition(condition):
 def physical():
     return render_template('physical.html', title='Physical Therapy',
                                         inner_title="Physical Therapy",
-                                        description="Wait what?",
+                                        description="Relieve Pain",
                                         landing="physicalLanding") 
 
 @app.route('/phobia-therapy')
@@ -368,7 +396,7 @@ def childrens_health_condition(condition):
 def therapy():
     return render_template('therapy.html', title="Individual Therapy and Psychiatry",
                                         inner_title="Individual Therapy and Psychiatry",
-                                        description="Insert Text",
+                                        description="Developed for you",
                                         landing="therapyLanding")
 
 @app.route('/individual-therapy-and-psychiatry/<condition>')
@@ -456,7 +484,7 @@ def reviews():
     total_pages = math.ceil(len(reviews) / 5) # total number of pages
     return render_template('reviews.html', title="Reviews",
                                         inner_title="Reviews",
-                                        description="Insert Text",
+                                        description="What Customers are Saying",
                                         landing="reviewLanding",
                                         reviews=specific_reviews,
                                         current_page=page,
@@ -704,7 +732,7 @@ def faq():
 def social():
     return render_template('social.html', title="Our Social",
                                         inner_title="Our Social",
-                                        description="Insert Text",
+                                        description="Check us out!",
                                         landing="socialLanding") 
 
 @app.route('/join-us')

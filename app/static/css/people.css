@@ -153,3 +153,19 @@
 .joLanding {
     background-image: url("/static/images/JoBalance.jpeg");
 }
+
+.joaoLanding {
+    background-image: url("/static/images/JoaoStreet.jpg");
+}
+
+.callumLanding {
+    background-image: url("/static/images/CallumTools.jpg");
+}
+
+.sandraLanding {
+    background-image: url("/static/images/SandraLanding.jpg");
+}
+
+.paulLanding {
+    background-image: url("/static/images/PaulTalking.jpg");
+}
