@@ -31,13 +31,6 @@ news = [
         'date': 'September 21, 2020',
         'link': "neomedica-announces-logo-change-after-9-years"
     },
-    {   'image': "SchoolChildren.jpg",
-        'title': 'Neomedica CFO Joao Santos Seen Volunteering at Local Elementary School ',
-        'author': 'Terrence Dunn',
-        'article': '<p>We all know Mr. Joao Santos is a math whiz – he is a seasoned expert in calculus, theoretical physics, probability, statistics, and mechanics. As Neomedica’s long standing CFO, there is little beyond the mind of Santos. </p> <p>His high level of math knowledge did not stop him from going back to the basics, though, as he was seen tutoring 2nd graders on their multiplication tables at George Washington Elementary School on Monday. When interviewed about his gracious volunteerism, Santos had the following to say: </p><p>“Yeah, you know I do love seeing the learning on their little faces – it reminds me of myself at a young age. Volunteering is a great way to stay in touch with the youth.” </p><p>Truly remarkable; Neomedica employees and executives are truly the most kind-hearted people. </p>',
-        'date': 'February 19, 2020 ',
-        'link': "neomedica-cfo-jaos-santos-seen-volunteering-at-local-elementary-school"
-    },
     
     {   'image': "YogaSocial.jpg",
         'title': 'Neomedica Launches 30-Day Exercise Program on all Social Media Platforms',
@@ -45,5 +38,13 @@ news = [
         'article': '<p>During the COVID-19 pandemic, fitness and exercise levels have dropped significantly. It is commonly known that exercise is vital for reducing stress levels, releasing endorphins, weight loss, lowering the risk of heart disease, and managing blood pressure and sugar levels. Thus, to get the public active once again, the Neomedica social media pages will be livestreaming a beginner-level bodyweight exercise routine every day starting April 1st at 5pm eastern time for thirty minutes. </p><p>This exercise routine can be done by virtually any age group and experience level, and it is specially designed to get you back into the swing of things. Exciting music will be played, and you can follow along with our trainer, Riley Crutchfield. Here’s what she has to say on the campaign: </p><p>“I’m super excited to be doing this. Hopefully, thousands of people will tune in on Instagram and Facebook live – I believe exercise is for everyone!” </p><p>How exciting!</p>',
         'date': 'March 25, 2020',
         'link': "neomedica-launches-30-day-exercise-program-on-all-social-media-platforms"
+    },
+
+    {   'image': "SchoolChildren.jpg",
+        'title': 'Neomedica CFO Joao Santos Seen Volunteering at Local Elementary School ',
+        'author': 'Terrence Dunn',
+        'article': '<p>We all know Mr. Joao Santos is a math whiz – he is a seasoned expert in calculus, theoretical physics, probability, statistics, and mechanics. As Neomedica’s long standing CFO, there is little beyond the mind of Santos. </p> <p>His high level of math knowledge did not stop him from going back to the basics, though, as he was seen tutoring 2nd graders on their multiplication tables at George Washington Elementary School on Monday. When interviewed about his gracious volunteerism, Santos had the following to say: </p><p>“Yeah, you know I do love seeing the learning on their little faces – it reminds me of myself at a young age. Volunteering is a great way to stay in touch with the youth.” </p><p>Truly remarkable; Neomedica employees and executives are truly the most kind-hearted people. </p>',
+        'date': 'February 19, 2020 ',
+        'link': "neomedica-cfo-jaos-santos-seen-volunteering-at-local-elementary-school"
     }
 ]
