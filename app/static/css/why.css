@@ -468,6 +468,10 @@ table {
     padding-top: 10%;
 }
 
+.graphImageHolder {
+    width: 100% !important;
+}
+
 .innovation {
     display: flex;
     justify-content: space-between;
