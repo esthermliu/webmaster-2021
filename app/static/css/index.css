@@ -244,8 +244,8 @@ body.fade-out {
 
 .transparentBackground {
 	height: 100vh;
-	background-image: linear-gradient(to bottom right, rgba(33, 94, 93, 0.8), rgba(33, 94, 93, 0.6), rgba(43, 122, 120, 0.4));
-	background-image: linear-gradient(rgba(41, 67, 71, 0.8), rgba(33, 94, 93, 0.6), rgba(43, 122, 120, 0.4));
+	/*background-image: linear-gradient(to bottom right, rgba(33, 94, 93, 0.8), rgba(33, 94, 93, 0.6), rgba(43, 122, 120, 0.4));
+	background-image: linear-gradient(rgba(41, 67, 71, 0.8), rgba(33, 94, 93, 0.6), rgba(43, 122, 120, 0.4));*/
 	width: 99vw;
 	z-index: 1;
 	position: absolute;
