@@ -10,56 +10,56 @@
     <div class = "slideImageHolder">
         <div id = "transparent1" class = "transparentBackground transparent">
         </div>
-        <img src="{{ url_for('static', filename='images/WhiteBackground.jpeg') }}"/>
+        <img src="{{ url_for('static', filename='images/FirstBack2.jpg') }}"/>
         <div class = "slideTextHolder">
-            <h1 class = "slideTitle fadeInDown"> INSERT TITLE  </h1>
-            <h2 class = "slideCaption fadeInUp"> insert text insert text insert text </h2>
+            <h1 class = "slideTitle fadeInDown"> TELEHEALTH, DONE RIGHT   </h1>
+            <h2 class = "slideCaption fadeInUp"> Explore our diverse wealth of medical treatment options </h2>
             <div id = "buttonSlide" class = "learnMoreContainer fadeInUp">
-                <a id = "buttonSlide" href = "news.html" class="learnMoreButton fadeInUp"><button>Discover more </button></a>
+                <a id = "buttonSlide" href = "{{ url_for('treatment') }}" class="learnMoreButton fadeInUp"><button>Discover more </button></a>
             </div>
         </div>
     </div>
     <div class = "slideImageHolder">
         <div class = "transparentBackground transparent">
         </div>
-        <img src="{{ url_for('static', filename='images/Filler.jpeg') }}"/>
+        <img src="{{ url_for('static', filename='images/SecondBack.png') }}"/>
         <div class = "slideTextHolder fadeInUp">
-            <h1 class = "slideTitle fadeInDown"> INSERT TITLE </h1>
-            <h2 class = "slideCaption fadeInUp"> insert text insert text insert text </h2>
+            <h1 class = "slideTitle fadeInDown"> YOUR 24/7 ONLINE CLINIC  </h1>
+            <h2 class = "slideCaption fadeInUp"> Get started with your treatment now </h2>
             <div id = "buttonSlide" class = "learnMoreContainer fadeInUp">
-                <a id = "buttonSlide" href = "news.html" class="learnMoreButton fadeInUp"><button>Discover more </button></a>
+                <a id = "buttonSlide" href = "{{ url_for('how') }}" class="learnMoreButton fadeInUp"><button>Discover more </button></a>
             </div>
         </div>
     </div>
     <div class = "slideImageHolder">
         <div class = "transparentBackground transparent">
         </div>
-        <img src="{{ url_for('static', filename='images/BlueTech.jpeg') }}"/>
+        <img src="{{ url_for('static', filename='images/ThirdBack.png') }}"/>
         <div class = "slideTextHolder">
             <div class = "textHolder1">
-              <h1 class = "slideTitle fadeInDown"> INSERT TITLE BLAH BLAH </h1>
+              <h1 class = "slideTitle fadeInDown"> ALL IN ONE  </h1>
             </div>
             <div class = "textHolder2">
-              <h2 class = "slideCaption fadeInUp"> insert text insert text insert text</h2>
+              <h2 class = "slideCaption fadeInUp"> Physical, mental, and behavioral health combined into one beautiful platform </h2>
             </div>
             <div class = "learnMoreContainer">
-                <a id = "buttonSlide" href = "news.html" class="learnMoreButton fadeInUp"><button>Discover more </button></a>
+                <a id = "buttonSlide" href = "{{ url_for('about') }}" class="learnMoreButton fadeInUp"><button>Discover more </button></a>
             </div>
         </div>
     </div>
     <div class = "slideImageHolder">
         <div class = "transparentBackground transparent">
         </div>
-        <img src="{{ url_for('static', filename='images/BlueTech.jpeg') }}"/>
+        <img src="{{ url_for('static', filename='images/FourthBack.png') }}"/>
         <div class = "slideTextHolder">
             <div class = "textHolder1">
-              <h1 class = "slideTitle fadeInDown"> INSERT TITLE BLAH BLAH </h1>
+              <h1 class = "slideTitle fadeInDown"> COVID-19 TREATMENT  </h1>
             </div>
             <div class = "textHolder2">
-              <h2 class = "slideCaption fadeInUp"> insert text insert text insert text</h2>
+              <h2 class = "slideCaption fadeInUp"> Learn how Neomedica is fighting the pandemic </h2>
             </div>
             <div class = "learnMoreContainer">
-                <a id = "buttonSlide" href = "news.html" class="learnMoreButton fadeInUp"><button>Discover more </button></a>
+                <a id = "buttonSlide" href = "{{ url_for('return_work') }}" class="learnMoreButton fadeInUp"><button>Discover more </button></a>
             </div>
         </div>
     </div>
@@ -74,31 +74,31 @@
         </div>
         <div class = "impactBox">
             <div class = "impactImageHolder show-on-scroll">
-                <img class = "show-on-scroll" src = "{{ url_for('static', filename='images/BlueHole.jpg') }}">
+                <img class = "show-on-scroll-right" src = "{{ url_for('static', filename='images/MakeImpact.jpg') }}">
             </div>
             <div class = "impactText">
                 <div class = "iconBox">
-                    <img class = "show-on-scroll" src = "{{ url_for('static', filename='images/FillerLogoBlue.png') }}">
-                    <div class = "titleText show-on-scroll">
-                        <h3>Insert title</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
-                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    <img class = "show-on-scroll-left" src = "{{ url_for('static', filename='images/Aw.png') }}">
+                    <div class = "titleText show-on-scroll-left">
+                        <h3>Why Us?</h3>
+                        <p>Here at Neomedica, we strive to offer our loyal patients seamless, world-class telemedicine. </p>
+                        <a href = "{{ url_for('why') }}" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
                     </div>
                 </div>
                 <div class = "iconBox">
-                    <img class = "show-on-scroll" src = "{{ url_for('static', filename='images/FillerLogoBlue.png') }}">
-                    <div class = "titleText show-on-scroll">
-                        <h3>Insert title</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
-                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    <img class = "show-on-scroll-left" src = "{{ url_for('static', filename='images/Package.png') }}">
+                    <div class = "titleText show-on-scroll-left">
+                        <h3>Treatment Options </h3>
+                        <p>We believe in providing a single consolidated, unified service to address your mental, physical, and COVID-19 related health needs.</p>
+                        <a href = "{{ url_for('treatment') }}" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
                     </div>
                 </div>
                 <div id = "lastIcon" class = "iconBox">
-                    <img class = "show-on-scroll" src = "{{ url_for('static', filename='images/FillerLogoBlue.png') }}">
-                    <div class = "titleText show-on-scroll">
-                        <h3>Insert title</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
-                        <a href = "#" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    <img class = "show-on-scroll-left" src = "{{ url_for('static', filename='images/Organizations.png') }}">
+                    <div class = "titleText show-on-scroll-left">
+                        <h3>Organizations </h3>
+                        <p>Not only do we provide for individuals and families, but we also offer excellent coverage for a variety of organizations.</p>
+                        <a href = "{{ url_for('organizations') }}" class = "learnMore">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
                     </div>
                 </div>
             </div>
@@ -111,11 +111,11 @@
         <div class = "largeMessage">
             <div class = "messageHolder">
                 <div class = "textSection show-on-scroll-right">
-                    <p>Dear People,</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Dear Neomedica Members,</p>
+                    <p>In this ever-pressing crisis, Neomedica’s first priority is the same as it has always been: safety and well-being for our patients, organizations, and providers. As such, we have proactively implemented several helpful COVID-19 measures and services. On our Treatment Options page, you’ll find that we now offer affordable return-to-work solutions including COVID-19 tests, screening, and treatment.</p>
+                    <p>Additionally, mask-wearing and social distancing measures within our workplace have been increased. In such unprecedented times, Neomedica is standings tronger than ever to provide safe, at-home care. We hope that you and those around you remain safe, and we value your loyalty as a customer and patient. The Neomedica team thanks you. </p>
                     <div class = "signatureBox">
-                        <img src = "{{ url_for('static', filename='images/FakeSignature.svg') }}">
+                        <img src = "{{ url_for('static', filename='images/SammySignature2.png') }}">
                         <h3>Sammy Urtzal, MD</h3>
                         <h4>Chief Medical Officer</h4>
                     </div>
@@ -134,47 +134,47 @@
             <div class = "solutionsHolder">
                 <div class = "solution show-on-scroll-right">
                     <div class = "solutionCircle">
-                        <img src = "{{ url_for('static', filename='images/IconCircleRed.png') }}">
+                        <img src = "{{ url_for('static', filename='images/MedicalCircle.png') }}">
                     </div>
                     <h4>Medical Health</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                    <a href = "#" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    <p>We offer urgent care, men’s and women's health, and teen’s/children’s health solutions. Click below to discover more.  </p>
+                    <a href = "{{ url_for('medical') }}" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
                 </div>
                 <div class = "solution show-on-scroll-right">
                     <div class = "solutionCircle">
-                        <img src = "{{ url_for('static', filename='images/IconCircleBlue.png') }}">
+                        <img src = "{{ url_for('static', filename='images/MentalCircle.png') }}">
                     </div>
                     <h4>Behavioral Health</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                    <a href = "#" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    <p>We offer behavioral health solutions, speech and occupational therapy, and psychiatry for individuals, couples, and families. Click below to discover more.  </p>
+                    <a href = "{{ url_for('behavioral') }}" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
                 </div>
                 <div class = "solution show-on-scroll-right">
                     <div class = "solutionCircle">
-                        <img src = "{{ url_for('static', filename='images/IconCircleTestPurple.png') }}">
+                        <img src = "{{ url_for('static', filename='images/WorkCircle.png') }}">
                     </div>
                     <h4>Return-to-Work</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                    <a href = "#" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    <p>The future of telemedicine is here – Neomedica now offers virtual reality solutions to those who qualify. Click below to discover more.  </p>
+                    <a href = "{{ url_for('return_work') }}" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
                 </div>
                 <div class = "solution show-on-scroll-left">
                     <div class = "solutionCircle">
-                        <img src = "{{ url_for('static', filename='images/IconCircleTestPurple.png') }}">
+                        <img src = "{{ url_for('static', filename='images/VirtualCircle.png') }}">
                     </div>
                     <h4>Virtual Reality</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                    <a href = "#" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    <p>The future of telemedicine is here – Neomedica now offers virtual reality solutions to those who qualify. Click below to discover more.  </p>
+                    <a href = "{{ url_for('virtual') }}" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
                 </div>
                 <div class = "solution show-on-scroll-left">
                     <div class = "solutionCircle">
-                        <img src = "{{ url_for('static', filename='images/IconCircleRed.png') }}">
+                        <img src = "{{ url_for('static', filename='images/PetCircle.png') }}">
                     </div>
                     <h4>Pet Therapy</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                    <a href = "#" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
+                    <p>Historically, animals have always served humans as a leading therapeutic tool. Neomedica offers trained therapy pets to those who qualify. Click below to discover more. </p>
+                    <a href = "{{ url_for('pet') }}" class = "learnMore longUnd">Learn more <i id = "rightArrow" class="fa fa-angle-right learn"></i></a>
                 </div>
             </div>
             <div class = "learnMoreContainerRegular show-on-scroll-up">
-                <a href = "news.html" class="learnMoreButtonRegular"><button>Discover more </button></a>
+                <a href = "{{ url_for('treatment') }}" class="learnMoreButtonRegular"><button>Discover more </button></a>
             </div>
         </div>
     </div>
@@ -217,19 +217,19 @@
                     <div class = "impactTitle show-on-scroll">
                         <h2>Why Us?</h2>
                     </div>
-                    <p class = "whyText show-on-scroll">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class = "whyText show-on-scroll">Neomedica focuses on consolidating the telemedicine experience. This means bringing high-quality versions of a variety of different therapy types and techniques to your home. We strive to replicate the in-person medical experience as closely as possible, and even surpass it to provide our patients with the treatment they deserve.</p>
                 </div>
                 <div class = "specialLargeBox">
                     <div class = "specialBox show-on-scroll-up">
                         <div class = "specialInner">
-                            <h1>90s</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <h1>85%</h1>
+                            <p>85% of users use Neomedica as their sole form of medical care (Excluding emergency room visits). </p>
                         </div>
                     </div>
                     <div class = "specialBox show-on-scroll-up">
                         <div class = "specialInner">
-                            <h1>95%</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <h1>90%</h1>
+                            <p>90% of Neomedica users rate us five out of five stars and are likely to recommend it to a colleague or friend. </p>
                         </div>
                     </div>
                     <div class = "specialBox show-on-scroll-up">
@@ -250,9 +250,9 @@
                     <div class = "impactTitle show-on-scroll-up humanConnect">
                         <h2>Always a Human Connection</h2>
                     </div>
-                    <p class = "show-on-scroll-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p class = "show-on-scroll-up">Unlike other services that attempt to use poorly-managed artificial intelligence systems or chatbots to mimic the human connection, Neomedica has real providers with real experience and expertise. We strive to closely match and surpass in-person healthcare. Click below to meet some of our providers.  </p>
                     <div class = "learnMoreContainerRegular show-on-scroll-up providerButton">
-                        <a href = "news.html" class="learnMoreButtonRegular"><button>Our Providers</button></a>
+                        <a href = "{{ url_for('providers') }}" class="learnMoreButtonRegular"><button>Our Providers</button></a>
                     </div>
                 </div>
             </div>
@@ -271,75 +271,51 @@
                 <div class = "featuredImageHolder reviewText">
                     <div class = "reviewInnerText">
                         <div class="reviewActualText">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>I tried dozens of telemedicine and telehealth options to deal with my knee pain, but nothing seemed to fit my exact needs. That is, until I discovered Neomedica. Now, I can do the things I love knowing I have a great service and a great provider by my side.</p>
                         </div>
                         <div class="recBox">
-                            <img src="{{ url_for('static', filename='images/FillerDude.png') }}">
-                            <h2>Insert Name</h2>
-                            <h3>Insert Description</h3>
+                            <img src="{{ url_for('static', filename='images/Aaron.png') }}">
+                            <h2>Aaron Hamby </h2>
+                            <h3>Customer since 2019 </h3>
                         </div>
                     </div>
                 </div>
                 <div class = "featuredImageHolder reviewText">
                     <div class = "reviewInnerText">
                         <div class="reviewActualText">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                            <p>I use Neomedica to cover my employees’ health insurance. It makes for an excellent way to attract prospective workers and keep them safe and happy. Neomedica is by far the most well-rounded virtual medicine platform out there. Its vast range of services truly hit every high point a service like it should.</p>
                         </div>
                         <div class="recBox">
-                            <img src="{{ url_for('static', filename='images/FillerDude.png') }}">
-                            <h2>Insert Name</h2>
-                            <h3>Insert Description</h3>
+                            <img src="{{ url_for('static', filename='images/Amanda.png') }}">
+                            <h2>Amanda Towney</h2>
+                            <h3>Customer since 2015 </h3>
                         </div>
                     </div>
                 </div>
                 <div class = "featuredImageHolder reviewText">
                     <div class = "reviewInnerText">
                         <div class="reviewActualText">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>After I tore my achilles as a teenager, I often had episodes where I’d be unable to run or jump. Neomedica’s talented sported doctors helped me deal with my injury with miracle isometrics and prescriptions. Now I can finally get back to marathons!</p>
                         </div>
                         <div class="recBox">
-                            <img src="{{ url_for('static', filename='images/FillerDude.png') }}">
-                            <h2>Insert Name</h2>
-                            <h3>Insert Description</h3>
+                            <img src="{{ url_for('static', filename='images/Michael.png') }}">
+                            <h2>Michael Chertrovsky </h2>
+                            <h3>Customer since 2016 </h3>
                         </div>
                     </div>
                 </div>
                 <div class = "featuredImageHolder reviewText">
                     <div class = "reviewInnerText">
                         <div class="reviewActualText">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>I’ve struggled with anxiety and depressive thoughts since I was a young girl. I’m 17 now, and Neomedica’s teen health therapy is perfect for me. At any time, I can schedule a counseling session with a qualified therapist that truly understands me.</p>
                         </div>
                         <div class="recBox">
-                            <img src="{{ url_for('static', filename='images/FillerDude.png') }}">
-                            <h2>Insert Name</h2>
-                            <h3>Insert Description</h3>
+                            <img src="{{ url_for('static', filename='images/Kirsten.png') }}">
+                            <h2>Kirsten Jordan</h2>
+                            <h3>Customer since 2018 </h3>
                         </div>
                     </div>
-                </div>
-                <div class = "featuredImageHolder reviewText">
-                    <div class = "reviewInnerText">
-                        <div class="reviewActualText">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class="recBox">
-                            <img src="{{ url_for('static', filename='images/FillerDude.png') }}">
-                            <h2>Insert Name</h2>
-                            <h3>Insert Description</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class = "featuredImageHolder reviewText">
-                    <div class = "reviewInnerText">
-                        <div class="reviewActualText">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class="recBox">
-                            <img src="{{ url_for('static', filename='images/FillerDude.png') }}">
-                            <h2>Insert Name</h2>
-                            <h3>Insert Description</h3>
-                        </div>
-                    </div>
-                </div>       
+                </div>                      
             </div>
             <a class="reviewNext"><i class="fa fa-angle-right"></i></a>
         </div>
@@ -349,7 +325,7 @@
             <h2 class = "show-on-scroll-up">Simple, yet powerful.</h2>
             <div class = "buttonHolder">
                 <div class = "learnMoreContainerRegular show-on-scroll-right demoButton">
-                    <a href = "news.html" class="learnMoreButtonRegular"><button>Request Demo</button></a>
+                    <a href = "{{ url_for('login') }}" class="learnMoreButtonRegular"><button>Request Demo</button></a>
                 </div>
                 <div class = "learnMoreContainerRegular show-on-scroll-left demoButton freeAccount">
                     <a href = "{{ url_for('register') }}" class="learnMoreButtonRegular"><button>Create a Free Account</button></a>

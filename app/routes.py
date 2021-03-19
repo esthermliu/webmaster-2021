@@ -29,7 +29,7 @@ def about():
 def why():
     return render_template('why.html', title='Why Us?', 
                                         inner_title="Why Us?", 
-                                        description="Insert Text", 
+                                        description="Affordable, reliable, quality care ", 
                                         landing="whyLanding")
 
 @app.route('/history')

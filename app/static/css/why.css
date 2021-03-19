@@ -153,7 +153,7 @@
 }
 
 #featuredSection {
-    background-image: url('../images/Feature.jpeg');
+    background-image: url('/static/images/DocStock.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -178,6 +178,7 @@
 .imageInside img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.3);
     border-radius: 50%;
+    width: 105px;
 }
 
 .imageInside {
@@ -308,6 +309,7 @@
 
 .dimensionImageHolder img {
   width: 100%;
+  border-radius: 50%;
 }
 
 .dimensionText {
@@ -421,7 +423,7 @@ table {
 }
 
 .providerSection {
-    background-image: url('/static/images/Providers3.jpeg');
+    background-image: url('/static/images/PayHelp.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -450,7 +452,7 @@ table {
 }
 
 .providerTransparent {
-    background-image: linear-gradient( rgba(145, 75, 173, 0.2), rgba(43, 122, 120, 0.2));
+    background-image: linear-gradient( rgba(145, 75, 173, 0.4), rgba(43, 122, 120, 0.4));
     padding: 8% 10% 8% 10% !important;
 }
 
