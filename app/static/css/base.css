@@ -608,6 +608,11 @@ footer {
     font-size: 12px;
 }
 
+.copyright a {
+    color: white;
+    line-height: 30px;
+}
+
 .fa-facebook-f, .fa-instagram, .fa-twitter, .fa-youtube, .fa-pinterest, .fa-linkedin-in {
     font-size: 20px;
     color: white;
