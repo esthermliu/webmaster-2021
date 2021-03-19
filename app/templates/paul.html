@@ -3,6 +3,7 @@
 {% block head %}
     {{ super() }}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/people.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/people_media.css') }}">
 {% endblock %}
 
 {% block childcontent %}
@@ -15,7 +16,7 @@
         <a href = "{{ url_for('leadership_bio', leader='Paul') }}"><b class = "bold">Paul Zhang</b></a>
     </p>
 </div>
-<div class = "firstSection">
+<div class = "firstSection actuallyFirst">
     <div class = "impactTitle peopleTitle show-on-scroll-right">
         <h2> Overview </h2>
     </div>

@@ -1,0 +1,39 @@
+@media screen and (max-width: 750px) { 
+    .firstSection {
+        padding: 15% 5% 15% 5% !important;
+    }
+
+    .firstSectionFlex {
+        padding: 15% 0% 15% 0% !important;
+    }
+
+    .second {
+        padding-top: 0 !important;
+    }
+
+    .firstSectionFlex {
+        flex-wrap: wrap;
+    }
+
+    .leftText {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .imageHolder {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .actuallyFirst {
+        padding-top: 25% !important;
+    }
+
+    .quoteBox {
+        margin: 0 !important;
+    }
+
+    .pageNav {
+        margin-left: 5%;
+    }
+}
